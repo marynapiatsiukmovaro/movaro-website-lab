@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" role="img" aria-label="Owner calmly caring for a wrapped cat at home">
+  <defs>
+    <linearGradient id="lr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7EDE0"/><stop offset="1" stop-color="#D6E0CB"/></linearGradient>
+  </defs>
+  <rect width="800" height="700" fill="url(#lr)"/>
+  <!-- window light -->
+  <rect x="540" y="60" width="200" height="240" rx="14" fill="#fff" opacity="0.45"/>
+  <line x1="640" y1="60" x2="640" y2="300" stroke="#D6E0CB" stroke-width="6"/>
+  <line x1="540" y1="180" x2="740" y2="180" stroke="#D6E0CB" stroke-width="6"/>
+  <!-- table -->
+  <rect x="80" y="500" width="640" height="30" rx="10" fill="#C9B488"/>
+  <!-- person torso -->
+  <path d="M120 500 q-10 -160 120 -180 q130 -20 150 90 l0 90 Z" fill="#A99A85"/>
+  <circle cx="210" cy="270" r="58" fill="#E8C9A8"/>
+  <path d="M152 268 q0 -70 58 -70 q58 0 58 70 q-30 -26 -58 -26 q-28 0 -58 26 Z" fill="#6B5B49"/>
+  <!-- wrapped cat on lap -->
+  <path d="M360 470 q120 -80 240 0 q30 40 0 70 l-240 0 q-30 -30 0 -70 Z" fill="#7E9072"/>
+  <ellipse cx="480" cy="420" rx="60" ry="52" fill="#C9B79B"/>
+  <path d="M432 388 l-8 -40 l38 18 Z" fill="#C9B79B"/>
+  <path d="M528 388 l8 -40 l-38 18 Z" fill="#C9B79B"/>
+  <circle cx="462" cy="418" r="6" fill="#3D3730"/>
+  <circle cx="498" cy="418" r="6" fill="#3D3730"/>
+  <path d="M476 436 q4 6 8 0" fill="#C07A5E"/>
+</svg>

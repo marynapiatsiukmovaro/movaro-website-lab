@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-label="Size guide visual showing cat measurement">
+  <rect width="800" height="640" fill="#EFE8DB"/>
+  <!-- cat silhouette side -->
+  <path d="M180 380 q-20 -120 60 -150 q10 -50 50 -30 q10 -30 40 -10 q60 -20 120 20 q120 10 150 90 q40 10 30 60 q20 30 -10 50 l-30 10 q-10 40 -60 40 l-360 0 q-40 0 -40 -40 q-20 -60 50 -90 Z" fill="#A99A85"/>
+  <circle cx="610" cy="320" r="6" fill="#fff"/>
+  <!-- measurement line -->
+  <line x1="180" y1="470" x2="690" y2="470" stroke="#5E7052" stroke-width="3"/>
+  <path d="M180 460 v20 M690 460 v20" stroke="#5E7052" stroke-width="3"/>
+  <rect x="380" y="452" width="120" height="36" rx="18" fill="#5E7052"/>
+  <text x="440" y="476" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="18" font-weight="600">Length</text>
+  <!-- girth circle -->
+  <ellipse cx="430" cy="300" rx="90" ry="110" fill="none" stroke="#C07A5E" stroke-width="3" stroke-dasharray="8 8"/>
+  <rect x="370" y="180" width="120" height="34" rx="17" fill="#C07A5E"/>
+  <text x="430" y="203" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="16" font-weight="600">Girth</text>
+</svg>

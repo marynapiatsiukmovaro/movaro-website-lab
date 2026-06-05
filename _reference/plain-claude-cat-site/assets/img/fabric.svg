@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-label="Soft quiet fabric close-up">
+  <defs>
+    <linearGradient id="f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DCCBAB"/><stop offset="1" stop-color="#C9B488"/></linearGradient>
+    <pattern id="weave" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="40" height="40" fill="none"/>
+      <path d="M0 20 h40 M20 0 v40" stroke="#ffffff" stroke-opacity="0.18" stroke-width="6"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="640" fill="url(#f)"/>
+  <rect width="800" height="640" fill="url(#weave)"/>
+  <path d="M0 420 q200 -80 400 0 t400 0 v220 h-800 Z" fill="#ffffff" opacity="0.08"/>
+  <path d="M0 200 q200 80 400 0 t400 0" stroke="#ffffff" stroke-opacity="0.12" stroke-width="10" fill="none"/>
+</svg>

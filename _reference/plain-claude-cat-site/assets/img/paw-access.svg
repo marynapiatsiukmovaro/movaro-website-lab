@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-label="Close-up of paw-by-paw access opening on the Movaro wrap">
+  <defs>
+    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A9B7C"/><stop offset="1" stop-color="#647557"/></linearGradient>
+  </defs>
+  <rect width="800" height="640" fill="#E7EDE0"/>
+  <path d="M120 200 h560 a40 40 0 0 1 40 40 v280 a40 40 0 0 1 -40 40 h-560 a40 40 0 0 1 -40 -40 v-280 a40 40 0 0 1 40 -40 Z" fill="url(#p)"/>
+  <!-- access slit -->
+  <path d="M360 280 q40 -30 80 0 q26 60 0 120 q-40 28 -80 0 q-24 -60 0 -120 Z" fill="#54624A"/>
+  <!-- paw -->
+  <ellipse cx="400" cy="360" rx="40" ry="30" fill="#C9B79B"/>
+  <circle cx="372" cy="332" r="9" fill="#C9B79B"/>
+  <circle cx="392" cy="324" r="9" fill="#C9B79B"/>
+  <circle cx="412" cy="324" r="9" fill="#C9B79B"/>
+  <circle cx="432" cy="332" r="9" fill="#C9B79B"/>
+  <ellipse cx="400" cy="366" rx="14" ry="10" fill="#C07A5E"/>
+  <!-- snap fasteners -->
+  <g fill="#E7EDE0"><circle cx="330" cy="300" r="7"/><circle cx="470" cy="300" r="7"/><circle cx="330" cy="420" r="7"/><circle cx="470" cy="420" r="7"/></g>
+</svg>
