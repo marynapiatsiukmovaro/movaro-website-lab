@@ -57,6 +57,10 @@
   .g-thumbs .ill{flex:1;aspect-ratio:1;border-radius:8px}
   .g-thumbs .ill:first-child{outline:2px solid var(--ink);outline-offset:-2px}
   .g-hint{text-align:center;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:0 0 4px}
+  .g-wrap{position:relative}
+  .g-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.94);color:#1A1714;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center}
+  .g-arrow.prev{left:10px}.g-arrow.next{right:10px}
+  .g-thumbs .ill{cursor:pointer}
 
   .buybox{background:var(--paper);padding-top:26px;padding-bottom:40px}
   .rating-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
@@ -186,7 +190,10 @@
 
   <!-- 1 GALLERY -->
   <section class="gallery" data-block="gallery">
-    <div class="g-carousel">
+    <div class="g-wrap">
+    <button class="g-arrow prev" onclick="gnav(-1)" aria-label="previous photo">‹</button>
+    <button class="g-arrow next" onclick="gnav(1)" aria-label="next photo">›</button>
+    <div class="g-carousel" id="gcar">
       <div class="g-slide">
       <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-label="Calm cat wrapped">
         <rect width="400" height="400" fill="#F2ECE1"/>
@@ -212,7 +219,8 @@
       <div class="g-slide"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="200" height="400" fill="#F2E6DE"/><rect x="200" width="200" height="400" fill="#E4EADD"/><path d="M60 252 q40 -56 80 0 q-4 28 -40 28 q-36 0 -40 -28Z" fill="#B89A86"/><path d="M82 234 l8 12M118 234 l-8 12" stroke="#2A2620" stroke-width="2.6" stroke-linecap="round"/><path d="M40 212 l-12 -8M160 212 l12 -8" stroke="#B9774F" stroke-width="2.6" stroke-linecap="round"/><path d="M260 254 q40 -30 80 0 q5 24 -40 28 q-45 -4 -40 -28Z" fill="#8FA286"/><rect x="290" y="250" width="20" height="34" rx="5" fill="#5F7257"/><ellipse cx="300" cy="224" rx="32" ry="28" fill="#C9BBA5"/><path d="M286 224 q7 5 14 0M300 224 q7 5 14 0" stroke="#2A2620" stroke-width="2.4" fill="none" stroke-linecap="round"/><text x="340" y="186" font-family="Cabin" font-size="22" fill="#5F7257">z</text></svg><span class="chip" style="top:16px;left:14px;background:rgba(255,255,255,.92)">From war → calm</span></div>
       <div class="g-slide"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><rect width="400" height="400" fill="#F2ECE1"/><rect x="56" y="152" width="150" height="120" rx="12" fill="#8FA286"/><rect x="91" y="178" width="80" height="34" rx="7" fill="#5F7257"/><rect x="238" y="120" width="46" height="92" rx="8" fill="#A9B89F"/><rect x="250" y="96" width="22" height="26" fill="#5F7257"/><path d="M300 200 h60 v60 a4 4 0 0 1 -4 4 h-52 a4 4 0 0 1 -4 -4Z" fill="#D69E7C"/><path d="M300 200 l8 -12 h44 l8 12Z" fill="#B9774F"/><rect x="250" y="252" width="70" height="48" rx="3" fill="#fff" stroke="#C9BFAE"/><path d="M260 266 h44 M260 276 h44 M260 286 h28" stroke="#8FA286" stroke-width="3" stroke-linecap="round"/></svg><span class="chip" style="top:16px;left:16px">What's in the box</span></div>
     </div>
-    <div class="g-hint">← swipe →</div>
+    </div>
+    <div class="g-hint">листай: стрелки ‹ › · свайп · тапни превью</div>
     <div class="g-thumbs">
       <div class="ill"><svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#F2ECE1"/><rect x="14" y="16" width="32" height="28" rx="5" fill="#8FA286"/><circle cx="24" cy="30" r="2.4" fill="#EFEAE0"/><circle cx="36" cy="30" r="2.4" fill="#EFEAE0"/><circle cx="30" cy="38" r="2.4" fill="#EFEAE0"/></svg></div>
       <div class="ill"><svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#F2ECE1"/><path d="M12 34 h36 v8 a4 4 0 0 1 -4 4 H16 a4 4 0 0 1 -4 -4Z" fill="#8FA286"/><path d="M18 34 q4 -14 16 -14" stroke="#5F7257" stroke-width="3" fill="none"/><circle cx="34" cy="20" r="6" fill="#C9BBA5"/></svg></div>
@@ -424,5 +432,10 @@
   <button class="btn">Add to cart</button>
 </div>
 
+<script>
+  var gcar=document.getElementById('gcar');
+  function gnav(d){gcar.scrollBy({left:d*gcar.clientWidth,behavior:'smooth'});}
+  document.querySelectorAll('.g-thumbs .ill').forEach(function(t,i){t.addEventListener('click',function(){gcar.scrollTo({left:i*gcar.clientWidth,behavior:'smooth'});});});
+</script>
 </body>
 </html>
