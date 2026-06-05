@@ -7,9 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Jost',sans-serif;background:#F8F4ED;color:#22201C;line-height:1.6;padding:40px 22px;max-width:640px;margin:0 auto}
+  body{font-family:'Jost',sans-serif;background:#F8F4ED;color:#22201C;line-height:1.6;padding:40px 22px;max-width:660px;margin:0 auto}
   h1{font-family:'Cabin';font-size:30px;letter-spacing:.02em;margin-bottom:6px}
-  .sub{color:#5C544A;margin-bottom:32px;font-size:15px}
+  .sub{color:#5C544A;margin-bottom:30px;font-size:15px}
   .eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5E7052;margin-bottom:24px}
   .stage{display:block;background:#fff;border:1px solid #D9D0C2;padding:20px;margin-bottom:14px;text-decoration:none;color:inherit;transition:border-color .15s}
   .stage:hover{border-color:#5E7052}
@@ -17,36 +17,52 @@
   .stage h2{font-family:'Cabin';font-size:19px;margin:4px 0 6px}
   .stage p{font-size:14px;color:#5C544A}
   .stage .date{font-size:12px;color:#8A8174;margin-top:8px;text-transform:uppercase;letter-spacing:.05em}
-  .soon{opacity:.5;pointer-events:none}
+  .soon{opacity:.55;pointer-events:none;border-style:dashed}
+  .soon .tag{color:#8A8174}
   footer{margin-top:30px;font-size:12px;color:#8A8174}
 </style>
 </head>
 <body>
   <div class="eyebrow">Movaro · Website Department</div>
   <h1>Website Lab</h1>
-  <p class="sub">История прогресса продуктовой страницы — стейдж за стейджем. Pro Cat Wrap (первый продукт).</p>
+  <p class="sub">История прогресса продуктовой страницы — стейдж за стейджем (по порядку). Первый продукт: Pro Cat Wrap. Полный журнал решений → <a href="PROGRESS.md">PROGRESS.md</a>.</p>
 
   <a class="stage" href="stage-0/index.html">
     <div class="tag">Stage 0</div>
     <h2>Первый прототип — структура + «вид Be Yours»</h2>
-    <p>10 блоков по согласованной структуре, перекрашены под тему Be Yours (плоские острые кнопки, Cabin/Jost, секции встык). Из своих знаний, без заимствования паттернов конкурентов.</p>
-    <div class="date">2026-06-05</div>
-  </a>
-
-  <a class="stage" href="stage-1.2/index.html">
-    <div class="tag">Stage 1.2</div>
-    <h2>Мой редакторский проход — баланс текст/картинка</h2>
-    <p>Без новых картинок: тонкие карусели-картинки в «О товаре» → 3 полноценных блока-выгоды с продающей копией; усилен PAS-блок боли; добавлены строки-аргументы к сравнению/до-после/инструкции/UGC.</p>
+    <p>10 блоков по согласованной структуре, перекрашены под тему Be Yours. Из знаний Claude, без заимствования паттернов конкурентов.</p>
     <div class="date">2026-06-05</div>
   </a>
 
   <a class="stage" href="stage-1/index.html">
     <div class="tag">Stage 1</div>
     <h2>Поблочное усиление по референсам + светлая Noble/Waterdoctor-эстетика</h2>
-    <p>Применён фидбек Марины по папкам 2–8: светлая «лайт-люкс» база, near-black CTA, Noble-ряд подарков, бенефит-карусель, text-on-photo, Мы-Они с фото продукта, шаги-карусель, UGC-stories, способы оплаты.</p>
+    <p>Фидбек Марины по папкам 2–8: светлая «лайт-люкс» база, near-black CTA, Noble-ряд подарков, бенефит-карусель, text-on-photo, Мы-Они с фото продукта, шаги-карусель, UGC-stories, способы оплаты.</p>
     <div class="date">2026-06-05</div>
   </a>
 
-  <footer>Movaro Website Lab · отдельно от основного репозитория product-launch (он держится чистым «по делу»).</footer>
+  <a class="stage" href="stage-1.2/index.html">
+    <div class="tag">Stage 1.2</div>
+    <h2>Мой редакторский проход — баланс текст/картинка</h2>
+    <p>Без новых картинок: тонкие карусели в «О товаре» → 3 полноценных блока-выгоды с продающей копией; усилен PAS; строки-аргументы к сравнению/до-после/инструкции/UGC.</p>
+    <div class="date">2026-06-05</div>
+  </a>
+
+  <a class="stage soon" href="#">
+    <div class="tag">Stage 1.3 — в работе</div>
+    <h2>Отрисованные картинки во все блоки</h2>
+    <p>Добавляю SVG-иллюстрации на-бренд (где уместно — стрелки/текст на картинке). Сайт «заиграет».</p>
+    <div class="date">—</div>
+  </a>
+
+  <a class="stage soon" href="#">
+    <div class="tag">Stage 2 — скоро</div>
+    <h2>Несвязанная версия Claude</h2>
+    <p>Ничем не ограничиваясь, предлагаю сайт, который вижу я как эксперт — возможно, полностью переосмысленная структура и блоки. Картинки переиспользую из 1.3.</p>
+    <div class="date">—</div>
+  </a>
+
+  <footer>Movaro Website Lab · отдельно от основного репозитория product-launch (он держится чистым «по делу»).<br>
+  Архив референса 5-мин plain-Claude сайта → <code>_reference/plain-claude-cat-site/</code> (НЕ эталон).</footer>
 </body>
 </html>
