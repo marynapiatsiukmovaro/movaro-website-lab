@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movaro Calm Wrap — Stage 3.0 · real photos (carousel)</title>
+<!--
+  MOVARO — Pro Cat Wrap — STAGE 2.4 = the chosen direction: CALM CLINICAL (2.1) + engagement layer.
+  Marina picked 2.1 (petrol, calm+trust) as the base; 2.2 felt "soothing not energizing", 2.3's drag
+  before/after was rejected (keep the ORIGINAL side-by-side before/after).
+  Added here: (1) image-HOTSPOTS on the wrap (ported from 2.3 — tap to explore); (2) a CONNECTING
+  THREAD/spine down the page with a travelling dot tied to scroll (attention + reading-progress, calm);
+  (3) pointed emoji accents (very sparing) + soft highlight on key phrases (.hl) so copy "plays".
+  Quiet-luxury motion + hero breathing kept. Type: Fraunces + Jost. SVG content reused, recolored only.
+  Modular: every <section data-block> = a future Shopify section.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF; --ivory:#F2EEE6; --sand:#E7E1D4; --cream:#ECE7DC;
+  --ink:#21201C; --ink-soft:#6A6256; --muted:#9C9385;
+  --line:#E6DFD1; --line-soft:#F0EBDF;
+  --sage:#3E5C5A; --sage-soft:#6E8B89; --sage-tint:#E2E9E7;
+  --clay:#B9774F; --clay-soft:#D9A47F; --clay-tint:#F4E5D8; --taupe:#C8BAA3;
+  --r:14px; --pill:999px;
+  --shadow:0 1px 2px rgba(33,32,28,.04), 0 8px 28px rgba(33,32,28,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:#E4DFD5;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:480px;margin:0 auto;background:var(--ivory);overflow:hidden;padding-bottom:78px;position:relative}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+section{padding:60px 24px}
+.s-paper{background:var(--paper)} .s-ivory{background:var(--ivory)} .s-sand{background:var(--sand)} .s-cream{background:var(--cream)}
+.eyebrow{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--sage)}
+.muted{color:var(--ink-soft)}
+.stars{color:var(--clay);letter-spacing:2px;font-size:14px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--ink);color:#fff;
+  border:1px solid var(--ink);border-radius:var(--pill);font-family:'Jost';font-size:13.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;min-height:58px;padding:17px 24px;cursor:pointer;transition:transform .12s,opacity .15s}
+.btn:active{transform:scale(.985);opacity:.92}
+.btn.ghost{background:transparent;color:var(--ink)}
+.sect-head{max-width:400px;margin:0 auto 30px;text-align:center}
+.sect-head h2{font-size:31px;margin:11px 0 9px;font-weight:500}
+.sect-head p{font-size:15px;color:var(--ink-soft)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.ill{position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--cream)}
+.ill svg{display:block;width:100%;height:100%}
+.chip{position:absolute;background:rgba(255,255,255,.95);color:var(--ink);font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:8px 13px;border-radius:var(--pill);box-shadow:0 2px 10px rgba(33,32,28,.09);backdrop-filter:blur(4px)}
+/* announce + header */
+.announce{background:var(--ink);color:#fff;text-align:center;font-family:'Jost';font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:11px 12px}
+.announce .dotsep{opacity:.45;margin:0 8px}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--paper);border-bottom:1px solid var(--line-soft);position:sticky;top:0;z-index:40}
+.logo{font-family:'Fraunces';font-weight:600;font-size:23px;letter-spacing:.02em}
+.hd-ic{display:flex;gap:18px}
+
+/* gallery / hero */
+.gallery{padding:0;background:var(--paper)}
+.g-wrap{position:relative}
+.g-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;aspect-ratio:4/5;-webkit-overflow-scrolling:touch}
+.g-carousel::-webkit-scrollbar{display:none}
+.g-slide{position:relative;min-width:100%;scroll-snap-align:center}
+.g-slide svg{display:block;width:100%;height:100%}
+.g-slide img,.ill img{display:block;width:100%;height:100%;object-fit:cover}
+.g-over{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 22px;background:linear-gradient(to top,rgba(20,17,14,.62),rgba(20,17,14,.12) 55%,transparent);color:#fff}
+.g-over .eb{font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E2E9E7;opacity:.95}
+.g-over h1{color:#fff;font-size:34px;font-weight:500;margin:8px 0 6px;letter-spacing:-.015em}
+.g-over p{font-size:14px;color:rgba(255,255,255,.92);max-width:300px}
+.g-arrow{position:absolute;top:42%;transform:translateY(-50%);z-index:5;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.86);color:#21201C;font-size:21px;line-height:1;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center}
+.g-arrow.prev{left:12px}.g-arrow.next{right:12px}
+.g-dots{position:absolute;bottom:104px;left:0;right:0;display:flex;gap:6px;justify-content:center;z-index:5}
+.g-dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55)}
+.g-dots i.on{background:#fff;width:18px;border-radius:3px}
+.g-thumbs{display:flex;gap:8px;padding:12px 16px;background:var(--paper)}
+.g-thumbs .ill{flex:1;aspect-ratio:1;border-radius:9px;cursor:pointer;transition:outline .15s}
+.g-thumbs .ill.on{outline:2px solid var(--ink);outline-offset:-2px}
+
+/* buy-box */
+.buybox{background:var(--paper);padding-top:30px;padding-bottom:44px}
+.descriptor{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sage)}
+.buybox h1{font-size:33px;font-weight:500;margin:9px 0}
+.rating-row{display:flex;align-items:center;gap:9px;margin-bottom:4px;font-size:12.5px;color:var(--ink-soft)}
+.rating-row a{color:var(--ink-soft);text-underline-offset:2px}
+.promise{font-size:16px;color:var(--ink-soft);margin:14px 0 20px}
+.promise b{color:var(--ink);font-weight:600}
+.trio{display:flex;gap:9px;margin:20px 0}
+.trio .t{flex:1;background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:14px 6px;text-align:center}
+.trio .t b{display:block;font-family:'Jost';font-size:10px;font-weight:600;margin-top:8px;line-height:1.3;letter-spacing:.02em}
+.opt{position:relative;display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:13px;padding:16px;margin-top:11px;cursor:pointer;background:var(--paper);transition:border-color .15s,background .15s}
+.opt.sel{border:1.5px solid var(--ink);background:#fff;box-shadow:var(--shadow)}
+.opt .rb{width:21px;height:21px;border-radius:50%;border:2px solid var(--muted);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color .15s}
+.opt.sel .rb{border-color:var(--ink)} .opt.sel .rb::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--ink)}
+.opt .o-main{flex:1}.opt .o-main b{font-size:14.5px;font-family:'Jost';font-weight:600}.opt .o-main small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;line-height:1.4}
+.opt .o-price{text-align:right}.opt .o-price b{font-size:17px;font-family:'Fraunces';font-weight:600}.opt .o-price s{display:block;color:var(--muted);font-size:12px}
+.save-tag{position:absolute;top:-10px;right:15px;background:var(--sage);color:#fff;font-family:'Jost';font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 11px;border-radius:var(--pill)}
+.field-label{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:20px 0 9px;display:flex;justify-content:space-between}
+.field-label a{color:var(--sage)}
+.sizes{display:flex;gap:8px}
+.sizes button{flex:1;border:1px solid var(--line);background:var(--paper);border-radius:9px;padding:12px 0;font-family:'Jost';font-weight:600;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);cursor:pointer;transition:.15s}
+.sizes button.sel{border-color:var(--ink);background:var(--ink);color:#fff}
+.gifts{display:flex;gap:8px;margin:22px 0}
+.gift{flex:1;text-align:center}
+.gift .g-badge{display:inline-block;background:var(--ink);color:#fff;font-family:'Jost';font-size:9px;font-weight:600;letter-spacing:.04em;padding:3px 9px;border-radius:var(--pill);margin-bottom:7px}
+.gift .ill{aspect-ratio:1;border-radius:11px;margin-bottom:6px}
+.gift small{font-size:9.5px;color:var(--ink-soft);line-height:1.25;display:block}
+.stock{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--ink-soft);margin:20px 0 14px}
+.stock .dot{width:8px;height:8px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 3px var(--sage-tint)}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:12px}
+.price-row .now{font-size:33px;font-weight:600;font-family:'Fraunces'}
+.price-row .was{color:var(--muted);text-decoration:line-through;font-size:18px}
+.price-row .pill-save{font-family:'Jost';font-size:11px;font-weight:600;color:var(--sage);background:var(--sage-tint);padding:4px 10px;border-radius:var(--pill)}
+.under-cta{margin-top:15px}
+.under-cta .row{display:flex;align-items:center;justify-content:center;gap:20px;font-size:11.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em}
+.pay{display:flex;gap:6px;justify-content:center;margin-top:15px;flex-wrap:wrap}
+.pay span{font-family:'Jost';font-size:8px;font-weight:700;letter-spacing:.03em;color:var(--ink-soft);background:var(--ivory);border:1px solid var(--line);border-radius:5px;padding:5px 9px}
+/* trust strip */
+.tstrip{display:flex;align-items:stretch;background:var(--ink);color:#fff;padding:0}
+.tstrip .ti{flex:1;text-align:center;padding:16px 6px;border-right:1px solid rgba(255,255,255,.12)}
+.tstrip .ti:last-child{border:none}
+.tstrip .ti b{display:block;font-family:'Fraunces';font-size:17px;font-weight:600}
+.tstrip .ti small{font-family:'Jost';font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.62);display:block;margin-top:3px}
+
+/* ugc */
+.scroll{display:flex;gap:13px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory;margin:0 -24px;padding-left:24px;padding-right:24px}
+.scroll::-webkit-scrollbar{display:none}
+.scroll > *{scroll-snap-align:start}
+.ugc-card{min-width:218px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.ugc-card .ill{aspect-ratio:9/13;border:none;border-radius:0}
+.ugc-handle{display:flex;align-items:center;gap:8px;padding:11px 13px 2px;font-size:12.5px;font-weight:600}
+.ugc-handle .dot{width:22px;height:22px;border-radius:50%;background:var(--sage-tint)}
+.ugc-handle .vf{margin-left:auto;font-size:9px;color:var(--sage);letter-spacing:.04em;text-transform:uppercase}
+.ugc-txt{padding:5px 13px 14px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+
+/* about / benefits */
+.lead-h{font-size:33px;font-weight:500;margin:12px 0 16px;letter-spacing:-.015em}
+.lead-p{font-size:16px;color:var(--ink-soft)}
+.lead-p b{color:var(--ink)}
+.tape{aspect-ratio:4/5;margin:26px 0}
+.brow{display:flex;gap:17px;align-items:flex-start;margin-top:34px}
+.brow:nth-child(even){flex-direction:row-reverse}
+.brow .ill{flex-shrink:0;width:120px;aspect-ratio:3/4}
+.brow .bt h3{font-size:22px;font-weight:500;margin-bottom:8px}
+.brow .bt p{font-size:14px;color:var(--ink-soft)}
+.brow .bt .proof{display:inline-flex;align-items:center;gap:6px;font-family:'Jost';font-size:12px;color:var(--sage);margin-top:11px;font-weight:600}
+
+/* mechanism */
+.mech{background:var(--cream)}
+.mech-diagram{aspect-ratio:1/1;margin:6px 0 22px}
+.mech-pts{display:flex;flex-direction:column;gap:14px}
+.mech-pt{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:16px}
+.mech-pt .ic{width:42px;height:42px;border-radius:11px;background:var(--sage-tint);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.mech-pt b{font-family:'Jost';font-size:14.5px;font-weight:600;display:block;margin-bottom:3px}
+.mech-pt p{font-size:13px;color:var(--ink-soft)}
+
+/* before/after */
+.ba-grid{display:flex;gap:12px;margin-top:24px}
+.ba-grid .col{flex:1}
+.ba-grid .ill{aspect-ratio:3/4}
+.ba-cap{text-align:center;font-family:'Jost';font-weight:600;font-size:11px;margin-top:11px;letter-spacing:.12em;text-transform:uppercase}
+.ba-cap.b{color:var(--clay)} .ba-cap.a{color:var(--sage)}
+
+/* comparison */
+.cmp{margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.cmp-head{display:grid;grid-template-columns:1.25fr .9fr .9fr;align-items:end}
+.cmp-head .h{padding:18px 6px 13px;text-align:center}
+.cmp-head .us{background:var(--sage-tint);border-radius:13px 13px 0 0}
+.cmp-head .mini{aspect-ratio:1;width:48px;margin:0 auto 7px;border-radius:9px;overflow:hidden}
+.cmp-head .us b{font-family:'Fraunces';font-size:15px;font-weight:600}
+.cmp-head .them b{font-family:'Jost';font-size:11.5px;font-weight:600;color:var(--muted);line-height:1.3;display:block}
+.cmp-row{display:grid;grid-template-columns:1.25fr .9fr .9fr;border-top:1px solid var(--line-soft);font-size:12.5px}
+.cmp-row .c{padding:14px 7px;text-align:center;display:flex;align-items:center;justify-content:center}
+.cmp-row .lbl{justify-content:flex-start;text-align:left;color:var(--ink-soft);font-weight:500}
+.cmp-row .us{background:var(--sage-tint);font-weight:600}
+.cmp-row:last-child .us{border-radius:0 0 13px 13px}
+.tick{color:var(--sage);font-weight:700;font-size:15px} .cross{color:var(--muted);font-size:11px}
+
+/* vet authority */
+.vet{background:var(--sand)}
+.vet-card{display:flex;gap:16px;align-items:center}
+.vet-card .ill{width:90px;height:90px;border-radius:50%;flex-shrink:0}
+.vet-card .vq{font-family:'Fraunces';font-size:18px;font-weight:500;line-height:1.3;font-style:italic}
+.vet-card .vn{font-family:'Jost';font-size:12px;color:var(--ink-soft);margin-top:8px;font-style:normal}
+
+/* steps */
+.step-card{min-width:218px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.step-card .ill{aspect-ratio:4/3;border:none;border-radius:0}
+.step-card .s-body{padding:14px}
+.step-card .s-num{font-family:'Jost';font-weight:700;font-size:11px;color:var(--sage);letter-spacing:.1em}
+.step-card h4{font-size:17px;font-weight:500;margin:4px 0 5px}
+.step-card p{font-size:12.5px;color:var(--ink-soft)}
+
+/* offer / stack */
+.offer{background:var(--ink);color:#fff}
+.offer .sect-head h2{color:#fff}.offer .sect-head p{color:rgba(255,255,255,.7)}
+.offer .eyebrow{color:var(--sage-soft)}
+.stack{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:22px;margin-top:8px}
+.stack .row{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.9)}
+.stack .row:last-child{border:none;font-weight:700;font-size:17px;padding-bottom:0;color:#fff}
+.stack .row .free{color:var(--sage-soft);font-weight:600}
+.stack .row s{color:rgba(255,255,255,.45)}
+.stack .row .total{font-family:'Fraunces'}
+.guarantee{display:flex;align-items:center;gap:14px;justify-content:center;background:rgba(62,92,90,.22);border:1px solid rgba(110,139,137,.4);border-radius:var(--r);padding:18px;margin:20px 0}
+.guarantee b{font-size:13.5px;font-family:'Jost'}.guarantee small{font-size:12px;color:rgba(255,255,255,.72)}
+.offer .btn{background:#fff;color:var(--ink);border-color:#fff}
+
+/* faq */
+details{background:var(--paper);border:1px solid var(--line);border-radius:13px;margin-top:11px;overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:18px;font-family:'Jost';font-weight:600;font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary .pm{font-size:23px;color:var(--sage);font-weight:300;line-height:1;transition:transform .2s}
+details[open] summary .pm{transform:rotate(45deg)}
+details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
+
+/* reviews */
+.rev-summary{display:flex;gap:22px;align-items:center;margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.rev-summary .big{font-family:'Fraunces';font-size:46px;font-weight:600;line-height:1}
+.bars{flex:1}
+.bar-row{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted);margin:2px 0}
+.bar{flex:1;height:6px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--clay)}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:18px;margin-top:13px}
+.rev .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.rev .name{font-family:'Jost';font-weight:600;font-size:13px;display:flex;align-items:center;gap:8px}
+.rev .vbadge{font-size:9px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.rev h4{font-family:'Fraunces';font-size:16px;font-weight:600;margin-bottom:6px}
+.rev p{font-size:13.5px;color:var(--ink-soft)}
+.rev .rphoto{display:flex;gap:8px;margin-top:12px}
+.rev .rphoto .ill{width:66px;height:66px;border-radius:9px}
+
+/* close */
+.close-cta{text-align:center;background:var(--cream)}
+.close-cta h3{font-size:28px;font-weight:500;margin-bottom:10px}
+.close-cta p{font-size:14px;color:var(--ink-soft);margin-bottom:20px}
+
+/* sticky */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;max-width:480px;margin:0 auto;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:12px;align-items:center;transform:translateY(120%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky .sp b{font-size:18px;font-family:'Fraunces';font-weight:600}.sticky .sp s{color:var(--muted);font-size:13px;margin-left:5px}
+.sticky .sp small{display:block;font-size:9.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em}
+.sticky .btn{flex:1;min-height:48px;padding:13px;font-size:11px}
+.footer{text-align:center;padding:28px 24px 34px;background:var(--ink);color:rgba(255,255,255,.5);font-size:11px;line-height:1.7}
+.footer .logo{color:#fff;font-size:20px;margin-bottom:8px}
+/* ===== Stage 2.4 engagement layer (hotspots + connecting thread + highlight) ===== */
+.hl{background:linear-gradient(transparent 58%, var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
+.hotspot{position:absolute;z-index:6;width:26px;height:26px;border-radius:50%;background:var(--sage);border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.22);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Jost';font-weight:700;font-size:14px}
+.hotspot::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--sage);opacity:.55;animation:hp 2.2s ease-out infinite}
+@keyframes hp{0%{transform:scale(.8);opacity:.65}100%{transform:scale(1.85);opacity:0}}
+.hotspot .tip{position:absolute;bottom:132%;left:50%;transform:translateX(-50%) translateY(6px);background:var(--ink);color:#fff;font-family:'Jost';font-weight:500;font-size:11px;line-height:1.35;padding:8px 12px;border-radius:9px;width:max-content;max-width:172px;opacity:0;pointer-events:none;transition:.2s;text-align:center;z-index:7}
+.hotspot.on .tip{opacity:1;transform:translateX(-50%) translateY(0)}
+.hotspot.on{background:#fff;color:var(--sage)}
+.spine{position:absolute;left:0;width:100%;z-index:1;pointer-events:none}
+.spine svg{width:100%;height:100%;display:block;overflow:visible;mix-blend-mode:multiply}
+.spine-track{fill:none;stroke:var(--line);stroke-width:1.3;vector-effect:non-scaling-stroke;opacity:.45}
+.spine-draw{fill:none;stroke:var(--sage-soft);stroke-width:1.7;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;opacity:.5}
+.spine-dot{position:absolute;left:0;top:0;width:12px;height:12px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 4px var(--sage-tint),0 2px 8px rgba(0,0,0,.18);transform:translate(-50%,-50%);transition:top .08s linear,left .08s linear}
+.spine-dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1.5px solid var(--sage);opacity:.5;animation:hp 2.4s ease-out infinite}
+@media (prefers-reduced-motion:reduce){.spine-dot::after,.hotspot::after{animation:none}}
+/* ===== Stage 2.1 · Calm Clinical motion (quiet luxury + one calm hero moment) ===== */
+@keyframes hero-up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+.g-over .eb{opacity:0;animation:hero-up .85s .15s both cubic-bezier(.2,.7,.2,1)}
+.g-over h1{opacity:0;animation:hero-up .95s .34s both cubic-bezier(.2,.7,.2,1)}
+.g-over p{opacity:0;animation:hero-up .95s .54s both cubic-bezier(.2,.7,.2,1)}
+#hs1{transform-origin:50% 58%;animation:breathe 6.5s ease-in-out infinite}
+.reveal{transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion:reduce){.g-over .eb,.g-over h1,.g-over p,#hs1{animation:none;opacity:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- connecting "calm pulse" thread: jagged (panic) at top -> calm wave at bottom, draws on scroll -->
+  <div class="spine" id="spine" aria-hidden="true">
+    <svg viewBox="0 0 100 1600" preserveAspectRatio="none">
+      <path class="spine-track" d="M50 0 C90 55 90 70 50 120 C12 175 12 190 50 240 C88 300 88 312 50 362 C14 430 14 448 50 512 C86 600 86 620 50 706 C18 820 18 850 50 952 C82 1110 82 1150 50 1292 C50 1420 50 1510 50 1600"/>
+      <path class="spine-draw" id="spineDraw" d="M50 0 C90 55 90 70 50 120 C12 175 12 190 50 240 C88 300 88 312 50 362 C14 430 14 448 50 512 C86 600 86 620 50 706 C18 820 18 850 50 952 C82 1110 82 1150 50 1292 C50 1420 50 1510 50 1600"/>
+    </svg>
+    <div class="spine-dot" id="spineDot"></div>
+  </div>
+
+  <!-- SECTION: announce -->
+  <div class="announce">100-Day Calm Guarantee<span class="dotsep">·</span>Free US Shipping<span class="dotsep">·</span>Vet-Designed</div>
+
+  <!-- SECTION: header -->
+  <header class="hd">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="#21201C" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <div class="logo">Movaro</div>
+    <div class="hd-ic">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#21201C" stroke-width="1.7"/><path d="M20 20l-4-4" stroke="#21201C" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 7h13l-1.2 9a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6 7zM6 7L5 4H3" stroke="#21201C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </header>
+
+  <!-- SECTION: hero-gallery -->
+  <section class="gallery" data-block="gallery">
+    <div class="g-wrap">
+      <button class="g-arrow prev" onclick="gnav(-1)" aria-label="previous">‹</button>
+      <button class="g-arrow next" onclick="gnav(1)" aria-label="next">›</button>
+      <div class="g-carousel" id="gcar">
+
+        <!-- slide 1: HERO — calm cat, owner trims a paw -->
+        <div class="g-slide">
+          <img id="hs1" src="img/hero.png" alt="Calm cat in the Movaro wrap while an owner trims a front paw">
+          <div class="g-over">
+            <div class="eb">Vet-designed calming cat wrap</div>
+            <h1>Calm, not trapped.</h1>
+            <p>Trim nails, give meds &amp; groom your cat — solo, calm, in minutes.</p>
+          </div>
+        </div>
+
+        <!-- slide 2: benefit / result -->
+        <div class="g-slide"><img src="img/benefit.png" alt="Calm content cat, the wrap folded neatly beside it"><span class="chip" style="top:18px;left:18px;background:rgba(255,255,255,.92)">From war to calm — done solo in minutes</span></div>
+
+        <!-- slide 3: how it works (feature callouts baked) -->
+        <div class="g-slide"><img src="img/features.png" alt="Wrap features: quiet quilted fabric, velcro limb-access, Movaro tag"></div>
+
+        <!-- slide 4: in use -->
+        <div class="g-slide"><img src="img/inuse.png" alt="Owner gently holding the calm wrapped cat"><span class="chip" style="top:18px;left:18px;background:rgba(255,255,255,.92)">One person. No fight.</span></div>
+
+        <!-- slide 5: what's in the box -->
+        <div class="g-slide"><img src="img/bundle.png" alt="In the box: wrap + spray + treats + guide"><span class="chip" style="top:18px;left:18px">In the box: wrap + spray + treats + guide</span></div>
+
+      </div>
+      <div class="g-dots" id="gdots"></div>
+    </div>
+    <div class="g-thumbs" id="gthumbs">
+      <div class="ill on"><img src="img/hero.png" alt=""></div>
+      <div class="ill"><img src="img/benefit.png" alt=""></div>
+      <div class="ill"><img src="img/features.png" alt=""></div>
+      <div class="ill"><img src="img/inuse.png" alt=""></div>
+      <div class="ill"><img src="img/bundle.png" alt=""></div>
+    </div>
+  </section>
+  <!-- SECTION: buy-box -->
+  <section class="buybox" data-block="buybox">
+    <div class="descriptor">Vet-designed calming cat wrap</div>
+    <h1>Movaro Calm Wrap</h1>
+    <div class="rating-row"><span class="stars">★★★★★</span> 4.8 · <a href="#reviews">600+ calm cats 🐾</a></div>
+    <p class="promise">Finally trim nails, give meds &amp; groom your cat <b class="hl">solo — calm, in minutes.</b> No scratches, no vet bills, no guilt.</p>
+
+    <div class="trio">
+      <div class="t"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#3E5C5A" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8L15 10" stroke="#3E5C5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Vet-designed</b></div>
+      <div class="t"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.3-7-9.6A4.4 4.4 0 0 1 12 8a4.4 4.4 0 0 1 7 2.8C19 16.7 12 21 12 21z" stroke="#3E5C5A" stroke-width="1.6" stroke-linejoin="round"/></svg><b>100-Day Guarantee</b></div>
+      <div class="t"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7" stroke="#3E5C5A" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.7" stroke="#3E5C5A" stroke-width="1.6"/><circle cx="17.5" cy="17" r="1.7" stroke="#3E5C5A" stroke-width="1.6"/></svg><b>Free Shipping</b></div>
+    </div>
+
+    <div class="field-label">Choose your kit</div>
+    <div id="bundle">
+      <div class="opt sel" data-price="89" data-was="119" data-label="Calm Bundle"><span class="save-tag">Save $30</span><div class="rb"></div>
+        <div class="o-main"><b>Calm Bundle</b><small>Wrap + calming spray + treat sample + how-to guide</small></div>
+        <div class="o-price"><b>$89</b><s>$119</s></div></div>
+      <div class="opt" data-price="69" data-was="99" data-label="Single Wrap"><div class="rb"></div>
+        <div class="o-main"><b>Single Wrap</b><small>Just the Movaro Calm Wrap</small></div>
+        <div class="o-price"><b>$69</b><s>$99</s></div></div>
+    </div>
+
+    <div class="field-label">Select size <a href="#faq">Size finder ›</a></div>
+    <div class="sizes" id="sizes"><button>Kitten</button><button>S</button><button class="sel">M</button><button>L</button><button>XL</button></div>
+
+    <div class="gifts">
+      <div class="gift"><span class="g-badge">Free $19</span><div class="ill"><svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#ECE7DC"/><rect x="25" y="22" width="14" height="26" rx="3" fill="#6E8B89"/><rect x="28" y="14" width="8" height="9" fill="#3E5C5A"/><rect x="27" y="11" width="10" height="4" rx="1" fill="#3E5C5A"/><path d="M24 16 l-6 -3 M24 19 l-7 0" stroke="#D9A47F" stroke-width="1.6" stroke-linecap="round"/></svg></div><small>Calming spray</small></div>
+      <div class="gift"><span class="g-badge">Free $9</span><div class="ill"><svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#ECE7DC"/><path d="M20 22 h20 v22 a3 3 0 0 1 -3 3 H23 a3 3 0 0 1 -3 -3Z" fill="#D9A47F"/><path d="M20 22 l4 -6 h12 l4 6Z" fill="#B9774F"/><circle cx="27" cy="34" r="2.2" fill="#8a5636"/><circle cx="34" cy="38" r="2.2" fill="#8a5636"/><circle cx="32" cy="30" r="2.2" fill="#8a5636"/></svg></div><small>Treat sample</small></div>
+      <div class="gift"><span class="g-badge">Free $15</span><div class="ill"><svg viewBox="0 0 60 60"><rect width="60" height="60" fill="#ECE7DC"/><rect x="19" y="16" width="22" height="28" rx="2" fill="#fff" stroke="#C9BFAE"/><path d="M24 23 h12 M24 28 h12 M24 33 h8" stroke="#6E8B89" stroke-width="2" stroke-linecap="round"/><path d="M41 16 v28 l4 -3 V19Z" fill="#6E8B89"/></svg></div><small>How-to guide</small></div>
+    </div>
+
+    <div class="stock"><span class="dot"></span> In stock — ships within 24h · Est. delivery in 3–5 days</div>
+    <div class="price-row"><span class="now" id="px-now">$89</span><span class="was" id="px-was">$119</span><span class="pill-save" id="px-save">Save $30</span></div>
+    <button class="btn" onclick="addToCart()">Calm my cat — Add to cart</button>
+    <div class="under-cta">
+      <div class="row">
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="#6A6256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Free US shipping</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="#6A6256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 100-day money-back</span>
+      </div>
+      <div class="pay"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span><span>APPLE PAY</span><span>G PAY</span><span>SHOP PAY</span></div>
+    </div>
+  </section>
+  <!-- SECTION: trust-strip -->
+  <div class="tstrip" data-block="trust-strip">
+    <div class="ti"><b>4.8★</b><small>600+ reviews</small></div>
+    <div class="ti"><b>Vet</b><small>Designed</small></div>
+    <div class="ti"><b>100</b><small>Day guarantee</small></div>
+    <div class="ti"><b>Free</b><small>US shipping</small></div>
+  </div>
+
+  <!-- SECTION: ugc -->
+  <section class="s-ivory" data-block="ugc">
+    <div class="sect-head reveal"><div class="eyebrow">★★★★★ Real cat parents</div><h2>"I genuinely can't believe it worked."</h2><p>Real owners, real spicy cats — filmed on their own phones, not in a studio.</p></div>
+    <div class="scroll reveal">
+      <div class="ugc-card">
+        <div class="ill"><img src="img/ugc1.png" alt=""></div>
+        <div class="ugc-handle"><span class="dot"></span>@badboymoosh_cats<span class="vf">✓</span></div><div class="ugc-txt">"Single-handedly ended the struggle to trim their nails. Worth every penny. #notsponsored"</div></div>
+      <div class="ugc-card">
+        <div class="ill"><img src="img/ugc2.png" alt=""></div>
+        <div class="ugc-handle"><span class="dot"></span>@peggy.and.theo<span class="vf">✓</span></div><div class="ugc-txt">"From panic to peace. He went from fighting to calm and cooperative. I cried a little 🥹"</div></div>
+      <div class="ugc-card">
+        <div class="ill"><img src="img/ugc3.png" alt=""></div>
+        <div class="ugc-handle"><span class="dot"></span>@thatspicycat<span class="vf">✓</span></div><div class="ugc-txt">"My cat is the definition of 'spicy.' First time I've done his nails ALONE without bleeding."</div></div>
+    </div>
+  </section>
+  <!-- SECTION: about / benefits -->
+  <section class="s-paper" data-block="about">
+    <div class="eyebrow reveal">The nightmare you know too well</div>
+    <h2 class="lead-h reveal">Nail day shouldn't feel like a war.</h2>
+    <p class="lead-p reveal">The hiss. The claws drawing blood. The two-person wrestling match that ends with your cat under the bed and you giving up — again. Eventually you just book the $150 sedated trim and feel guilty about all of it.</p>
+    <p class="lead-p reveal" style="margin-top:15px">Here's what nobody tells you: <b class="hl">your cat isn't being bad — it's scared.</b> And a scared cat doesn't need to be fought. It needs to feel safe. That's the whole idea behind the wrap.</p>
+
+    <div class="ill tape reveal">
+      <svg viewBox="0 0 360 450" preserveAspectRatio="xMidYMid slice"><rect width="360" height="450" fill="#ECE7DC"/><rect y="300" width="360" height="150" fill="#E7E0D1"/><path d="M150 300 q40 -8 70 0 v150 h-70Z" fill="#C8BAA3" opacity=".5"/>
+        <path d="M120 320 q70 -64 144 0 q10 56 -72 66 q-82 -10 -72 -66Z" fill="#6E8B89"/>
+        <rect x="178" y="316" width="28" height="56" rx="7" fill="#3E5C5A"/>
+        <ellipse cx="192" cy="252" rx="56" ry="50" fill="#C8BAA3"/>
+        <path d="M150 224 l7 -30 24 20Z" fill="#C8BAA3"/><path d="M234 224 l-7 -30 -24 20Z" fill="#C8BAA3"/>
+        <path d="M164 254 q10 7 20 0M200 254 q10 7 20 0" stroke="#2A2620" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M188 266 l4 5 4 -5" stroke="#2A2620" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M250 196 q40 4 50 40" stroke="#C8BAA3" stroke-width="20" fill="none" stroke-linecap="round"/>
+        <rect x="286" y="150" width="14" height="42" rx="4" fill="#6A6256" transform="rotate(22 293 170)"/>
+      </svg>
+      <span class="chip" style="top:14px;left:50%;transform:translateX(-50%)">Tap the dots to explore ↓</span>
+      <button class="hotspot" style="top:56%;left:44%" aria-label="pressure">+<span class="tip">Even, gentle pressure — most cats settle in ~60 seconds</span></button>
+      <button class="hotspot" style="top:42%;left:74%" aria-label="velcro">+<span class="tip">Velcro opens one limb at a time</span></button>
+      <button class="hotspot" style="top:72%;left:32%" aria-label="fabric">+<span class="tip">Soft, quiet fabric — no scary plastic crinkle</span></button>
+    </div>
+
+    <div class="brow reveal">
+      <div class="ill"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice"><rect width="120" height="160" fill="#E2E9E7"/><path d="M24 96 q36 -34 72 0 q5 30 -36 34 q-41 -4 -36 -34Z" fill="#6E8B89"/><rect x="52" y="92" width="16" height="30" rx="4" fill="#3E5C5A"/><ellipse cx="60" cy="64" rx="28" ry="25" fill="#C8BAA3"/><path d="M40 46 l4 -16 13 11Z" fill="#C8BAA3"/><path d="M80 46 l-4 -16 -13 11Z" fill="#C8BAA3"/><path d="M50 65 q5 4 10 0M62 65 q5 4 10 0" stroke="#2A2620" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M14 96 l10 0M106 96 l-10 0" stroke="#3E5C5A" stroke-width="2.4" stroke-linecap="round"/><text x="92" y="40" font-family="Fraunces" font-size="14" fill="#3E5C5A">z</text></svg></div>
+      <div class="bt"><h3>Calm, not trapped</h3>
+        <p>A $15 bag just traps a cat — which makes the panic worse. The Movaro wrap works the opposite way: even, gentle swaddle pressure (the same principle that calms a swaddled baby) tells your cat's nervous system it's safe. Within about a minute, most cats stop fighting and settle. Then velcro flaps open <i>one limb at a time</i>.</p>
+        <span class="proof">● Works for nails, meds, subQ fluids &amp; ears</span></div>
+    </div>
+    <div class="brow reveal">
+      <div class="ill"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice"><rect width="120" height="160" fill="#E2E9E7"/><circle cx="44" cy="52" r="14" fill="#C8BAA3"/><path d="M26 116 q0 -28 18 -28 q18 0 18 28Z" fill="#6E8B89"/><path d="M70 104 q26 -22 40 0 q4 20 -22 22 q-22 -2 -18 -22Z" fill="#6E8B89"/><ellipse cx="90" cy="86" rx="20" ry="18" fill="#C8BAA3"/><path d="M76 86 q4 3 8 0M92 86 q4 3 8 0" stroke="#2A2620" stroke-width="1.7" fill="none" stroke-linecap="round"/><circle cx="62" cy="60" r="13" fill="#3E5C5A"/><path d="M57 60 l3 3 6 -7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="bt"><h3>Finally — do it solo</h3>
+        <p>If trimming your cat has always been a two-person job, this is the part that changes your week. Wrapped and calm, your cat simply stays put — so one person, one pair of hands, gets it done in a few quiet minutes. No more begging a friend to come over. No more giving up halfway.</p>
+        <span class="proof">● Made for solo owners &amp; one-handed care</span></div>
+    </div>
+    <div class="brow reveal">
+      <div class="ill"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice"><rect width="120" height="160" fill="#E2E9E7"/><path d="M40 44 h28 l20 20 -34 34 -34 -34Z" fill="#6E8B89"/><circle cx="58" cy="62" r="6" fill="#E2E9E7"/><text x="46" y="108" font-family="Fraunces" font-size="30" font-weight="700" fill="#3E5C5A">$</text><path d="M84 96 l0 26 M84 122 l-7 -8 M84 122 l7 -8" stroke="#B9774F" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="bt"><h3>Pays for itself in ~3 trims</h3>
+        <p>A groomer charges $25–$30 a trim. A sedated vet visit runs $145–$500 — every single time. The Movaro wrap is a one-time $69 and <span class="hl">pays for itself in about three trims</span>, then keeps saving you for years of nails, meds and grooming you do calmly at home.</p>
+        <span class="proof">● One wrap ≈ 3 trims — then it's saving you money</span></div>
+    </div>
+  </section>
+  <!-- SECTION: mechanism (the genuine "Add" — why a wrap calms when a bag panics) -->
+  <section class="mech" data-block="mechanism">
+    <div class="sect-head reveal"><div class="eyebrow">The science of calm</div><h2>Why a wrap calms when a bag panics</h2><p>It's not magic and it's not force. It's the same gentle-pressure principle vets and parents have used for decades.</p></div>
+    <div class="ill mech-diagram reveal">
+      <svg viewBox="0 0 360 360" preserveAspectRatio="xMidYMid slice"><rect width="360" height="360" fill="#ECE7DC"/><circle cx="180" cy="180" r="150" fill="#E2E9E7"/>
+        <path d="M86 232 q94 -80 188 0 q12 66 -94 76 q-106 -10 -94 -76Z" fill="#6E8B89"/>
+        <rect x="162" y="228" width="36" height="64" rx="8" fill="#3E5C5A"/>
+        <ellipse cx="180" cy="156" rx="58" ry="52" fill="#C8BAA3"/>
+        <path d="M134 122 l8 -32 26 22ZM226 122 l-8 -32 -26 22Z" fill="#C8BAA3"/>
+        <path d="M150 158 q11 8 22 0M188 158 q11 8 22 0" stroke="#2A2620" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M174 170 l6 6 6 -6" stroke="#2A2620" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- gentle even-pressure arrows pointing inward -->
+        <g stroke="#3E5C5A" stroke-width="3.2" fill="none" stroke-linecap="round" opacity=".85">
+          <path d="M48 200 l26 8M74 208 l-9 -7M74 208 l-3 11"/>
+          <path d="M312 200 l-26 8M286 208 l9 -7M286 208 l3 11"/>
+          <path d="M70 282 l22 -16M92 266 l-11 -2M92 266 l1 11"/>
+          <path d="M290 282 l-22 -16M268 266 l11 -2M268 266 l-1 11"/>
+        </g>
+        <text x="180" y="338" text-anchor="middle" font-family="Jost" font-size="14" fill="#3E5C5A" font-weight="600">EVEN, GENTLE PRESSURE — ALL OVER</text>
+      </svg>
+    </div>
+    <div class="mech-pts">
+      <div class="mech-pt reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#3E5C5A" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div><b>Deep-pressure calm</b><p>Even, all-over pressure triggers the same "swaddle" response that settles a baby — the nervous system reads it as <i>safe</i> and the fight drains out. A bag presses nowhere and grips everywhere, so the cat keeps struggling.</p></div></div>
+      <div class="mech-pt reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" stroke="#3E5C5A" stroke-width="1.6"/><circle cx="12" cy="12" r="2.4" stroke="#3E5C5A" stroke-width="1.6"/></svg></div><div><b>Less to panic about</b><p>Soft, quiet fabric (no scary plastic crinkle) lowers the noise and the visual chaos that set a cat off in the first place. Calmer input → calmer cat.</p></div></div>
+      <div class="mech-pt reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M5 12l4-4M5 12l4 4" stroke="#3E5C5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><b>One limb, then done</b><p>You expose exactly the paw or area you need — not the whole cat — so the job is quick and the cat never feels fully cornered. Quick and contained beats long and total every time.</p></div></div>
+    </div>
+  </section>
+  <!-- SECTION: before/after -->
+  <section class="s-ivory" data-block="before-after">
+    <div class="sect-head reveal"><div class="eyebrow">See the difference</div><h2>From war to calm</h2><p>Same cat, same nail trim — with and without the wrap. It doesn't force calm; it lets your cat settle on its own.</p></div>
+    <div class="ba-grid reveal">
+      <div class="col"><div class="ill"><svg viewBox="0 0 160 210" preserveAspectRatio="xMidYMid slice"><rect width="160" height="210" fill="#F2E6DE"/><ellipse cx="80" cy="170" rx="74" ry="34" fill="#E8D6CB"/><path d="M44 150 q36 -58 72 0 q-4 30 -36 30 q-32 0 -36 -30Z" fill="#B89A86"/><path d="M40 120 l8 -30 16 20ZM120 120 l-8 -30 -16 20Z" fill="#B89A86"/><path d="M60 130 l10 12M100 130 l-10 12" stroke="#2A2620" stroke-width="2.4" stroke-linecap="round"/><circle cx="64" cy="134" r="2" fill="#2A2620"/><circle cx="96" cy="134" r="2" fill="#2A2620"/><path d="M74 150 q6 -5 12 0" stroke="#2A2620" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M30 96 l-12 -8M126 96 l12 -8M24 120 l-14 -2M136 120 l14 -2" stroke="#B9774F" stroke-width="2.4" stroke-linecap="round"/><path d="M118 64 l8 -8 M122 60 l8 -2" stroke="#B9774F" stroke-width="2" stroke-linecap="round"/></svg><span class="chip" style="top:12px;left:12px;background:var(--clay);color:#fff">Before</span></div><div class="ba-cap b">The usual battle</div></div>
+      <div class="col"><div class="ill"><svg viewBox="0 0 160 210" preserveAspectRatio="xMidYMid slice"><rect width="160" height="210" fill="#E2E9E7"/><ellipse cx="80" cy="172" rx="76" ry="32" fill="#D9E3E0"/><path d="M30 156 q50 -30 100 0 q6 24 -50 28 q-56 -4 -50 -28Z" fill="#6E8B89"/><rect x="70" y="150" width="20" height="34" rx="5" fill="#3E5C5A"/><ellipse cx="80" cy="120" rx="34" ry="30" fill="#C8BAA3"/><path d="M52 98 l6 -20 16 14ZM108 98 l-6 -20 -16 14Z" fill="#C8BAA3"/><path d="M66 120 q7 5 14 0M86 120 q7 5 14 0" stroke="#2A2620" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M76 130 l4 4 4 -4" stroke="#2A2620" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="118" y="70" font-family="Fraunces" font-size="20" fill="#3E5C5A">z</text><text x="134" y="54" font-family="Fraunces" font-size="14" fill="#6E8B89">z</text></svg><span class="chip" style="top:12px;left:12px;background:var(--sage);color:#fff">After</span></div><div class="ba-cap a">Calm &amp; cooperative</div></div>
+    </div>
+  </section>
+  <!-- SECTION: comparison (3-way: us vs cheap bag vs vet) -->
+  <section class="s-paper" data-block="compare">
+    <div class="sect-head reveal"><div class="eyebrow">Don't settle</div><h2>Why owners switch to Movaro</h2><p>A cheap bag traps. A vet sedates &amp; charges. The wrap does the one thing that actually works — it calms.</p></div>
+    <div class="cmp reveal">
+      <div class="cmp-head">
+        <div class="h"></div>
+        <div class="h us"><div class="mini"><svg viewBox="0 0 54 54"><rect width="54" height="54" fill="#E2E9E7"/><path d="M12 34 q15 -16 30 0 q2 12 -15 14 q-17 -2 -15 -14Z" fill="#6E8B89"/><rect x="23" y="32" width="8" height="14" rx="2" fill="#3E5C5A"/><ellipse cx="27" cy="22" rx="13" ry="11" fill="#C8BAA3"/><path d="M20 22 q4 3 7 0M27 22 q4 3 7 0" stroke="#2A2620" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg></div><b>Movaro</b></div>
+        <div class="h them"><b>$15 bag<br>· vet visit</b></div>
+      </div>
+      <div class="cmp-row"><div class="c lbl">Actually calms (not just traps)</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
+      <div class="cmp-row"><div class="c lbl">Quiet, soft fabric</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">Noisy / N/A</span></div></div>
+      <div class="cmp-row"><div class="c lbl">Do it solo at home</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
+      <div class="cmp-row"><div class="c lbl">Fits Kitten → XL</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">One size</span></div></div>
+      <div class="cmp-row"><div class="c lbl">Cost over a year</div><div class="c us">$69 once</div><div class="c"><span class="cross">$300+</span></div></div>
+      <div class="cmp-row"><div class="c lbl">100-day guarantee</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION: vet authority (E-A-T, woven) -->
+  <section class="vet" data-block="vet">
+    <div class="vet-card reveal">
+      <div class="ill"><svg viewBox="0 0 90 90" preserveAspectRatio="xMidYMid slice"><rect width="90" height="90" fill="#E2E9E7"/><circle cx="45" cy="34" r="17" fill="#C8BAA3"/><path d="M18 84 q0 -27 27 -27 q27 0 27 27Z" fill="#6E8B89"/><path d="M38 80 v-14 h14 v14" fill="#fff"/><path d="M45 66 v10 M40 71 h10" stroke="#3E5C5A" stroke-width="2.4" stroke-linecap="round"/><path d="M37 32 q4 3 8 0M45 32 q4 3 8 0" stroke="#2A2620" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>
+      <div><div class="vq">"Gentle wrapping is how we keep anxious cats calm for exams. Movaro puts that same method in the owner's hands — at home, without the fear."</div><div class="vn">— Designed with practicing veterinarians · Movaro</div></div>
+    </div>
+  </section>
+  <!-- SECTION: instruction -->
+  <section class="s-cream" data-block="instruction">
+    <div class="sect-head reveal"><div class="eyebrow">Easier than the towel trick</div><h2>Calm in 3 simple steps</h2><p>No training, no second person. If you can wrap a burrito, you can do this.</p></div>
+    <div class="scroll reveal">
+      <div class="step-card"><div class="ill"><svg viewBox="0 0 215 161" preserveAspectRatio="xMidYMid slice"><rect width="215" height="161" fill="#ECE7DC"/><rect x="46" y="92" width="124" height="40" rx="8" fill="#9DB3B0"/><path d="M46 92 q62 -14 124 0" stroke="#6E8B89" stroke-width="2" fill="none"/><ellipse cx="108" cy="74" rx="34" ry="28" fill="#C8BAA3"/><path d="M84 54 l6 -18 16 14ZM132 54 l-6 -18 -16 14Z" fill="#C8BAA3"/><path d="M96 74 q6 4 12 0M112 74 q6 4 12 0" stroke="#2A2620" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M40 110 q-10 -2 -10 12M175 110 q10 -2 10 12" stroke="#3E5C5A" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M30 122 l-4 -5M30 122 l5 -3M185 122 l4 -5M185 122 l-5 -3" stroke="#3E5C5A" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></div><div class="s-body"><div class="s-num">STEP 1</div><h4>Wrap</h4><p>Lay the cat on the open wrap, fold the sides over and fasten the velcro. Snug, never tight.</p></div></div>
+      <div class="step-card"><div class="ill"><svg viewBox="0 0 215 161" preserveAspectRatio="xMidYMid slice"><rect width="215" height="161" fill="#ECE7DC"/><path d="M70 120 q38 -30 76 0 q5 22 -38 26 q-43 -4 -38 -26Z" fill="#6E8B89"/><rect x="100" y="116" width="16" height="28" rx="4" fill="#3E5C5A"/><ellipse cx="108" cy="88" rx="30" ry="26" fill="#C8BAA3"/><path d="M95 88 q7 5 13 0M108 88 q7 5 13 0" stroke="#2A2620" stroke-width="2" fill="none" stroke-linecap="round"/><text x="150" y="60" font-family="Fraunces" font-size="20" fill="#3E5C5A">z</text><text x="166" y="46" font-family="Fraunces" font-size="14" fill="#6E8B89">z</text><circle cx="56" cy="54" r="16" fill="none" stroke="#B9774F" stroke-width="2.4"/><path d="M56 46 v8 l5 4" stroke="#B9774F" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="s-body"><div class="s-num">STEP 2</div><h4>Soothe</h4><p>Give it about 60 seconds. The gentle pressure does the work — the fight drains out and your cat settles.</p></div></div>
+      <div class="step-card"><div class="ill"><svg viewBox="0 0 215 161" preserveAspectRatio="xMidYMid slice"><rect width="215" height="161" fill="#ECE7DC"/><path d="M64 122 q44 -28 88 0 q4 20 -44 24 q-48 -4 -44 -24Z" fill="#6E8B89"/><path d="M108 120 l24 6 q4 -16 -10 -22Z" fill="#9DB3B0"/><ellipse cx="150" cy="120" rx="13" ry="9" fill="#C8BAA3"/><ellipse cx="108" cy="92" rx="30" ry="26" fill="#C8BAA3"/><path d="M95 92 q7 5 13 0M108 92 q7 5 13 0" stroke="#2A2620" stroke-width="2" fill="none" stroke-linecap="round"/><rect x="158" y="96" width="9" height="26" rx="3" fill="#6A6256" transform="rotate(28 162 108)"/></svg></div><div class="s-body"><div class="s-num">STEP 3</div><h4>Groom</h4><p>Open one velcro flap, do the nails, meds or ears, close it — done. Then treat &amp; release.</p></div></div>
+    </div>
+  </section>
+  <!-- SECTION: offer / value stack -->
+  <section class="offer" data-block="offer">
+    <div class="sect-head reveal"><div class="eyebrow">Everything you get</div><h2>The whole Calm Bundle</h2><p>Against a $145–$500 sedated vet trim, the math isn't close.</p></div>
+    <div class="stack reveal">
+      <div class="row"><span>Movaro Calm Wrap (your size)</span><span>$69</span></div>
+      <div class="row"><span>Calming pheromone spray</span><span><s>$19</s> <span class="free">Free</span></span></div>
+      <div class="row"><span>Calming treat sample</span><span><s>$9</s> <span class="free">Free</span></span></div>
+      <div class="row"><span>Positive-association how-to guide</span><span><s>$15</s> <span class="free">Free</span></span></div>
+      <div class="row"><span>Today</span><span class="total">$89&nbsp; <s style="font-weight:400">$112</s></span></div>
+    </div>
+    <div class="guarantee reveal">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#6E8B89" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#6E8B89" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div style="text-align:left"><b>100-Day Calm Guarantee</b><br><small>Love it or your money back · keep the spray as our gift · free US shipping</small></div>
+    </div>
+    <button class="btn reveal" onclick="addToCart()">Get the Calm Bundle — $89</button>
+  </section>
+
+  <!-- SECTION: faq -->
+  <section class="s-paper" data-block="faq" id="faq">
+    <div class="sect-head reveal"><div class="eyebrow">Simple, honest answers</div><h2>Questions, answered</h2></div>
+    <details open><summary>"This would never work on MY cat." <span class="pm">+</span></summary><div class="ans">That's what most owners say — including the ones reviewing the spiciest, most fractious cats they've owned. The swaddle pressure works <i>with</i> a cat's instinct to feel safe when held snugly, not against it. And you're covered by our 100-day guarantee, so trying it on your cat costs you nothing.</div></details>
+    <details><summary>Isn't wrapping cruel? Won't it panic more? <span class="pm">+</span></summary><div class="ans">Gentle wrapping is the opposite of scruffing — vets use it precisely because it calms. The fabric is soft and quiet (no scary plastic), it lowers visual stimulation, and most cats settle within a minute. We include a positive-association quick-start so the very first time builds trust instead of fear.</div></details>
+    <details><summary>What size do I need? <span class="pm">+</span></summary><div class="ans">We make Kitten, S, M, L and XL — most adult cats are M, large or fluffy cats L/XL. Our size finder matches by weight and build. (The #1 complaint with other wraps is one-size-fits-all; we fixed that.)</div></details>
+    <details><summary>Can I use it with meds my vet prescribed? <span class="pm">+</span></summary><div class="ans">Yes — owners use it for pills, ear drops, subQ fluids and insulin, and it works alongside calming aids like gabapentin your vet may already recommend. It simply makes home care easier. It's a grooming &amp; calming aid, not a medical device.</div></details>
+    <details><summary>What if it doesn't work for us? <span class="pm">+</span></summary><div class="ans">Send it back within 100 days for a full refund — and keep the calming spray as our gift. Free US shipping. That's the Calm Guarantee: the only risk is staying stuck with nail-day battles.</div></details>
+  </section>
+  <!-- SECTION: written reviews -->
+  <section class="s-ivory" data-block="reviews" id="reviews">
+    <div class="sect-head reveal"><div class="eyebrow">Verified buyers</div><h2>Loved by spicy-cat parents</h2></div>
+    <div class="rev-summary reveal">
+      <div style="text-align:center"><div class="big">4.8</div><div class="stars">★★★★★</div><div class="muted" style="font-size:11px">612 reviews</div></div>
+      <div class="bars">
+        <div class="bar-row">5 <span class="bar"><i style="width:86%"></i></span> 526</div>
+        <div class="bar-row">4 <span class="bar"><i style="width:10%"></i></span> 61</div>
+        <div class="bar-row">3 <span class="bar"><i style="width:3%"></i></span> 18</div>
+        <div class="bar-row">2 <span class="bar"><i style="width:1%"></i></span> 5</div>
+        <div class="bar-row">1 <span class="bar"><i style="width:0%"></i></span> 2</div>
+      </div>
+    </div>
+    <div class="rev reveal"><div class="top"><span class="name">Rebecca T. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★★</span></div><h4>"Now it only takes one person"</h4><p>I live alone and trimming his nails was genuinely impossible — I'd dread it for weeks. With this it only takes one person, and it's quiet, unlike the plastic ones that made him panic. First time in years his nails are actually short.</p>
+      <div class="rphoto">
+        <div class="ill"><img src="img/ugc3.png" alt=""></div>
+        <div class="ill"><img src="img/ugc1.png" alt=""></div>
+      </div></div>
+    <div class="rev reveal"><div class="top"><span class="name">Chris E. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★★</span></div><h4>"Cheaper than one vet trip"</h4><p>$145 for anesthesia plus $25 for the actual trim — every time. This paid for itself the first month and my cat is far less stressed than at the clinic. Wish I'd found it years ago.</p></div>
+    <div class="rev reveal"><div class="top"><span class="name">Leighann C. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★☆</span></div><h4>"Saving my senior cat"</h4><p>I could never get fluids into him and can't afford weekly vet visits. Honestly this thing is saving my buddy's life. (Tip: size up if your cat is fluffy — the size guide helped.)</p>
+      <div class="rphoto"><div class="ill"><img src="img/ugc2.png" alt=""></div></div></div>
+    <p class="muted" style="font-size:12px;text-align:center;margin-top:16px">Reviews load from our review app with real buyer photos — drawn placeholders shown here.</p>
+  </section>
+
+  <!-- SECTION: close cta -->
+  <section class="close-cta" data-block="close">
+    <h3>Ready to end the war?</h3>
+    <p>Calm nail trims, meds &amp; grooming — solo, in minutes. Backed by a 100-day guarantee.</p>
+    <button class="btn" style="max-width:320px;margin:0 auto" onclick="addToCart()">Calm my cat — $89</button>
+  </section>
+
+  <!-- SECTION: footer -->
+  <footer class="footer" data-block="footer">
+    <div class="logo">Movaro</div>
+    Calm, not trapped.<br>
+    Vet-designed calming wraps for the cats we love.<br><br>
+    © Movaro · 100-Day Calm Guarantee · Free US Shipping<br>
+    Shipping · Returns · Contact · Privacy
+  </footer></div>
+<div class="sticky" id="sticky">
+  <div class="sp"><span id="st-px"><b>$89</b><s>$119</s></span><small id="st-lbl">Calm Bundle · M</small></div>
+  <button class="btn" onclick="addToCart()">Add to cart</button>
+</div>
+<script>
+  // ---- gallery carousel ----
+  var gcar=document.getElementById('gcar');
+  var thumbs=Array.prototype.slice.call(document.querySelectorAll('#gthumbs .ill'));
+  var dotsWrap=document.getElementById('gdots');
+  thumbs.forEach(function(){var i=document.createElement('i');dotsWrap.appendChild(i);});
+  var dots=Array.prototype.slice.call(dotsWrap.children);
+  function setActive(i){thumbs.forEach(function(t,n){t.classList.toggle('on',n===i);});dots.forEach(function(d,n){d.classList.toggle('on',n===i);});}
+  function gnav(d){gcar.scrollBy({left:d*gcar.clientWidth,behavior:'smooth'});}
+  thumbs.forEach(function(t,i){t.addEventListener('click',function(){gcar.scrollTo({left:i*gcar.clientWidth,behavior:'smooth'});});});
+  gcar.addEventListener('scroll',function(){var i=Math.round(gcar.scrollLeft/gcar.clientWidth);setActive(i);});
+
+  // ---- bundle + size -> price ----
+  var state={price:89,was:119,label:'Calm Bundle',size:'M'};
+  function fmt(){
+    var save=state.was-state.price;
+    document.getElementById('px-now').textContent='$'+state.price;
+    document.getElementById('px-was').textContent='$'+state.was;
+    document.getElementById('px-save').textContent='Save $'+save;
+    document.getElementById('st-px').innerHTML='<b>$'+state.price+'</b><s>$'+state.was+'</s>';
+    document.getElementById('st-lbl').textContent=state.label+' · '+state.size;
+  }
+  document.querySelectorAll('#bundle .opt').forEach(function(o){
+    o.addEventListener('click',function(){
+      document.querySelectorAll('#bundle .opt').forEach(function(x){x.classList.remove('sel');});
+      o.classList.add('sel');
+      state.price=+o.dataset.price;state.was=+o.dataset.was;state.label=o.dataset.label;fmt();
+    });
+  });
+  document.querySelectorAll('#sizes button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('#sizes button').forEach(function(x){x.classList.remove('sel');});
+      b.classList.add('sel');state.size=b.textContent;fmt();
+    });
+  });
+  function addToCart(){var s=document.getElementById('sticky');s.classList.add('show');s.animate([{transform:'scale(1)'},{transform:'scale(1.02)'},{transform:'scale(1)'}],{duration:260});}
+
+  // ---- sticky on scroll past buy-box ----
+  var buybox=document.querySelector('.buybox');
+  var sticky=document.getElementById('sticky');
+  new IntersectionObserver(function(e){sticky.classList.toggle('show',!e[0].isIntersecting&&e[0].boundingClientRect.top<0);},{threshold:0}).observe(buybox);
+
+  // ---- scroll reveal ----
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  fmt();
+
+  // ===== Stage 2.4 engagement =====
+  // image hotspots (tap to reveal)
+  document.querySelectorAll('.hotspot').forEach(function(h){
+    h.addEventListener('click',function(e){e.preventDefault();var was=h.classList.contains('on');document.querySelectorAll('.hotspot').forEach(function(x){x.classList.remove('on');});if(!was)h.classList.add('on');});
+  });
+  // connecting "calm pulse" thread — draws from jagged (panic) to calm wave as you scroll
+  (function(){
+    var spine=document.getElementById('spine'),draw=document.getElementById('spineDraw'),dot=document.getElementById('spineDot');
+    if(!spine||!draw||!dot)return;
+    var startEl=document.querySelector('[data-block="ugc"]'),endEl=document.querySelector('[data-block="offer"]');
+    if(!startEl||!endEl)return;
+    var len=draw.getTotalLength();draw.style.strokeDasharray=len;
+    function upd(){
+      var top=startEl.offsetTop,h=endEl.offsetTop+endEl.offsetHeight-top;
+      spine.style.top=top+'px';spine.style.height=h+'px';
+      var p=(window.scrollY+window.innerHeight*0.55-top)/h;p=Math.max(0,Math.min(1,p));
+      draw.style.strokeDashoffset=len*(1-p);
+      var pt=draw.getPointAtLength(len*p);
+      dot.style.left=(pt.x/100*spine.clientWidth)+'px';
+      dot.style.top=(pt.y/1600*h)+'px';
+    }
+    window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);setTimeout(upd,80);
+  })();
+</script>
+</body>
+</html>
