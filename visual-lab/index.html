@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movaro — Visual Lab (фото)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Jost',sans-serif;background:#F8F4ED;color:#22201C;line-height:1.6;padding:40px 22px;max-width:680px;margin:0 auto}
+  h1{font-family:'Cabin';font-size:30px;letter-spacing:.02em;margin-bottom:6px}
+  .sub{color:#5C544A;margin-bottom:18px;font-size:15px}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5E7052;margin-bottom:24px}
+  a{color:#5E7052}
+  .note{background:#fff;border:1px dashed #C7BCA9;border-radius:10px;padding:13px 15px;font-size:13px;color:#5C544A;margin-bottom:22px}
+  .note b{color:#22201C}
+  .group{background:#fff;border:1px solid #D9D0C2;border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .group[open]{border-color:#5E7052}
+  summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary:hover{background:#FAF7F1}
+  summary .gt{font-family:'Cabin';font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5E7052;white-space:nowrap}
+  summary .gh{font-family:'Cabin';font-size:17px;font-weight:600;flex:1;line-height:1.25}
+  summary .cnt{font-size:12px;color:#8A8174;background:#F1EADB;border-radius:999px;padding:2px 9px}
+  summary .chev{transition:transform .2s;color:#8A8174;font-size:13px}
+  .group[open] summary .chev{transform:rotate(90deg)}
+  .items{padding:0 16px 12px}
+  .item{display:block;border-top:1px solid #EFE8DB;padding:14px 4px;text-decoration:none;color:inherit}
+  .item:hover{background:#FAF7F1}
+  .item .it{font-family:'Cabin';font-weight:700;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#5E7052}
+  .item h3{font-family:'Cabin';font-size:16px;margin:3px 0 4px;font-weight:600}
+  .item p{font-size:13px;color:#5C544A}
+  footer{margin-top:26px;font-size:12px;color:#8A8174}
+</style>
+</head>
+<body>
+  <div class="eyebrow">Movaro · Website · Visual Production</div>
+  <h1>Visual Lab — фото</h1>
+  <p class="sub">История фото-системы (подотдел визуала): как выводим структуру, шаблоны и генерим фотосет. По сессиям. ← <a href="../index.html">Website Lab (сайт)</a></p>
+
+  <div class="note">⚠️ <b>Промежуточное, разрабатываем — не «устоявшееся».</b> Структура и шаблоны выведены из анализа сильных брендов; оттачиваем каждую сессию. Метод: ChatGPT (thinking mode) даёт фото → Claude накладывает текст/выноски/сравнение кодом.</div>
+
+  <details class="group" open>
+    <summary><span class="gt">6 июн 2026</span><span class="gh">Session 3-cont — Hero фотосхема (Pro Cat Wrap)</span><span class="cnt">4</span><span class="chev">▸</span></summary>
+    <div class="items">
+      <a class="item" href="hero-teardown/table-a.html"><div class="it">Шаг 1 · Анализ</div><h3>Разбор 66 брендов (raw teardown + отметки)</h3><p>Галереи флагманов 66 сильных DTC (17 Марины + 49 из 1800DTC), фото-по-фото. Отмечаем сильное галочками → выводим паттерны. Вывод: у всех &gt;5 фото; норма 6–9.</p></a>
+      <a class="item" href="hero-teardown/template-board.html"><div class="it">Шаг 2 · Шаблон</div><h3>Общий шаблон HERO — 5 слотов</h3><p>Выведенные из анализа слоты: 1 крючок · 2 выгода · 3 как-устроено/выноски · 4 в-использовании · 5 мы-они/ценность. Продукт-агностичный, под любую нишу.</p></a>
+      <a class="item" href="hero-teardown/board-procatwrap.html"><div class="it">Шаг 3 · Наполнение</div><h3>Pro Cat Wrap — скетч-план по слотам</h3><p>Шаблон наполнен смыслами из PI («Calm, not trapped», боли/возражения). Черновые скетчи-планы (что снимаем + что пишем) до генерации.</p></a>
+      <a class="item" href="hero-teardown/СОБРАНО/_gallery-preview.jpg"><div class="it">Шаг 4 · Результат</div><h3>Собранная hero-галерея (промежуточный результат)</h3><p>Все 5 слотов + таблица «Мы-Они»: GPT-фото (thinking-mode карусель, мастер-лок) + наложенный кодом текст/выноски/сравнение/ценность. База v1.</p></a>
+    </div>
+  </details>
+
+  <footer>Visual Lab · подпапка Website Lab (отдельный репозиторий, основная рабочая папка не перегружается).<br>
+  Рабочие файлы: <code>hero-teardown/</code> (доски · refs · ВЫБРАНО · СОБРАНО · _РЕЗУЛЬТАТЫ-сюда).</footer>
+</body>
+</html>
