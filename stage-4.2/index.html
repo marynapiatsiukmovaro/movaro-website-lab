@@ -83,6 +83,9 @@ section{padding:62px 26px}
 .flag .price .now{font-family:'Fraunces';font-size:26px;font-weight:600}
 .flag .price .was{color:var(--muted);text-decoration:line-through;font-size:15px}
 .flag .price .save{font-family:'Jost';font-size:11px;font-weight:600;color:var(--sage);background:var(--sage-tint);padding:4px 10px;border-radius:var(--pill)}
+.flag ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin:14px 0 18px}
+.flag ul li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink);line-height:1.4}
+.flag ul li .bem{font-size:17px;width:22px;text-align:center;flex-shrink:0;margin-top:1px}
 
 /* OFFER blocks — compact: image + big headline + ONE line + ONE accent */
 .ob .ph{aspect-ratio:16/11;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);margin-bottom:20px}
@@ -210,7 +213,12 @@ section{padding:62px 26px}
         <div class="d">Vet-designed calming cat wrap</div>
         <h3>Movaro Calm Wrap</h3>
         <div class="rt"><span class="stars">★★★★★</span> 4.8 · 600+ calm cats 🐾</div>
-        <div class="price"><span class="now">$64.99</span><span class="was">$99.99</span><span class="save">+ 3 free gifts</span></div>
+        <ul>
+          <li><span class="bem">😌</span><span><b class="hlw">Calm in ~60 seconds</b> — gentle pressure, no fight</span></li>
+          <li><span class="bem">🙌</span><span><b class="hlw">Do it solo</b> — one person, a few quiet minutes</span></li>
+          <li><span class="bem">💰</span><span><b class="hlw">Saves $300+/year</b> vs groomer &amp; sedated vet trims</span></li>
+        </ul>
+        <div class="price"><span class="now">$64.99</span><span class="was">$99.99</span><span class="save">+ 3 free gifts ($35)</span></div>
         <a href="../stage-4.0/index.html" class="btn block">Shop now →</a>
       </div>
     </div>
