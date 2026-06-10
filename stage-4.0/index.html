@@ -205,7 +205,7 @@ section{padding:60px 24px}
 .cmp{margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
 .cmp-head{display:grid;grid-template-columns:1.25fr .9fr .9fr;align-items:end}
 .cmp-head .h{padding:18px 6px 13px;text-align:center}
-.cmp-head .us{background:var(--sage-tint);border-radius:14px 14px 0 0;margin-top:-12px;padding-top:26px;box-shadow:0 -7px 16px rgba(33,32,28,.07);position:relative}
+.cmp-head .us{background:var(--sage-tint);border-radius:13px 13px 0 0}
 .cmp-head .mini{aspect-ratio:1;width:48px;margin:0 auto 7px;border-radius:9px;overflow:hidden}
 .cmp-head .us b{font-family:'Fraunces';font-size:15px;font-weight:600}
 .cmp-head .them b{font-family:'Jost';font-size:11.5px;font-weight:600;color:var(--muted);line-height:1.3;display:block}
@@ -213,7 +213,7 @@ section{padding:60px 24px}
 .cmp-row .c{padding:14px 7px;text-align:center;display:flex;align-items:center;justify-content:center}
 .cmp-row .lbl{justify-content:flex-start;text-align:left;color:var(--ink-soft);font-weight:500}
 .cmp-row .us{background:var(--sage-tint);font-weight:600}
-.cmp-row:last-child .us{border-radius:0 0 14px 14px;margin-bottom:-12px;padding-bottom:24px;box-shadow:0 9px 18px rgba(33,32,28,.1)}
+.cmp-row:last-child .us{border-radius:0 0 13px 13px}
 .tick{color:var(--sage);font-weight:700;font-size:15px} .cross{color:var(--muted);font-size:11px}
 
 /* vet authority */
@@ -223,8 +223,8 @@ section{padding:60px 24px}
 .vet-card .vq{font-family:'Fraunces';font-size:18px;font-weight:500;line-height:1.3;font-style:italic}
 .vet-card .vn{font-family:'Jost';font-size:12px;color:var(--ink-soft);margin-top:8px;font-style:normal}
 .cmp-tag{font-family:'Jost';font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:var(--pill);padding:3px 9px;display:inline-block;margin-top:5px}
-.cmp-trust{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px}
-.cmp-trust span{font-family:'Jost';font-size:11px;font-weight:600;color:var(--accent-deep);background:var(--sage-tint);border-radius:var(--pill);padding:6px 11px}
+.cmp-trust{display:flex;flex-wrap:wrap;gap:5px 16px;justify-content:center;margin-top:22px;font-family:'Jost';font-size:12px;color:var(--ink-soft)}
+.cmp-trust span{white-space:nowrap}
 .cmp-head .mini img{width:100%;height:100%;object-fit:cover;display:block}
 .brandblock{display:flex;gap:16px;align-items:center}
 .brand-photo{position:relative;width:92px;height:92px;flex-shrink:0;border-radius:12px;overflow:hidden}
@@ -244,18 +244,18 @@ section{padding:60px 24px}
 .step-card p{font-size:12.5px;color:var(--ink-soft)}
 
 /* offer / stack */
-.offer{background:var(--ink);color:#fff}
-.offer .sect-head h2{color:#fff}.offer .sect-head p{color:rgba(255,255,255,.7)}
-.offer .eyebrow{color:var(--sage-soft)}
-.stack{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:22px;margin-top:8px}
-.stack .row{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.9)}
-.stack .row:last-child{border:none;font-weight:700;font-size:17px;padding-bottom:0;color:#fff}
-.stack .row .free{color:var(--sage-soft);font-weight:600}
-.stack .row s{color:rgba(255,255,255,.45)}
+.offer{background:var(--cream)}
+.offer .sect-head h2{color:var(--ink)}.offer .sect-head p{color:var(--ink-soft)}
+.offer .eyebrow{color:var(--accent-deep)}
+.stack{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-top:8px;box-shadow:var(--shadow)}
+.stack .row{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:11px 0;border-bottom:1px solid var(--line-soft);color:var(--ink)}
+.stack .row:last-child{border:none;font-weight:700;font-size:17px;padding-bottom:0;color:var(--ink)}
+.stack .row .free{color:var(--accent-deep);font-weight:600}
+.stack .row s{color:var(--muted)}
 .stack .row .total{font-family:'Fraunces'}
-.guarantee{display:flex;align-items:center;gap:14px;justify-content:center;background:rgba(62,92,90,.22);border:1px solid rgba(110,139,137,.4);border-radius:var(--r);padding:18px;margin:20px 0}
-.guarantee b{font-size:13.5px;font-family:'Jost'}.guarantee small{font-size:12px;color:rgba(255,255,255,.72)}
-.offer .btn{background:#fff;color:var(--ink);border-color:#fff}
+.guarantee{display:flex;align-items:center;gap:14px;justify-content:center;background:var(--sage-tint);border:1px solid #CFE0DD;border-radius:var(--r);padding:18px;margin:20px 0}
+.guarantee b{font-size:13.5px;font-family:'Jost'}.guarantee small{font-size:12px;color:var(--ink-soft)}
+.offer .btn{background:var(--accent);color:#fff;border-color:var(--accent)}
 
 /* faq */
 details{background:var(--paper);border:1px solid var(--line);border-radius:13px;margin-top:11px;overflow:hidden}
@@ -305,8 +305,8 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 .hotspot.on{background:#fff;color:var(--sage)}
 .spine{position:absolute;left:0;width:100%;z-index:1;pointer-events:none}
 .spine svg{width:100%;height:100%;display:block;overflow:visible}
-.spine-track{fill:none;stroke:var(--line);stroke-width:1.3;vector-effect:non-scaling-stroke;opacity:.35}
-.spine-draw{fill:none;stroke:var(--taupe);stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;opacity:.45}
+.spine-track{fill:none;stroke:var(--line);stroke-width:1.3;vector-effect:non-scaling-stroke;opacity:.25}
+.spine-draw{fill:none;stroke:var(--taupe);stroke-width:1.5;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;opacity:.3}
 .spine-dot{position:absolute;left:0;top:0;width:12px;height:12px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 4px var(--sage-tint),0 2px 8px rgba(0,0,0,.18);transform:translate(-50%,-50%);transition:top .08s linear,left .08s linear}
 .spine-dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1.5px solid var(--sage);opacity:.5;animation:hp 2.4s ease-out infinite}
 .spine-label{position:absolute;left:50%;top:0;transform:translateX(-50%);white-space:nowrap;background:var(--accent);color:#fff;font-family:'Jost';font-weight:600;font-size:10.5px;letter-spacing:.01em;padding:6px 12px;border-radius:var(--pill);box-shadow:0 3px 12px rgba(33,32,28,.2);pointer-events:none;opacity:0;transition:opacity .25s,background .35s}
@@ -521,7 +521,6 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
       <details class="mpt"><summary><b>Less to panic about</b><span>Soft, quiet fabric removes the noise &amp; visual chaos that set a cat off.</span><i class="ch">+</i></summary><div class="ans">No scary plastic crinkle, nothing flapping — calmer input means a calmer cat from the very first second.</div></details>
       <details class="mpt"><summary><b>One limb, then done</b><span>Expose only the paw you need — quick, and never fully cornered.</span><i class="ch">+</i></summary><div class="ans">You work one area at a time instead of pinning the whole cat, so it's fast and far less stressful for both of you.</div></details>
     </div>
-    <p class="sci-src reveal">Based on the deep-pressure / swaddling principle used in veterinary calming wraps. <i>Sources being verified.</i></p>
   </section>
   <!-- SECTION: before/after -->
   <section class="s-ivory" data-block="before-after">
@@ -537,7 +536,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <div class="cmp reveal">
       <div class="cmp-head">
         <div class="h"></div>
-        <div class="h us"><div class="mini"><img src="img/hero.jpg" alt="Movaro wrap"></div><b>Movaro</b><div class="cmp-tag">Best value</div></div>
+        <div class="h us"><div class="mini"><svg viewBox="0 0 54 54"><rect width="54" height="54" fill="#E2E9E7"/><path d="M12 34 q15 -16 30 0 q2 12 -15 14 q-17 -2 -15 -14Z" fill="#6E8B89"/><rect x="23" y="32" width="8" height="14" rx="2" fill="#3E5C5A"/><ellipse cx="27" cy="22" rx="13" ry="11" fill="#C8BAA3"/><path d="M20 22 q4 3 7 0M27 22 q4 3 7 0" stroke="#2A2620" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg></div><b>Movaro</b></div>
         <div class="h them"><b>$15 bag<br>· vet visit</b></div>
       </div>
       <div class="cmp-row"><div class="c lbl">Actually calms (not just traps)</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
@@ -547,7 +546,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
       <div class="cmp-row"><div class="c lbl">Cost over a year</div><div class="c us">$64.99 once</div><div class="c"><span class="cross">$300+</span></div></div>
       <div class="cmp-row"><div class="c lbl">30-day guarantee</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
     </div>
-    <div class="cmp-trust reveal"><span>🩺 Designed with vets</span><span>🧶 Premium quiet fabric</span><span>📏 Full Kitten–XL range</span><span>↩️ Easy 30-day returns</span></div>
+    <div class="cmp-trust reveal"><span>🩺 Designed with vets</span><span>📅 Caring for cats since 2024</span><span>💬 Real support — same-day replies</span></div>
   </section>
 
   <!-- SECTION: vet authority (E-A-T, woven) -->
@@ -558,7 +557,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
         <span class="ph-tag">Brand photo → TBD</span>
       </div>
       <div class="brand-body">
-        <p><b>Real people, here for your cat.</b> Spicy cat, a sizing question, or second thoughts? Write to <b>support@movaro.com</b> — you'll hear back, usually the same day.</p>
+        <p><b>Movaro started with one belief: nail day shouldn't be a battle.</b> We put everything into getting it right — the fabric, the fit, the calm. Not right for your cat? We'll make it right. A question or a doubt? Write to <b>support@movaro.com</b> — a real person answers, usually the same day.</p>
       </div>
     </div>
   </section>
