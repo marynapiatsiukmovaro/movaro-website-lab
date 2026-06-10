@@ -62,7 +62,7 @@ section{padding:60px 24px}
 /* gallery / hero */
 .gallery{padding:0;background:var(--paper)}
 .g-wrap{position:relative}
-.g-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;aspect-ratio:4/5;-webkit-overflow-scrolling:touch}
+.g-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;aspect-ratio:4/5;-webkit-overflow-scrolling:touch;touch-action:pan-x;overscroll-behavior-x:contain}
 .g-carousel::-webkit-scrollbar{display:none}
 .g-slide{position:relative;min-width:100%;scroll-snap-align:center}
 .g-slide svg{display:block;width:100%;height:100%}
@@ -183,15 +183,15 @@ section{padding:60px 24px}
 .cmp{margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
 .cmp-head{display:grid;grid-template-columns:1.25fr .9fr .9fr;align-items:end}
 .cmp-head .h{padding:18px 6px 13px;text-align:center}
-.cmp-head .us{background:var(--sage-tint);border-radius:13px 13px 0 0}
+.cmp-head .us{background:#fff;border:2px solid var(--accent);border-bottom:none;border-radius:14px 14px 0 0;box-shadow:0 -4px 16px rgba(47,122,115,.1);position:relative}
 .cmp-head .mini{aspect-ratio:1;width:48px;margin:0 auto 7px;border-radius:9px;overflow:hidden}
 .cmp-head .us b{font-family:'Fraunces';font-size:15px;font-weight:600}
 .cmp-head .them b{font-family:'Jost';font-size:11.5px;font-weight:600;color:var(--muted);line-height:1.3;display:block}
 .cmp-row{display:grid;grid-template-columns:1.25fr .9fr .9fr;border-top:1px solid var(--line-soft);font-size:12.5px}
 .cmp-row .c{padding:14px 7px;text-align:center;display:flex;align-items:center;justify-content:center}
 .cmp-row .lbl{justify-content:flex-start;text-align:left;color:var(--ink-soft);font-weight:500}
-.cmp-row .us{background:var(--sage-tint);font-weight:600}
-.cmp-row:last-child .us{border-radius:0 0 13px 13px}
+.cmp-row .us{background:#fff;border-left:2px solid var(--accent);border-right:2px solid var(--accent);font-weight:600}
+.cmp-row:last-child .us{border-bottom:2px solid var(--accent);border-radius:0 0 14px 14px;box-shadow:0 10px 20px rgba(47,122,115,.13)}
 .tick{color:var(--sage);font-weight:700;font-size:15px} .cross{color:var(--muted);font-size:11px}
 
 /* vet authority */
@@ -200,6 +200,14 @@ section{padding:60px 24px}
 .vet-card .ill{width:90px;height:90px;border-radius:50%;flex-shrink:0}
 .vet-card .vq{font-family:'Fraunces';font-size:18px;font-weight:500;line-height:1.3;font-style:italic}
 .vet-card .vn{font-family:'Jost';font-size:12px;color:var(--ink-soft);margin-top:8px;font-style:normal}
+.cmp-tag{font-family:'Jost';font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:var(--pill);padding:3px 9px;display:inline-block;margin-top:5px}
+.cmp-head .mini img{width:100%;height:100%;object-fit:cover;display:block}
+.brandcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
+.brandcard p{font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+.brandcard p+p{margin-top:13px}
+.brandcard p b{color:var(--ink)}
+.brand-trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.brand-trust span{font-family:'Jost';font-size:11px;font-weight:600;color:var(--accent-deep);background:var(--sage-tint);border:1px solid #CFE0DD;border-radius:var(--pill);padding:6px 11px}
 
 /* steps */
 .step-card{min-width:218px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
@@ -499,7 +507,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <div class="cmp reveal">
       <div class="cmp-head">
         <div class="h"></div>
-        <div class="h us"><div class="mini"><svg viewBox="0 0 54 54"><rect width="54" height="54" fill="#E2E9E7"/><path d="M12 34 q15 -16 30 0 q2 12 -15 14 q-17 -2 -15 -14Z" fill="#6E8B89"/><rect x="23" y="32" width="8" height="14" rx="2" fill="#3E5C5A"/><ellipse cx="27" cy="22" rx="13" ry="11" fill="#C8BAA3"/><path d="M20 22 q4 3 7 0M27 22 q4 3 7 0" stroke="#2A2620" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg></div><b>Movaro</b></div>
+        <div class="h us"><div class="mini"><img src="img/hero.jpg" alt="Movaro wrap"></div><b>Movaro</b><div class="cmp-tag">Best value</div></div>
         <div class="h them"><b>$15 bag<br>· vet visit</b></div>
       </div>
       <div class="cmp-row"><div class="c lbl">Actually calms (not just traps)</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
@@ -513,9 +521,13 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 
   <!-- SECTION: vet authority (E-A-T, woven) -->
   <section class="vet" data-block="vet">
-    <div class="vet-card reveal">
-      <div class="ill"><svg viewBox="0 0 90 90" preserveAspectRatio="xMidYMid slice"><rect width="90" height="90" fill="#E2E9E7"/><circle cx="45" cy="34" r="17" fill="#C8BAA3"/><path d="M18 84 q0 -27 27 -27 q27 0 27 27Z" fill="#6E8B89"/><path d="M38 80 v-14 h14 v14" fill="#fff"/><path d="M45 66 v10 M40 71 h10" stroke="#3E5C5A" stroke-width="2.4" stroke-linecap="round"/><path d="M37 32 q4 3 8 0M45 32 q4 3 8 0" stroke="#2A2620" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>
-      <div><div class="vq">"Gentle wrapping is how we keep anxious cats calm for exams. Movaro puts that same method in the owner's hands — at home, without the fear."</div><div class="vn">— Designed with practicing veterinarians · Movaro</div></div>
+    <div class="sect-head reveal"><div class="eyebrow">From us to you</div><h2>Why cat parents trust us</h2></div>
+    <div class="brandcard reveal">
+      <p>We built Movaro around one idea: <b class="hl">gentle wrapping — the same calming method vets use for exams</b> — should be something you can do at home, without the fear. We obsess over the soft, quiet fabric, the fit and the calm, so nail day finally stops being a fight.</p>
+      <p>And we're real people, here when you need us. Not sure about sizing, or got a spicy cat that just won't cooperate? <b>Email us at support@movaro.com</b> — we reply fast, usually the same day.</p>
+      <div class="brand-trust">
+        <span>🩺 Designed with vets</span><span>🐾 10,000+ cats calmed</span><span>💬 Same-day replies</span><span>🛡️ 30-day money-back</span>
+      </div>
     </div>
   </section>
   <!-- SECTION: instruction -->
