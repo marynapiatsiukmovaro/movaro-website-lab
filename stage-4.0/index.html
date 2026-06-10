@@ -24,6 +24,7 @@
   --line:#E6DFD1; --line-soft:#F0EBDF;
   --sage:#3E5C5A; --sage-soft:#6E8B89; --sage-tint:#E2E9E7;
   --clay:#B9774F; --clay-soft:#D9A47F; --clay-tint:#F4E5D8; --taupe:#C8BAA3;
+  --honey:#D7A94E; --honey-deep:#C28F2E; --honey-tint:#F3E5C2;
   --r:14px; --pill:999px;
   --shadow:0 1px 2px rgba(33,32,28,.04), 0 8px 28px rgba(33,32,28,.05);
 }
@@ -51,8 +52,8 @@ section{padding:60px 24px}
 .ill svg{display:block;width:100%;height:100%}
 .chip{position:absolute;background:rgba(255,255,255,.95);color:var(--ink);font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:8px 13px;border-radius:var(--pill);box-shadow:0 2px 10px rgba(33,32,28,.09);backdrop-filter:blur(4px)}
 /* announce + header */
-.announce{background:var(--ink);color:#fff;text-align:center;font-family:'Jost';font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:11px 12px}
-.announce .dotsep{opacity:.45;margin:0 8px}
+.announce{background:var(--honey);color:var(--ink);text-align:center;font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:11px 12px}
+.announce .dotsep{opacity:.5;margin:0 8px}
 .hd{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--paper);border-bottom:1px solid var(--line-soft);position:sticky;top:0;z-index:40}
 .logo{font-family:'Fraunces';font-weight:600;font-size:23px;letter-spacing:.02em}
 .hd-ic{display:flex;gap:18px}
@@ -122,6 +123,8 @@ section{padding:60px 24px}
 .benefits li svg{flex-shrink:0;margin-top:3px}
 .benefits li .bem{font-size:18px;line-height:1.15;flex-shrink:0;width:22px;text-align:center;margin-top:1px}
 .benefits li b{font-weight:600}
+.cred{font-family:'Jost';font-size:11.5px;color:var(--ink-soft);margin:9px 0 2px;display:flex;flex-wrap:wrap;gap:3px 10px}
+.reassure{background:var(--sage-tint);border:1px solid #CFE0DD;border-radius:11px;padding:12px 14px;font-size:13px;color:var(--ink);line-height:1.45;margin:18px 0 2px}
 .gift-head{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:24px 0 10px;display:flex;align-items:center;gap:8px}
 .gift-head .pv{margin-left:auto;color:var(--sage);background:var(--sage-tint);font-size:10px;padding:3px 9px;border-radius:var(--pill);letter-spacing:.04em}
 .bb-acc{margin-top:24px}
@@ -255,6 +258,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 .footer .logo{color:#fff;font-size:20px;margin-bottom:8px}
 /* ===== Stage 2.4 engagement layer (hotspots + connecting thread + highlight) ===== */
 .hl{background:linear-gradient(transparent 58%, var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
+.hlw{background:linear-gradient(transparent 56%, var(--honey-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
 .hotspot{position:absolute;z-index:6;width:26px;height:26px;border-radius:50%;background:var(--sage);border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.22);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Jost';font-weight:700;font-size:14px}
 .hotspot::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--sage);opacity:.55;animation:hp 2.2s ease-out infinite}
 @keyframes hp{0%{transform:scale(.8);opacity:.65}100%{transform:scale(1.85);opacity:0}}
@@ -342,6 +346,9 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <h1>Movaro Calm Wrap</h1>
     <div class="rating-row"><span class="stars">★★★★★</span> 4.8 · <a href="#reviews">600+ calm cats 🐾</a></div>
 
+    <!-- CREDIBILITY anchor — props up the rating for a brand new store (seeded, honesty L2; number = Marina to set) -->
+    <div class="cred"><span>🩺 Vet-designed</span><span>🐾 10,000+ cats calmed</span><span>🇺🇸 Ships from the US</span></div>
+
     <!-- PRICE — high; the cold buyer scans photo → price first -->
     <div class="price-row"><span class="now" id="px-now">$64.99</span><span class="was" id="px-was">$99.99</span><span class="pill-save" id="px-save">Save $35</span></div>
 
@@ -349,11 +356,14 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 
     <!-- BENEFITS — outcome benefits (separate from the trust strip) -->
     <ul class="benefits">
-      <li><span class="bem">😌</span><span><b class="hl">Calm in ~60 seconds</b> — gentle swaddle pressure, no hissing, no fight</span></li>
-      <li><span class="bem">🙌</span><span><b class="hl">Do it solo</b> — one person, a few quiet minutes, finally</span></li>
-      <li><span class="bem">💰</span><span><b class="hl">Saves $300+/year</b> vs groomer &amp; sedated vet trims</span></li>
-      <li><span class="bem">🐾</span><span><b class="hl">Gentle, not cruel</b> — your cat stays calm, never panicked</span></li>
+      <li><span class="bem">😌</span><span><b class="hlw">Calm in ~60 seconds</b> — gentle swaddle pressure, no hissing, no fight</span></li>
+      <li><span class="bem">🙌</span><span><b class="hlw">Do it solo</b> — one person, a few quiet minutes, finally</span></li>
+      <li><span class="bem">💰</span><span><b class="hlw">Saves $300+/year</b> vs groomer &amp; sedated vet trims</span></li>
+      <li><span class="bem">🐾</span><span><b class="hlw">Gentle, not cruel</b> — your cat stays calm, never panicked</span></li>
     </ul>
+
+    <!-- OBJECTION pre-empt — the #1 cold hesitation ("my spicy cat / is it cruel"), placed at the buy-box not buried in FAQ -->
+    <div class="reassure">🐾 <b>Works even on the spiciest cats</b> — gentle swaddling, never scruffing. Not calmer in 30 days? Full refund.</div>
 
     <!-- VALUE-STACK — show the free gifts BEFORE the kit choice (value ≫ price). NO spray (PI B2: unproven/safety) -->
     <div class="gift-head">Free with every wrap <span class="pv">$35 value</span></div>
