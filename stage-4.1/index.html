@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movaro — Calm care for the cats you love</title>
+<!--
+  MOVARO — STAGE 4.1 = HOME PAGE prototype (+ structure for the pages we need to apply to 2Checkout).
+  Design language locked to Stage 4.0 (product page): Fraunces + Jost, teal accent, same :root tokens —
+  one unified brand. Mobile-first (.wrap max-width 480px). Brand-first + flagship-forward + checkout-legit
+  (clear what we sell, brand story, policy links, contact). Built design-first in the Lab; ports to Shopify
+  the same way the product page did (theme = vehicle). Placeholders are obvious (href="#", "TBD") on purpose.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF; --ivory:#F2EEE6; --sand:#E7E1D4; --cream:#ECE7DC;
+  --ink:#21201C; --ink-soft:#6A6256; --muted:#9C9385;
+  --line:#E6DFD1; --line-soft:#F0EBDF;
+  --sage:#3E5C5A; --sage-soft:#6E8B89; --sage-tint:#E2E9E7;
+  --clay:#B9774F; --clay-soft:#D9A47F; --clay-tint:#F4E5D8; --taupe:#C8BAA3;
+  --honey:#D7A94E; --honey-deep:#C28F2E; --honey-tint:#F3E5C2;
+  --accent:#2F7A73; --accent-deep:#246159;
+  --r:14px; --pill:999px;
+  --shadow:0 1px 2px rgba(33,32,28,.04), 0 8px 28px rgba(33,32,28,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:#E4DFD5;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:480px;margin:0 auto;background:var(--ivory);overflow:hidden;position:relative}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+section{padding:58px 24px}
+.s-paper{background:var(--paper)} .s-ivory{background:var(--ivory)} .s-sand{background:var(--sand)} .s-cream{background:var(--cream)}
+.eyebrow{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--sage)}
+.muted{color:var(--ink-soft)}
+.stars{color:var(--clay);letter-spacing:2px;font-size:14px}
+.hl{background:linear-gradient(transparent 58%, var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
+.hlw{background:linear-gradient(transparent 56%, var(--honey-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;
+  border:1px solid var(--accent);border-radius:var(--pill);font-family:'Jost';font-size:13.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;min-height:56px;padding:16px 30px;cursor:pointer;text-decoration:none;transition:transform .12s,opacity .15s}
+.btn:active{transform:scale(.985);opacity:.92}
+.btn.block{display:flex;width:100%}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.sect-head{max-width:400px;margin:0 auto 28px;text-align:center}
+.sect-head h2{font-size:31px;margin:11px 0 9px;font-weight:500}
+.sect-head p{font-size:15px;color:var(--ink-soft)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.ill{position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--cream)}
+.ill img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* announce + header (same as product page) */
+.announce{background:var(--accent);color:#fff;text-align:center;font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:11px 12px;white-space:nowrap}
+.announce .dotsep{opacity:.5;margin:0 8px}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--paper);border-bottom:1px solid var(--line-soft);position:sticky;top:0;z-index:40}
+.logo{font-family:'Fraunces';font-weight:600;font-size:23px;letter-spacing:.02em}
+.hd-ic{display:flex;gap:18px}
+
+/* HERO (brand) */
+.hero{position:relative;background:var(--paper)}
+.hero .ph{position:relative;aspect-ratio:4/5;overflow:hidden}
+.hero .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.hero .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:30px 24px 30px;background:linear-gradient(to top,rgba(20,17,14,.66),rgba(20,17,14,.10) 58%,transparent)}
+.hero .ov .eb{font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E2E9E7}
+.hero .ov h1{color:#fff;font-size:42px;font-weight:500;margin:9px 0 8px;letter-spacing:-.02em}
+.hero .ov p{color:rgba(255,255,255,.92);font-size:15px;max-width:320px;margin-bottom:18px}
+.hero .ov .btn{align-self:flex-start}
+
+/* trust strip (same as product page) */
+.tstrip{display:flex;align-items:stretch;background:var(--accent);color:#fff}
+.tstrip .ti{flex:1;text-align:center;padding:16px 6px;border-right:1px solid rgba(255,255,255,.12)}
+.tstrip .ti:last-child{border:none}
+.tstrip .ti b{display:block;font-family:'Fraunces';font-size:16px;font-weight:600}
+.tstrip .ti small{font-family:'Jost';font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.62);display:block;margin-top:3px}
+
+/* flagship product feature */
+.flag{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.flag .ph{aspect-ratio:4/3;position:relative}
+.flag .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.flag .ph .tag{position:absolute;top:13px;left:13px;background:var(--honey);color:#3A2E12;font-family:'Jost';font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:var(--pill)}
+.flag .body{padding:22px}
+.flag .desc{font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+.flag h3{font-size:26px;font-weight:500;margin:7px 0 6px}
+.flag .rating{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px}
+.flag ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin:0 0 16px}
+.flag ul li{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.flag ul li .bem{font-size:17px;width:22px;text-align:center;flex-shrink:0}
+.flag .price{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
+.flag .price .now{font-family:'Fraunces';font-size:27px;font-weight:600}
+.flag .price .was{color:var(--muted);text-decoration:line-through;font-size:15px}
+.flag .price .save{font-family:'Jost';font-size:11px;font-weight:600;color:var(--sage);background:var(--sage-tint);padding:4px 10px;border-radius:var(--pill)}
+
+/* brand story */
+.brand{background:var(--sand)}
+.brand .lead{font-family:'Fraunces';font-size:25px;font-weight:500;line-height:1.22;margin:14px 0 14px}
+.brand p{font-size:14.5px;color:var(--ink-soft)}
+.brand p b{color:var(--ink)}
+.brand .sig{font-family:'Fraunces';font-style:italic;font-size:15px;color:var(--ink);margin-top:16px}
+
+/* what we help with */
+.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:6px}
+.help-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:18px 15px;text-align:center}
+.help-card .ic{width:46px;height:46px;border-radius:12px;background:var(--sage-tint);margin:0 auto 11px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.help-card b{font-family:'Jost';font-size:13.5px;font-weight:600;display:block}
+.help-card small{font-size:11.5px;color:var(--ink-soft);display:block;margin-top:3px;line-height:1.4}
+
+/* social proof */
+.scroll{display:flex;gap:13px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory;margin:0 -24px;padding-left:24px;padding-right:24px}
+.scroll::-webkit-scrollbar{display:none}
+.scroll > *{scroll-snap-align:start}
+.ugc-card{min-width:214px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.ugc-card .ill{aspect-ratio:9/12;border:none;border-radius:0}
+.ugc-handle{display:flex;align-items:center;gap:8px;padding:11px 13px 2px;font-size:12.5px;font-weight:600}
+.ugc-handle .dot{width:22px;height:22px;border-radius:50%;background:var(--sage-tint)}
+.ugc-handle .vf{margin-left:auto;font-size:9px;color:var(--sage);letter-spacing:.04em;text-transform:uppercase}
+.ugc-txt{padding:5px 13px 14px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+
+/* guarantee */
+.guar{background:var(--sage);color:#fff;text-align:center}
+.guar .eyebrow{color:#CFE0DD}
+.guar h2{color:#fff;font-size:30px;margin:11px 0 10px}
+.guar p{color:rgba(255,255,255,.85);font-size:14.5px;max-width:360px;margin:0 auto 20px}
+.guar .seal{width:74px;height:74px;border-radius:50%;border:2px solid rgba(255,255,255,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Fraunces'}
+.guar .seal b{font-size:22px;font-weight:600;line-height:1}
+.guar .seal small{font-size:8px;letter-spacing:.12em;text-transform:uppercase;font-family:'Jost';color:rgba(255,255,255,.75);margin-top:2px}
+
+/* newsletter */
+.news{background:var(--cream);text-align:center}
+.news h3{font-size:24px;font-weight:500;margin-bottom:8px}
+.news p{font-size:14px;color:var(--ink-soft);margin-bottom:18px}
+.news .form{display:flex;gap:8px;max-width:360px;margin:0 auto}
+.news input{flex:1;border:1px solid var(--line);border-radius:var(--pill);padding:14px 18px;font-family:'Jost';font-size:14px;background:var(--paper);color:var(--ink)}
+.news input::placeholder{color:var(--muted)}
+.news .btn{min-height:48px;padding:14px 22px}
+
+/* footer */
+.footer{background:var(--ink);color:rgba(255,255,255,.55);padding:40px 24px 34px;font-size:12.5px;line-height:1.8}
+.footer .logo{color:#fff;font-size:22px;margin-bottom:6px}
+.footer .tag{color:rgba(255,255,255,.7);margin-bottom:24px;font-size:13px}
+.footer .cols{display:flex;gap:30px;flex-wrap:wrap;margin-bottom:26px}
+.footer .col h5{font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:11px}
+.footer .col a{display:block;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:8px;font-size:13px}
+.footer .col a:hover{color:#fff}
+.footer .bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-size:11px;color:rgba(255,255,255,.4)}
+.footer .pay{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.footer .pay span{font-family:'Jost';font-size:8px;font-weight:700;letter-spacing:.03em;color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.18);border-radius:5px;padding:5px 9px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- announce + header (reused from product page → native announcement bar + header in Shopify) -->
+  <div class="announce">Free US Shipping<span class="dotsep">·</span>30-Day Calm Guarantee</div>
+  <header class="hd">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="#21201C" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <div class="logo">Movaro</div>
+    <div class="hd-ic">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#21201C" stroke-width="1.7"/><path d="M20 20l-4-4" stroke="#21201C" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 7h13l-1.2 9a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6 7zM6 7L5 4H3" stroke="#21201C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </header>
+
+  <!-- 1. HERO (brand) -->
+  <section class="hero" style="padding:0">
+    <div class="ph">
+      <img src="img/hero.jpg" alt="A calm cat in the Movaro wrap">
+      <div class="ov">
+        <div class="eb">Vet-designed · Calming pet care</div>
+        <h1>Calm, not trapped.</h1>
+        <p>Care for your cat at home — nails, meds &amp; grooming, <span style="color:#fff;font-weight:600">calmly, solo, in minutes.</span></p>
+        <a href="../stage-4.0/index.html" class="btn">Shop the Calm Wrap</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRUST STRIP -->
+  <div class="tstrip">
+    <div class="ti"><b>🩺</b><small>Vet-designed</small></div>
+    <div class="ti"><b>30-day</b><small>money-back</small></div>
+    <div class="ti"><b>Free</b><small>US shipping</small></div>
+    <div class="ti"><b>10k+</b><small>cats calmed</small></div>
+  </div>
+
+  <!-- 3. FLAGSHIP PRODUCT -->
+  <section class="s-ivory">
+    <div class="sect-head reveal"><div class="eyebrow">Our flagship</div><h2>Meet the Calm Wrap</h2><p>The gentle swaddle that ends the nail-trim war — built with vets, loved by spicy cats.</p></div>
+    <div class="flag reveal">
+      <div class="ph"><img src="img/about.jpg" alt="Movaro Calm Wrap"><span class="tag">Most loved</span></div>
+      <div class="body">
+        <div class="desc">Vet-designed calming cat wrap</div>
+        <h3>Movaro Calm Wrap</h3>
+        <div class="rating"><span class="stars">★★★★★</span> 4.8 · 600+ calm cats 🐾</div>
+        <ul>
+          <li><span class="bem">😌</span><span><b class="hlw">Calm in ~60 seconds</b> — gentle pressure, no fight</span></li>
+          <li><span class="bem">🙌</span><span><b class="hlw">Do it solo</b> — one person, a few quiet minutes</span></li>
+          <li><span class="bem">💰</span><span><b class="hlw">Saves $300+/year</b> vs groomer &amp; sedated vet trims</span></li>
+        </ul>
+        <div class="price"><span class="now">$64.99</span><span class="was">$99.99</span><span class="save">+ 3 free gifts ($35)</span></div>
+        <a href="../stage-4.0/index.html" class="btn block">Shop now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. BRAND STORY (legitimacy) -->
+  <section class="brand">
+    <div class="eyebrow reveal">Why Movaro</div>
+    <div class="lead reveal">We believe care shouldn't be a battle.</div>
+    <p class="reveal">Movaro started with one belief: a scared cat doesn't need to be fought — it needs to feel safe. So we design calm, vet-informed tools that let you care for your cat at home without the hiss, the claws, or the guilt. <b>Calm over force, always.</b></p>
+    <p class="reveal" style="margin-top:13px">Every product is built with input from vets and tested by real cat parents — and backed by a 30-day promise. Questions? A real person answers at <b>support@movaro.com</b>, usually the same day.</p>
+    <div class="sig reveal">— The Movaro team 🐾</div>
+  </section>
+
+  <!-- 5. WHAT WE HELP WITH (brand domain) -->
+  <section class="s-paper">
+    <div class="sect-head reveal"><div class="eyebrow">Calm care at home</div><h2>What we help you do</h2><p>The everyday moments that used to mean a fight — now done calmly, solo.</p></div>
+    <div class="help-grid reveal">
+      <div class="help-card"><div class="ic">✂️</div><b>Nail trims</b><small>No more two-person wrestling</small></div>
+      <div class="help-card"><div class="ic">💊</div><b>Meds &amp; pills</b><small>Give them without the chase</small></div>
+      <div class="help-card"><div class="ic">💧</div><b>SubQ fluids</b><small>Senior care, calmly at home</small></div>
+      <div class="help-card"><div class="ic">👂</div><b>Ears &amp; grooming</b><small>Clean &amp; brush, stress-free</small></div>
+    </div>
+  </section>
+
+  <!-- 6. SOCIAL PROOF -->
+  <section class="s-ivory">
+    <div class="sect-head reveal"><div class="eyebrow">★★★★★ Real cat parents</div><h2>"I genuinely can't believe it worked."</h2></div>
+    <div class="scroll reveal">
+      <div class="ugc-card"><div class="ill"><img src="img/ugc1.jpg" alt=""></div><div class="ugc-handle"><span class="dot"></span>@badboymoosh_cats<span class="vf">✓</span></div><div class="ugc-txt">"Single-handedly ended the struggle to trim their nails. Worth every penny."</div></div>
+      <div class="ugc-card"><div class="ill"><img src="img/ugc2.jpg" alt=""></div><div class="ugc-handle"><span class="dot"></span>@peggy.and.theo<span class="vf">✓</span></div><div class="ugc-txt">"From panic to peace. He went from fighting to calm and cooperative. I cried a little 🥹"</div></div>
+      <div class="ugc-card"><div class="ill"><img src="img/ugc3.jpg" alt=""></div><div class="ugc-handle"><span class="dot"></span>@thatspicycat<span class="vf">✓</span></div><div class="ugc-txt">"My cat is the definition of 'spicy.' First time I've done his nails ALONE without bleeding."</div></div>
+    </div>
+  </section>
+
+  <!-- 7. GUARANTEE -->
+  <section class="guar">
+    <div class="seal"><b>30</b><small>Day calm</small></div>
+    <div class="eyebrow">Our promise</div>
+    <h2>Calm in 30 days, or your money back.</h2>
+    <p>Try Movaro at home. If your cat isn't calmer and care isn't easier within 30 days, we'll refund you — and you keep the guide as our gift.</p>
+    <a href="../stage-4.0/index.html" class="btn" style="background:#fff;color:var(--accent-deep);border-color:#fff">Shop risk-free</a>
+  </section>
+
+  <!-- 8. NEWSLETTER -->
+  <section class="news">
+    <h3>Be the first to know</h3>
+    <p>New products, calm-care tips &amp; the occasional treat — straight to your inbox.</p>
+    <form class="form" onsubmit="return false">
+      <input type="email" placeholder="Enter your email">
+      <button class="btn" type="submit">Join</button>
+    </form>
+  </section>
+
+  <!-- 9. FOOTER (with policy links — required for checkout application) -->
+  <footer class="footer">
+    <div class="logo">Movaro</div>
+    <div class="tag">Calm, not trapped. Vet-designed care for the cats we love.</div>
+    <div class="cols">
+      <div class="col">
+        <h5>Shop</h5>
+        <a href="../stage-4.0/index.html">Calm Wrap</a>
+        <a href="#">All products</a>
+        <a href="#">Gift guide</a>
+      </div>
+      <div class="col">
+        <h5>Help</h5>
+        <a href="#contact">Contact us</a>
+        <a href="#shipping">Shipping</a>
+        <a href="#refund">Returns &amp; refunds</a>
+        <a href="#sizing">Size guide</a>
+      </div>
+      <div class="col">
+        <h5>Company</h5>
+        <a href="#about">About Movaro</a>
+        <a href="#privacy">Privacy policy</a>
+        <a href="#terms">Terms of service</a>
+      </div>
+    </div>
+    <div class="bottom">
+      Questions? <b style="color:rgba(255,255,255,.8)">support@movaro.com</b><br>
+      © 2026 Movaro · 30-Day Calm Guarantee · Free US Shipping
+      <div class="pay"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span><span>APPLE PAY</span><span>G PAY</span></div>
+    </div>
+  </footer>
+
+</div>
+<script>
+  // scroll reveal (same as product page)
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
