@@ -120,6 +120,7 @@ section{padding:60px 24px}
 .benefits{list-style:none;margin:18px 0 4px;display:flex;flex-direction:column;gap:11px}
 .benefits li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--ink);line-height:1.45}
 .benefits li svg{flex-shrink:0;margin-top:3px}
+.benefits li .bem{font-size:18px;line-height:1.15;flex-shrink:0;width:22px;text-align:center;margin-top:1px}
 .benefits li b{font-weight:600}
 .gift-head{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:24px 0 10px;display:flex;align-items:center;gap:8px}
 .gift-head .pv{margin-left:auto;color:var(--sage);background:var(--sage-tint);font-size:10px;padding:3px 9px;border-radius:var(--pill);letter-spacing:.04em}
@@ -348,10 +349,10 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 
     <!-- BENEFITS — outcome benefits (separate from the trust strip) -->
     <ul class="benefits">
-      <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#E2E9E7"/><path d="M8 12.4l2.6 2.6L16 9.6" stroke="#3E5C5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Calm in ~60 seconds</b> — gentle swaddle pressure, no hissing, no fight</span></li>
-      <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#E2E9E7"/><path d="M8 12.4l2.6 2.6L16 9.6" stroke="#3E5C5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Do it solo in minutes</b> — one person, one pair of hands, finally</span></li>
-      <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#E2E9E7"/><path d="M8 12.4l2.6 2.6L16 9.6" stroke="#3E5C5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Saves $300+/year</b> vs groomer &amp; sedated vet trims</span></li>
-      <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#E2E9E7"/><path d="M8 12.4l2.6 2.6L16 9.6" stroke="#3E5C5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Gentle, not cruel</b> — your cat stays calm, never panicked</span></li>
+      <li><span class="bem">😌</span><span><b class="hl">Calm in ~60 seconds</b> — gentle swaddle pressure, no hissing, no fight</span></li>
+      <li><span class="bem">🙌</span><span><b class="hl">Do it solo</b> — one person, a few quiet minutes, finally</span></li>
+      <li><span class="bem">💰</span><span><b class="hl">Saves $300+/year</b> vs groomer &amp; sedated vet trims</span></li>
+      <li><span class="bem">🐾</span><span><b class="hl">Gentle, not cruel</b> — your cat stays calm, never panicked</span></li>
     </ul>
 
     <!-- VALUE-STACK — show the free gifts BEFORE the kit choice (value ≫ price). NO spray (PI B2: unproven/safety) -->
@@ -374,7 +375,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     </div>
 
     <div class="field-label">Select size <a href="#sizing">Size finder ›</a></div>
-    <div class="sizes" id="sizes"><button>Kitten</button><button>S</button><button class="sel">M</button><button>L</button><button>XL</button></div>
+    <div class="sizes" id="sizes" style="margin-bottom:24px"><button>Kitten</button><button>S</button><button class="sel">M</button><button>L</button><button>XL</button></div>
 
     <button class="btn" onclick="addToCart()">Calm my cat — Add to cart</button>
     <div class="under-cta">
