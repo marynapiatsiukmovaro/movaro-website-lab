@@ -1,0 +1,76 @@
+/* MOVARO — shared chrome for footer pages (About / Contact / FAQ / Site guide). RAW BASE — minimal, enrich later. */
+:root{--paper:#FFFFFF;--ivory:#F2EEE6;--sand:#E7E1D4;--cream:#ECE7DC;--ink:#21201C;--ink-soft:#6A6256;--muted:#9C9385;--line:#E6DFD1;--line-soft:#F0EBDF;--sage:#3E5C5A;--sage-tint:#E2E9E7;--honey:#D7A94E;--honey-tint:#F3E5C2;--accent:#2F7A73;--accent-deep:#246159;--r:14px;--pill:999px;--shadow:0 1px 2px rgba(33,32,28,.04),0 8px 28px rgba(33,32,28,.05)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:#E4DFD5;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:480px;margin:0 auto;background:var(--ivory);overflow:hidden;position:relative}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.1;letter-spacing:-.015em}
+.eyebrow{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--sage)}
+.hl{background:linear-gradient(transparent 58%,var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;border:1px solid var(--accent);border-radius:var(--pill);font-family:'Jost';font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;min-height:54px;padding:15px 28px;text-decoration:none}
+/* announce + header */
+.announce{background:var(--accent);color:#fff;text-align:center;font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:11px 12px;white-space:nowrap}
+.announce .dotsep{opacity:.5;margin:0 8px}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--paper);border-bottom:1px solid var(--line-soft);position:sticky;top:0;z-index:40}
+.logo{font-family:'Fraunces';font-weight:600;font-size:23px;letter-spacing:.02em}
+.hd a.logo{color:inherit;text-decoration:none}
+.hd-ic{display:flex;gap:18px}
+.crumb{font-family:'Jost';font-size:11px;color:var(--muted);letter-spacing:.04em;padding:14px 26px 0;background:var(--paper)}
+.crumb a{color:var(--sage);text-decoration:none}
+/* centered intro (About "Hi, we're Movaro") */
+.intro{background:var(--paper);text-align:center;padding:48px 30px 54px}
+.intro .eyebrow{margin-bottom:16px}
+.intro h1{font-size:34px;margin-bottom:18px}
+.intro p{font-size:16.5px;color:var(--ink-soft);line-height:1.62;max-width:380px;margin:0 auto 14px}
+.intro p b{color:var(--ink)}
+.intro .sign{font-family:'Fraunces';font-style:italic;font-size:16px;color:var(--ink);margin-top:8px}
+/* generic page head + content */
+.pagehd{padding:34px 26px 6px;background:var(--paper)}
+.pagehd h1{font-size:34px}
+.pagehd p{font-size:15px;color:var(--ink-soft);margin-top:10px}
+.sec{padding:30px 26px}
+.s-ivory{background:var(--ivory)}.s-paper{background:var(--paper)}
+/* contact options */
+.copt{display:flex;flex-direction:column;gap:11px}
+.copt a{display:flex;gap:14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:16px;text-decoration:none;color:var(--ink)}
+.copt .ic{width:42px;height:42px;border-radius:11px;background:var(--sage-tint);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:19px}
+.copt b{font-family:'Jost';font-size:14px;font-weight:600;display:block}
+.copt small{font-size:12.5px;color:var(--ink-soft);display:block;margin-top:2px}
+.cform{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.cform input,.cform textarea{border:1px solid var(--line);border-radius:11px;padding:14px 16px;font-family:'Jost';font-size:14px;background:var(--paper);color:var(--ink);width:100%}
+.cform textarea{min-height:120px;resize:vertical}
+.cform .btn{margin-top:4px}
+/* faq accordion */
+details.q{background:var(--paper);border:1px solid var(--line);border-radius:13px;margin-top:11px;overflow:hidden}
+details.q summary{list-style:none;cursor:pointer;padding:16px 18px;font-family:'Jost';font-weight:600;font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary .pm{font-size:22px;color:var(--sage);font-weight:300;line-height:1;transition:transform .2s}
+details.q[open] summary .pm{transform:rotate(45deg)}
+details.q .ans{padding:0 18px 17px;font-size:14px;color:var(--ink-soft);line-height:1.6}
+/* steps (site guide) */
+.step{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:16px;margin-top:11px}
+.step .n{width:34px;height:34px;border-radius:50%;background:var(--sage);color:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:600;font-size:15px}
+.step b{font-family:'Jost';font-size:14px;font-weight:600;display:block;margin-bottom:3px}
+.step small{font-size:13px;color:var(--ink-soft);line-height:1.5;display:block}
+/* promise (kept — blends into footer) */
+.promise{background:var(--sage);color:#fff;text-align:center;padding:44px 26px}
+.promise .eyebrow{color:#CFE0DD}
+.promise h2{color:#fff;font-size:27px;margin:11px 0 10px}
+.promise p{font-size:14.5px;color:rgba(255,255,255,.85);max-width:360px;margin:0 auto 20px}
+.promise .btn{background:#fff;color:var(--accent-deep);border-color:#fff}
+.promise .mail{display:block;margin-top:14px;font-size:13px;color:rgba(255,255,255,.85);text-decoration:none}
+/* footer */
+.footer{background:var(--sage);color:rgba(255,255,255,.72)}
+.footer .top{text-align:center;padding:30px 24px 18px;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer .top .logo{color:#fff;font-size:22px;margin-bottom:5px}
+.footer .top .tag{color:rgba(255,255,255,.7);font-size:12.5px}
+.footer details{border-bottom:1px solid rgba(255,255,255,.14)}
+.footer summary{list-style:none;cursor:pointer;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Jost';font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.footer summary::-webkit-details-marker{display:none}
+.footer summary .chev{font-size:18px;font-weight:300;color:rgba(255,255,255,.7)}
+.footer details[open] summary .chev{transform:rotate(180deg)}
+.footer .links{padding:0 24px 16px}
+.footer .links a{display:block;color:rgba(255,255,255,.72);text-decoration:none;padding:6px 0;font-size:13.5px}
+.footer .bottom{padding:18px 24px 30px;text-align:center;font-size:11px;color:rgba(255,255,255,.6)}
+.footer .pay{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:10px 0}
+.footer .pay span{font-family:'Jost';font-size:8px;font-weight:700;color:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.28);border-radius:5px;padding:5px 9px}
