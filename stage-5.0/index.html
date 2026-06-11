@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movaro — Calm care for the cats you love</title>
+<!--
+  MOVARO — STAGE 4.2 = HOME PAGE v2 (Elena brand-converter) + accordion footer.
+  ITER 3 (Marina feedback on iter 2): KEEP footer / witnesses(rating+10k+reviews+guarantee) / product card / 4-point strip.
+  REWORK: (1) HERO — descriptor now readable (stronger scrim) + a REAL Elena offer (2 benefits + 1 uniqueness in one
+  content-rich line, "read it → understand what I get & why unique") + prominent CTA. (2) 3 OFFER BLOCKS rebuilt in the
+  PRODUCT-PAGE "brow" style (alternating small photo + heading + copy + proof bullet + .hl/.hlw highlights); block 3
+  (uniqueness) = Us-vs-Them TABLE instead of a photo. (3) ABOUT + BUY redesigned so it's not "text after text".
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF; --ivory:#F2EEE6; --sand:#E7E1D4; --cream:#ECE7DC;
+  --ink:#21201C; --ink-soft:#6A6256; --muted:#9C9385;
+  --line:#E6DFD1; --line-soft:#F0EBDF;
+  --sage:#3E5C5A; --sage-soft:#6E8B89; --sage-tint:#E2E9E7;
+  --clay:#B9774F; --clay-soft:#D9A47F; --clay-tint:#F4E5D8; --taupe:#C8BAA3;
+  --honey:#D7A94E; --honey-deep:#C28F2E; --honey-tint:#F3E5C2;
+  --accent:#2F7A73; --accent-deep:#246159;
+  --r:14px; --pill:999px;
+  --shadow:0 1px 2px rgba(33,32,28,.04), 0 8px 28px rgba(33,32,28,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:#E4DFD5;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:480px;margin:0 auto;background:var(--ivory);overflow:hidden;position:relative}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.06;letter-spacing:-.015em}
+section{padding:58px 26px}
+.s-paper{background:var(--paper)} .s-ivory{background:var(--ivory)} .s-sand{background:var(--sand)} .s-cream{background:var(--cream)}
+.eyebrow{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--sage)}
+.stars{color:var(--clay);letter-spacing:2px;font-size:14px}
+.hl{background:linear-gradient(transparent 58%, var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
+.hlw{background:linear-gradient(transparent 56%, var(--honey-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;
+  border:1px solid var(--accent);border-radius:var(--pill);font-family:'Jost';font-size:13.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;min-height:56px;padding:16px 30px;cursor:pointer;text-decoration:none;transition:transform .12s,opacity .15s}
+.btn:active{transform:scale(.985);opacity:.92}
+.btn.block{display:flex;width:100%}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink);min-height:46px;font-size:12px}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* announce + header */
+.announce{background:var(--accent);color:#fff;text-align:center;font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:11px 12px;white-space:nowrap}
+.announce .dotsep{opacity:.5;margin:0 8px}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--paper);border-bottom:1px solid var(--line-soft);position:sticky;top:0;z-index:40}
+.logo{font-family:'Fraunces';font-weight:600;font-size:23px;letter-spacing:.02em}
+.hd-ic{display:flex;gap:18px}
+
+/* HERO — descriptor readable + REAL offer + prominent CTA */
+.hero{position:relative;background:var(--paper);padding:0}
+.hero .ph{position:relative;aspect-ratio:3/4;overflow:hidden}
+.hero .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.hero .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:30px 26px 32px;
+  background:linear-gradient(to top,rgba(18,16,13,.88) 0%,rgba(18,16,13,.72) 30%,rgba(18,16,13,.28) 62%,rgba(18,16,13,0) 100%)}
+.hero .desc{display:inline-block;font-family:'Jost';font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:rgba(47,122,115,.92);padding:6px 12px;border-radius:var(--pill);margin-bottom:14px;align-self:flex-start}
+.hero h1{color:#fff;font-size:44px;font-weight:500;letter-spacing:-.025em;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,.25)}
+.hero .offer{color:#fff;font-size:16px;line-height:1.5;max-width:340px;margin-bottom:22px}
+.hero .offer b{font-weight:600}
+.hero .offer .u{color:var(--honey-tint);font-weight:600}
+.hero .btn{align-self:stretch;background:#fff;color:var(--accent-deep);border-color:#fff;box-shadow:0 8px 26px rgba(0,0,0,.3);min-height:60px;font-size:14px}
+
+/* benefits strip */
+.tstrip{display:flex;align-items:stretch;background:var(--accent);color:#fff}
+.tstrip .ti{flex:1;text-align:center;padding:17px 6px;border-right:1px solid rgba(255,255,255,.12)}
+.tstrip .ti:last-child{border:none}
+.tstrip .ti b{display:block;font-family:'Fraunces';font-size:17px;font-weight:600}
+.tstrip .ti small{font-family:'Jost';font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.62);display:block;margin-top:3px}
+
+/* product card (kept) */
+.flag{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.flag .ph{aspect-ratio:4/3;position:relative}
+.flag .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.flag .ph .tag{position:absolute;top:13px;left:13px;background:var(--honey);color:#3A2E12;font-family:'Jost';font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:var(--pill)}
+.flag .body{padding:22px}
+.flag .d{font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+.flag h3{font-size:25px;font-weight:500;margin:7px 0 6px}
+.flag .rt{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px}
+.flag ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin:14px 0 18px}
+.flag ul li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink);line-height:1.4}
+.flag ul li .bem{font-size:17px;width:22px;text-align:center;flex-shrink:0;margin-top:1px}
+.flag .price{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
+.flag .price .now{font-family:'Fraunces';font-size:26px;font-weight:600}
+.flag .price .was{color:var(--muted);text-decoration:line-through;font-size:15px}
+.flag .price .save{font-family:'Jost';font-size:11px;font-weight:600;color:var(--sage);background:var(--sage-tint);padding:4px 10px;border-radius:var(--pill)}
+
+/* OFFER body — product-page "brow" style (alternating photo + heading + copy + proof) */
+.sect-head{max-width:400px;margin:0 auto 8px;text-align:center}
+.sect-head h2{font-size:30px;margin:10px 0 9px;font-weight:500}
+.sect-head p{font-size:14.5px;color:var(--ink-soft)}
+.brow{display:flex;gap:18px;align-items:center;margin-top:36px}
+.brow:nth-child(even){flex-direction:row-reverse}
+.brow .ill{flex-shrink:0;width:132px;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.brow .ill img{width:100%;height:100%;object-fit:cover;display:block}
+.brow .bt h3{font-size:24px;font-weight:500;margin-bottom:9px;line-height:1.1}
+.brow .bt p{font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+.brow .bt p b{color:var(--ink)}
+.brow .bt .proof{display:inline-flex;align-items:center;gap:7px;font-family:'Jost';font-size:12px;color:var(--sage);margin-top:13px;font-weight:600;background:var(--sage-tint);padding:6px 12px;border-radius:var(--pill)}
+/* uniqueness block — heading + Us-vs-Them table (no photo) */
+.uniq-block{margin-top:40px}
+.uniq-block h3{font-size:24px;font-weight:500;margin-bottom:10px}
+.uniq-block .lead{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px}
+.uniq-block .lead b{color:var(--ink)}
+.uvt{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.uvt .row{display:grid;grid-template-columns:1.4fr .8fr .8fr;font-size:13px;border-top:1px solid var(--line-soft)}
+.uvt .row:first-child{border-top:none}
+.uvt .row .c{padding:13px 8px;text-align:center;display:flex;align-items:center;justify-content:center}
+.uvt .row .lbl{justify-content:flex-start;text-align:left;color:var(--ink-soft);font-weight:500}
+.uvt .row .us{background:var(--sage-tint);font-weight:600}
+.uvt .head{background:var(--paper)}
+.uvt .head .us{font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--ink)}
+.uvt .head .them{font-family:'Jost';font-size:11px;color:var(--muted);font-weight:600}
+.tick{color:var(--sage);font-weight:700;font-size:16px}.cross{color:var(--muted)}
+
+/* WITNESSES — kept (Marina likes it) */
+.proofwrap{background:var(--sand);text-align:center}
+.rate{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-soft);margin-bottom:26px}
+.rate b{font-family:'Fraunces';font-size:20px;color:var(--ink)}
+.scroll{display:flex;gap:13px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory;margin:0 -26px 24px;padding-left:26px;padding-right:26px;text-align:left}
+.scroll::-webkit-scrollbar{display:none}
+.scroll > *{scroll-snap-align:start}
+.ugc-card{min-width:212px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.ugc-card .ill{aspect-ratio:9/11;overflow:hidden}
+.ugc-card .ill img{width:100%;height:100%;object-fit:cover;display:block}
+.ugc-handle{display:flex;align-items:center;gap:8px;padding:11px 13px 2px;font-size:12.5px;font-weight:600}
+.ugc-handle .dot{width:22px;height:22px;border-radius:50%;background:var(--sage-tint)}
+.ugc-handle .vf{margin-left:auto;font-size:9px;color:var(--sage);letter-spacing:.04em;text-transform:uppercase}
+.ugc-txt{padding:5px 13px 14px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.guar-line{display:inline-flex;align-items:center;gap:10px;font-family:'Jost';font-size:13.5px;font-weight:600;color:var(--accent-deep);background:var(--sage-tint);border:1px solid #CFE0DD;border-radius:var(--pill);padding:12px 22px}
+
+/* ABOUT — visual, not "text after text" (image + concise) */
+.about{background:var(--cream)}
+.about .card{display:flex;gap:18px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.about .card .ph{flex-shrink:0;width:92px;height:92px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.about .card .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.about .card .eyebrow{margin-bottom:7px}
+.about .card .lead{font-family:'Fraunces';font-size:19px;font-weight:500;line-height:1.2;margin-bottom:7px}
+.about .card p{font-size:13px;color:var(--ink-soft);line-height:1.5}
+.about .card a{display:inline-block;font-family:'Jost';font-size:12px;font-weight:600;color:var(--sage);margin-top:9px;text-decoration:none;letter-spacing:.04em}
+
+/* FINAL BUY — strong closer with product thumb */
+.buy{background:var(--sage);color:#fff;text-align:center}
+.buy .thumb{width:96px;height:96px;border-radius:var(--r);overflow:hidden;margin:0 auto 18px;border:2px solid rgba(255,255,255,.3)}
+.buy .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.buy .eyebrow{color:#CFE0DD}
+.buy h2{color:#fff;font-size:32px;margin:11px 0 12px}
+.buy .price{display:inline-flex;align-items:baseline;gap:9px;margin-bottom:18px;color:#fff}
+.buy .price .now{font-family:'Fraunces';font-size:26px;font-weight:600}
+.buy .price .was{color:rgba(255,255,255,.6);text-decoration:line-through;font-size:15px}
+.buy .price .save{font-family:'Jost';font-size:11px;font-weight:600;background:rgba(255,255,255,.18);padding:4px 10px;border-radius:var(--pill)}
+.buy .btn{background:#fff;color:var(--accent-deep);border-color:#fff}
+.buy .reassure{margin-top:14px;font-size:12px;color:rgba(255,255,255,.78)}
+
+/* FOOTER — petrol, collapsible (kept) */
+.footer{background:var(--sage);color:rgba(255,255,255,.72)}
+.footer .top{text-align:center;padding:34px 24px 20px;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer .top .logo{color:#fff;font-size:24px;margin-bottom:6px}
+.footer .top .tag{color:rgba(255,255,255,.7);font-size:13px}
+.footer details{border-bottom:1px solid rgba(255,255,255,.14)}
+.footer summary{list-style:none;cursor:pointer;padding:17px 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Jost';font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.footer summary::-webkit-details-marker{display:none}
+.footer summary .chev{font-size:18px;font-weight:300;transition:transform .2s;color:rgba(255,255,255,.7)}
+.footer details[open] summary .chev{transform:rotate(180deg)}
+.footer .links{padding:0 24px 18px}
+.footer .links a{display:block;color:rgba(255,255,255,.72);text-decoration:none;padding:7px 0;font-size:13.5px}
+.footer .links a:hover{color:#fff}
+.footer .sub{padding:4px 24px 20px}
+.footer .sub p{font-size:12.5px;color:rgba(255,255,255,.7);margin-bottom:11px}
+.footer .sub .row{display:flex;border:1px solid rgba(255,255,255,.3);border-radius:var(--pill);overflow:hidden}
+.footer .sub input{flex:1;background:transparent;border:none;padding:13px 16px;color:#fff;font-family:'Jost';font-size:13px}
+.footer .sub input::placeholder{color:rgba(255,255,255,.55)}
+.footer .sub button{background:#fff;border:none;color:var(--sage);padding:0 18px;font-size:18px;cursor:pointer}
+.footer .trust{text-align:center;padding:18px 24px;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer .trust .tp{display:inline-flex;align-items:center;gap:8px;font-family:'Jost';font-size:12px;color:rgba(255,255,255,.85)}
+.footer .trust .tp .tp-stars{color:#fff;letter-spacing:1px}
+.footer .trust .ph-note{display:block;font-size:9px;color:rgba(255,255,255,.5);margin-top:5px;letter-spacing:.04em}
+.footer .bottom{padding:20px 24px 30px;text-align:center;font-size:11px;color:rgba(255,255,255,.6)}
+.footer .pay{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.footer .pay span{font-family:'Jost';font-size:8px;font-weight:700;letter-spacing:.03em;color:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.28);border-radius:5px;padding:5px 9px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- announce + header -->
+  <div class="announce">Free US Shipping<span class="dotsep">·</span>3 Free Gifts Worth $35</div>
+  <header class="hd">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="#21201C" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <div class="logo">Movaro</div>
+    <div class="hd-ic">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#21201C" stroke-width="1.7"/><path d="M20 20l-4-4" stroke="#21201C" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 7h13l-1.2 9a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6 7zM6 7L5 4H3" stroke="#21201C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </header>
+
+  <!-- HERO — descriptor (readable) + REAL Elena offer + prominent CTA -->
+  <section class="hero">
+    <div class="ph">
+      <img src="img/hotspot.jpg" alt="A calm cat in the Movaro wrap">
+      <div class="ov">
+        <h1>Calm,<br>not trapped.</h1>
+        <p class="offer">The <span class="u">vet-designed wrap</span> that settles your cat in <b>~60 seconds</b> — so you trim nails, give meds &amp; groom <b>at home, solo</b>, and skip <b>$300+/yr</b> in vet trims.</p>
+        <a href="#flagship" class="btn">Shop the Calm Wrap →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- benefits strip (kept) -->
+  <div class="tstrip">
+    <div class="ti"><b>🩺</b><small>Vet-designed</small></div>
+    <div class="ti"><b>30-day</b><small>money-back</small></div>
+    <div class="ti"><b>Free</b><small>US shipping</small></div>
+    <div class="ti"><b>10k+</b><small>cats calmed</small></div>
+  </div>
+
+  <!-- CATALOG / product card (kept) -->
+  <section class="s-ivory" id="flagship">
+    <div class="flag reveal">
+      <div class="ph"><img src="img/about.jpg" alt="Movaro Calm Wrap"><span class="tag">Most loved</span></div>
+      <div class="body">
+        <div class="d">Vet-designed calming cat wrap</div>
+        <h3>Movaro Calm Wrap</h3>
+        <div class="rt"><span class="stars">★★★★★</span> 4.8 · 600+ calm cats 🐾</div>
+        <ul>
+          <li><span class="bem">😌</span><span><b class="hlw">Calm in ~60 seconds</b> — gentle pressure, no fight</span></li>
+          <li><span class="bem">🙌</span><span><b class="hlw">Do it solo</b> — one person, a few quiet minutes</span></li>
+          <li><span class="bem">💰</span><span><b class="hlw">Saves $300+/year</b> vs groomer &amp; sedated vet trims</span></li>
+        </ul>
+        <div class="price"><span class="now">$64.99</span><span class="was">$99.99</span><span class="save">+ 3 free gifts ($35)</span></div>
+        <a href="../stage-4.0/index.html" class="btn block">Shop now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER BODY — Elena's 2 benefits + 1 uniqueness, product-page "brow" style -->
+  <section class="s-paper">
+    <div class="sect-head reveal"><div class="eyebrow">Why cat parents switch</div><h2>Three reasons it works.</h2></div>
+
+    <!-- benefit 1 — QUALITY -->
+    <div class="brow reveal">
+      <div class="ill"><img src="img/benefit.jpg" alt="Calm cat groomed at home"></div>
+      <div class="bt">
+        <h3>Calm, not a fight</h3>
+        <p>Gentle swaddle pressure tells your cat's nervous system it's safe — so <b class="hl">most cats settle in about a minute,</b> and you finally do nails, meds &amp; grooming without the hiss or the blood.</p>
+        <span class="proof">😌 Works for nails, meds, subQ &amp; ears</span>
+      </div>
+    </div>
+
+    <!-- benefit 2 — MONEY -->
+    <div class="brow reveal">
+      <div class="ill"><img src="img/bundle.jpg" alt="One wrap replaces years of vet trims"></div>
+      <div class="bt">
+        <h3>Pays for itself</h3>
+        <p>A groomer is $25–30 a trim; a sedated vet visit, <b>$145–500 — every time.</b> Movaro is a one-time $64.99 and <b class="hl">pays for itself in about three trims.</b></p>
+        <span class="proof">💰 Saves $300+/year</span>
+      </div>
+    </div>
+
+    <!-- uniqueness — TABLE instead of photo -->
+    <div class="uniq-block reveal">
+      <h3>What a $15 bag can't do</h3>
+      <p class="lead">A cheap bag just <b>traps</b> a cat — panic gets worse. Movaro calms. That's the wedge no bag copies.</p>
+      <div class="uvt">
+        <div class="row head"><div class="c lbl"></div><div class="c us">Movaro</div><div class="c them">$15 bag</div></div>
+        <div class="row"><div class="c lbl">Calms — not just traps</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✕</span></div></div>
+        <div class="row"><div class="c lbl">Quiet soft fabric</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✕</span></div></div>
+        <div class="row"><div class="c lbl">Full Kitten→XL range</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✕</span></div></div>
+        <div class="row"><div class="c lbl">30-day calm guarantee</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✕</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WITNESSES — kept (Marina likes it) -->
+  <section class="proofwrap">
+    <div class="eyebrow reveal">The witnesses</div>
+    <h2 class="reveal" style="font-size:30px;margin:11px 0 14px">10,000+ calmer cats.</h2>
+    <div class="rate reveal"><span class="stars">★★★★★</span> <b>4.8</b> · 600+ verified reviews</div>
+    <div class="scroll reveal">
+      <div class="ugc-card"><div class="ill"><img src="img/ugc1.jpg" alt=""></div><div class="ugc-handle"><span class="dot"></span>@badboymoosh_cats<span class="vf">✓</span></div><div class="ugc-txt">"I'd given up trimming his nails alone — every time turned into a war. This ended it for good."</div></div>
+      <div class="ugc-card"><div class="ill"><img src="img/ugc3.jpg" alt=""></div><div class="ugc-handle"><span class="dot"></span>@thatspicycat<span class="vf">✓</span></div><div class="ugc-txt">"My cat is the definition of 'spicy.' First time I've done his nails ALONE — without bleeding."</div></div>
+      <div class="ugc-card"><div class="ill"><img src="img/ugc2.jpg" alt=""></div><div class="ugc-handle"><span class="dot"></span>@peggy.and.theo<span class="vf">✓</span></div><div class="ugc-txt">"Nail day used to mean two people, towels and panic. From panic to peace — I cried a little 🥹"</div></div>
+    </div>
+    <div class="guar-line reveal">🛡️ 30-Day Calm Guarantee — love it or your money back</div>
+  </section>
+
+  <!-- ABOUT — visual card, concise (Elena: late + brief) -->
+  <section class="about">
+    <div class="card reveal">
+      <div class="ph" style="display:flex;align-items:center;justify-content:center;background:var(--sage-tint);text-align:center"><span style="font-family:'Jost';font-size:8px;font-weight:700;color:var(--sage);letter-spacing:.06em;line-height:1.35">TEAM<br>PHOTO<br>TBD</span></div>
+      <div>
+        <div class="eyebrow">Why Movaro</div>
+        <div class="lead">Care shouldn't be a battle.</div>
+        <p>A scared cat doesn't need to be fought — it needs to feel safe. <b>Calm over force, always.</b></p>
+        <a href="#about">Read our story →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL BUY — removed for now (Marina: too bulky); revisit a tight closing CTA when strengthening the page -->
+
+  <!-- FOOTER — petrol, collapsible (kept) -->
+  <footer class="footer">
+    <div class="top">
+      <div class="logo">Movaro</div>
+      <div class="tag">Calm, not trapped.</div>
+    </div>
+    <details>
+      <summary>About Movaro <span class="chev">⌄</span></summary>
+      <div class="links"><a href="about.html">Our story</a><a href="#about">Vet-designed promise</a><a href="#refer">Refer a friend</a></div>
+    </details>
+    <details>
+      <summary>FAQ &amp; Policies <span class="chev">⌄</span></summary>
+      <div class="links"><a href="faq.html">FAQ</a><a href="#shipping">Shipping</a><a href="#refund">Returns &amp; Refunds</a><a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Service</a></div>
+    </details>
+    <details>
+      <summary>More Information <span class="chev">⌄</span></summary>
+      <div class="links"><a href="contact.html">Contact Us</a><a href="#track">Track Your Order</a><a href="size-guide.html">Size Guide</a><a href="guide.html">How to Order</a></div>
+    </details>
+    <details open>
+      <summary>Exclusive Benefits <span class="chev">⌄</span></summary>
+      <div class="sub">
+        <p>Join free for exclusive deals &amp; calm-care tips.</p>
+        <form class="row" onsubmit="return false"><input type="email" placeholder="Enter your email"><button type="submit">→</button></form>
+      </div>
+    </details>
+    <div class="trust">
+      <span class="tp"><span class="tp-stars">★★★★★</span> Trustpilot 4.8 · 347 reviews</span>
+      <span class="ph-note">placeholder — real Trustpilot widget once the account is live</span>
+    </div>
+    <div class="bottom">
+      <div class="pay"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span><span>APPLE PAY</span><span>G PAY</span></div>
+      support@movaro.com<br>
+      © 2026 Movaro · 30-Day Calm Guarantee · Free US Shipping
+    </div>
+  </footer>
+
+</div>
+<script>
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
