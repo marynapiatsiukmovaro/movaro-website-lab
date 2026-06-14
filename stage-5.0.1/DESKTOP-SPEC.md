@@ -19,7 +19,7 @@
 ## What the THEME gives on desktop (no custom build — just settings)
 - **Announcement bar** = full-width; setting `layout: carousel` → the two phrases ROTATE (like mobile). (`mobile_layout: carousel` already.)
 - **Header** = single row: logo LEFT (`logo_position: middle-left`, `logo_height: 40` — made smaller so it doesn't dominate; mobile stays `mobile_logo_position: center`, `mobile_logo_height: 44`), nav CENTERED (our `header.liquid` snippet, desktop only), cart RIGHT. Search/account stay hidden (keep-and-hide, scoped `.header-wrapper`).
-- **Hero** = native 2-column: gallery LEFT + our buy-box (`mv_buybox`) RIGHT, sticky. **Untouched — Marina: it's great.**
+- **Hero** = native 2-column: gallery LEFT + our buy-box (`mv_buybox`) RIGHT, sticky. **Gallery layout = `columns`** → desktop shows all photos **2-per-row, several rows** (Marina's pick); **mobile auto-renders as a slider** (theme handles per-device). Old competitor screenshots removed from the product — gallery = our 5 photos only. Buy-box untouched (Marina: great).
 - **Footer** = native re-skinned petrol footer → columns in a row on desktop.
 
 ## Our custom desktop body layout (`@media(min-width:990px)` in movaro-product.css)
