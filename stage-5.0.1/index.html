@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movaro · 5.0.1 — Десктоп-версия продуктовой</title>
+<style>
+  :root{--ink:#21201C;--soft:#6A6256;--line:#E6DFD1;--sage:#3E5C5A;--accent:#2F7A73;--cream:#F2EEE6}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Jost',system-ui,-apple-system,sans-serif;color:var(--ink);background:#FBF9F4;line-height:1.6}
+  .wrap{max-width:780px;margin:0 auto;padding:40px 22px 80px}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
+  h1{font-family:Georgia,serif;font-size:32px;font-weight:500;margin:8px 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--soft);font-size:15px;margin:0 0 26px}
+  .cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;text-decoration:none;
+       font-weight:600;font-size:15px;letter-spacing:.02em;padding:16px 26px;border-radius:999px;box-shadow:0 6px 18px rgba(47,122,115,.28)}
+  .cta:active{transform:scale(.98)}
+  .hint{font-size:12.5px;color:var(--soft);margin:12px 0 0}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:22px 0}
+  .card h2{font-family:Georgia,serif;font-size:20px;font-weight:500;margin:0 0 12px}
+  ul{margin:0;padding-left:20px}
+  li{margin:7px 0;font-size:14.5px}
+  li b{color:var(--ink)}
+  .tag{display:inline-block;background:var(--cream);border-radius:6px;padding:1px 7px;font-size:12px;color:var(--soft)}
+  .note{background:#FFF6E6;border:1px solid #F0E2BE;border-radius:12px;padding:16px 18px;font-size:13.5px;color:#6a5b30;margin:24px 0}
+  .back{display:inline-block;margin-bottom:18px;color:var(--soft);text-decoration:none;font-size:13px}
+  code{background:var(--cream);padding:1px 6px;border-radius:5px;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Все стейджи</a>
+  <div class="eyebrow">Stage 5.0.1 · 2026-06-14</div>
+  <h1>Десктоп-версия продуктовой страницы</h1>
+  <p class="sub">Первая десктоп-версия. Если будем переделывать — станет 5.0.1.1. Мобильная версия не тронута (она приоритет — реклама идёт с телефона).</p>
+
+  <a class="cta" href="https://9109bw-8y.myshopify.com/products/pro-cat-wrap?preview_theme_id=188865773931" target="_blank" rel="noopener">🖥️ Открыть живой десктоп на Shopify (preview) →</a>
+  <p class="hint">Открывай <b>на компьютере</b>. Это preview-ссылка — показывает свежую версию сразу (обычная ссылка магазина обновляется медленнее). На телефоне можно через «Запросить версию для ПК».</p>
+
+  <div class="note">
+    <b>Почему здесь нет обычной превью-страницы, как у других стейджей.</b><br>
+    Десктоп-раскладку даёт <b>сама купленная тема</b> (2-колоночный Hero, announcement bar, шапка, подвал) — это живёт только на Shopify и в отдельной Лаб-странице не воспроизводится. Поэтому здесь — <b>запись решений + наш CSS</b>, а сам вид смотрим по кнопке выше. Файлы-снапшот: <code>movaro-product.css</code> · <code>product.movaro-pp.json</code> · <code>DESKTOP-SPEC.md</code>.
+  </div>
+
+  <div class="card">
+    <h2>Что даёт тема (без нашей сборки — просто настройки)</h2>
+    <ul>
+      <li><b>Announcement bar</b> — крутящаяся строка (как на мобильной).</li>
+      <li><b>Шапка</b> — один ряд: лого Movaro <b>слева</b> (компактный) · меню <b>по центру</b> · корзина справа. Лупа/аккаунт скрыты.</li>
+      <li><b>Hero</b> — 2 колонки: галерея слева + наш buy-box справа (липкий). Не трогали — отличный.</li>
+      <li><b>Подвал</b> — петроль, колонки в ряд.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Наша часть — раскладка тела (<span class="tag">@media ≥ 990px</span>, мобильная не тронута)</h2>
+    <ul>
+      <li><b>Отзывы (UGC)</b> — все <b>5 карточек в ряд</b>, без скролла.</li>
+      <li><b>About</b> — заголовок «Nail day…» + 2 текста <b>по центру сверху</b>, ниже: котик слева (липкий) / 3 фото-описания справа.</li>
+      <li><b>Mechanism</b> — 2 колонки: визуал слева / пункты справа; пункты <b>сразу открыты</b> (без «+»).</li>
+      <li><b>До/После</b> и <b>«Мы / Они»</b> — без изменений (и так хорошо).</li>
+      <li><b>Vet / бренд-блок</b> — немного шире.</li>
+      <li><b>«Calm in 3 simple steps»</b> — 3 фото крупнее в ряд, поля ужаты.</li>
+      <li>Базовая колонка тела расширена до ~740px.</li>
+    </ul>
+  </div>
+
+  <p class="hint">Полная спецификация и точные значения — в <code>DESKTOP-SPEC.md</code> этой папки. Источник правды нашей десктоп-части = файлы в <code>stage-5.0.1/</code>; полный вид = тема на Shopify (кнопка выше).</p>
+</div>
+</body>
+</html>
