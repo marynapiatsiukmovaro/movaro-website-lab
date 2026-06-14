@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movaro — 5.0.1.1 · Десктоп-чертёж (раскладка + правила + рендеры)</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#21201C;--soft:#6A6256;--muted:#9C9385;--line:#E6DFD1;--paper:#fff;--ivory:#F2EEE6;--sand:#E7E1D4;--sage:#3E5C5A;--accent:#2F7A73;--honey:#D7A94E;--r:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:#EDE8DE;line-height:1.55;padding:0 0 80px}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header.top{background:var(--sage);color:#fff;padding:34px 0 30px;margin-bottom:26px}
+header.top h1{color:#fff;font-size:30px;margin-bottom:8px}
+header.top p{color:rgba(255,255,255,.85);font-size:14.5px;max-width:760px}
+.raw{background:#FBE7C9;border:1px solid var(--honey);border-radius:var(--r);padding:13px 16px;font-size:13px;color:#6b531c;margin:16px 0 0}
+.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.nav a{background:rgba(255,255,255,.15);color:#fff;text-decoration:none;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--soft);margin:8px 0 22px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.chip{width:14px;height:14px;border-radius:3px;display:inline-block}
+.c-theme{background:#cfe0dd;border:1px solid #9cc} .c-our{background:#fff;border:1px solid var(--line)}
+section.page{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:34px}
+section.page>h2{font-size:24px;margin-bottom:4px}
+section.page>.sub{color:var(--soft);font-size:13.5px;margin-bottom:20px}
+.cols{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:start}
+@media(max-width:820px){.cols{grid-template-columns:1fr}}
+.schematitle,.tabletitle,.rendtitle{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+/* schematic wireframe */
+.schema{display:flex;flex-direction:column;gap:8px}
+.blk{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:10px 12px;font-size:12px;position:relative}
+.blk.theme{background:#e8f1ef;border-color:#bcd}
+.blk b{font-family:'Fraunces';font-size:12.5px;display:block}
+.blk small{color:var(--muted);font-size:10.5px}
+.blk.row2{display:grid;grid-template-columns:0.85fr 1.15fr;gap:8px;background:var(--ivory)}
+.blk.row2 .half{background:#fff;border:1px dashed var(--line);border-radius:6px;padding:7px 9px}
+.blk.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--sand)}
+.blk.row3 .half{background:#fff;border:1px dashed var(--line);border-radius:6px;padding:9px 4px;text-align:center;font-size:10px}
+.blk.strip{background:var(--accent);color:#fff;text-align:center;padding:7px}
+.blk.strip b,.blk.strip small{color:#fff}
+.blk.hero{background:linear-gradient(120deg,#dfe6e4,#eee);text-align:center;padding:20px 12px}
+/* rules table */
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{background:var(--ivory);font-family:'Jost';font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--soft)}
+td b{color:var(--ink)} code{font-family:ui-monospace,Menlo,monospace;font-size:11px;background:#f3efe6;padding:1px 5px;border-radius:4px;color:#4a4436;display:inline-block;margin-top:3px}
+.mob{color:var(--soft)} .dt{color:var(--ink)}
+/* renders */
+.renders{margin-top:24px}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:820px){.rgrid{grid-template-columns:1fr}}
+.rcard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#faf7f0}
+.rcard .cap{font-size:12px;font-weight:600;padding:9px 12px;color:var(--soft);border-bottom:1px solid var(--line);background:#fff}
+.rcard .scroll{max-height:560px;overflow:auto}
+.rcard img{width:100%;display:block}
+.rcard.mobile{max-width:300px;margin:0 auto}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+.foot{font-size:12.5px;color:var(--soft);text-align:center;margin-top:30px;line-height:1.7}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <h1>Movaro · 5.0.1.1 — десктоп-чертёж</h1>
+  <p>Переиспользуемый справочник раскладки: <b>схема блоков</b> + <b>правило на каждый блок (мобайл → десктоп) с реальным CSS</b> + <b>живые рендеры</b> текущих страниц. Цель — взять новый продукт и собрать страницу по карте, не согласовывая каждый блок заново.</p>
+  <div class="raw">⚠️ СЫРАЯ БАЗА — снимок на 2026-06-14 (S5i). Товар и главная ещё дорабатываются; это фиксирует текущее состояние и показывает эволюцию. Источник правды = живая тема (assets <code>movaro-home.css</code> / <code>movaro-product.css</code> + шаблоны). Обновлять этот срез по мере правок.</div>
+  <div class="nav"><a href="#home">🏠 Главная</a><a href="#product">🛍️ Карточка товара</a></div>
+  <div class="legend" style="margin-top:16px;color:rgba(255,255,255,.8)">
+    <span><span class="chip c-theme"></span> блок темы (нативный)</span>
+    <span><span class="chip c-our"></span> наш кастом-блок (custom-liquid)</span>
+  </div>
+</div></header>
+
+<div class="wrap">
+
+<!-- ================= HOME ================= -->
+<section class="page" id="home">
+  <h2>🏠 Главная страница</h2>
+  <div class="sub">Шаблон <code>templates/index.json</code> · CSS <code>assets/movaro-home.css</code> (scoped <code>.mvh</code>) · десктоп-брейкпоинт <b>990px</b>. Каркас (announce / header / footer) — нативный, общий для всего сайта.</div>
+
+  <div class="cols">
+    <div>
+      <div class="schematitle">Схема — десктоп</div>
+      <div class="schema">
+        <div class="blk theme strip"><b>Announcement bar</b><small>тема · на всю ширину, тонкий</small></div>
+        <div class="blk theme"><b>Header</b><small>тема · лого по центру, меню, корзина</small></div>
+        <div class="blk hero"><b>HERO — слайдшоу (тема)</b><small>десктоп: 1 широкий композит · текст по центру</small></div>
+        <div class="blk strip"><b>Полоска 4 преимуществ</b><small>наш · тонкая, на всю ширину</small></div>
+        <div class="blk row2"><div class="half"><b>Карточка товара</b><small>слева · sticky</small></div><div class="half"><b>3 причины + таблица</b><small>справа (чуть шире)</small></div></div>
+        <div class="blk row3"><div class="half">UGC 1</div><div class="half">UGC 2</div><div class="half">UGC 3</div></div>
+        <div class="blk"><b>About</b><small>наш · карточка по центру (max 600)</small></div>
+        <div class="blk theme"><b>Footer</b><small>тема · петроль-аккордеон</small></div>
+      </div>
+      <div class="note">Контент-блоки контейнер ~1040px по центру + бежевый воздух по бокам (не edge-to-edge).</div>
+    </div>
+
+    <div>
+      <div class="tabletitle">Правила: мобайл → десктоп + CSS</div>
+      <table>
+        <tr><th>Блок</th><th>Мобайл</th><th>Десктоп (@≥990)</th></tr>
+        <tr><td><b>Hero</b><br><span style="color:#9cc">тема</span></td>
+            <td class="mob">портрет-карусель, 2 слайда (hotspot · cozy), текст снизу-слева</td>
+            <td class="dt">1 широкий композит (textless, склейка 2 фото), 2-й слайд скрыт, текст по центру, компактнее<br><code>image=десктоп-широкое · image_mobile=портрет</code><br><code>.slideshow__slide:not(:first-of-type){display:none}</code></td></tr>
+        <tr><td><b>Полоска 4-преим.</b></td>
+            <td class="mob">петроль, 4 ячейки</td>
+            <td class="dt">тоньше/компактнее, на всю ширину<br><code>.tstrip .ti{padding:13px 8px} b{font-size:16px}</code></td></tr>
+        <tr><td><b>Каталог + 3 причины</b></td>
+            <td class="mob">стопкой: карточка (банд ivory) → 3 причины (банд paper)</td>
+            <td class="dt">одна секция, 2 колонки: карточка слева <b>sticky</b> (370) / 3 причины справа; контейнер 1040 + ivory-воздух<br><code>.shopsec{display:grid;grid-template-columns:370px 1fr;gap:50px;padding-inline:max(26px,calc((100% - 1040px)/2))}</code><br><code>.shop-left{position:sticky;top:90px}</code></td></tr>
+        <tr><td><b>Уникальность<br>(What a $15 bag)</b></td>
+            <td class="mob">заголовок слева</td>
+            <td class="dt">заголовок + лид по центру над таблицей<br><code>.shopsec .uniq-block{text-align:center}</code></td></tr>
+        <tr><td><b>Свидетели (UGC)</b></td>
+            <td class="mob">горизонтальный слайдер, 3 карточки</td>
+            <td class="dt">3 карточки в ряд, контейнер 1040 + поля; воздух между фото<br><code>.proofwrap .scroll{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}</code></td></tr>
+        <tr><td><b>About</b></td>
+            <td class="mob">карточка (cream банд)</td>
+            <td class="dt">карточка по центру<br><code>.about .card{max-width:600px;margin:0 auto}</code></td></tr>
+      </table>
+      <div class="note">Принцип: десктоп даёт тема (hero-слайдшоу, шапка, футер); наша часть = только CSS-медиазапросы тела <code>@media(min-width:990px)</code>. Мобайл не трогаем — он база.</div>
+    </div>
+  </div>
+
+  <div class="renders">
+    <div class="rendtitle">Живые рендеры — главная</div>
+    <div class="rgrid">
+      <div class="rcard"><div class="cap">🖥️ Десктоп (1440)</div><div class="scroll"><img src="renders/home-desktop.jpg" alt="home desktop"></div></div>
+      <div class="rcard mobile"><div class="cap">📱 Мобайл (430)</div><div class="scroll"><img src="renders/home-mobile.jpg" alt="home mobile"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCT ================= -->
+<section class="page" id="product">
+  <h2>🛍️ Карточка товара</h2>
+  <div class="sub">Шаблон <code>templates/product.movaro-pp.json</code> · CSS <code>assets/movaro-product.css</code> (scoped <code>.mvb</code> / <code>#mvpp</code>) · десктоп-брейкпоинт <b>990px</b>. Полный CSS-спек = <code>stage-5.0.1/DESKTOP-SPEC.md</code>.</div>
+
+  <div class="cols">
+    <div>
+      <div class="schematitle">Схема — десктоп</div>
+      <div class="schema">
+        <div class="blk theme strip"><b>Announcement bar</b><small>тема · крутится</small></div>
+        <div class="blk theme"><b>Header</b><small>тема · лого слева, меню по центру</small></div>
+        <div class="blk row2"><div class="half"><b>Галерея</b><small>тема · 2/ряд</small></div><div class="half"><b>Buy-box (наш 5.0)</b><small>справа</small></div></div>
+        <div class="blk strip"><b>Trust-полоска</b><small>наш</small></div>
+        <div class="blk row3"><div class="half">UGC ×5 в ряд</div><div class="half"></div><div class="half"></div></div>
+        <div class="blk row2"><div class="half"><b>About: котик</b><small>слева sticky</small></div><div class="half"><b>3 brow-фото</b><small>справа</small></div></div>
+        <div class="blk row2"><div class="half"><b>Механизм: визуал</b></div><div class="half"><b>пункты (открыты)</b></div></div>
+        <div class="blk"><b>Before/After · Мы-Они</b><small>как есть</small></div>
+        <div class="blk"><b>Vet · Инструкция (3 фото крупнее) · Offer · FAQ · Reviews · Close</b></div>
+        <div class="blk theme"><b>Footer</b><small>тема</small></div>
+      </div>
+      <div class="note">Спайн-линия — бледная, живая; кружок-точка отложен (<code>label::before</code>).</div>
+    </div>
+
+    <div>
+      <div class="tabletitle">Правила: мобайл → десктоп (кратко)</div>
+      <table>
+        <tr><th>Блок</th><th>Мобайл</th><th>Десктоп (@≥990)</th></tr>
+        <tr><td><b>Hero</b></td><td class="mob">галерея-слайдер сверху → buy-box под ней</td><td class="dt">2 колонки: галерея слева (тема) / buy-box справа (наш, verbatim 5.0)</td></tr>
+        <tr><td><b>Тело</b></td><td class="mob">в одну колонку</td><td class="dt">контейнер <b>740</b>, по центру, много воздуха</td></tr>
+        <tr><td><b>UGC</b></td><td class="mob">слайдер</td><td class="dt">5 карточек в ряд (без скролла)</td></tr>
+        <tr><td><b>About</b></td><td class="mob">стопкой</td><td class="dt">заголовок+лид по центру; ниже котик слева (sticky) / 3 brow-фото справа</td></tr>
+        <tr><td><b>Механизм</b></td><td class="mob">аккордеон-пункты закрыты</td><td class="dt">2 колонки (визуал слева / пункты справа), пункты <b>открыты</b></td></tr>
+        <tr><td><b>Vet · Инструкция</b></td><td class="mob">узко</td><td class="dt">vet шире · инструкция 3 фото крупнее в ряд</td></tr>
+        <tr><td><b>Before/After · Мы-Они</b></td><td class="mob">как есть</td><td class="dt">не трогали</td></tr>
+      </table>
+      <div class="note">Полный CSS — в <code>stage-5.0.1/DESKTOP-SPEC.md</code> + <code>assets/movaro-product.css</code> (живая тема = источник правды).</div>
+    </div>
+  </div>
+
+  <div class="renders">
+    <div class="rendtitle">Живые рендеры — товар</div>
+    <div class="rgrid">
+      <div class="rcard"><div class="cap">🖥️ Десктоп (1440)</div><div class="scroll"><img src="renders/product-desktop.jpg" alt="product desktop"></div></div>
+      <div class="rcard mobile"><div class="cap">📱 Мобайл (430)</div><div class="scroll"><img src="renders/product-mobile.jpg" alt="product mobile"></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  Movaro Website Lab · 5.0.1.1 — десктоп-чертёж (срез 2026-06-14).<br>
+  Обновлять при доработках: пере-снять рендеры + поправить правило блока. Источник правды — живая тема.
+</div>
+</div>
+</body>
+</html>
