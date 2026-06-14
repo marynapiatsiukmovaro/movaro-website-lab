@@ -91,3 +91,5 @@
   (она отдельным блоком ниже). Зафиксированный результат базы. ⚠ промежуточный — шрифт/цвета/копи дорабатываем.
 - **3.1.1** — exploration: то же + реальные фото в теле (UGC, отзывы) — увидеть, как страница «заиграет» целиком.
   Фото-производство задокументировано отдельно: `visual-lab/` (страница прогресса фото).
+
+- **5.0.1 (2026-06-14) — DESKTOP version of the product page.** Theme provides desktop Hero/announce/header/footer; our custom = body CSS media queries (@>=990px): widened column, UGC 5-across, About (heading centered top / cat left / brows right), Mechanism 2-col + accordions open, Vet wider, Instruction 3-up bigger. Header: logo left+smaller, nav centered, cart right; announce rotating. Snapshot+spec in `stage-5.0.1/`. Mobile untouched.
