@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movaro — 5.0.2 · Footer-страницы &amp; секционная архитектура (подвал)</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#21201C;--soft:#6A6256;--muted:#9C9385;--line:#E6DFD1;--paper:#fff;--ivory:#F2EEE6;--sand:#E7E1D4;--sage:#3E5C5A;--accent:#2F7A73;--honey:#D7A94E;--r:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:#EDE8DE;line-height:1.55;padding:0 0 80px}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header.top{background:var(--sage);color:#fff;padding:34px 0 30px;margin-bottom:26px}
+header.top h1{color:#fff;font-size:30px;margin-bottom:8px}
+header.top p{color:rgba(255,255,255,.85);font-size:14.5px;max-width:820px}
+.raw{background:#FBE7C9;border:1px solid var(--honey);border-radius:var(--r);padding:13px 16px;font-size:13px;color:#6b531c;margin:16px 0 0}
+.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.nav a{background:rgba(255,255,255,.15);color:#fff;text-decoration:none;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;margin:14px 0 0;color:rgba(255,255,255,.8)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.chip{width:14px;height:14px;border-radius:3px;display:inline-block}
+.c-theme{background:#cfe0dd;border:1px solid #9cc} .c-our{background:#fff;border:1px solid var(--line)}
+section.page{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:34px}
+section.page>h2{font-size:24px;margin-bottom:4px}
+section.page>.sub{color:var(--soft);font-size:13.5px;margin-bottom:20px}
+.cols{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:start}
+@media(max-width:820px){.cols{grid-template-columns:1fr}}
+.schematitle,.tabletitle,.rendtitle{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.schema{display:flex;flex-direction:column;gap:8px}
+.blk{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:10px 12px;font-size:12px}
+.blk.theme{background:#e8f1ef;border-color:#bcd}
+.blk.sand{background:var(--sand)}
+.blk.sage{background:var(--sage);color:#fff}.blk.sage b,.blk.sage small{color:#fff}
+.blk b{font-family:'Fraunces';font-size:12.5px;display:block}
+.blk small{color:var(--muted);font-size:10.5px}
+.blk.row2{display:grid;grid-template-columns:0.85fr 1.15fr;gap:8px}
+.blk.row2 .half{background:#fff;border:1px dashed var(--line);border-radius:6px;padding:7px 9px}
+.blk.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.blk.row3 .half{background:#fff;border:1px dashed var(--line);border-radius:6px;padding:9px 4px;text-align:center;font-size:10px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{background:var(--ivory);font-family:'Jost';font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--soft)}
+td b{color:var(--ink)} code{font-family:ui-monospace,Menlo,monospace;font-size:11px;background:#f3efe6;padding:1px 5px;border-radius:4px;color:#4a4436;display:inline-block;margin-top:3px}
+.mob{color:var(--soft)} .dt{color:var(--ink)}
+.renders{margin-top:24px}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:820px){.rgrid{grid-template-columns:1fr}}
+.rcard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#faf7f0}
+.rcard .cap{font-size:12px;font-weight:600;padding:9px 12px;color:var(--soft);border-bottom:1px solid var(--line);background:#fff}
+.rcard .scroll{max-height:560px;overflow:auto}
+.rcard img{width:100%;display:block}
+.rcard.mobile{max-width:300px;margin:0 auto}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+ul.pts{margin:8px 0 0 18px;font-size:13px;color:var(--soft)}ul.pts li{margin-bottom:5px}ul.pts b{color:var(--ink)}
+.status td:first-child{font-weight:600}
+.ok{color:var(--accent);font-weight:700}.todo{color:var(--honey-deep,#b07d1a);font-weight:700}
+.foot{font-size:12.5px;color:var(--soft);text-align:center;margin-top:30px;line-height:1.7}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <h1>Movaro · 5.0.2 — footer-страницы &amp; секционная архитектура</h1>
+  <p>Как мы строим страницы «подвала» (About / FAQ / How-to-Order / Size / Contact + полисы) и <b>почему перешли с монолита на СЕКЦИИ</b> — тот же принцип, что у продуктовой и главной (S5: «кастомные секции, не монолит»). Плюс: <b>переиспользование готового блока</b> (intro About → верх каталога) и чистка корзины.</p>
+  <div class="raw">⚠️ СЫРАЯ БАЗА — снимок на 2026-06-15 (S5k). About готов как база (story-фото = плейсхолдеры-бриф, дорабатываем на фото-сессии). Источник правды = живая тема (<code>templates/page.movaro-about.json</code> + <code>assets/movaro-about.css</code>). Этот срез обновлять по мере правок.</div>
+  <div class="nav"><a href="#arch">🧩 Архитектура</a><a href="#about">📄 About</a><a href="#catalog">🛒 Каталог</a><a href="#cart">🛍️ Корзина</a><a href="#status">📋 Статус подвала</a></div>
+  <div class="legend">
+    <span><span class="chip c-theme"></span> механика темы (нативное)</span>
+    <span><span class="chip c-our"></span> наш кастом-блок (custom-liquid)</span>
+  </div>
+</div></header>
+
+<div class="wrap">
+
+<!-- ARCHITECTURE -->
+<section class="page" id="arch">
+  <h2>🧩 Секционная архитектура footer-страниц</h2>
+  <div class="sub">Раньше footer-страницы были <b>монолитом</b> (<code>page.movaro.liquid</code> рендерил один <code>body_html</code>). Проблема: не редактируется в конструкторе, правится одним куском, мелкие правки буксуют. Решение (как у продуктовой/главной):</div>
+  <table>
+    <tr><th>Слой</th><th>Что</th><th>Зачем</th></tr>
+    <tr><td><b>Шаблон</b></td><td><code>templates/page.movaro-about.json</code> (JSON-шаблон страницы)</td><td>держит список секций + порядок; страница указывает на него через <code>template_suffix</code></td></tr>
+    <tr><td><b>Блоки</b></td><td>каждый блок = своя <code>custom-liquid</code> секция (<code>full_width</code>, padding 0)</td><td>редактируется и двигается в конструкторе; правим/проверяем ОДИН блок, не весь лист</td></tr>
+    <tr><td><b>CSS</b></td><td>общий ассет <code>assets/movaro-about.css</code>, заскоуплен <code>.mv-pg.mv-about</code></td><td>один источник; брейкпоинт десктопа <b>760px</b>; беж-секции — full-bleed через <code>box-shadow</code></td></tr>
+    <tr><td><b>Переиспользование</b></td><td>блок witnesses = <b>та же секция, что на главной</b> (<code>.mvh</code> + <code>movaro-home.css</code>, нативный <code>asset_url</code>)</td><td>1-в-1 с главной, без копий/костылей; правка главной → меняется и тут</td></tr>
+  </table>
+  <div class="note">🔑 Урок S5k: лид «What we stand for» уезжал влево, т.к. <code>.mv-pg p{margin:0}</code> (спецификация 0,1,1) перебивал <code>.mv-pr-lead{margin:0 auto}</code> (0,1,0) → починка = поднять спецификацию <code>.mv-pg .mv-pr-lead</code>. Диагностика — изолированным рендером, не на глаз.</div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="about">
+  <h2>📄 About — 6 блоков-секций</h2>
+  <div class="sub">Шаблон <code>templates/page.movaro-about.json</code> · CSS <code>assets/movaro-about.css</code> (<code>.mv-pg</code>) · структура согласована с Мариной.</div>
+  <div class="cols">
+    <div>
+      <div class="schematitle">Схема блоков (сверху вниз)</div>
+      <div class="schema">
+        <div class="blk theme"><b>Announce + Header</b><small>тема · общие для сайта</small></div>
+        <div class="blk"><b>1. Intro</b><small>👋 Hi, we're Movaro + слоган (hl). Переиспользуется на каталоге</small></div>
+        <div class="blk"><b>2. Story — 3-фото «лесенка»</b><small>chaos → search → result · фото-плейсхолдеры = фотобриф</small></div>
+        <div class="blk sand"><b>3. What we stand for</b><small>4 принципа (hl), беж</small></div>
+        <div class="blk"><b>4. Why Movaro is different</b><small>стрелки ↓ к 3 карточкам</small></div>
+        <div class="blk sand"><b>5. Witnesses</b><small>= дубль HOME-блока (.mvh), беж</small></div>
+        <div class="blk sage"><b>6. Promise</b><small>sage-карточка, 30-day</small></div>
+        <div class="blk theme"><b>Footer</b><small>тема · петроль-аккордеон</small></div>
+      </div>
+    </div>
+    <div>
+      <div class="tabletitle">Правила: мобайл → десктоп (@≥760)</div>
+      <table>
+        <tr><th>Блок</th><th>Мобайл</th><th>Десктоп</th></tr>
+        <tr><td><b>Заголовки секций</b></td><td class="mob">воздух после заголовка <code>.mv-h{margin-bottom:38px}</code> (калибровка S5k: 30 мало, 48 много → 38)</td><td class="dt">28px</td></tr>
+        <tr><td><b>Story</b></td><td class="mob">лесенка: фото/текст чередуются, фото 128px</td><td class="dt">шире: фото <b>300px</b>, контейнер лесенки <b>1000</b> (меньше белых полей)<br><code>.mv-lad{max-width:1000px} .mv-row{grid-template-columns:300px 1fr}</code></td></tr>
+        <tr><td><b>What we stand for</b></td><td class="mob">лид по центру, 2×2 принципа</td><td class="dt">лид по центру (<code>.mv-pg .mv-pr-lead</code> спец-фикс), 4 принципа в ряд</td></tr>
+        <tr><td><b>Why different</b></td><td class="mob">стрелки ↓, карточки стопкой</td><td class="dt">3 карточки в ряд</td></tr>
+        <tr><td><b>Witnesses</b></td><td class="mob">слайдер 3 карточки (как главная)</td><td class="dt">3 в ряд (как главная)</td></tr>
+      </table>
+      <div class="note">Беж-секции (stand-for / witnesses) = full-bleed через <code>box-shadow:0 0 0 100vmax var(--sand);clip-path:inset(0 -100vmax)</code>. Standalone-исходник: <code>stage-5.0/about.html</code>.</div>
+    </div>
+  </div>
+  <div class="renders">
+    <div class="rendtitle">Живые рендеры — About</div>
+    <div class="rgrid">
+      <div class="rcard"><div class="cap">🖥️ Десктоп (1440)</div><div class="scroll"><img src="renders/about-desktop.jpg" alt="about desktop"></div></div>
+      <div class="rcard mobile"><div class="cap">📱 Мобайл (414)</div><div class="scroll"><img src="renders/about-mobile.jpg" alt="about mobile"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="page" id="catalog">
+  <h2>🛒 Каталог — intro-блок сверху (переиспользование)</h2>
+  <div class="sub">Шаблон <code>templates/collection.json</code>. Идея Марины: голую сетку товаров «утеплить» брендовым входом — <b>тот же intro-блок, что на About</b>, сверху, затем товары.</div>
+  <div class="cols">
+    <div>
+      <div class="schematitle">Схема</div>
+      <div class="schema">
+        <div class="blk theme"><b>Announce + Header</b><small>тема · solid (см. фикс)</small></div>
+        <div class="blk"><b>shop-intro</b><small>= копия About-intro (eyebrow убран под каталог)</small></div>
+        <div class="blk theme"><b>Product grid</b><small>тема · vendor «MY STORE» скрыт</small></div>
+        <div class="blk"><b>Trust-полоска</b><small>наш custom-liquid (низ)</small></div>
+        <div class="blk theme"><b>Footer</b><small>тема</small></div>
+      </div>
+    </div>
+    <div>
+      <div class="tabletitle">Что сделано (S5k)</div>
+      <ul class="pts">
+        <li><b>Intro-блок сверху</b> — добавлен первой секцией в <code>collection.json</code> (<code>shop-intro</code>), eyebrow «About Movaro» убран (под контекст каталога).</li>
+        <li><b>Наслоение «Products» на лого (мобайл) убрано</b> — причина: <code>enable_transparent_header_collection=true</code> (прозрачная шапка для баннеров с фото). Выключил → шапка solid на коллекциях.</li>
+        <li><b>Старый баннер «Products»</b> скрыт (keep-and-hide, <code>disabled:true</code>) — заменён нашим intro.</li>
+        <li><b>Vendor «MY STORE»</b> на карточке скрыт (<code>show_vendor:false</code>).</li>
+      </ul>
+      <div class="note">Десктоп каталога = тот же intro по центру + сетка ниже (как десктоп About intro).</div>
+    </div>
+  </div>
+  <div class="renders">
+    <div class="rendtitle">Живые рендеры — каталог</div>
+    <div class="rgrid">
+      <div class="rcard"><div class="cap">🖥️ Десктоп (1440)</div><div class="scroll"><img src="renders/catalog-desktop.jpg" alt="catalog desktop"></div></div>
+      <div class="rcard mobile"><div class="cap">📱 Мобайл (414)</div><div class="scroll"><img src="renders/catalog-mobile.jpg" alt="catalog mobile"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CART -->
+<section class="page" id="cart">
+  <h2>🛍️ Корзина — убрали пугающую строку</h2>
+  <div class="sub">Под subtotal тема писала «Taxes, discounts and shipping calculated at checkout» — пугает (противоречит «free shipping», намёк на доп.расходы).</div>
+  <table>
+    <tr><th>Было</th><th>Стало</th></tr>
+    <tr><td class="mob">Taxes, discounts and shipping calculated at checkout.</td><td class="dt"><b>Almost there 🐾 No extra fees at checkout.</b></td></tr>
+  </table>
+  <div class="note">Заменено во всех 8 вариантах подписи в <code>locales/en.default.json</code> (<code>sections.cart.*</code>), чтобы при любой налоговой настройке показывалось это. «Worldwide shipping» не пишем — реклама на US.</div>
+</section>
+
+<!-- STATUS -->
+<section class="page" id="status">
+  <h2>📋 Статус footer-страниц</h2>
+  <table class="status">
+    <tr><th>Страница</th><th>Архитектура</th><th>Статус</th></tr>
+    <tr><td>About</td><td>секции (<code>page.movaro-about.json</code>)</td><td class="ok">✅ готово (база)</td></tr>
+    <tr><td>Catalog (collection)</td><td>+ intro-секция</td><td class="ok">✅ готово</td></tr>
+    <tr><td>Contact</td><td><code>page.movaro-contact.liquid</code> (нативная форма темы = механика)</td><td>🟡 базовая</td></tr>
+    <tr><td>FAQ · How-to-Order · Size Guide</td><td>пока монолит <code>page.movaro</code></td><td class="todo">⏳ перевести на секции</td></tr>
+    <tr><td>Policies (Privacy/Refund/Terms/Shipping)</td><td>нативные Shopify Policies</td><td class="ok">✅ заполнено</td></tr>
+  </table>
+  <div class="note">⏳ Дальше: FAQ / How-to-Order / Size Guide перевести на ту же секционную архитектуру; Size Guide ждёт реальный размерный ряд от Product Intelligence.</div>
+</section>
+
+<div class="foot">
+  Movaro Website Lab · 5.0.2 — footer-страницы &amp; секции (срез 2026-06-15, S5k).<br>
+  Обновлять при доработках: пере-снять рендеры + поправить правила. Источник правды — живая тема.
+</div>
+</div>
+</body>
+</html>

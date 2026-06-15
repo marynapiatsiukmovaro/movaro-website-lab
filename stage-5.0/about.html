@@ -3,15 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Movaro</title>
-<!-- MOVARO footer page: ABOUT v3 (Marina: minimal — warm "Hi, we're Movaro" text + Our promise, nothing else; enrich later vs competitors). RAW BASE. -->
+<title>About Movaro — 5.0 (synced from Shopify, section-based)</title>
+<!-- MOVARO footer page: ABOUT — SYNCED from live Shopify (S5k, 2026-06-15). Built as 6 custom-liquid SECTIONS on
+     templates/page.movaro-about.json (Shopify) → here as a standalone design-source. RAW BASE (story photos = brief placeholders). -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="pages.css">
+<style>
+/* ===== movaro-about.css (scoped .mv-pg) — synced from Shopify asset ===== */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap');
+.mv-pg{--paper:#FFFFFF;--sand:#E7E1D4;--ivory:#F6F3ED;--ink:#21201C;--ink-soft:#6A6256;--line:#E6DFD1;--sage:#3E5C5A;--sage-tint:#E2E9E7;--accent:#2F7A73;--accent-deep:#246159;--honey:#D7A94E;--pill:999px;--r:14px;max-width:560px;margin:0 auto;background:#fff;font-family:'Jost',system-ui,sans-serif;color:var(--ink);line-height:1.6}
+.mv-pg.mv-about{max-width:560px}
+.mv-pg *{box-sizing:border-box}
+.mv-pg h1,.mv-pg h2,.mv-pg h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.13;letter-spacing:-.015em;margin:0}
+.mv-pg p{margin:0}
+.mv-pg .eyebrow{font-family:'Jost';font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage);display:block}
+.mv-pg .hl{background:linear-gradient(transparent 56%,var(--sage-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
+.mv-pg .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;border:1px solid var(--accent);border-radius:var(--pill);font-family:'Jost';font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;min-height:54px;padding:15px 28px;text-decoration:none}
+.mv-sec{padding:42px 26px}
+/* full-bleed beige */
+.mv-sec.sand{background:var(--sand);box-shadow:0 0 0 100vmax var(--sand);clip-path:inset(0 -100vmax)}
+.mv-sec.sand .mv-in{max-width:560px;margin:0 auto}
+.mv-ctr{text-align:center}
+/* single big sage section heading */
+.mv-h{text-align:center;color:var(--sage);font-size:clamp(26px,6.6vw,31px);margin-bottom:38px}
+/* intro */
+.mv-intro{padding-bottom:14px}
+.mv-intro .eyebrow{margin-bottom:13px}
+.mv-intro h1{font-size:clamp(31px,7.4vw,42px);margin-bottom:15px}
+.mv-intro p{font-size:16.5px;color:var(--ink-soft);max-width:440px;margin:0 auto}
+.mv-intro p b{color:var(--ink)}
+/* story */
+.mv-story{padding-top:8px}
+.mv-lad{display:grid;gap:24px}
+.mv-row{display:grid;grid-template-columns:128px 1fr;gap:18px;align-items:center}
+.mv-row:nth-child(even){grid-template-columns:1fr 128px}
+.mv-row:nth-child(even) .txt{order:1}.mv-row:nth-child(even) .ph{order:2}
+.mv-row .ph{aspect-ratio:4/5;background:var(--ivory);border:1.5px dashed var(--accent);border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--accent-deep);padding:10px;gap:5px}
+.mv-row .ph .cam{font-size:22px}.mv-row .ph small{font-size:10px;line-height:1.35;font-weight:600;letter-spacing:.04em}
+.mv-row h3{font-size:19px;margin-bottom:6px}
+.mv-row p{font-size:14px;color:var(--ink-soft)}
+/* principles */
+.mv-pg .mv-pr-lead{text-align:center;font-size:15px;color:var(--ink-soft);max-width:470px;margin:0 auto}
+.mv-pr{display:grid;grid-template-columns:1fr 1fr;gap:30px 18px;max-width:440px;margin:30px auto 0;text-align:center}
+.mv-pr .it .i{font-size:25px;line-height:1}
+.mv-pr .it b{display:block;font-family:'Jost';font-weight:600;font-size:14.5px;margin:10px 0 5px}
+.mv-pr .it small{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+/* why different */
+.mv-why .lead{text-align:center;font-size:14px;color:var(--ink-soft);max-width:380px;margin:0 auto}
+.mv-why .fan{display:none}
+.mv-why-cards{display:grid;grid-template-columns:1fr;gap:0;margin-top:14px}
+.mv-why-c{padding-top:16px}
+.mv-why-c .da{display:flex;justify-content:center;margin-bottom:9px}
+.mv-why-card{background:var(--ivory);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px;text-align:center}
+.mv-why-card .e{font-size:25px;line-height:1;display:block;margin-bottom:8px}
+.mv-why-card b{font-family:'Fraunces';font-weight:600;font-size:17px;color:var(--ink);display:block;margin-bottom:5px}
+.mv-why-card small{font-size:13px;color:var(--ink-soft);line-height:1.5}
+/* promise */
+.mv-promise{background:var(--sage);color:#fff;text-align:center;padding:50px 28px;border-radius:18px;margin:32px 16px 36px}
+.mv-promise h2{color:#fff;font-size:27px;margin:0 0 10px}
+.mv-promise .eyebrow{color:#CFE0DD;margin-bottom:11px}
+.mv-promise p{color:rgba(255,255,255,.85);max-width:380px;margin:0 auto 20px;font-size:14.5px}
+.mv-promise .btn{background:#fff;color:var(--accent-deep);border-color:#fff}
+.mv-promise .mail{display:block;margin-top:14px;font-size:13px;color:rgba(255,255,255,.85);text-decoration:none}
+/* desktop */
+@media(min-width:760px){
+  .mv-pg.mv-about{max-width:1080px}
+  .mv-sec{padding:60px 52px}
+  .mv-sec.sand .mv-in{max-width:920px;margin:0 auto}
+  .mv-h{font-size:33px;margin-bottom:28px}
+  .mv-intro{padding-top:64px;padding-bottom:10px}
+  .mv-story{padding-top:8px}
+  .mv-intro p{font-size:17px}
+  .mv-lad{gap:36px;max-width:1000px;margin:0 auto}
+  .mv-row{grid-template-columns:300px 1fr;gap:48px}
+  .mv-row:nth-child(even){grid-template-columns:1fr 300px}
+  .mv-row h3{font-size:24px}.mv-row p{font-size:15px}
+  .mv-pr{grid-template-columns:repeat(4,1fr);max-width:900px;gap:36px}
+  .mv-why .fan{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end;justify-items:center;max-width:620px;margin:6px auto 4px}
+  .mv-why-cards{grid-template-columns:repeat(3,1fr);gap:20px;max-width:880px;margin:8px auto 0}
+  .mv-why-c .da{display:none}
+  .mv-promise{margin:34px auto 48px;max-width:940px}
+}
+/* ===== movaro-home.css (only used by the witnesses .mvh block, duplicated from home) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap');
+.mvh{--paper:#FFFFFF;--ivory:#F2EEE6;--sand:#E7E1D4;--cream:#ECE7DC;--ink:#21201C;--ink-soft:#6A6256;--muted:#9C9385;--line:#E6DFD1;--line-soft:#F0EBDF;--sage:#3E5C5A;--sage-soft:#6E8B89;--sage-tint:#E2E9E7;--clay:#B9774F;--clay-soft:#D9A47F;--clay-tint:#F4E5D8;--taupe:#C8BAA3;--honey:#D7A94E;--honey-deep:#C28F2E;--honey-tint:#F3E5C2;--accent:#2F7A73;--accent-deep:#246159;--r:14px;--pill:999px;--shadow:0 1px 2px rgba(33,32,28,.04),0 8px 28px rgba(33,32,28,.05);font-family:'Jost',system-ui,sans-serif;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.mvh *{box-sizing:border-box}
+.mvh h1,.mvh h2,.mvh h3,.mvh h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.06;letter-spacing:-.015em;margin:0}
+.mvh p{margin:0}
+.mvh img{display:block}
+.mvh .inwrap{max-width:480px;margin:0 auto}
+.mvh .sec{padding:58px 26px}
+.mvh.s-paper{background:var(--paper)}.mvh.s-ivory{background:var(--ivory)}.mvh.s-sand{background:var(--sand)}.mvh.s-cream{background:var(--cream)}
+.mvh .eyebrow{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--sage)}
+.mvh .stars{color:var(--clay);letter-spacing:2px;font-size:14px}
+.mvh .hl{background:linear-gradient(transparent 58%,var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
+.mvh .hlw{background:linear-gradient(transparent 56%,var(--honey-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
+.mvh .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;border:1px solid var(--accent);border-radius:var(--pill);font-family:'Jost';font-size:13.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;min-height:56px;padding:16px 30px;cursor:pointer;text-decoration:none;transition:transform .12s,opacity .15s}
+.mvh .btn:active{transform:scale(.985);opacity:.92}
+.mvh .btn.block{display:flex;width:100%}
+.mvh .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.mvh .reveal.in{opacity:1;transform:none}
+.mvh .hero{position:relative;background:var(--paper);padding:0}
+.mvh .hero .ph{position:relative;aspect-ratio:3/4;overflow:hidden}
+.mvh .hero .ph img{width:100%;height:100%;object-fit:cover}
+.mvh .hero .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:30px 26px 32px;background:linear-gradient(to top,rgba(18,16,13,.88) 0%,rgba(18,16,13,.72) 30%,rgba(18,16,13,.28) 62%,rgba(18,16,13,0) 100%)}
+.mvh .hero h1{color:#fff;font-size:44px;font-weight:500;letter-spacing:-.025em;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,.25)}
+.mvh .hero .offer{color:#fff;font-size:16px;line-height:1.5;max-width:340px;margin-bottom:22px}
+.mvh .hero .offer b{font-weight:600}
+.mvh .hero .offer .u{color:var(--honey-tint);font-weight:600}
+.mvh .hero .btn{align-self:stretch;background:#fff;color:var(--accent-deep);border-color:#fff;box-shadow:0 8px 26px rgba(0,0,0,.3);min-height:60px;font-size:14px}
+.mvh .tstrip{display:flex;align-items:stretch;background:var(--accent);color:#fff}
+.mvh .tstrip .ti{flex:1;text-align:center;padding:17px 6px;border-right:1px solid rgba(255,255,255,.12)}
+.mvh .tstrip .ti:last-child{border:none}
+.mvh .tstrip .ti b{display:block;font-family:'Fraunces';font-size:17px;font-weight:600}
+.mvh .tstrip .ti small{font-family:'Jost';font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.62);display:block;margin-top:3px}
+.mvh .flag{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.mvh .flag .ph{aspect-ratio:4/3;position:relative}
+.mvh .flag .ph img{width:100%;height:100%;object-fit:cover}
+.mvh .flag .ph .tag{position:absolute;top:13px;left:13px;background:var(--honey);color:#3A2E12;font-family:'Jost';font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:var(--pill)}
+.mvh .flag .body{padding:22px}
+.mvh .flag .d{font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+.mvh .flag h3{font-size:25px;font-weight:500;margin:7px 0 6px}
+.mvh .flag .rt{font-size:12.5px;color:var(--ink-soft);margin-bottom:14px}
+.mvh .flag ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin:14px 0 18px}
+.mvh .flag ul li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink);line-height:1.4}
+.mvh .flag ul li .bem{font-size:17px;width:22px;text-align:center;flex-shrink:0;margin-top:1px}
+.mvh .flag .price{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
+.mvh .flag .price .now{font-family:'Fraunces';font-size:26px;font-weight:600}
+.mvh .flag .price .was{color:var(--muted);text-decoration:line-through;font-size:15px}
+.mvh .flag .price .save{font-family:'Jost';font-size:11px;font-weight:600;color:var(--sage);background:var(--sage-tint);padding:4px 10px;border-radius:var(--pill)}
+.mvh .sect-head{max-width:400px;margin:0 auto 8px;text-align:center}
+.mvh .sect-head h2{font-size:30px;margin:10px 0 9px;font-weight:500}
+.mvh .sect-head p{font-size:14.5px;color:var(--ink-soft)}
+.mvh .brow{display:flex;gap:18px;align-items:center;margin-top:36px}
+.mvh .brow:nth-child(even){flex-direction:row-reverse}
+.mvh .brow .ill{flex-shrink:0;width:132px;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.mvh .brow .ill img{width:100%;height:100%;object-fit:cover}
+.mvh .brow .bt h3{font-size:24px;font-weight:500;margin-bottom:9px;line-height:1.1}
+.mvh .brow .bt p{font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+.mvh .brow .bt p b{color:var(--ink)}
+.mvh .brow .bt .proof{display:inline-flex;align-items:center;gap:7px;font-family:'Jost';font-size:12px;color:var(--sage);margin-top:13px;font-weight:600;background:var(--sage-tint);padding:6px 12px;border-radius:var(--pill)}
+.mvh .uniq-block{margin-top:40px}
+.mvh .uniq-block h3{font-size:24px;font-weight:500;margin-bottom:10px}
+.mvh .uniq-block .lead{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px}
+.mvh .uniq-block .lead b{color:var(--ink)}
+.mvh .uvt{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.mvh .uvt .row{display:grid;grid-template-columns:1.4fr .8fr .8fr;font-size:13px;border-top:1px solid var(--line-soft)}
+.mvh .uvt .row:first-child{border-top:none}
+.mvh .uvt .row .c{padding:13px 8px;text-align:center;display:flex;align-items:center;justify-content:center}
+.mvh .uvt .row .lbl{justify-content:flex-start;text-align:left;color:var(--ink-soft);font-weight:500}
+.mvh .uvt .row .us{background:var(--sage-tint);font-weight:600}
+.mvh .uvt .head{background:var(--paper)}
+.mvh .uvt .head .us{font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--ink)}
+.mvh .uvt .head .them{font-family:'Jost';font-size:11px;color:var(--muted);font-weight:600}
+.mvh .tick{color:var(--sage);font-weight:700;font-size:16px}.mvh .cross{color:var(--muted)}
+.mvh .proofwrap{text-align:center}
+.mvh .rate{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-soft);margin-bottom:26px}
+.mvh .rate b{font-family:'Fraunces';font-size:20px;color:var(--ink)}
+.mvh .scroll{display:flex;gap:13px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory;margin:0 -26px 24px;padding-left:26px;padding-right:26px;text-align:left}
+.mvh .scroll::-webkit-scrollbar{display:none}
+.mvh .scroll>*{scroll-snap-align:start}
+.mvh .ugc-card{min-width:212px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.mvh .ugc-card .ill{aspect-ratio:9/11;overflow:hidden}
+.mvh .ugc-card .ill img{width:100%;height:100%;object-fit:cover}
+.mvh .ugc-handle{display:flex;align-items:center;gap:8px;padding:11px 13px 2px;font-size:12.5px;font-weight:600}
+.mvh .ugc-handle .dot{width:22px;height:22px;border-radius:50%;background:var(--sage-tint)}
+.mvh .ugc-handle .vf{margin-left:auto;font-size:9px;color:var(--sage);letter-spacing:.04em;text-transform:uppercase}
+.mvh .ugc-txt{padding:5px 13px 14px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.mvh .guar-line{display:inline-flex;align-items:center;gap:10px;font-family:'Jost';font-size:13.5px;font-weight:600;color:var(--accent-deep);background:var(--sage-tint);border:1px solid #CFE0DD;border-radius:var(--pill);padding:12px 22px}
+.mvh .about .card{display:flex;gap:18px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.mvh .about .card .ph{flex-shrink:0;width:92px;height:92px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.mvh .about .card .ph img{width:100%;height:100%;object-fit:cover}
+.mvh .about .card .eyebrow{margin-bottom:7px}
+.mvh .about .card .lead{font-family:'Fraunces';font-size:19px;font-weight:500;line-height:1.2;margin-bottom:7px}
+.mvh .about .card p{font-size:13px;color:var(--ink-soft);line-height:1.5}
+.mvh .about .card a{display:inline-block;font-family:'Jost';font-size:12px;font-weight:600;color:var(--sage);margin-top:9px;text-decoration:none;letter-spacing:.04em}
+/* === HERO DESKTOP (S5i) === */
+@media (min-width:990px){
+ [id$="__mvh-hero-slideshow"]{max-width:1120px!important;margin-left:auto!important;margin-right:auto!important}
+ [id$="__mvh-hero-slideshow"] .slideshow{width:100%!important;max-width:100%!important;left:auto!important;margin:0!important;border-radius:16px;overflow:hidden}
+ [id$="__mvh-hero-slideshow"] .slideshow__slide:not(:first-of-type){display:none!important}
+ [id$="__mvh-hero-slideshow"] .slideshow__center{justify-content:center!important;text-align:center!important}
+ [id$="__mvh-hero-slideshow"] .slideshow__content{align-items:center!important}
+ [id$="__mvh-hero-slideshow"] .slideshow__box{align-items:center!important;text-align:center!important;margin-left:auto!important;margin-right:auto!important;max-width:640px!important}
+ [id$="__mvh-hero-slideshow"] .slideshow__button{justify-content:center!important}
+ [id$="__mvh-hero-slideshow"] .slideshow__heading{font-size:42px!important}
+ [id$="__mvh-hero-slideshow"] .slideshow__text{font-size:16.5px!important}
+ [id$="__mvh-hero-slideshow"] [class*="pagination"],[id$="__mvh-hero-slideshow"] [class*="slider-button"],[id$="__mvh-hero-slideshow"] [class*="slideshow__control"]{display:none!important}
+}
+/* === BODY DESKTOP (S5i) === */
+@media (max-width:989px){
+ .mvh.shopsec .shop-left .sec{padding-bottom:30px}
+ .mvh.shopsec .shop-right .sec{padding-top:30px}
+}
+@media (min-width:990px){
+ /* default desktop: full width (keeps the thin strip edge-to-edge like the announce bar) */
+ .mvh .inwrap{max-width:none}
+ /* 4-point strip — COMPACT / thin */
+ .mvh .tstrip .ti{padding:13px 8px}
+ .mvh .tstrip .ti b{font-size:16px}
+ .mvh .tstrip .ti small{font-size:9px;margin-top:2px}
+ /* contained content blocks: generous beige air on the sides */
+ .mvh.s-sand .inwrap,.mvh.s-cream .inwrap{max-width:1040px;margin:0 auto}
+ /* SHOP: contained 1040 (ivory air on sides) — card left (sticky) / 3-reasons right */
+ .mvh.shopsec{display:grid;grid-template-columns:370px 1fr;gap:50px;align-items:start;background:var(--ivory);padding-left:max(26px,calc((100% - 1040px)/2));padding-right:max(26px,calc((100% - 1040px)/2))}
+ .mvh.shopsec .shop-col{background:transparent}
+ .mvh.shopsec .shop-col .sec{padding:58px 0}
+ .mvh.shopsec .shop-col .inwrap{max-width:none}
+ .mvh.shopsec .shop-left{position:sticky;top:90px}
+ .mvh.shopsec .flag{max-width:370px}
+ .mvh.shopsec .sect-head{margin-left:0;text-align:left;max-width:none}
+ .mvh.shopsec .brow{margin-top:26px}
+ /* WITNESSES: 3 UGC in a row, contained (margins as before) */
+ .mvh .proofwrap .scroll{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;overflow:visible;margin:0;padding:0}
+ .mvh .proofwrap .ugc-card{min-width:0}
+ .mvh .proofwrap .ugc-card .ill{aspect-ratio:4/5}
+ /* ABOUT compact centered */
+ .mvh .about .card{max-width:600px;margin:0 auto}
+}
+/* === S5i DESKTOP TWEAKS === */
+@media (min-width:990px){
+ /* center 'What a $15 bag can't do' heading+lead above the table */
+ .mvh.shopsec .uniq-block{text-align:center}
+ .mvh.shopsec .uniq-block .lead{margin-left:auto;margin-right:auto;max-width:560px}
+ .mvh.shopsec .uniq-block .uvt .lbl{text-align:left}
+ /* witnesses: more air between UGC cards + breathing room above the guarantee line */
+ .mvh .proofwrap .scroll{gap:32px;margin-bottom:22px}
+ .mvh .proofwrap .guar-line{margin-top:6px}
+}
+
+</style>
 </head>
 <body>
-<div class="wrap">
-
   <div class="announce">Free US Shipping<span class="dotsep">·</span>30-Day Calm Guarantee</div>
   <header class="hd">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="#21201C" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -23,24 +247,131 @@
   </header>
   <div class="crumb"><a href="index.html">Home</a> / About</div>
 
-  <!-- minimal warm intro -->
-  <section class="intro">
-    <div class="eyebrow">About Movaro</div>
+<div class="mv-pg mv-about">
+<section class="mv-sec mv-ctr mv-intro">
+    <span class="eyebrow">About Movaro</span>
     <h1>Hi, we're Movaro 👋</h1>
-    <p>We're a small team of cat people who believe <b>care shouldn't be a battle.</b></p>
-    <p>A scared cat doesn't need to be fought — it needs to feel safe. So we design gentle, vet-informed tools that let you care for your cat at home, calmly: nails, meds &amp; grooming, without the hiss or the guilt.</p>
-    <p><b class="hl">Calm over force, always.</b></p>
-    <div class="sign">— The Movaro team 🐾</div>
+    <p>We're a small team of cat people who believe <b class="hl">care shouldn't be a battle.</b> 🐾</p>
   </section>
+</div>
 
-  <!-- promise (kept — blends into footer) -->
-  <section class="promise">
-    <div class="eyebrow">Our promise</div>
-    <h2>Calm in 30 days, or your money back.</h2>
-    <p>Try Movaro at home. Not calmer &amp; easier within 30 days? We'll make it right.</p>
-    <a href="product.html" class="btn">Shop the Calm Wrap</a>
-    <a href="mailto:support@movaro.com" class="mail">Questions? support@movaro.com</a>
+<div class="mv-pg mv-about">
+<section class="mv-sec mv-story">
+    <h2 class="mv-h">How it all started</h2>
+    <div class="mv-lad">
+      <div class="mv-row">
+        <div class="ph">
+<span class="cam">📷</span><small>THE CHAOS<br>cat bolting from arms</small>
+</div>
+        <div class="txt">
+<h3>It started in chaos.</h3>
+<p>One scared cat, one nail trim, a living-room wrestling match — hissing, hiding, a guilty owner. Sound familiar?</p>
+</div>
+      </div>
+      <div class="mv-row">
+        <div class="ph">
+<span class="cam">📷</span><small>THE SEARCH<br>testing wraps</small>
+</div>
+        <div class="txt">
+<h3>We looked for a kinder way.</h3>
+<p>We dug into how vets actually calm cats — gentle, even pressure, never force — and tested wrap after wrap until cats truly settled.</p>
+</div>
+      </div>
+      <div class="mv-row">
+        <div class="ph">
+<span class="cam">📷</span><small>THE RESULT<br>finished Movaro + calm cat</small>
+</div>
+        <div class="txt">
+<h3>So we made Movaro.</h3>
+<p>A soft, vet-informed wrap that turns the fight into <b class="hl">a few calm minutes</b> — done solo, at home.</p>
+</div>
+      </div>
+    </div>
   </section>
+</div>
+
+<div class="mv-pg mv-about">
+<section class="mv-sec sand">
+    <div class="mv-in">
+      <h2 class="mv-h">What we stand for</h2>
+      <p class="mv-pr-lead">A scared cat doesn't need to be fought — it needs to feel safe. So we design gentle, vet-informed tools that let you care for your cat at home, calmly: nails, meds &amp; grooming, without the hiss or the guilt.</p>
+      <div class="mv-pr">
+        <div class="it">
+<div class="i">🐾</div>
+<b><span class="hl">Calm over force</span></b><small>We never fight a frightened cat.</small>
+</div>
+        <div class="it">
+<div class="i">🩺</div>
+<b><span class="hl">Vet-informed</span></b><small>Built on proven calming methods.</small>
+</div>
+        <div class="it">
+<div class="i">🏠</div>
+<b><span class="hl">Real homes</span></b><small>Easy to use solo, on your couch.</small>
+</div>
+        <div class="it">
+<div class="i">🤍</div>
+<b><span class="hl">Safety first</span></b><small>Soft, breathable, comfort-first.</small>
+</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="mv-pg mv-about">
+<section class="mv-sec mv-why">
+    <h2 class="mv-h">Why Movaro is different</h2>
+    <p class="lead">Three things a cheap restraint bag will never give you.</p>
+    <div class="fan">
+<div><svg width="40" height="30" viewbox="0 0 40 30" fill="none"><path d="M37 5C22 5 9 10 5 24m0 0l10-3m-10 3l3-10" stroke="#2F7A73" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div><svg width="20" height="28" viewbox="0 0 20 28" fill="none"><path d="M10 2v20m0 0l-6-6m6 6l6-6" stroke="#2F7A73" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div><svg width="40" height="30" viewbox="0 0 40 30" fill="none"><path d="M3 5C18 5 31 10 35 24m0 0l-10-3m10 3l-3-10" stroke="#2F7A73" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+</div>
+    <div class="mv-why-cards">
+      <div class="mv-why-c">
+<div class="da"><svg width="20" height="28" viewbox="0 0 20 28" fill="none"><path d="M10 2v20m0 0l-6-6m6 6l6-6" stroke="#2F7A73" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="mv-why-card">
+<span class="e">🌿</span><b>Calm, not trapped</b><small>Soothes like a swaddle — instead of a bag that makes the fight worse.</small>
+</div>
+</div>
+      <div class="mv-why-c">
+<div class="da"><svg width="20" height="28" viewbox="0 0 20 28" fill="none"><path d="M10 2v20m0 0l-6-6m6 6l6-6" stroke="#2F7A73" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="mv-why-card">
+<span class="e">📏</span><b>Fits every cat</b><small>A full Kitten → XL range — not one-size-frustrates-all.</small>
+</div>
+</div>
+      <div class="mv-why-c">
+<div class="da"><svg width="20" height="28" viewbox="0 0 20 28" fill="none"><path d="M10 2v20m0 0l-6-6m6 6l6-6" stroke="#2F7A73" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="mv-why-card">
+<span class="e">🛡️</span><b>Truly risk-free</b><small>A real 30-day money-back guarantee — not "all sales final."</small>
+</div>
+</div>
+    </div>
+  </section>
+</div>
+
+<div class="mvh s-sand"><div class="sec"><div class="inwrap">
+<div class="proofwrap">
+<div class="eyebrow">The witnesses</div>
+<h2 style="font-size:30px;margin:11px 0 14px">10,000+ calmer cats.</h2>
+<div class="rate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>4.8</b> &middot; 600+ verified reviews</div>
+<div class="scroll">
+<div class="ugc-card"><div class="ill"><img src="img/ugc1.jpg" srcset="img/ugc1.jpg 240w, img/ugc1.jpg 480w" sizes="212px" loading="lazy" decoding="async" alt=""></div><div class="ugc-handle"><span class="dot"></span>@badboymoosh_cats<span class="vf">&#10003;</span></div><div class="ugc-txt">"I'd given up trimming his nails alone &mdash; every time turned into a war. This ended it for good."</div></div>
+<div class="ugc-card"><div class="ill"><img src="img/ugc3.jpg" srcset="img/ugc3.jpg 240w, img/ugc3.jpg 480w" sizes="212px" loading="lazy" decoding="async" alt=""></div><div class="ugc-handle"><span class="dot"></span>@thatspicycat<span class="vf">&#10003;</span></div><div class="ugc-txt">"My cat is the definition of 'spicy.' First time I've done his nails ALONE &mdash; without bleeding."</div></div>
+<div class="ugc-card"><div class="ill"><img src="img/ugc2.jpg" srcset="img/ugc2.jpg 240w, img/ugc2.jpg 480w" sizes="212px" loading="lazy" decoding="async" alt=""></div><div class="ugc-handle"><span class="dot"></span>@peggy.and.theo<span class="vf">&#10003;</span></div><div class="ugc-txt">"Nail day used to mean two people, towels and panic. From panic to peace &mdash; I cried a little &#129402;"</div></div>
+</div>
+<div class="guar-line">&#128737;&#65039; 30-Day Calm Guarantee &mdash; love it or your money back</div>
+</div>
+</div></div></div>
+
+<div class="mv-pg mv-about">
+<section class="mv-promise">
+    <span class="eyebrow">Our promise</span>
+    <h2>Calm in 30 days, or your money back.</h2>
+    <p>Try Movaro at home. If care isn't calmer and easier within 30 days, we'll make it right — no fuss.</p>
+    <a href="/products/pro-cat-wrap" class="btn">Shop the Calm Wrap</a>
+    <a href="mailto:mylovee.store1@gmail.com" class="mail">Questions? mylovee.store1@gmail.com</a>
+  </section>
+</div>
 
   <footer class="footer">
     <div class="top"><div class="logo">Movaro</div><div class="tag">Calm, not trapped.</div></div>
@@ -49,7 +380,5 @@
     <details><summary>More Information <span class="chev">⌄</span></summary><div class="links"><a href="#track">Track Your Order</a><a href="size-guide.html">Size Guide</a></div></details>
     <div class="bottom"><div class="pay"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span><span>APPLE PAY</span><span>G PAY</span></div>support@movaro.com<br>© 2026 Movaro · 30-Day Calm Guarantee · Free US Shipping</div>
   </footer>
-
-</div>
 </body>
 </html>
