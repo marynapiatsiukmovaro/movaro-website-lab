@@ -62,8 +62,8 @@ ul.pts{margin:8px 0 0 18px;font-size:13px;color:var(--soft)}ul.pts li{margin-bot
 <header class="top"><div class="wrap">
   <h1>Movaro · 5.0.2 — footer-страницы &amp; секционная архитектура</h1>
   <p>Как мы строим страницы «подвала» (About / FAQ / How-to-Order / Size / Contact + полисы) и <b>почему перешли с монолита на СЕКЦИИ</b> — тот же принцип, что у продуктовой и главной (S5: «кастомные секции, не монолит»). Плюс: <b>переиспользование готового блока</b> (intro About → верх каталога) и чистка корзины.</p>
-  <div class="raw">⚠️ СЫРАЯ БАЗА — снимок на 2026-06-15 (S5k). About готов как база (story-фото = плейсхолдеры-бриф, дорабатываем на фото-сессии). Источник правды = живая тема (<code>templates/page.movaro-about.json</code> + <code>assets/movaro-about.css</code>). Этот срез обновлять по мере правок.</div>
-  <div class="nav"><a href="#arch">🧩 Архитектура</a><a href="#about">📄 About</a><a href="#catalog">🛒 Каталог</a><a href="#cart">🛍️ Корзина</a><a href="#status">📋 Статус подвала</a></div>
+  <div class="raw">⚠️ СЫРАЯ БАЗА — снимок на 2026-06-15 (S5l). About/Shipping/Returns/Contact готовы как база; Privacy/Terms = нативные Shopify <code>/policies/*</code> (один источник правды, не дублируем). Источник правды = живая тема (шаблоны <code>page.movaro-*.json/.liquid</code> + <code>movaro-pages.css</code>). Этот срез обновлять по мере правок.</div>
+  <div class="nav"><a href="#arch">🧩 Архитектура</a><a href="#about">📄 About</a><a href="#shipping">🚚 Shipping</a><a href="#returns">↩️ Returns</a><a href="#contact">✉️ Contact</a><a href="#catalog">🛒 Каталог</a><a href="#cart">🛍️ Корзина</a><a href="#status">📋 Статус подвала</a></div>
   <div class="legend">
     <span><span class="chip c-theme"></span> механика темы (нативное)</span>
     <span><span class="chip c-our"></span> наш кастом-блок (custom-liquid)</span>
@@ -126,6 +126,111 @@ ul.pts{margin:8px 0 0 18px;font-size:13px;color:var(--soft)}ul.pts li{margin-bot
   </div>
 </section>
 
+<!-- SHIPPING -->
+<section class="page" id="shipping">
+  <h2>🚚 Shipping — секции + sage-CTA</h2>
+  <div class="sub">Шаблон <code>templates/page.movaro-shipping.json</code> = 2 custom-liquid секции (<code>ship-body</code> + <code>ship-cta</code>) · CSS <code>assets/movaro-pages.css</code> (<code>.mv-pg</code>, белый) · <b>переиспользует готовые блоки — новый CSS не нужен</b>.</div>
+  <div class="cols">
+    <div>
+      <div class="schematitle">Схема блоков</div>
+      <div class="schema">
+        <div class="blk theme"><b>Announce + Header</b><small>тема · общие</small></div>
+        <div class="blk"><b>pagehd</b><small>«Shipping» + подзаголовок, по центру</small></div>
+        <div class="blk"><b>ship-body — 6 карточек .step</b><small>эмодзи-иконка вместо цифры: 🇺🇸 free US · 📦 сроки · 🔔 tracking+confirmation · 🌍 international · 🔎 не пришло · 📮 неверный адрес</small></div>
+        <div class="blk sage"><b>ship-cta</b><small>sage promise-карточка «We're a message away» → Email us</small></div>
+        <div class="blk theme"><b>Footer</b><small>тема</small></div>
+      </div>
+    </div>
+    <div>
+      <div class="tabletitle">Правила + контент</div>
+      <table>
+        <tr><th>Что</th><th>Решение</th></tr>
+        <tr><td><b>Сроки (залочены)</b></td><td>отгрузка <b>24–48ч</b> (1–2 раб. дня) · US <b>5–8 раб. дней</b> · Intl бесплатно <b>10–20</b>. Источник = store-base-legal (НЕ старые «3–5»).</td></tr>
+        <tr><td><b>Тон</b></td><td>тёплый, с заботой (Marina): без холодных дисклеймеров — «most orders land in that window…».</td></tr>
+        <tr><td><b>Taxes</b></td><td>US-first: «no extra fees at your door»; интернационалка — мягкая строка про местные пошлины.</td></tr>
+        <tr><td><b>Десктоп</b></td><td>контейнер 980 (movaro-pages.css @≥760), карточки стопкой, заголовок по центру.</td></tr>
+      </table>
+      <div class="note">🔑 баг-урок: глобальное <code>.step b{display:block}</code> (заголовок карточки) ломает инлайн-<code>&lt;b&gt;</code> в тексте → инлайн-жирный = <code>&lt;strong&gt;</code>.</div>
+    </div>
+  </div>
+  <div class="renders">
+    <div class="rendtitle">Живые рендеры — Shipping</div>
+    <div class="rgrid">
+      <div class="rcard"><div class="cap">🖥️ Десктоп</div><div class="scroll"><img src="renders/shipping-desktop.jpg" alt="shipping desktop"></div></div>
+      <div class="rcard mobile"><div class="cap">📱 Мобайл</div><div class="scroll"><img src="renders/shipping-mobile.jpg" alt="shipping mobile"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RETURNS -->
+<section class="page" id="returns">
+  <h2>↩️ Returns &amp; refunds — секции + sage-CTA</h2>
+  <div class="sub">Шаблон <code>templates/page.movaro-refund.json</code> = 2 секции (<code>refund-body</code> 6 карточек + <code>refund-cta</code>) · общий <code>movaro-pages.css</code>.</div>
+  <div class="cols">
+    <div>
+      <div class="schematitle">Схема блоков</div>
+      <div class="schema">
+        <div class="blk theme"><b>Announce + Header</b><small>тема</small></div>
+        <div class="blk"><b>pagehd</b><small>«Returns &amp; refunds», по центру</small></div>
+        <div class="blk"><b>refund-body — 6 карточек .step</b><small>🐾 30-day Calm Guarantee · 🎁 keep the guide · ✉️ как вернуть · 💳 рефанд 5–10 дней · 📦 брак/доставка · 🔁 обмен размера</small></div>
+        <div class="blk sage"><b>refund-cta</b><small>sage «Need a hand with a return?»</small></div>
+        <div class="blk theme"><b>Footer</b><small>тема</small></div>
+      </div>
+    </div>
+    <div>
+      <div class="tabletitle">Политика (решения Марины)</div>
+      <table>
+        <tr><th>Что</th><th>Решение</th></tr>
+        <tr><td><b>Состояние</b></td><td>принимаем <b>использованный</b> вреп под Calm-гарантию (чистый/пригодный) — совпадает с «попробуй 30 дней»; передумал = неношеный.</td></tr>
+        <tr><td><b>Возврат-доставка</b></td><td>брак/ошибка = <b>мы</b>; передумал/неудовлетворён = <b>клиент</b>.</td></tr>
+        <tr><td><b>Подстраховка</b></td><td>гарантия = реальная неудача «не успокоил кота»/брак, не «попользовался-расхотел». 🔮 ужесточить при масштабе.</td></tr>
+        <tr><td><b>Гайд</b></td><td>остаётся подарком при любом возврате.</td></tr>
+      </table>
+      <div class="note">⚠️ Нативный Shopify Refund-полис (чекаут) Марина переставляет под этот текст (источник — <code>store-base-legal.md</code>), чтобы чекаут совпал с сайтом.</div>
+    </div>
+  </div>
+  <div class="renders">
+    <div class="rendtitle">Живые рендеры — Returns</div>
+    <div class="rgrid">
+      <div class="rcard"><div class="cap">🖥️ Десктоп</div><div class="scroll"><img src="renders/returns-desktop.jpg" alt="returns desktop"></div></div>
+      <div class="rcard mobile"><div class="cap">📱 Мобайл</div><div class="scroll"><img src="renders/returns-mobile.jpg" alt="returns mobile"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="contact">
+  <h2>✉️ Contact — карточки + рабочая форма (десктоп 2-кол)</h2>
+  <div class="sub">Шаблон <code>templates/page.movaro-contact.liquid</code> — оставлен <code>.liquid</code> ради реальной формы темы <code>{% form 'contact' %}</code> · <code>movaro-pages.css</code>, белый.</div>
+  <div class="cols">
+    <div>
+      <div class="schematitle">Схема блоков</div>
+      <div class="schema">
+        <div class="blk theme"><b>Announce + Header</b><small>тема</small></div>
+        <div class="blk"><b>pagehd</b><small>«Get in touch» + подзаголовок</small></div>
+        <div class="blk row2"><div class="half"><b>Карточки .copt</b><small>✉️ mylovee.store1@gmail.com · ❓ FAQ</small></div><div class="half"><b>Форма</b><small>имя · email · сообщение → Send (реальная форма темы)</small></div></div>
+        <div class="blk theme"><b>Footer</b><small>тема</small></div>
+      </div>
+    </div>
+    <div>
+      <div class="tabletitle">Правила: мобайл → десктоп (@≥760)</div>
+      <table>
+        <tr><th>Блок</th><th>Мобайл</th><th>Десктоп</th></tr>
+        <tr><td><b>Раскладка</b></td><td class="mob">стопкой: карточки, затем форма</td><td class="dt"><b>2 колонки</b> <code>.contactgrid</code> (карточки слева / форма справа), контейнер 980 → белые поля не гигантские</td></tr>
+        <tr><td><b>Email / чистка</b></td><td class="mob" colspan="2">унифицирован → <b>mylovee.store1@gmail.com</b> (был support@movaro — нерабочий, нет домена). Карта «Track your order» убрана.</td></tr>
+      </table>
+      <div class="note">Метод (Марина): наш дизайн + тема только для механики формы. Богатый нативный contact (Sales/Press/карта) — overkill, не наш кейс.</div>
+    </div>
+  </div>
+  <div class="renders">
+    <div class="rendtitle">Живые рендеры — Contact</div>
+    <div class="rgrid">
+      <div class="rcard"><div class="cap">🖥️ Десктоп (2-кол)</div><div class="scroll"><img src="renders/contact-desktop.jpg" alt="contact desktop"></div></div>
+      <div class="rcard mobile"><div class="cap">📱 Мобайл</div><div class="scroll"><img src="renders/contact-mobile.jpg" alt="contact mobile"></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- CATALOG -->
 <section class="page" id="catalog">
   <h2>🛒 Каталог — intro-блок сверху (переиспользование)</h2>
@@ -178,17 +283,21 @@ ul.pts{margin:8px 0 0 18px;font-size:13px;color:var(--soft)}ul.pts li{margin-bot
   <table class="status">
     <tr><th>Страница</th><th>Архитектура</th><th>Статус</th></tr>
     <tr><td>About</td><td>секции (<code>page.movaro-about.json</code>)</td><td class="ok">✅ готово (база)</td></tr>
-    <tr><td>Catalog (collection)</td><td>+ intro-секция</td><td class="ok">✅ готово</td></tr>
-    <tr><td>Contact</td><td><code>page.movaro-contact.liquid</code> (нативная форма темы = механика)</td><td>🟡 базовая</td></tr>
     <tr><td>FAQ</td><td>секции (<code>page.movaro-faq.json</code> + <code>movaro-pages.css</code>); CTA = sage promise-card; десктоп 2-кол аккордеон</td><td class="ok">✅ готово (S5k)</td></tr>
-    <tr><td>How-to-Order · Size Guide</td><td>пока монолит <code>page.movaro</code></td><td class="todo">⏳ перевести (тем же паттерном + CTA-карточка)</td></tr>
-    <tr><td>Policies (Privacy/Refund/Terms/Shipping)</td><td>нативные Shopify Policies</td><td class="ok">✅ заполнено</td></tr>
+    <tr><td>Shipping</td><td>секции (<code>page.movaro-shipping.json</code> + <code>movaro-pages.css</code>); 6 карточек <code>.step</code> + sage-CTA</td><td class="ok">✅ готово (S5l)</td></tr>
+    <tr><td>Returns &amp; Refunds</td><td>секции (<code>page.movaro-refund.json</code> + <code>movaro-pages.css</code>); 6 карточек + sage-CTA</td><td class="ok">✅ готово (S5l)</td></tr>
+    <tr><td>Contact</td><td><code>page.movaro-contact.liquid</code> (рабочая форма темы); белый, десктоп 2-кол карточки+форма</td><td class="ok">✅ готово (S5l)</td></tr>
+    <tr><td>Catalog (collection)</td><td>+ intro-секция</td><td class="ok">✅ готово</td></tr>
+    <tr><td>Privacy · Terms</td><td>футер ведёт на нативные Shopify <code>/policies/*</code> (один источник правды; brand-prose не делаем)</td><td class="ok">✅ решено (S5l)</td></tr>
+    <tr><td>How-to-Order</td><td>—</td><td class="todo">⏸ пропущен (не нужен, Marina)</td></tr>
+    <tr><td>Size Guide</td><td>пока монолит <code>page.movaro</code></td><td class="todo">⛔ ждёт PI B4 (реальный размерный ряд)</td></tr>
+    <tr><td>Native Policies (чекаут: Refund/Shipping/Terms/Privacy)</td><td>нативные Shopify Policies</td><td class="ok">✅ заполнено · ⚠️ Refund переставить под обновлённый текст</td></tr>
   </table>
-  <div class="note">⏳ Дальше: FAQ / How-to-Order / Size Guide перевести на ту же секционную архитектуру; Size Guide ждёт реальный размерный ряд от Product Intelligence.</div>
+  <div class="note">⏳ Дальше: Size Guide на секции (ждёт PI B4); Track-Your-Order скрыт; email/даты — sweep после подключения домена + корп-почты. Нативный Refund-полис Марина переставляет под текст из <code>store-base-legal.md</code> (чекаут = сайт).</div>
 </section>
 
 <div class="foot">
-  Movaro Website Lab · 5.0.2 — footer-страницы &amp; секции (срез 2026-06-15, S5k).<br>
+  Movaro Website Lab · 5.0.2 — footer-страницы &amp; секции (срез 2026-06-15, S5l).<br>
   Обновлять при доработках: пере-снять рендеры + поправить правила. Источник правды — живая тема.
 </div>
 </div>
