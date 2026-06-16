@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Movaro 5.0 (synced from Shopify)</title>
-<!-- MOVARO footer page: CONTACT — SYNCED from live Shopify (S5l, 2026-06-15). page.movaro-contact.liquid (kept .liquid for the real {% form 'contact' %}); white .mv-pg, desktop 2-col cards+form. Email mylovee.store1@gmail.com. RAW BASE. -->
+<title>Returns & Refunds — Movaro 5.0 (synced from Shopify)</title>
+<!-- MOVARO footer page: RETURNS & REFUNDS — SYNCED from live Shopify (S5l, 2026-06-15). 6 cards + sage CTA on templates/page.movaro-refund.json. RAW BASE. -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="pages.css">
@@ -76,49 +76,32 @@
 .mv-pg .sec.faqgrid details.q{margin-top:0}
 .mv-pg .promise{margin:38px auto 52px;max-width:880px;padding:60px 44px 64px}
 }
-/* ===== contact-specific (from page.movaro-contact.liquid) ===== */
-#MainContent,.transition-content{min-width:0;}
-  .mv-pg.mv-contact .sec.contactgrid{padding-top:18px;padding-bottom:40px}
-  .mv-pg .cform{display:flex;flex-direction:column;gap:10px}
-  .mv-pg .cform input,.mv-pg .cform textarea{border:1px solid var(--line);border-radius:11px;padding:14px 16px;font-family:'Jost',system-ui,sans-serif;font-size:14px;background:#fff;color:var(--ink);width:100%}
-  .mv-pg .cform textarea{min-height:130px;resize:vertical}
-  .mv-pg .cform .btn{margin-top:4px;width:100%}
-  .mv-pg .mv-thanks{display:block;text-align:center;margin-bottom:14px;font-weight:600;color:var(--accent-deep)}
-  .mv-pg .contactgrid .cleft{margin-bottom:18px}
-  @media(min-width:760px){
-    .mv-pg .contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-    .mv-pg .contactgrid .cleft{margin-bottom:0}
-    .mv-pg .cform .btn{width:auto;align-self:flex-start;min-width:220px}
-  }
+
 </style>
 </head>
 <body>
-<div class="mv-pg mv-contact">
-  <div class="pagehd">
-    <h1>Get in touch</h1>
-    <p>A question about your order — or your cat? We're happy to help, usually the same day.</p>
-  </div>
-  <div class="sec contactgrid">
-    <div class="cleft"><div class="copt">
-<a href="mailto:mylovee.store1@gmail.com"><div class="ic">✉️</div>
-<div>
-<b>mylovee.store1@gmail.com</b><small>Email us — replies within 24 hours</small>
-</div></a>
-<a href="/pages/faq"><div class="ic">❓</div>
-<div>
-<b>FAQ</b><small>Quick answers to common questions</small>
-</div></a>
-</div></div>
-    <div class="cright">
-      <!-- live page uses a real Shopify {% form 'contact' %}; static here for the design source -->
-      <form class="cform" onsubmit="return false">
-        <input type="text" placeholder="Your name">
-        <input type="email" placeholder="Your email">
-        <textarea placeholder="How can we help?"></textarea>
-        <button type="submit" class="btn">Send message</button>
-      </form>
-    </div>
-  </div>
+<div class="mv-pg">
+<div class="pagehd">
+<h1>Returns &amp; refunds</h1>
+<p>Love it or your money back — give Movaro a fair try with your cat for 30 days.</p>
+</div>
+<section class="sec s-paper">
+<div class="step"><div class="n">🐾</div><div><b>The 30-Day Calm Guarantee</b><small>Give Movaro a fair try with your cat. If it genuinely doesn't help them feel calmer within 30 days, just reach out and we'll refund you in full — even if you've already used it. We only ask that it comes back clean and in reusable condition, so the guarantee stays fair for every cat parent.</small></div></div>
+<div class="step"><div class="n">🎁</div><div><b>Keep the guide — it's yours</b><small>Whatever you decide, the Cat Calm &amp; Longevity guide stays with you as our gift, even if you return the wrap.</small></div></div>
+<div class="step"><div class="n">✉️</div><div><b>How to start a return</b><small>Just email us with your order number and we'll send simple instructions and the return address. No need to send anything back before you hear from us.</small></div></div>
+<div class="step"><div class="n">💳</div><div><b>Your refund</b><small>Once your return reaches us, we'll confirm by email and refund your original payment method within 5–10 business days. Depending on your bank, it can take a day or two more to appear.</small></div></div>
+<div class="step"><div class="n">📦</div><div><b>Damaged, faulty or wrong — that's on us</b><small>Got the wrong item or a fault? Send us a photo within 7 days and we'll cover return shipping and make it right — a replacement or a full refund. For a change-of-mind or guarantee return, return postage is covered by you.</small></div></div>
+<div class="step"><div class="n">🔁</div><div><b>Need a different size?</b><small>Email us and we'll happily help you exchange for the right fit.</small></div></div>
+</section>
+</div>
+<div class="mv-pg">
+<section class="promise">
+<span class="eyebrow">Need a hand with a return?</span>
+<h2>We're a message away.</h2>
+<p>A real person answers, usually the same day.</p>
+<a href="mailto:mylovee.store1@gmail.com" class="btn">Email us</a>
+<a href="mailto:mylovee.store1@gmail.com" class="mail">mylovee.store1@gmail.com</a>
+</section>
 </div>
 </body>
 </html>

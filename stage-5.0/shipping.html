@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Movaro 5.0 (synced from Shopify)</title>
-<!-- MOVARO footer page: CONTACT — SYNCED from live Shopify (S5l, 2026-06-15). page.movaro-contact.liquid (kept .liquid for the real {% form 'contact' %}); white .mv-pg, desktop 2-col cards+form. Email mylovee.store1@gmail.com. RAW BASE. -->
+<title>Shipping — Movaro 5.0 (synced from Shopify)</title>
+<!-- MOVARO footer page: SHIPPING — SYNCED from live Shopify (S5l, 2026-06-15). 2 custom-liquid sections (ship-body + ship-cta) on templates/page.movaro-shipping.json. RAW BASE. -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="pages.css">
@@ -76,49 +76,32 @@
 .mv-pg .sec.faqgrid details.q{margin-top:0}
 .mv-pg .promise{margin:38px auto 52px;max-width:880px;padding:60px 44px 64px}
 }
-/* ===== contact-specific (from page.movaro-contact.liquid) ===== */
-#MainContent,.transition-content{min-width:0;}
-  .mv-pg.mv-contact .sec.contactgrid{padding-top:18px;padding-bottom:40px}
-  .mv-pg .cform{display:flex;flex-direction:column;gap:10px}
-  .mv-pg .cform input,.mv-pg .cform textarea{border:1px solid var(--line);border-radius:11px;padding:14px 16px;font-family:'Jost',system-ui,sans-serif;font-size:14px;background:#fff;color:var(--ink);width:100%}
-  .mv-pg .cform textarea{min-height:130px;resize:vertical}
-  .mv-pg .cform .btn{margin-top:4px;width:100%}
-  .mv-pg .mv-thanks{display:block;text-align:center;margin-bottom:14px;font-weight:600;color:var(--accent-deep)}
-  .mv-pg .contactgrid .cleft{margin-bottom:18px}
-  @media(min-width:760px){
-    .mv-pg .contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-    .mv-pg .contactgrid .cleft{margin-bottom:0}
-    .mv-pg .cform .btn{width:auto;align-self:flex-start;min-width:220px}
-  }
+
 </style>
 </head>
 <body>
-<div class="mv-pg mv-contact">
-  <div class="pagehd">
-    <h1>Get in touch</h1>
-    <p>A question about your order — or your cat? We're happy to help, usually the same day.</p>
-  </div>
-  <div class="sec contactgrid">
-    <div class="cleft"><div class="copt">
-<a href="mailto:mylovee.store1@gmail.com"><div class="ic">✉️</div>
-<div>
-<b>mylovee.store1@gmail.com</b><small>Email us — replies within 24 hours</small>
-</div></a>
-<a href="/pages/faq"><div class="ic">❓</div>
-<div>
-<b>FAQ</b><small>Quick answers to common questions</small>
-</div></a>
-</div></div>
-    <div class="cright">
-      <!-- live page uses a real Shopify {% form 'contact' %}; static here for the design source -->
-      <form class="cform" onsubmit="return false">
-        <input type="text" placeholder="Your name">
-        <input type="email" placeholder="Your email">
-        <textarea placeholder="How can we help?"></textarea>
-        <button type="submit" class="btn">Send message</button>
-      </form>
-    </div>
-  </div>
+<div class="mv-pg">
+<div class="pagehd">
+<h1>Shipping</h1>
+<p>Free US shipping — fast, tracked, and no surprises at your door.</p>
+</div>
+<section class="sec s-paper">
+<div class="step"><div class="n">🇺🇸</div><div><b>Free US shipping</b><small>On every order — no minimum. We pack and ship from the US within 24–48 hours (1–2 business days), so your cat's calm kit is on its way fast.</small></div></div>
+<div class="step"><div class="n">📦</div><div><b>Delivery time</b><small>United States: usually <strong>5–8 business days</strong> after it ships. International: usually <strong>10–20 business days</strong>, depending on where you are and local customs. Most orders land right in that window — and if a carrier ever runs a little behind, your tracking keeps you posted every step of the way.</small></div></div>
+<div class="step"><div class="n">🔔</div><div><b>Tracking &amp; confirmation</b><small>You'll get an order confirmation by email right away, then a tracking link the moment your order ships. Don't see tracking after a few days? Drop us a line — we'll happily check on it for you.</small></div></div>
+<div class="step"><div class="n">🌍</div><div><b>International orders</b><small>We ship worldwide — always free. Inside the US, the price you see is all you pay: no extra fees at your door. International orders may occasionally have local customs charges set by your country, which are outside our control.</small></div></div>
+<div class="step"><div class="n">🔎</div><div><b>Order didn't arrive on time?</b><small>If your tracking stalls or your order hasn't arrived when you expected, just email us — we'll track it down and make it right. You're never left chasing a package alone.</small></div></div>
+<div class="step"><div class="n">📮</div><div><b>Wrong or undeliverable address</b><small>Just double-check your address at checkout so your order finds you. If anything ever comes back to us as undeliverable, no worries — we'll reach out and get it on its way to you again.</small></div></div>
+</section>
+</div>
+<div class="mv-pg">
+<section class="promise">
+<span class="eyebrow">Questions about your order?</span>
+<h2>We're a message away.</h2>
+<p>A real person answers, usually the same day.</p>
+<a href="mailto:mylovee.store1@gmail.com" class="btn">Email us</a>
+<a href="mailto:mylovee.store1@gmail.com" class="mail">mylovee.store1@gmail.com</a>
+</section>
 </div>
 </body>
 </html>
