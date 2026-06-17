@@ -278,6 +278,43 @@ ul.pts{margin:8px 0 0 18px;font-size:13px;color:var(--soft)}ul.pts li{margin-bot
 </section>
 
 <!-- STATUS -->
+<!-- SIZE GUIDE -->
+<section class="page" id="size">
+  <h2>📏 Size Guide — секции + реальная таблица (S6)</h2>
+  <div class="sub">Шаблон <code>templates/page.movaro-size.json</code> = 4 custom-liquid секции (<code>size-head · size-measure · size-chart · size-cta</code>) · CSS <code>assets/movaro-pages.css</code> (<code>.mv-pg</code>, белый) · реальные данные от Sourcing (B4).</div>
+  <div class="cols">
+    <div>
+      <div class="schematitle">Схема блоков</div>
+      <div class="schema">
+        <div class="blk theme"><b>Announce + Header</b><small>тема · общие</small></div>
+        <div class="blk"><b>size-head — pagehd</b><small>«Find your cat's size» + «when in doubt — size up»</small></div>
+        <div class="blk"><b>size-measure — 2 .step</b><small>1 Weight · 2 Back length (chest girth убран)</small></div>
+        <div class="blk"><b>size-chart — .sztable (s-ivory)</b><small>3 размера S/M/L: вес lb+kg · спина in+cm · best for + «size up»</small></div>
+        <div class="blk sage"><b>size-cta</b><small>sage promise-карточка «Wrong size? We'll fix it» → Shop + email</small></div>
+        <div class="blk theme"><b>Footer</b><small>тема</small></div>
+      </div>
+    </div>
+    <div>
+      <div class="tabletitle">Правила + контент</div>
+      <table>
+        <tr><th>Что</th><th>Решение</th></tr>
+        <tr><td><b>Реальные размеры (B4)</b></td><td>S 3–8 lb (1.2–3.8 кг) · M 8–17 lb (3.8–7.8) · L 17–30 lb (7.8–13.75); спина 25–35 / 35–38 / 38–50 см. <b>3 размера, НЕ 5.</b></td></tr>
+        <tr><td><b>Десктоп — воздух</b></td><td>контент уже: <code>.mv-pg.mvsz{max-width:840}</code> @≥760 (640 узко / 980 широко — Marina); поля по бокам, не растянуто.</td></tr>
+        <tr><td><b>CTA</b></td><td>скруглённая sage promise-карточка с полями (как About/FAQ), НЕ полоса во всю ширину.</td></tr>
+        <tr><td><b>Старый body_html</b></td><td>→ чистое SEO-summary (JSON-шаблон главный); бэкап <code>datafix-sizeguide/_old-body-backup.html</code>.</td></tr>
+      </table>
+      <div class="note">🔑 монолит <code>page.movaro</code> давал узкие беж-поля на десктопе → JSON-шаблон = белый full-width (как About/FAQ). Email = mylovee (свип после домена).</div>
+    </div>
+  </div>
+  <div class="renders">
+    <div class="rendtitle">Живые рендеры — Size Guide</div>
+    <div class="rgrid">
+      <div class="rcard"><div class="cap">🖥️ Десктоп</div><div class="scroll"><img src="renders/size-guide-desktop.jpg" alt="size guide desktop"></div></div>
+      <div class="rcard mobile"><div class="cap">📱 Мобайл</div><div class="scroll"><img src="renders/size-guide-mobile.jpg" alt="size guide mobile"></div></div>
+    </div>
+  </div>
+</section>
+
 <section class="page" id="status">
   <h2>📋 Статус footer-страниц</h2>
   <table class="status">
@@ -290,14 +327,14 @@ ul.pts{margin:8px 0 0 18px;font-size:13px;color:var(--soft)}ul.pts li{margin-bot
     <tr><td>Catalog (collection)</td><td>+ intro-секция</td><td class="ok">✅ готово</td></tr>
     <tr><td>Privacy · Terms</td><td>футер ведёт на нативные Shopify <code>/policies/*</code> (один источник правды; brand-prose не делаем)</td><td class="ok">✅ решено (S5l)</td></tr>
     <tr><td>How-to-Order</td><td>—</td><td class="todo">⏸ пропущен (не нужен, Marina)</td></tr>
-    <tr><td>Size Guide</td><td>пока монолит <code>page.movaro</code></td><td class="todo">⛔ ждёт PI B4 (реальный размерный ряд)</td></tr>
+    <tr><td>Size Guide</td><td>секции (<code>page.movaro-size.json</code> + <code>movaro-pages.css</code>); реальная таблица S/M/L; десктоп <code>.mvsz</code> 840</td><td class="ok">✅ готово (S6)</td></tr>
     <tr><td>Native Policies (чекаут: Refund/Shipping/Terms/Privacy)</td><td>нативные Shopify Policies</td><td class="ok">✅ заполнено · ⚠️ Refund переставить под обновлённый текст</td></tr>
   </table>
   <div class="note">⏳ Дальше: Size Guide на секции (ждёт PI B4); Track-Your-Order скрыт; email/даты — sweep после подключения домена + корп-почты. Нативный Refund-полис Марина переставляет под текст из <code>store-base-legal.md</code> (чекаут = сайт).</div>
 </section>
 
 <div class="foot">
-  Movaro Website Lab · 5.0.2 — footer-страницы &amp; секции (срез 2026-06-15, S5l).<br>
+  Movaro Website Lab · 5.0.2 — footer-страницы &amp; секции (срез 2026-06-15, S5l · + Size Guide S6 2026-06-17).<br>
   Обновлять при доработках: пере-снять рендеры + поправить правила. Источник правды — живая тема.
 </div>
 </div>
