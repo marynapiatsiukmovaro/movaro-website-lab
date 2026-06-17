@@ -1,6 +1,6 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Movaro — правка данных, продуктовая</title>
+<title>Movaro — правка данных, продуктовая (v2)</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -209,6 +209,7 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
 .changes h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9C9385;margin:0 0 12px}
 .chg{padding:10px 0;border-top:1px dashed #E6DFD1}
 .chg:first-of-type{border-top:none}
+.chg.nc{opacity:.62}
 .cl{font-weight:600;font-size:13px;margin-bottom:5px}
 .co,.cn{font-size:12.5px;line-height:1.5;margin:3px 0;padding-left:2px}
 .co{color:#9a8f80}.cn{color:#21201C}
@@ -218,28 +219,28 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
 .previewwrap{padding:14px 12px 20px;background:#F7F4EE}
 .plabel{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9C9385;margin:0 0 12px;text-align:center}
 .phone{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.06)}
-.ph{background:#E4DCCB;color:#9C9385;font-size:11px;letter-spacing:.15em;display:flex;align-items:center;justify-content:center;min-height:120px;aspect-ratio:4/5}
-.gift .ph,.brow .ill .ph{min-height:0}
+/* photo placeholder fills its frame exactly */
+.ph{position:absolute;inset:0;width:100%;height:100%;background:#E4DCCB;color:#9C9385;font-size:10px;letter-spacing:.18em;display:flex;align-items:center;justify-content:center}
 .foot{text-align:center;font-size:12px;color:#6A6256;margin-top:10px}
 </style></head><body><div class="wrap">
-<div class="intro"><h1>Правка данных — продуктовая страница</h1>
-<p>Меняем выдуманную инфу на реальную (данные из Sourcing, B1–B7). Дизайн и фото не трогаем — только текст/цифры.</p>
-<p><b>Правки нужны в 5 блоках</b> (ниже). Остальные блоки проверил — чистые, менять нечего:</p>
+<div class="intro"><h1>Правка данных — продуктовая (v2)</h1>
+<p>Учёл твой фидбэк: proof-чип вместо fleece, сжатый материал, $145–$250, fabric оставил где естественно, починил отображение фото-плейсхолдеров.</p>
+<p><b>Правки в 5 блоках.</b> Остальные проверил — чистые:</p>
 <div class="note"><b>Без изменений:</b> trust · ugc (отзывы) · before/after · vet (бренд-история) · instruction · reviews · close · spine</div>
-<div class="note">⚙️ <b>Site-wide отдельно:</b> announce-бар «3 Free Gifts Worth $35» → «Free Gifts With Every Order» (меняется на всём сайте, внесу вместе с шапкой). Email support@movaro — НЕ трогаем (ждём домен, твоё решение).</div>
+<div class="note">⚙️ <b>Site-wide:</b> announce «3 Free Gifts $35» → «Free Gifts With Every Order» (внесу с шапкой). Email support@movaro — не трогаем (ждём домен).</div>
 </div>
 <section class="rblock">
       <div class="rhead"><span class="bnum">1 · buy-box</span><span class="btitle">Первый экран / buy-box</span></div>
       <div class="changes"><h4>Что меняю</h4><div class="chg"><div class="cl">Дескриптор</div>
         <div class="co"><span class="tag old">было</span> Vet-designed calming cat wrap</div>
         <div class="cn"><span class="tag new">стало</span> The #1 calming cat wrap</div>
-        <div class="cw">↳ убрали vet-авторитет (ложь/FTC); сильное слово из класса соц-пруфа</div></div><div class="chg"><div class="cl">Чип доверия</div>
+        <div class="cw">↳ убрали vet-авторитет (ложь/FTC); сильное слово из класса соц-пруфа</div></div><div class="chg"><div class="cl">Чип доверия → доказательство</div>
         <div class="co"><span class="tag old">было</span> 🩺 Vet-designed</div>
-        <div class="cn"><span class="tag new">стало</span> 🧺 Soft, quiet fleece</div>
-        <div class="cw">↳ vet-designed убран; вместо — реальный материал-преимущество</div></div><div class="chg"><div class="cl">Материал (детали)</div>
-        <div class="co"><span class="tag old">было</span> Soft, quilted fabric · Diamond-velcro</div>
-        <div class="cn"><span class="tag new">стало</span> Soft quiet fleece · velcro collar, back zip + limb-access flaps</div>
-        <div class="cw">↳ реальные спеки (B4); молния — лёгкое упоминание, без акцента (D4)</div></div><div class="chg"><div class="cl">Размеры</div>
+        <div class="cn"><span class="tag new">стало</span> 🔬 Backed by calming science</div>
+        <div class="cw">↳ vet-designed убран; вместо — ДОКАЗАТЕЛЬСТВО (наука мягкого давления/swaddle, B6). Альтернатива: «🐾 The calming method vets use»</div></div><div class="chg"><div class="cl">Материал (детали) — сжато</div>
+        <div class="co"><span class="tag old">было</span> Soft quilted fabric · Diamond-velcro closure (непонятно)</div>
+        <div class="cn"><span class="tag new">стало</span> Soft quiet fleece · velcro flaps open one paw at a time</div>
+        <div class="cw">↳ реальные спеки, ёмко; diamond-velcro выкинут; молнию тут НЕ пишу (ёмкость)</div></div><div class="chg"><div class="cl">Размеры</div>
         <div class="co"><span class="tag old">было</span> Kitten · S · M · L · XL (5)</div>
         <div class="cn"><span class="tag new">стало</span> S · M · L (3, по весу)</div>
         <div class="cw">↳ реальный ряд поставщика (B4)</div></div><div class="chg"><div class="cl">Care & sizing</div>
@@ -248,10 +249,10 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
         <div class="cw">↳ реальные веса; убрал «pending sourcing»</div></div><div class="chg"><div class="cl">Подарки</div>
         <div class="co"><span class="tag old">было</span> $15 guide + $12 toy + $8 scissors ($35 value)</div>
         <div class="cn"><span class="tag new">стало</span> 📖 Cat-Calm guide + 📋 stress cheatsheet (цифровые, free)</div>
-        <div class="cw">↳ для теста — только цифра (B2); физику убрали, цену ценности убрали</div></div><div class="chg"><div class="cl">Метка набора</div>
+        <div class="cw">↳ для теста — только цифра (B2); физику и цену ценности убрали</div></div><div class="chg"><div class="cl">Метка набора</div>
         <div class="co"><span class="tag old">было</span> +$35 gifts free</div>
         <div class="cn"><span class="tag new">стало</span> + free gifts</div>
-        <div class="cw">↳ без числа — цифровые подарки</div></div></div>
+        <div class="cw">↳ без числа — подарки цифровые</div></div></div>
       <div class="previewwrap"><div class="plabel">Как станет (живой рендер · фото = плейсхолдер)</div>
       <div class="phone"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -324,7 +325,7 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
     <div class="rating-row"><span class="stars">★★★★★</span> 4.8 · <a href="#reviews">600+ calm cats 🐾</a></div>
 
     <!-- CREDIBILITY anchor — props up the rating for a brand new store (seeded, honesty L2; number = Marina to set) -->
-    <div class="cred"><span>🐾 10,000+ cats calmed</span><span>🧺 Soft, quiet fleece</span><span>🇺🇸 Ships from the US</span></div>
+    <div class="cred"><span>🐾 10,000+ cats calmed</span><span>🔬 Backed by calming science</span><span>🇺🇸 Ships from the US</span></div>
 
     <!-- PRICE — high; the cold buyer scans photo → price first -->
     <div class="price-row"><span class="now" id="px-now">$64.99</span><span class="was" id="px-was">$99.99</span><span class="pill-save" id="px-save">Save $35</span></div>
@@ -374,7 +375,7 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
 
     <!-- ACCORDION — so the cold buyer never leaves for a policy page (pattern from Marina's Watch Ring site) -->
     <div class="bb-acc">
-      <details><summary>Product details <span class="pm">+</span></summary><div class="ans">Soft, <b>quiet fleece</b> in calming grey (no scary plastic crinkle). Velcro collar, back zip and limb-access flaps — open one paw at a time for nails, meds &amp; grooming. Full-body wrap, machine-washable. Sizes <b>S, M, L</b> (by weight — see size finder). In the box: the wrap + your free <b>Cat-Calm guide &amp; stress-signals cheatsheet</b> (digital) + a quick-start card.</div></details>
+      <details><summary>Product details <span class="pm">+</span></summary><div class="ans">Soft, <b>quiet fleece</b>, in calming grey. Velcro flaps open one paw at a time — for nails, meds &amp; grooming. Full-body wrap, machine-washable. Sizes <b>S / M / L</b> by weight. In the box: wrap + digital Cat-Calm guide &amp; stress cheatsheet + quick-start card.</div></details>
       <details><summary>Shipping &amp; returns <span class="pm">+</span></summary><div class="ans">Free US shipping, dispatched in 24–48h, typically 5–8 business days. Not in love with it? <b>30-day money-back</b> — and keep the guide as our gift. Questions: support@movaro.</div></details>
       <details id="sizing"><summary>Care &amp; sizing <span class="pm">+</span></summary><div class="ans">Machine wash cold, air dry. <b>Size by weight:</b> S (≈3–8 lb) · M (≈8–17 lb, most adults) · L (≈17–30 lb). Unsure? Use the size finder or size up.</div></details>
     </div>
@@ -409,11 +410,11 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
       <div class="rhead"><span class="bnum">4 · about</span><span class="btitle">Боль → как работает → выгоды</span></div>
       <div class="changes"><h4>Что меняю</h4><div class="chg"><div class="cl">Цена вет-визита</div>
         <div class="co"><span class="tag old">было</span> $145–$500 — every single time</div>
-        <div class="cn"><span class="tag new">стало</span> $145–$170 — every single time</div>
-        <div class="cw">↳ убрал $500 (не привязан к стрижке, рискованный — B5)</div></div><div class="chg"><div class="cl">Подпись на фото</div>
-        <div class="co"><span class="tag old">было</span> 🤫 Soft, quiet fabric</div>
-        <div class="cn"><span class="tag new">стало</span> 🤫 Soft, quiet fleece</div>
-        <div class="cw">↳ реальный материал</div></div></div>
+        <div class="cn"><span class="tag new">стало</span> $145–$250 — every single time</div>
+        <div class="cw">↳ убрал рискованный $500; $145–250 реалистично + эффектнее (Marina)</div></div><div class="chg nc"><div class="cl">Ткань</div>
+        <div class="co"><span class="tag old">было</span> (оставляю «soft, quiet fabric»)</div>
+        
+        <div class="cw">↳ fabric тут читается естественно — не форсю fleece</div></div></div>
       <div class="previewwrap"><div class="plabel">Как станет (живой рендер · фото = плейсхолдер)</div>
       <div class="phone">
 <div class="mvb bg-paper"><div class="mvb-sec ab-d"><div class="eyebrow reveal">The nightmare you know too well</div>
@@ -426,7 +427,7 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
       <span class="chip" style="top:14px;left:50%;transform:translateX(-50%)">👆 Tap the + dots to see how it works</span>
       <button class="hotspot" style="top:56%;left:44%" aria-label="pressure">+<span class="tip">😌 Even, gentle pressure — most cats settle in ~60s</span></button>
       <button class="hotspot" style="top:42%;left:58%" aria-label="velcro">+<span class="tip">🐾 Velcro opens one limb at a time</span></button>
-      <button class="hotspot" style="top:72%;left:32%" aria-label="fabric">+<span class="tip">🤫 Soft, quiet fleece — no plastic crinkle</span></button>
+      <button class="hotspot" style="top:72%;left:32%" aria-label="fabric">+<span class="tip">🤫 Soft, quiet fabric — no plastic crinkle</span></button>
     </div>
 
     <div class="brow reveal">
@@ -444,7 +445,7 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
     <div class="brow reveal">
       <div class="ill"><div class="ph">ФОТО</div></div>
       <div class="bt"><h3>Pays for itself in ~3 trims</h3>
-        <p>A groomer charges $25–$30 a trim. A sedated vet visit runs $145–$170 — every single time. The Movaro wrap is a one-time $64.99 and <span class="hl">pays for itself in about three trims</span>, then keeps saving you for years of nails, meds and grooming you do calmly at home.</p>
+        <p>A groomer charges $25–$30 a trim. A sedated vet visit runs $145–$250 — every single time. The Movaro wrap is a one-time $64.99 and <span class="hl">pays for itself in about three trims</span>, then keeps saving you for years of nails, meds and grooming you do calmly at home.</p>
         <span class="proof">● One wrap ≈ 3 trims — then it's saving you money</span></div>
     </div></div></div></div></div>
     </section><section class="rblock">
@@ -452,13 +453,13 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
       <div class="changes"><h4>Что меняю</h4><div class="chg"><div class="cl">Строка размеров</div>
         <div class="co"><span class="tag old">было</span> Fits Kitten → XL</div>
         <div class="cn"><span class="tag new">стало</span> Fits S / M / L by weight</div>
-        <div class="cw">↳ реальный ряд</div></div><div class="chg"><div class="cl">Строка ткани</div>
-        <div class="co"><span class="tag old">было</span> Quiet, soft fabric</div>
-        <div class="cn"><span class="tag new">стало</span> Quiet, soft fleece</div>
-        <div class="cw">↳ реальный материал</div></div><div class="chg"><div class="cl">Подпись под таблицей</div>
+        <div class="cw">↳ реальный ряд</div></div><div class="chg"><div class="cl">Подпись под таблицей</div>
         <div class="co"><span class="tag old">было</span> 🩺 Designed with vets</div>
         <div class="cn"><span class="tag new">стало</span> 🐾 Loved by 10,000+ cats</div>
-        <div class="cw">↳ vet-авторитет убран; честный соц-пруф</div></div></div>
+        <div class="cw">↳ vet-авторитет убран; честный соц-пруф</div></div><div class="chg nc"><div class="cl">Ткань</div>
+        <div class="co"><span class="tag old">было</span> (оставляю «Quiet, soft fabric»)</div>
+        
+        <div class="cw">↳ fabric — ок</div></div></div>
       <div class="previewwrap"><div class="plabel">Как станет (живой рендер · фото = плейсхолдер)</div>
       <div class="phone">
 <div class="mvb bg-paper"><div class="mvb-sec"><div class="sect-head reveal"><div class="eyebrow">Don't settle</div><h2>Why owners switch to Movaro</h2><p>A cheap bag traps. A vet sedates &amp; charges. The wrap does the one thing that actually works — it calms.</p></div>
@@ -469,7 +470,7 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
         <div class="h them"><b>$15 bag<br>· vet visit</b></div>
       </div>
       <div class="cmp-row"><div class="c lbl">Actually calms (not just traps)</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
-      <div class="cmp-row"><div class="c lbl">Quiet, soft fleece</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">Noisy / N/A</span></div></div>
+      <div class="cmp-row"><div class="c lbl">Quiet, soft fabric</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">Noisy / N/A</span></div></div>
       <div class="cmp-row"><div class="c lbl">Do it solo at home</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
       <div class="cmp-row"><div class="c lbl">Fits S / M / L by weight</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">One size</span></div></div>
       <div class="cmp-row"><div class="c lbl">Cost over a year</div><div class="c us">$64.99 once</div><div class="c"><span class="cross">$300+</span></div></div>
@@ -480,15 +481,15 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
       <div class="rhead"><span class="bnum">9 · offer</span><span class="btitle">Оффер / value-stack</span></div>
       <div class="changes"><h4>Что меняю</h4><div class="chg"><div class="cl">Якорь экономии</div>
         <div class="co"><span class="tag old">было</span> $145–$500 sedated vet trim</div>
-        <div class="cn"><span class="tag new">стало</span> $145–$170 sedated vet trim</div>
-        <div class="cw">↳ убрал $500 (B5)</div></div><div class="chg"><div class="cl">Состав набора</div>
+        <div class="cn"><span class="tag new">стало</span> $145–$250 sedated vet trim</div>
+        <div class="cw">↳ как в About</div></div><div class="chg"><div class="cl">Состав набора</div>
         <div class="co"><span class="tag old">было</span> guide $15 + toy $12 + scissors $8</div>
         <div class="cn"><span class="tag new">стало</span> 📖 guide (digital) + 📋 stress cheatsheet (digital)</div>
-        <div class="cw">↳ цифровые подарки (B2); физику и цены убрали</div></div></div>
+        <div class="cw">↳ цифровые подарки; физику и цены убрали</div></div></div>
       <div class="previewwrap"><div class="plabel">Как станет (живой рендер · фото = плейсхолдер)</div>
       <div class="phone">
 <div class="mvb bg-sage offer" data-mv="offer"><div class="mvb-sec">
-    <div class="sect-head reveal"><div class="eyebrow">Everything you get</div><h2>The whole Calm Kit</h2><p>Against a $145–$170 sedated vet trim, the math isn't close.</p></div>
+    <div class="sect-head reveal"><div class="eyebrow">Everything you get</div><h2>The whole Calm Kit</h2><p>Against a $145–$250 sedated vet trim, the math isn't close.</p></div>
     <div class="stack reveal">
       <div class="row"><span>🐱 Movaro Calm Wrap (your size)</span><span>$64.99</span></div>
       <div class="row"><span>📖 Cat Calm &amp; Longevity guide (digital)</span><span class="free">Free</span></div>
@@ -510,20 +511,20 @@ body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#
         <div class="cw">↳ реальный ряд (B4)</div></div><div class="chg"><div class="cl">Габапентин</div>
         <div class="co"><span class="tag old">было</span> ...calming aids like gabapentin your vet may recommend</div>
         <div class="cn"><span class="tag new">стало</span> ...alongside whatever your vet has already prescribed</div>
-        <div class="cw">↳ смягчил — убрал название препарата (B7)</div></div><div class="chg"><div class="cl">Ткань</div>
-        <div class="co"><span class="tag old">было</span> fabric is soft and quiet</div>
-        <div class="cn"><span class="tag new">стало</span> fleece is soft and quiet</div>
-        <div class="cw">↳ реальный материал</div></div></div>
+        <div class="cw">↳ смягчил — убрал название препарата (B7)</div></div><div class="chg nc"><div class="cl">Ткань</div>
+        <div class="co"><span class="tag old">было</span> (оставляю «fabric is soft and quiet»)</div>
+        
+        <div class="cw">↳ fabric — ок</div></div></div>
       <div class="previewwrap"><div class="plabel">Как станет (живой рендер · фото = плейсхолдер)</div>
       <div class="phone">
 <div class="mvb bg-paper"><div class="mvb-sec faq">
     <div class="sect-head reveal"><div class="eyebrow">Simple, honest answers</div><h2>Questions, answered</h2></div>
     <details open><summary>"This would never work on MY cat." <span class="pm">+</span></summary><div class="ans">That's what most owners say — including the ones reviewing the spiciest, most fractious cats they've owned. The swaddle pressure works <i>with</i> a cat's instinct to feel safe when held snugly, not against it. And you're covered by our 30-day guarantee, so trying it on your cat costs you nothing.</div></details>
-    <details><summary>Isn't wrapping cruel? Won't it panic more? <span class="pm">+</span></summary><div class="ans">Gentle wrapping is the opposite of scruffing — vets use it precisely because it calms. The fleece is soft and quiet (no scary plastic), it lowers visual stimulation, and most cats settle within a minute. We include a positive-association quick-start so the very first time builds trust instead of fear.</div></details>
+    <details><summary>Isn't wrapping cruel? Won't it panic more? <span class="pm">+</span></summary><div class="ans">Gentle wrapping is the opposite of scruffing — vets use it precisely because it calms. The fabric is soft and quiet (no scary plastic), it lowers visual stimulation, and most cats settle within a minute. We include a positive-association quick-start so the very first time builds trust instead of fear.</div></details>
     <details><summary>What size do I need? <span class="pm">+</span></summary><div class="ans">We make three sizes — <b>S, M and L</b> — matched by your cat’s weight: S for ~3–8 lb, M for ~8–17 lb (most adults), L for ~17–30 lb. Large or fluffy cats take L. Our size finder picks your fit in seconds. (One-size-fits-all is the #1 complaint with other wraps — we fixed that.)</div></details>
     <details><summary>Can I use it with meds my vet prescribed? <span class="pm">+</span></summary><div class="ans">Yes — owners use it for pills, ear drops, subQ fluids and insulin, and it works alongside calming aids like gabapentin your vet may already recommend. It simply makes home care easier. It's a grooming &amp; calming aid, not a medical device.</div></details>
     <details><summary>What if it doesn't work for us? <span class="pm">+</span></summary><div class="ans">Send it back within 30 days for a full refund — and keep the guide as our gift. Free US shipping. That's the Calm Guarantee: the only risk is staying stuck with nail-day battles.</div></details>
   </div></div></div></div>
     </section>
-<div class="foot">Movaro · datafix · продуктовая · 5 блоков · RAW BASE</div>
+<div class="foot">Movaro · datafix v2 · продуктовая · RAW BASE</div>
 </div></body></html>
