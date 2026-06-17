@@ -1,65 +1,71 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Movaro — галерея: смыслы (слева/справа)</title>
+<title>Movaro — галерея (визуально: заголовок + бейджи)</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box} body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
-.wrap{max-width:760px;margin:0 auto;padding:18px 12px 70px}
+.wrap{max-width:680px;margin:0 auto;padding:18px 12px 70px}
 .intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:18px;margin-bottom:18px}
 .intro h1{font-family:'Fraunces',serif;font-size:23px;margin:0 0 8px}
 .intro p{font-size:13px;color:#4f483d;margin:6px 0}
-.formula{background:#21201C;color:#fff;border-radius:12px;padding:14px 16px;font-size:12.5px;line-height:1.55;margin-top:10px}
-.formula b{color:#9bc4bd}
-.pains{background:#F1E3DD;color:#8a4a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
-.slot{background:#fff;border:1px solid #E6DFD1;border-radius:13px;margin-bottom:14px;overflow:hidden}
-.sh{background:#FBF9F4;border-bottom:1px solid #EFE8DB;padding:10px 14px;display:flex;gap:10px;align-items:baseline}
-.sh .num{font-family:'Fraunces',serif;font-size:16px}
-.sh .stage{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#3E5C5A}
-.cols{display:flex}
-.col{flex:1;padding:13px 14px;font-size:12.5px}
-.col.left{background:#F6F2EA;color:#9a8f80;border-right:1px solid #EFE8DB}
-.col.right{background:#fff}
-.lab{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
-.col.left .lab{color:#b3a692} .col.right .lab{color:#2f6b63}
-.txt{margin-top:9px;padding-top:9px;border-top:1px dashed #E6DFD1;font-size:12px;color:#21201C}
-.txt b{color:#3E5C5A}
+.intro .key{background:#E2E9E7;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.slot{background:#fff;border:1px solid #E6DFD1;border-radius:13px;overflow:hidden}
+.fr{position:relative;aspect-ratio:4/5;background:linear-gradient(135deg,#E4DCCB,#D3C9B5);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.stg{position:absolute;top:8px;left:8px;right:8px;background:rgba(33,32,28,.78);color:#fff;font-size:9px;font-weight:600;letter-spacing:.04em;padding:4px 8px;border-radius:7px;z-index:3;text-transform:uppercase}
+.scene{font-size:11px;color:#7a715f;text-align:center;padding:14px;max-width:90%}
+.head{position:absolute;left:12px;right:12px;text-align:center;font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6);line-height:1.12;z-index:2}
+.badges{position:absolute;bottom:10px;left:8px;right:8px;display:flex;flex-wrap:wrap;gap:5px;justify-content:center;z-index:2}
+.bg{background:rgba(255,255,255,.94);border-radius:999px;padding:4px 9px;font-size:10px;color:#21201C;display:inline-flex;align-items:center;gap:4px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.bg b{font-size:10px;color:#3E5C5A}
+.mean{font-size:12px;color:#21201C;padding:11px 12px;background:#FBF9F4;border-top:1px solid #EFE8DB}
+.mean .ml{display:block;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2f6b63;margin-bottom:5px}
 .foot{text-align:center;font-size:12px;color:#6A6256;margin-top:18px}
-@media(max-width:560px){.cols{flex-direction:column} .col.left{border-right:none;border-bottom:1px solid #EFE8DB}}
+@media(max-width:540px){.grid{grid-template-columns:1fr} .head{font-size:20px}}
 </style></head><body><div class="wrap">
-<div class="intro"><h1>Галерея — смыслы: слева моё / справа наше новое</h1>
-<p>Перестроили на <b>боль-первый</b>: ведём не товаром, а болью клиента → «это про меня» → решение. Слева — мой прежний вариант, справа — наш новый (твоя логика + мои нюансы). Сравни, докрутим.</p>
-<div class="pains"><b>3 боли = наше УТП</b> (= Еленины 2 выгоды + деньги): 😿 вина (мучаешь кота) · 🩹 себе больно (царапины) · 💸 деньги (платишь снова и снова).</div>
-<div class="formula"><b>ФОРМУЛА ГАЛЕРЕИ</b> (переиспользуемая для любого товара):<br>Фото 1 = боль-хук + УТП · Фото 2–4 = каждая боль→выгода (эмоция → физика → деньги) · Фото 5 = почему именно мы (уникальность + доверие) → дальше ТЕЛО по Елене (соц-пруф → оффер/CTA).<br><span style="color:#c9a">Нюансы:</span> фото 1 = один комбо-хук (не 3 строки) · картинка тёплая, боль несёт текст · подсказка свайпа (1/5).</div>
+<div class="intro"><h1>Галерея — продаём ВИЗУАЛЬНО (не текстом)</h1>
+<p>Короткий заголовок (боль/выгода) + <b>иконки-бейджи</b> (наши плюсы/доверие в 1-2 слова) + <b>сама картинка доказывает</b>. Текста минимум — убедительность через визуал. К концу галереи клиент продан.</p>
+<div class="key">🎨 Бейджи/иконки рисуем МЫ кодом-оверлеем (чёткие, на-бренде, редактируемые — наш метод). Главное возражение «жестоко?» вплетено в фото 2-3; полная обработка возражений — в теле (FAQ/сравнение/инструкция).</div>
 </div>
-<div class="slot">
-      <div class="sh"><span class="num">Фото 1</span><span class="stage">ХУК · боль + УТП</span></div>
-      <div class="cols">
-        <div class="col left"><div class="lab">Было (моё v2)</div><p>СТОП. Премиум спокойный кот, «Calm, not trapped». Считать = врап успокаивает + товар премиум/мягкий.</p></div>
-        <div class="col right"><div class="lab">Стало (боль-первый · вместе)</div><p>Клиент НЕ чувствует проблемы → ведём БОЛЬЮ + даём решение одним кадром. Реакция «ого, это про меня — и так можно?!». Картинка: кот спокойно в врапе, лапка наружу, стрижём коготь (видно, что работает). Текст-УТП (комбо всех 3 болей, коротко).</p><div class="txt"><b>Текст на фото:</b> «Nail trims without the trauma, the scratches, or the vet bill.»  (вариант: «Stop fighting nail day — calm cat, safe hands, no vet bills.»)</div></div>
+<div class="grid"><div class="slot">
+      <div class="fr">
+        <span class="stg">Фото 1 · ХУК · боль + УТП</span>
+        <div class="scene">📷 Кот спокойно в врапе, лапка наружу, стрижём коготь</div>
+        <div class="head" style="top:12px">Nail trims without the war</div>
+        <div class="badges"><span class="bg"><b>😌</b>Calm cat</span><span class="bg"><b>🖐️</b>No scratches</span><span class="bg"><b>💸</b>Skip the vet bill</span></div>
       </div>
+      <div class="mean"><span class="ml">Смысл</span>Клиент не чувствует проблемы → бьём 3 болями СРАЗУ (иконки) + показываем решение в кадре. «Ого, это про меня — и так можно?!»</div>
     </div><div class="slot">
-      <div class="sh"><span class="num">Фото 2</span><span class="stage">Боль 1 → решение · ЭМОЦИЯ/вина</span></div>
-      <div class="cols">
-        <div class="col left"><div class="lab">Было (моё v2)</div><p>ХОЧУ. Результат — спокойная стрижка в одни руки.</p></div>
-        <div class="col right"><div class="lab">Стало (боль-первый · вместе)</div><p>Самая глубокая боль кошатника: «удерживать/прижимать кота силой = ужас для него; ты, не зная, ТРАВМИРУЕШЬ того, кого любишь». Облегчение: в врапе кот чувствует себя в БЕЗОПАСНОСТИ (не в ловушке), успокаивается. Вина → «наконец могу по-доброму».</p><div class="txt"><b>Текст на фото:</b> «Pinning your cat down terrifies them. Wrapped, they feel safe.»</div></div>
+      <div class="fr">
+        <span class="stg">Фото 2 · Боль 1 · ВИНА → решение</span>
+        <div class="scene">📷 Расслабленный довольный кот в врапе (видно — ему ок)</div>
+        <div class="head" style="bottom:54px">Holding them down = stress</div>
+        <div class="badges"><span class="bg"><b>🤍</b>Feels safe</span><span class="bg"><b>⏱️</b>Calm in ~60s</span></div>
       </div>
+      <div class="mean"><span class="ml">Смысл</span>Глубокая боль: удерживая силой, ты травмируешь кота. Картинка (спокойный кот) = ДОКАЗАТЕЛЬСТВО облегчения. Бейдж = механизм. Текста минимум.</div>
     </div><div class="slot">
-      <div class="sh"><span class="num">Фото 3</span><span class="stage">Боль 2 → решение · ТЫ/царапины</span></div>
-      <div class="cols">
-        <div class="col left"><div class="lab">Было (моё v2)</div><p>ВЕРЮ. Фишки-выноски: как работает + качество.</p></div>
-        <div class="col right"><div class="lab">Стало (боль-первый · вместе)</div><p>Физическая боль ХОЗЯИНА: «каждая стрижка = царапины, укусы, борьба вдвоём, кровь». Облегчение: в врапе кот тебя не достанет — спокойно, безопасно, в одиночку. (При этом тут же можно подсветить, КАК: велкро-флап по одной лапе.)</p><div class="txt"><b>Текст на фото:</b> «No more scratches, bites, or two-person wrestling.»</div></div>
+      <div class="fr">
+        <span class="stg">Фото 3 · Боль 2 · РУКИ → решение</span>
+        <div class="scene">📷 Одна рука спокойно стрижёт, кот не вырывается</div>
+        <div class="head" style="bottom:54px">No more scratches or bites</div>
+        <div class="badges"><span class="bg"><b>✋</b>Safe for you</span><span class="bg"><b>🐾</b>Gentle, never forced</span></div>
       </div>
+      <div class="mean"><span class="ml">Смысл</span>Физическая боль хозяина + вплетено «не жестоко» (бейдж «gently, never forced»). Кадр доказывает: без борьбы.</div>
     </div><div class="slot">
-      <div class="sh"><span class="num">Фото 4</span><span class="stage">Боль 3 → решение · ДЕНЬГИ</span></div>
-      <div class="cols">
-        <div class="col left"><div class="lab">Было (моё v2)</div><p>МОГУ + не жестоко. Один человек, кот спокоен.</p></div>
-        <div class="col right"><div class="lab">Стало (боль-первый · вместе)</div><p>Боль кошелька: «$25–30 грумер / $145+ седация у вета — каждый раз, годами». Облегчение: разовый $64.99, делаешь дома, окупается за ~3 стрижки, экономия $300+/год. Финансовая выгода (денежная плоскость по Елене).</p><div class="txt"><b>Текст на фото:</b> «$25–$150 every trip → one wrap, done at home.» (+ «pays for itself in ~3 trims»)</div></div>
+      <div class="fr">
+        <span class="stg">Фото 4 · Боль 3 · ДЕНЬГИ → решение</span>
+        <div class="scene">📷 Визуал экономии: счета грумера/вета (зачёркнуты) → один врап</div>
+        <div class="head" style="top:12px">$25–$150 a trim. Forever.</div>
+        <div class="badges"><span class="bg"><b>💸</b>One-time $64.99</span><span class="bg"><b>📉</b>Pays back in ~3 trims</span></div>
       </div>
+      <div class="mean"><span class="ml">Смысл</span>Боль кошелька. Бейджи продают выгоду цифрой, картинка-сравнение показывает экономию. Минимум слов.</div>
     </div><div class="slot">
-      <div class="sh"><span class="num">Фото 5</span><span class="stage">Почему именно МЫ · уникальность+доверие</span></div>
-      <div class="cols">
-        <div class="col left"><div class="lab">Было (моё v2)</div><p>БЕРУ. Ценность/сравнение, что входит.</p></div>
-        <div class="col right"><div class="lab">Стало (боль-первый · вместе)</div><p>Клиент уже хочет — закрываем «почему ЭТОТ, а не дешёвый мешок за $15?». Уникальность: УСПОКАИВАЕТ (а не просто держит) · мягкий тихий флис · доступ по одной лапе · размеры S/M/L · 30-дн гарантия · 10 000+ котов. → дальше ТЕЛО по Елене: соц-пруф (UGC/отзывы) → оффер/CTA (бандл, покупка).</p><div class="txt"><b>Текст на фото:</b> «Calms — not just traps. Loved by 10,000+ cats.»  (товар-герой + триггеры доверия)</div></div>
+      <div class="fr">
+        <span class="stg">Фото 5 · Почему МЫ · доверие (визуально)</span>
+        <div class="scene">📷 Герой-товар + спокойный кот</div>
+        <div class="head" style="top:12px">Calms — doesn't just trap</div>
+        <div class="badges"><span class="bg"><b>★★★★★</b>4.8</span><span class="bg"><b>🐾</b>10,000+ cats</span><span class="bg"><b>🛡️</b>30-day guarantee</span><span class="bg"><b>🧺</b>Soft fleece</span></div>
       </div>
-    </div>
-<div class="foot">Movaro · галерея · смысл-первый · согласуем → потом UGC · RAW</div>
+      <div class="mean"><span class="ml">Смысл</span>Закрываем «почему вы, а не дешёвый мешок». Стек бейджей-доверия = «мы лучшие» ВИЗУАЛЬНО, не текстом. К концу галереи клиент продан. → дальше тело по Елене.</div>
+    </div></div>
+<div class="foot">Movaro · галерея · визуальная подача · согласуем → UGC · RAW</div>
 </div></body></html>
