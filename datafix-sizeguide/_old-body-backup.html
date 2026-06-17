@@ -1,0 +1,134 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap');
+.mv-pg{--paper:#FFFFFF;--ivory:#F2EEE6;--ink:#21201C;--ink-soft:#6A6256;--muted:#9C9385;--line:#E6DFD1;--line-soft:#F0EBDF;--sage:#3E5C5A;--sage-tint:#E2E9E7;--accent:#2F7A73;--accent-deep:#246159;--pill:999px;--r:14px;max-width:520px;margin:0 auto;background:var(--ivory);font-family:'Jost',system-ui,sans-serif;color:var(--ink);line-height:1.6}
+.mv-pg *{box-sizing:border-box}
+.mv-pg h1,.mv-pg h2,.mv-pg h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.1;letter-spacing:-.015em;margin:0}
+.mv-pg p{margin:0}
+.mv-pg .eyebrow{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--sage);display:block}
+.mv-pg .hl{background:linear-gradient(transparent 58%,var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
+.mv-pg .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;border:1px solid var(--accent);border-radius:var(--pill);font-family:'Jost';font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;min-height:54px;padding:15px 28px;text-decoration:none}
+.mv-pg .intro{background:var(--paper);text-align:center;padding:48px 30px 54px}
+.mv-pg .intro .eyebrow{margin-bottom:16px}
+.mv-pg .intro h1{font-size:34px;margin-bottom:18px}
+.mv-pg .intro p{font-size:16.5px;color:var(--ink-soft);line-height:1.62;max-width:380px;margin:0 auto 14px}
+.mv-pg .intro p b{color:var(--ink)}
+.mv-pg .intro .sign{font-family:'Fraunces';font-style:italic;font-size:16px;color:var(--ink);margin-top:8px}
+.mv-pg .pagehd{padding:34px 26px 6px;background:var(--paper)}
+.mv-pg .pagehd h1{font-size:34px}
+.mv-pg .pagehd p{font-size:15px;color:var(--ink-soft);margin-top:10px}
+.mv-pg .sec{padding:30px 26px}
+.mv-pg .s-ivory{background:var(--ivory)}.mv-pg .s-paper{background:var(--paper)}
+.mv-pg .copt{display:flex;flex-direction:column;gap:11px}
+.mv-pg .copt a{display:flex;gap:14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:16px;text-decoration:none;color:var(--ink)}
+.mv-pg .copt .ic{width:42px;height:42px;border-radius:11px;background:var(--sage-tint);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:19px}
+.mv-pg .copt b{font-family:'Jost';font-size:14px;font-weight:600;display:block}
+.mv-pg .copt small{font-size:12.5px;color:var(--ink-soft);display:block;margin-top:2px}
+.mv-pg details.q{background:var(--paper);border:1px solid var(--line);border-radius:13px;margin-top:11px;overflow:hidden}
+.mv-pg details.q summary{list-style:none;cursor:pointer;padding:16px 18px;font-family:'Jost';font-weight:600;font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.mv-pg details.q summary::-webkit-details-marker{display:none}
+.mv-pg details.q summary .pm{font-size:22px;color:var(--sage);font-weight:300;line-height:1;transition:transform .2s}
+.mv-pg details.q[open] summary .pm{transform:rotate(45deg)}
+.mv-pg details.q .ans{padding:0 18px 17px;font-size:14px;color:var(--ink-soft);line-height:1.6}
+.mv-pg .step{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:16px;margin-top:11px}
+.mv-pg .step .n{width:34px;height:34px;border-radius:50%;background:var(--sage);color:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:600;font-size:15px}
+.mv-pg .step b{font-family:'Jost';font-size:14px;font-weight:600;display:block;margin-bottom:3px}
+.mv-pg .step small{font-size:13px;color:var(--ink-soft);line-height:1.5;display:block}
+.mv-pg .promise{background:var(--sage);color:#fff;text-align:center;padding:44px 26px}
+.mv-pg .promise .eyebrow{color:#CFE0DD}
+.mv-pg .promise h2{color:#fff;font-size:27px;margin:11px 0 10px}
+.mv-pg .promise p{font-size:14.5px;color:rgba(255,255,255,.85);max-width:360px;margin:0 auto 20px}
+.mv-pg .promise .btn{background:#fff;color:var(--accent-deep);border-color:#fff}
+.mv-pg .promise .mail{display:block;margin-top:14px;font-size:13px;color:rgba(255,255,255,.85);text-decoration:none}
+.mv-pg .measure{display:flex;flex-direction:column;gap:11px;margin-top:8px}
+.mv-pg .measure .m{display:flex;gap:13px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:15px 16px}
+.mv-pg .measure .m .n{width:32px;height:32px;border-radius:50%;background:var(--sage);color:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:600;font-size:14px}
+.mv-pg .measure .m b{font-family:'Jost';font-size:14px;font-weight:600;display:block;margin-bottom:2px}
+.mv-pg .measure .m small{font-size:12.5px;color:var(--ink-soft);line-height:1.5;display:block}
+.mv-pg .sztable{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;font-size:12.5px;margin-top:6px}
+.mv-pg .sztable th,.mv-pg .sztable td{padding:11px 9px;text-align:left;border-bottom:1px solid var(--line-soft)}
+.mv-pg .sztable thead th{font-family:'Jost';font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sage);background:var(--sage-tint)}
+.mv-pg .sztable tbody td:first-child{font-family:'Fraunces';font-weight:600;color:var(--ink)}
+.mv-pg .sztable tbody tr:last-child td{border-bottom:none}
+.mv-pg .sizeup{text-align:center;font-size:13px;color:var(--ink-soft);margin-top:16px}
+.mv-pg .sizeup b{color:var(--ink)}
+</style><div class="mv-pg">
+<div class="pagehd">
+<h1>Find your cat's size</h1>
+<p>A snug, comfortable fit is what makes the calming work. When in doubt — size up.</p>
+</div>
+<section class="sec s-paper">
+<span class="eyebrow">How to measure</span>
+<div class="measure" style="margin-top:12px">
+<div class="m">
+<div class="n">1</div>
+<div>
+<b>Weight</b><small>The quickest way to choose — use your cat's most recent weight.</small>
+</div>
+</div>
+<div class="m">
+<div class="n">2</div>
+<div>
+<b>Body length</b><small>Along the back, from the base of the neck to the base of the tail.</small>
+</div>
+</div>
+<div class="m">
+<div class="n">3</div>
+<div>
+<b>Chest girth</b> <small>(optional) — around the widest part of the chest, just behind the front legs.</small>
+</div>
+</div>
+</div>
+</section>
+<section class="sec s-ivory">
+<span class="eyebrow">Size chart</span>
+<p style="font-size:13px;color:#6A6256;margin:8px 0 4px">⚠️ Placeholder measurements — final chart pending sourcing.</p>
+<table class="sztable">
+<thead><tr>
+<th>Size</th>
+<th>Weight</th>
+<th>Length</th>
+<th>Best for</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Kitten</td>
+<td>2–5 lb</td>
+<td>8–11 in</td>
+<td>Kittens &amp; petite cats</td>
+</tr>
+<tr>
+<td>S</td>
+<td>5–8 lb</td>
+<td>11–14 in</td>
+<td>Slim adult cats</td>
+</tr>
+<tr>
+<td>M</td>
+<td>8–11 lb</td>
+<td>14–17 in</td>
+<td>Most adult cats</td>
+</tr>
+<tr>
+<td>L</td>
+<td>11–15 lb</td>
+<td>17–20 in</td>
+<td>Large / long-bodied cats</td>
+</tr>
+<tr>
+<td>XL</td>
+<td>15 lb+</td>
+<td>20 in+</td>
+<td>Big breeds (Maine Coon, Ragdoll)</td>
+</tr>
+</tbody>
+</table>
+<p class="sizeup">Between two sizes? <b>Size up</b> — a slightly roomier fit is easier to secure gently and stays comfortable.</p>
+</section>
+<section class="promise">
+<span class="eyebrow">Risk-free fit</span>
+<h2>Wrong size? We'll fix it.</h2>
+<p>Pick the size you think is best — our 30-day guarantee makes exchanges simple. We've got the rest covered.</p>
+<a href="/products/pro-cat-wrap" class="btn">Shop the Calm Wrap</a>
+<a href="mailto:support@movaro.com" class="mail">Questions? support@movaro.com</a>
+</section>
+</div>
