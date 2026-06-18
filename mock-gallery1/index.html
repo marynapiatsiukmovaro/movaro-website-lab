@@ -51,19 +51,22 @@
 /* photo4 grid4 use-cases */
 .grid4{position:relative;width:100%;aspect-ratio:4/5;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;overflow:hidden;gap:2px;background:#fff}
 .grid4 .g{position:relative;background-size:cover;background-position:center}
-.grid4 .g .lab{position:absolute;left:6px;top:6px;background:rgba(47,122,115,.94);color:#fff;font-weight:600;font-size:10.5px;padding:3px 8px;border-radius:6px}
-.grid4 .center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,.96);border-radius:10px;padding:8px 13px;text-align:center;z-index:4;font-family:'Fraunces',serif;font-weight:600;font-size:14px;color:#21201C;box-shadow:0 3px 12px rgba(0,0,0,.32);line-height:1.1}
+.grid4 .g .lab{position:absolute;background:rgba(47,122,115,.94);color:#fff;font-weight:600;font-size:10px;padding:3px 8px;border-radius:6px;z-index:3}
+.grid4 .g.tl .lab{top:6px;left:6px}.grid4 .g.tr .lab{top:6px;right:6px}.grid4 .g.bl .lab{bottom:6px;left:6px}.grid4 .g.br .lab{bottom:6px;right:6px}
+.grid4 .money{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:82%;background:rgba(255,255,255,.97);border-radius:13px;padding:11px 13px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
+.grid4 .money .p{color:#d9503e;font-weight:700;font-size:12px;line-height:1.18;display:block}
+.grid4 .money .s{color:#21201C;font-weight:700;font-size:15px;font-family:'Fraunces',serif;margin-top:5px;line-height:1.12;display:block}
+.grid4 .money .save{display:inline-block;margin-top:7px;background:#2f7a73;color:#fff;font-size:10.5px;font-weight:700;padding:4px 11px;border-radius:999px}
 /* photo5 split spec+brand+bonus */
-.split{position:relative;width:100%;aspect-ratio:4/5;display:flex;flex-direction:column;overflow:hidden;background:#f3f1ec}
-.split .row{flex:1;display:flex;min-height:0}
-.split .l{width:50%;background-image:url('../stage-4.0/img/features.jpg');background-size:cover;background-position:center;position:relative}
-.split .l .cap{position:absolute;left:6px;top:6px;background:rgba(20,30,28,.8);color:#fff;font-size:10px;font-weight:600;padding:3px 8px;border-radius:6px}
-.split .r{width:50%;position:relative;background-image:url('../stage-3.0/img/hero-6-product.png');background-size:cover;background-position:center}
-.split .r .adv{position:absolute;left:0;right:0;bottom:0;top:0;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,.1));display:flex;flex-direction:column;justify-content:flex-end;padding:10px;gap:5px}
-.split .r .adv .b{background:rgba(255,255,255,.95);border-radius:7px;padding:4px 8px;font-size:10.5px;font-weight:600;color:#21201C}
-.split .value{background:#1f2e2c;color:#fff;text-align:center;padding:7px 8px;font-weight:600;font-size:11px}
-.split .bonus{background:#2f7a73;color:#fff;text-align:center;padding:9px 8px;font-weight:700;font-size:12.5px}
-.split .bonus span{color:#f3e5c2}
+.love{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-4.0/img/ba-after.jpg');background-size:cover;background-position:50% 26%;overflow:hidden}
+.love .gt{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.love .hd{position:absolute;top:15px;left:14px;right:14px;text-align:center;font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:21px;text-shadow:0 2px 10px rgba(0,0,0,.7);z-index:3}
+.love .card{position:absolute;left:13px;right:13px;bottom:13px;background:rgba(255,255,255,.97);border-radius:14px;padding:11px 14px;z-index:3;box-shadow:0 4px 16px rgba(0,0,0,.32)}
+.love .card .it{display:flex;align-items:flex-start;gap:8px;font-size:12px;font-weight:600;color:#21201C;padding:3px 0;line-height:1.25}
+.love .card .tr{text-align:center;font-size:11px;color:#7a715f;margin-top:7px;font-weight:600;border-top:1px solid #eee;padding-top:7px}
+.love .card .tr b{color:#E8A93D}
+.specph2{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-4.0/img/features.jpg');background-size:cover;background-position:center;overflow:hidden;background-color:#f3f1ec}
+.specph2 .hd{position:absolute;top:0;left:0;right:0;text-align:center;padding:12px 14px 22px;background:linear-gradient(180deg,rgba(20,30,28,.82),rgba(20,30,28,0));color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:18px;z-index:3}
 </style></head><body><div class="wrap">
 <div class="intro"><h1>🧪 Лаборатория фото — ГАЛЕРЕЯ v4 (по твоей схеме)</h1>
 <p>Фото-1 зафиксировано. 2–5 перестроил по листу: коллажи до/после, применение, спека+бонусы. Картинки — заглушки под раскладку (для «до»-паники и применения возьмём нужные кадры при генерации).</p>
@@ -111,30 +114,32 @@
     <div class="spec"><span class="k">Простым языком:</span> 🔴 боль (без него каждая стрижка — война: царапины, укусы, 20 минут беготни) → 🟢 решение (спокойно, за минуту, в одни руки, без царапин). Цвет-код, без затемнения, без слоганов.</div>
 </div>
 
-<div class="sechd">Фото 4 · ПРИМЕНЕНИЕ — коллаж 4 (как у конкурента, но наше)</div>
+<div class="sechd">Фото 4 · ДЕНЬГИ (применение — фоном)</div>
 <div class="card">
     <div class="grid4">
-      <div class="g" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"><span class="lab">Nail trims</span></div>
-      <div class="g" style="background-image:url('../stage-3.0/img/use-vet.png')"><span class="lab">Meds &amp; pills</span></div>
-      <div class="g" style="background-image:url('../stage-3.0/img/use-ear.png')"><span class="lab">Ears &amp; eyes</span></div>
-      <div class="g" style="background-image:url('../stage-4.0/img/ba-after.jpg')"><span class="lab">Calm-downs</span></div>
-      <div class="center">One wrap.<br>Every stressful moment.</div>
+      <div class="g tl" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"><span class="lab">Nail trims</span></div>
+      <div class="g tr" style="background-image:url('../stage-3.0/img/use-vet.png')"><span class="lab">Meds &amp; pills</span></div>
+      <div class="g bl" style="background-image:url('../stage-3.0/img/use-ear.png')"><span class="lab">Ears &amp; eyes</span></div>
+      <div class="g br" style="background-image:url('../stage-4.0/img/ba-after.jpg')"><span class="lab">Calm-downs</span></div>
+      <div class="money"><span class="p">$25–$150 a groomer, every single trim — forever</span><span class="s">One Movaro does it all</span><span class="save">💸 Save $300+ a year</span></div>
     </div>
-    <div class="spec"><span class="k">Смысл:</span> закрываем дыру — НИГДЕ не показано применение. 4 сценария (стрижка · лекарства · уши/глаза · успокоить) + центр-заголовок. <span class="k">⚠️</span> кадры — заглушки, перегенерим в едином стиле.</div>
+    <div class="spec"><span class="k">Смысл:</span> главное — ДЕНЬГИ (3-я боль): платишь каждый раз → разовая покупка экономит. Применение (4 сценария) идёт ФОНОМ = доказывает «одна штука = куча задач». Бирки увёл в углы (центр-карта не перекрывает). 🔴 боль-цифры → 🟢 экономия.</div>
 </div>
 
-<div class="sechd">Фото 5 · СПЕКА + БРЕНД + БОНУСЫ</div>
+<div class="sechd">Фото 5 · ВЛЮБИТЬ — всё, что ты получаешь</div>
 <div class="card">
-    <div class="split">
-      <div class="row">
-        <div class="l"><span class="cap">Made to last</span></div>
-        <div class="r"><div class="adv"><span class="b">🧺 Soft quiet fleece</span><span class="b">🐾 Velcro flap access</span><span class="b">📏 3 sizes · S·M·L</span></div></div>
-      </div>
-      <div class="value">💸 One-time $64.99 — not $90 every vet trip · 🛡️ 30-day calm guarantee</div>
-      <div class="bonus">🎁 Free: <span>Cat-Calm Guide + Stress Cheat-Sheet</span></div>
+    <div class="love"><div class="gt"></div>
+      <div class="hd">More than a wrap</div>
+      <div class="card"><div class="it">🧣 <span><b>The Calm Wrap</b> — calms your cat in ~60s</span></div><div class="it">🎁 <span>Free <b>Cat-Calm Guide</b></span></div><div class="it">📋 <span>Free <b>Stress Cheat-Sheet</b></span></div><div class="it">🛡️ <span><b>30-day</b> calm guarantee</span></div><div class="tr"><b>★★★★★ 4.8</b> · loved by 10,000+ cats</div></div>
     </div>
-    <div class="spec"><span class="k">Смысл:</span> слева спека (качество) · справа врап + преимущества · <b>добавил ценность/деньги</b> (разово vs счета вета) + гарантию (вернул доверие) · снизу бонусы. <span class="k">⚠️</span> спека-картинка = старый спек (перегенерим под флис/велкро).</div>
+    <div class="spec"><span class="k">Смысл:</span> здесь ВЛЮБЛЯЕМ — «ты получаешь не просто врап, а ещё это, это, это» (результат + 2 гайда + гарантия + доверие) на нормальной подложке (тёплый кадр + белая карточка), не дёшево. Закрывает «почему вы / что я получаю».</div>
 </div>
 
-<div class="note">⚠️ Все картинки — заглушки под раскладку/текст; финал генерим. Реагируй по каждому фото — докрутим текст, потом батчи + промты.</div>
+<div class="sechd">Фото 6 · СПЕКА на белом (детали продукта)</div>
+<div class="card">
+    <div class="specph2"><div class="hd">Made to last — every detail</div></div>
+    <div class="spec"><span class="k">Смысл:</span> хорошая спека на белом (выносим отдельным кадром — она сильная). Качество/конструкция = доверие. <span class="k">⚠️</span> впечатанные подписи = старый спек (quilted/diamond) → перегенерим под флис/велкро-флапы.</div>
+</div>
+
+<div class="note">⚠️ Все картинки — заглушки под раскладку/текст; финал генерим. Галерея теперь = 6 кадров (хук · вина · руки · деньги · влюбить · спека). Реагируй по 4–6 — потом батчи + промты.</div>
 </div></body></html>
