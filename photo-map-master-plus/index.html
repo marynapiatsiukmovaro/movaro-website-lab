@@ -1,0 +1,273 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movaro — Шаг 3 · Фотокарта МАСТЕР+ (фото·тексты·шрифты·пачки)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box} body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.55}
+.wrap{max-width:720px;margin:0 auto;padding:18px 12px 70px}
+.intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:18px;margin-bottom:18px}
+.intro h1{font-family:'Fraunces',serif;font-size:22px;margin:0 0 8px}
+.intro p{font-size:13px;color:#4f483d;margin:6px 0}
+.intro .key{background:#E2E9E7;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.slot{background:#fff;border:1px solid #E6DFD1;border-radius:13px;overflow:hidden}
+.fr{position:relative;aspect-ratio:4/5;background:linear-gradient(135deg,#E4DCCB,#D3C9B5);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.stg{position:absolute;top:8px;left:8px;right:8px;background:rgba(33,32,28,.78);color:#fff;font-size:9px;font-weight:600;letter-spacing:.04em;padding:4px 8px;border-radius:7px;z-index:4;text-transform:uppercase}
+.scene{font-size:11px;color:#7a715f;text-align:center;padding:14px;max-width:90%}
+.head{position:absolute;left:12px;right:12px;text-align:center;font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.65);line-height:1.12;z-index:2}
+.proof{position:absolute;bottom:42px;left:8px;right:8px;display:flex;justify-content:center;z-index:3}
+.pf{background:#2f6b63;color:#fff;border-radius:999px;padding:5px 11px;font-size:10px;box-shadow:0 1px 5px rgba(0,0,0,.25);text-align:center}
+.pf b{color:#f3e5c2}
+.badges{position:absolute;bottom:10px;left:8px;right:8px;display:flex;flex-wrap:wrap;gap:5px;justify-content:center;z-index:2}
+.bg{background:rgba(255,255,255,.95);border-radius:999px;padding:4px 9px;font-size:9.5px;color:#21201C;display:inline-flex;align-items:center;gap:4px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.bg b{font-size:9.5px;color:#3E5C5A}
+.dot{position:absolute;width:22px;height:22px;border-radius:50%;background:#fff;color:#2f6b63;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 1px 6px rgba(0,0,0,.35);z-index:3;font-weight:700}
+.pain{display:inline-block;font-size:9.5px;font-weight:700;color:#9a5a44;background:#F1E3DD;border-radius:999px;padding:1px 7px;margin-left:4px}
+.tag{position:absolute;top:8px;left:8px;color:#fff;font-family:'Jost';font-size:10px;font-weight:600;letter-spacing:.04em;padding:4px 10px;border-radius:999px;z-index:3}
+.mean{padding:12px 13px;background:#FBF9F4;border-top:1px solid #EFE8DB}
+.part{font-size:12px;color:#2a2620;margin-bottom:11px}
+.part:last-child{margin-bottom:0}
+.ml{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;padding:2px 8px;border-radius:999px}
+.ml.pn{background:#F1E3DD;color:#9a5a44} .ml.av{background:#E2E9E7;color:#2f6b63}
+.foot{text-align:center;font-size:12px;color:#6A6256;margin-top:18px}
+h2.sec{font-family:'Fraunces',serif;font-size:18px;background:#fff;border:1px solid #E6DFD1;border-left:4px solid #3E5C5A;border-radius:10px;padding:13px 15px;margin:28px 0 6px}
+h2.sec.lock{border-left-color:#2f6b63;background:#F2F7F5}
+.secintro{font-size:12.5px;color:#5b5347;margin:0 4px 14px;font-style:italic}
+@media(max-width:560px){.grid{grid-template-columns:1fr} .head{font-size:20px}}
+</style></head><body><div class="wrap">
+<div class="intro"><h1>Шаг 3 · Фотокарта МАСТЕР+ — фото · тексты · шрифты · пачки (ТЗ для генерации)</h1>
+<p><b>Дубликат проработанной мастер-карты (Шаг 2) — здесь фиксируем КОНКРЕТИКУ под генерацию.</b> Шаги: ① <i>photo-map</i> (все блоки) → ② <i>photo-map-master</i> (смыслы) → <b>③ этот файл (фото+тексты+шрифты+пачки)</b>. По нему просто пройдёмся → поймём, какие картинки создавать → промты выводятся сами.</p>
+<div class="key">Как читать слот: <b>📷 scene</b> = что ГЕНЕРИМ в ChatGPT (БЕЗ текста, textless) · <b>заголовок/бейджи</b> = текст, который накладываю кодом (шрифты: <b>Fraunces</b> заголовки / <b>Jost</b> подписи — как на сайте) · <b>пачка №</b> = группа съёмки (общий мастер+style-lock = одна карусель). Идём блок за блоком — фиксируем картинку + текст + шрифт + пачку РАЗОМ.</div>
+<div class="key" style="background:#FBF3E6;color:#8a6a32">🎬 <b>Пачки генерации:</b> П1 спокойный кот в врапе · П2 уход в одни руки / in-use · П3 UGC телефон-регистр · П4 продукт-спека (открытый, застёжки) · П5 before-хаос · П6 живой айфон (бренд + about-story) · 🎁 подарки (мокапы). ⚠️ Это НЕ финальная «дубликат-формула» (план/формула) — её собираем в самом конце, после практики.</div>
+</div>
+<h2 class="sec lock">🖼 ГАЛЕРЕЯ — 5 фото · ✅ ЗАФИКСИРОВАНО (LOCKED v6)</h2><p class="secintro">Верх страницы, продаёт за 3 секунды. Pain-first забег: ХУК → Боль1(вина) → Боль2(руки) → Боль3(деньги) → Почему-мы.</p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">Фото 1 · ХУК · боль + УТП</span><div class="scene">📷 Кот спокойно в врапе, лапка наружу, стрижём коготь</div>
+        <div class="head" style="top:34px">Nail trims without the war</div><div class="proof"><span class="pf"><b>★★★★★ 4.8</b> Loved by 10,000+ cat parents</span></div><div class="badges"><span class="bg"><b>😌</b>Calm cat</span><span class="bg"><b>🖐️</b>No scratches</span><span class="bg"><b>💸</b>Skip the vet bill</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Боль (смысл)</span>Клиент НЕ чувствует проблемы → ведём БОЛЬЮ + даём решение одним кадром. Реакция «ого, это про меня — и так можно?!». Картинка: кот спокойно в врапе, лапка наружу, стрижём коготь (видно, что работает). Текст-УТП (комбо всех 3 болей, коротко).</div>
+        <div class="part"><span class="ml av">Решение / мы (преимущество)</span>3 боли сразу (иконки) + решение в кадре + мелкий соц-пруф в углу = «это про меня, и это established бренд».</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Фото 2 · Боль 1 · ВИНА → решение</span><div class="scene">📷 Расслабленный кот в врапе (видно — ему ок)</div>
+        <div class="head" style="bottom:90px">Holding them down = stress</div><div class="proof"><span class="pf"><b>🔬 Deep-pressure science</b> swaddle-принцип, как у младенца</span></div><div class="badges"><span class="bg"><b>🤍</b>Feels safe in ~60s</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Боль (смысл)</span>Самая глубокая боль кошатника: «удерживать/прижимать кота силой = ужас для него; ты, не зная, ТРАВМИРУЕШЬ того, кого любишь». Облегчение: в врапе кот чувствует себя в БЕЗОПАСНОСТИ (не в ловушке), успокаивается. Вина → «наконец могу по-доброму».</div>
+        <div class="part"><span class="ml av">Решение / мы (преимущество)</span>Картинка = доказательство облегчения. Proof-бейдж = НАУКА (не «изобрели»): давление/swaddle реально успокаивает. Закрывает «докажите».</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Фото 3 · Боль 2 · РУКИ → решение</span><div class="scene">📷 Одна рука спокойно стрижёт, кот не вырывается</div>
+        <div class="head" style="bottom:90px">No more scratches or bites</div><div class="proof"><span class="pf"><b>🧺 Thick soft fleece</b> full wrap → claws tucked, hands safe</span></div><div class="badges"><span class="bg"><b>✋</b>Gentle, never forced</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Боль (смысл)</span>Физическая боль ХОЗЯИНА: «каждая стрижка = царапины, укусы, борьба вдвоём, кровь». Облегчение: в врапе кот тебя не достанет — спокойно, безопасно, в одиночку. (При этом тут же можно подсветить, КАК: велкро-флап по одной лапе.)</div>
+        <div class="part"><span class="ml av">Решение / мы (преимущество)</span>Физическая боль + материал-конкретика: толстый флис, полный обхват → когти спрятаны, руки целы. Убедительно про качество.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Фото 4 · Боль 3 · ДЕНЬГИ → решение</span><div class="scene">📷 Визуал экономии: счета грумера/вета (зачёркнуты) → один врап</div>
+        <div class="head" style="top:34px">$25–$150 a trim. Forever.</div><div class="proof"><span class="pf"><b>🎁 + Free guides</b> Cat-Calm guide & stress cheatsheet</span></div><div class="badges"><span class="bg"><b>💸</b>One-time $64.99</span><span class="bg"><b>📉</b>Pays back in ~3 trims</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Боль (смысл)</span>Боль кошелька: «$25–30 грумер / $145+ седация у вета — каждый раз, годами». Облегчение: разовый $64.99, делаешь дома, окупается за ~3 стрижки, экономия $300+/год. Финансовая выгода (денежная плоскость по Елене).</div>
+        <div class="part"><span class="ml av">Решение / мы (преимущество)</span>Боль кошелька + добавляем ценность (бесплатные цифровые гайды = «что получаешь»). Выгода цифрой.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Фото 5 · Почему МЫ · доверие</span><div class="scene">📷 Герой-товар + спокойный кот</div>
+        <div class="head" style="top:34px">Calms — doesn't just trap</div><div class="badges"><span class="bg"><b>★★★★★</b>4.8</span><span class="bg"><b>🐾</b>10,000+ cats</span><span class="bg"><b>🛡️</b>30-day guarantee</span><span class="bg"><b>🧺</b>Soft fleece</span><span class="bg"><b>✋</b>One-paw access</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Боль (смысл)</span>Клиент уже хочет — закрываем «почему ЭТОТ, а не дешёвый мешок за $15?». Уникальность: УСПОКАИВАЕТ (а не просто держит) · мягкий тихий флис · доступ по одной лапе · размеры S/M/L · 30-дн гарантия · 10 000+ котов. → дальше ТЕЛО по Елене: соц-пруф (UGC/отзывы) → оффер/CTA (бандл, покупка).</div>
+        <div class="part"><span class="ml av">Решение / мы (преимущество)</span>Стек доверия = «мы лучшие» визуально. К концу галереи клиент продан → дальше тело по Елене (UGC/отзывы/оффер).</div>
+      </div>
+    </div></div>
+
+<h2 class="sec">🎁 ПОДАРКИ — 2 цифровых гайда (buy-box + оффер)</h2><p class="secintro">Идут в buy-box/оффере как бесплатные бонусы. Роль: подарок должен ощущаться РЕАЛЬНЫМ ценным продуктом, не припиской → ценность ≫ цены, риск ноль. Заглушка это убивает. ⚠️ Контент гайдов реально создать (честность). Точные названия — из buy-box при сборке.</p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">Подарок 1 · главный гайд</span><div class="scene">📷 Премиум-мокап: обложка + раскрытый разворот (планшет/буклет), палитра Movaro, спокойный кот на обложке</div>
+        <div class="head" style="top:30px">The Cat-Calm Guide</div><div class="proof"><span class="pf"><b>🎁 Yours free</b> with every wrap</span></div><div class="badges"><span class="bg"><b>📖</b>Step-by-step</span><span class="bg"><b>📱</b>Instant download</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл (зачем)</span>Холодный клиент: «я получаю врап И целый гайд?» → ощущение, что ценность сильно выше цены, риск ноль. Подарок должен читаться как настоящий продукт, а не бесплатная приписка — иначе обесценивает весь оффер.</div>
+        <div class="part"><span class="ml av">Подача / как выглядит</span>Премиальный мокап: обложка + видимый разворот (видно, что внутри реальный контент), бренд Movaro, спокойная палитра как на сайте. Бейдж «Free» + «instant download» (честно: цифровой). ⚠️ контент гайда реально написать.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Подарок 2 · памятка</span><div class="scene">📷 Одностраничная памятка (телефон/печать): иконки сигналов стресса кота — уши, хвост, зрачки</div>
+        <div class="head" style="top:30px">Stress-Signals Cheat-Sheet</div><div class="proof"><span class="pf"><b>🎁 Free</b> 1-page quick reference</span></div><div class="badges"><span class="bg"><b>⚡</b>Use it today</span><span class="bg"><b>🖨️</b>Printable</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл (зачем)</span>Мгновенно полезная памятка → клиент чувствует, что бренд даёт реальную ЗАБОТУ и пользу, а не просто продаёт. Добавляет ощутимой ценности к стеку оффера.</div>
+        <div class="part"><span class="ml av">Подача / как выглядит</span>Чистый одностраничник, иконки (сигналы стресса), вид на телефоне или печать, бренд Movaro. Понятно-полезный с одного взгляда.</div>
+      </div>
+    </div></div>
+
+<h2 class="sec">📸 UGC — ОБРАБОТКА ВОЗРАЖЕНИЙ — 5 фото (без видео)</h2><p class="secintro">Сразу после buy-box. На мобиле видны первые 1-2-3 кадра — они должны читаться как ЖИВЫЕ настоящие люди И тут же снимать самое сильное возражение → мгновенное доверие. НЕ повтор 3 болей (их бьём в About с другой стороны). 1-3 = три возражения по силе · 4-5 = доверие/лояльность к бренду + добив. Подписи инфо-насыщенные, чуть «неидеальные» (имя кота, ситуация) — достоверность, не слоганы.</p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">UGC 1 · «самый сок» · жестоко?</span><div class="scene">📷 Хозяин рядом, кот ЯВНО доволен (мурчит/засыпает) в врапе · тёплый дом · телефон-кадр</div>
+        <div class="head" style="bottom:90px">«I was scared I'd traumatize him»</div><div class="proof"><span class="pf"><b>@leos.mom ✓</b> he relaxed in a minute & started purring 😭</span></div><div class="badges"><span class="bg"><b>★★★★★</b></span><span class="bg"><b>😺</b>покорён ~60с</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Возражение №1 (сильнейшее)</span>«А это не жестоко? я просто привяжу кота силой — мне будет ужасно». Самый глубокий эмоциональный блокер покупки (риск №1 из PI). Пока он не снят, человек не купит, даже если всё нравится.</div>
+        <div class="part"><span class="ml av">Как снимаем / подача</span>Кот сам «голосует» — ему ОТКРЫТО хорошо (мурчит/засыпает). Живой телефон-кадр, инфо-насыщенная подпись с именем кота и дугой «боялась → отпустило». Переворот «фиксатор = жестоко» → «ему нравится». Первым = мгновенное доверие.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">UGC 2 · мой кот — демон</span><div class="scene">📷 Самый дикий «спайси»-кот спокоен в врапе · контраст настроения до/после</div>
+        <div class="head" style="bottom:90px">«ONLY thing that's worked on Bandit»</div><div class="proof"><span class="pf"><b>@... ✓</b> a nightmare at the vet — finally calm</span></div><div class="badges"><span class="bg"><b>🙀→😌</b></span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Возражение №2 · относимость</span>«На МОЁМ психе не сработает — он особенный/дикий». Самое частое «но» сразу после интереса.</div>
+        <div class="part"><span class="ml av">Как снимаем / подача</span>Победа над самым бешеным котом (кошмар у вета → спокоен). Логика «сработало на этом гремлине → сработает на любом». Конкретный кот, конкретная ситуация = относимость.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">UGC 3 · работает? развод? соло?</span><div class="scene">📷 Хозяин ОДИН спокойно стрижёт все лапы · без помощника · руки целы</div>
+        <div class="head" style="bottom:90px">«Did all 4 paws myself, no blood»</div><div class="proof"><span class="pf"><b>@... ✓</b> didn't expect a 'wrap' to do this</span></div><div class="badges"><span class="bg"><b>🖐️</b>solo, first try</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Возражение №3 · эффективность/легит</span>«Реально работает или развод? и справлюсь ли ОДИН без помощника?». Скепсис «очередная штука с рекламы».</div>
+        <div class="part"><span class="ml av">Как снимаем / подача</span>Детальный, конкретный, чуть «шероховатый» отзыв (все 4 лапы, с первого раза, без крови) — сама подлинность и детальность закрывают скепсис лучше глянца.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">UGC 4 · бренд + деньги (добив)</span><div class="scene">📷 Красивый кадр: продукт в руках/дома + аккуратная упаковка/бирка Movaro (читается «настоящий бренд») + довольный хозяин</div>
+        <div class="head" style="bottom:90px">«Paid for itself in 2 trims»</div><div class="proof"><span class="pf"><b>@... ✓</b> was $40 a visit just for nails</span></div><div class="badges"><span class="bg"><b>📦</b>real brand</span><span class="bg"><b>💸</b>окупился</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Доверие к бренду + деньги</span>«Настоящий это бренд или безликий дропшип?» + первый денежный довод (раньше возражения 1-3 деньги не трогали → добив тут логичен). Деньги-добив свой у каждого продукта — здесь про экономию vs грумер.</div>
+        <div class="part"><span class="ml av">Как снимаем / подача</span>Бренд-сигналы в кадре (упаковка, бирка, качество в руках) → «ого, это реальный бренд» + строка про окупаемость рационализирует цену. Двойная работа: доверие + добив.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">UGC 5 · бренд + эмоция (клинчер)</span><div class="scene">📷 Тёплый «лояльный» момент: постоянный клиент, любимый кот, уют · бренд читается ненавязчиво</div>
+        <div class="head" style="bottom:90px">«Wish I'd found this years ago»</div><div class="proof"><span class="pf"><b>@... ✓</b> my whole routine changed 💛</span></div><div class="badges"><span class="bg"><b>💛</b>repeat buyer</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Доверие к бренду + эмоция</span>Лояльность («покупаю снова, люблю этот бренд») + эмоциональный пик. Закрываем блок на чувстве, а не на рацио → сильнейший выход из UGC. (Альт: поменять с №4 — деньги на №5.)</div>
+        <div class="part"><span class="ml av">Как снимаем / подача</span>Тёплый человеческий момент постоянного клиента, бренд читается ненавязчиво. Эмоция «жаль, не нашла раньше» = клиент хочет это облегчение себе.</div>
+      </div>
+    </div></div>
+
+<h2 class="sec">📸 ABOUT-блок — продукт + 3 выгоды (повтор оффера в теле)</h2><p class="secintro">Тёплый клиент (часть даже НЕ листала галерею — не все листают!) заново встречает оффер, спокойнее и глубже. Первый кадр = НАШ ПРОДУКТ (решение). Дальше 3 выгоды = три боли наоборот, под чуть другим углом (affirmation/benefit, не pain-hook) — НЕ выдумываем заново, повторяем визуально иначе. <b>Роль = страховка конверсии для непролиставших + глубина для дотошных.</b></p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">Hotspot · наш продукт</span><div class="scene">📷 Спокойный кот в сером флис-врапе, чисто/премиум + точки-тапы на фишках</div>
+        <div class="head" style="top:28px">👆 See how it works</div><span class="dot" style="top:46%;left:32%">+</span><span class="dot" style="top:60%;left:62%">+</span><span class="dot" style="top:38%;left:66%">+</span><div class="badges"><span class="bg"><b>🤍</b>gentle pressure</span><span class="bg"><b>🐾</b>flap access</span><span class="bg"><b>🧺</b>soft fleece</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл (зачем)</span>Прогретый клиент заново встречает РЕШЕНИЕ — первое, что видит в About, это наш продукт, понятно. Не все листают галерею → About пере-доставляет суть. С первого взгляда: «вот эта штука и решает мою проблему».</div>
+        <div class="part"><span class="ml av">Подача / как снимаем</span>Чистый премиум-продукт на спокойном коте + тап-точки раскрывают 3 фишки (давление · флап-доступ · флис) → дотошный изучает сам → осознанное доверие, не «поверь на слово». Мост в блок «Механизм» (что → почему).</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Выгода 1 · спокойствие</span><div class="scene">📷 Крупно: расслабленная/сонная морда кота в врапе — ему ЯВНО хорошо</div>
+        <div class="head" style="top:24px">Soothes — never just traps</div><div class="proof"><span class="pf"><b>🔬 Deep-pressure</b> settles in ~60s</span></div><div class="badges"><span class="bg"><b>😌</b>safe, not pinned</span><span class="bg"><b>🤍</b>он расслабляется</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Выгода №1 (= боль наоборот)<span class="pain">😿 кот</span></span>Не «держим», а УСПОКАИВАЕМ: давление = безопасность, кот оседает. Это то, чего НЕ делает ни один мешок (мешок держит — врап успокаивает). Бьём так же сильно, как боль в галерее, только с другой стороны.</div>
+        <div class="part"><span class="ml av">Подача / как снимаем</span>Смысл несёт сам кадр + текст НА фото (люди смотрят на фото): заголовок + proof-наука + бейджи. Крупная расслабленная морда = доказательство «ему хорошо».</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Выгода 2 · в одни руки</span><div class="scene">📷 Один человек, спокойно стрижёт, руки целы — кот не вырывается</div>
+        <div class="head" style="top:24px">Your hands — finally safe</div><div class="proof"><span class="pf"><b>🖐️ Solo</b> no helper, no blood</span></div><div class="badges"><span class="bg"><b>✋</b>claws tucked</span><span class="bg"><b>🧺</b>thick fleece</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Выгода №2 (= боль наоборот)<span class="pain">🩹 руки</span></span>Конец войне вдвоём: один человек, дома, НИ одной царапины — толстый флис прячет когти. Больше не зовёшь на помощь и не бросаешь на полпути.</div>
+        <div class="part"><span class="ml av">Подача / как снимаем</span>Заголовок + proof + бейджи прямо на фото. Кадр: одна рука спокойно стрижёт, кот расслаблен.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Выгода 3 · окупается</span><div class="scene">📷 Визуал экономии: зачёркнутые счета грумера/вета → один врап</div>
+        <div class="head" style="top:24px">Pays for itself in ~3 trims</div><div class="proof"><span class="pf"><b>💸 $25–$150 a trim</b> → one-time $64.99</span></div><div class="badges"><span class="bg"><b>📉</b>save $300+/yr</span><span class="bg"><b>♾️</b>used for years</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Выгода №3 (= боль наоборот)<span class="pain">💸 деньги</span></span>$25–$150 за стрижку — каждый раз, годами. Здесь — разовый $64.99, дома, окупается за ~3 раза, дальше экономия $300+/год. Конкретными ЦИФРАМИ, а не вялым «окупается».</div>
+        <div class="part"><span class="ml av">Подача / как снимаем</span>Цифры прямо на фото (зачёркнутые счета → один врап). Спокойный value-визуал, но с сильными числами.</div>
+      </div>
+    </div></div>
+
+<h2 class="sec">📸 НАУКА СПОКОЙСТВИЯ — научный подход + доказательства (1 картинка из 4 панелей)</h2><p class="secintro">⚠️ Это НЕ «как пользоваться» (шаги 1-2-3 — это блок «Инструкция»). Здесь доказываем: мы не выдумали голословно — это <b>deep-pressure / swaddle НАУКА</b> + контраст с дешёвым мешком. Усиливает обещание спокойствия (что → почему). Ориентир — блок на сайте, что тебе нравится: «The science of calm — why a wrap calms when a bag panics», ОДНА картинка из 4 связанных панелей. Честность: научный принцип, НЕ «мы изобрели», НЕ «vet-designed». 🎯 <b>Финальный вид = как на сайте: картинка, под ней текст</b> — сохраняем как эталон коллажа (Marina: визуально классно).</p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">Панель 1 · давление</span><div class="scene">📷 Равномерное давление по всему телу, как пеленание младенца</div>
+        <div class="head" style="top:24px">Even, all-over pressure</div><div class="proof"><span class="pf"><b>🔬 swaddle-ответ</b> «you're safe»</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Что закрывает</span>Скепсис «как ткань вообще успокаивает кота?». Deep-pressure говорит нервной системе «безопасно» — борьба уходит. Тот же swaddle-ответ, что успокаивает младенца.</div>
+        <div class="part"><span class="ml av">Контраст с мешком</span>Дешёвый мешок давит нигде и хватает везде → кот продолжает биться. В этом разница, видимая глазом.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Панель 2 · нервная система</span><div class="scene">📷 Спокойная морда — fight-or-flight выключился</div>
+        <div class="head" style="top:24px">The fight drains out</div><div class="proof"><span class="pf"><b>🧠</b> nervous system settles</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Что закрывает</span>«А он не будет паниковать ещё сильнее?». Под равномерным давлением fight-or-flight выключается, кот оседает.</div>
+        <div class="part"><span class="ml av">Подача</span>Кадр спокойной/мягкой морды как доказательство переключения состояния.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Панель 3 · меньше хаоса</span><div class="scene">📷 Мягкий тихий флис укрывает тело — нет визуального хаоса</div>
+        <div class="head" style="top:24px">Less to panic about</div><div class="proof"><span class="pf"><b>🧺</b> soft, quiet fabric</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Что закрывает</span>«Качество / почему именно флис?». Мягкая тихая ткань убирает шум и визуальный хаос, что заводят кота.</div>
+        <div class="part"><span class="ml av">Контраст с мешком</span>Нет страшного хруста пластика, ничего не хлопает → спокойнее с первой секунды.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Панель 4 · одна лапа</span><div class="scene">📷 Наружу только нужная лапа — кот не зажат целиком</div>
+        <div class="head" style="top:24px">One limb, then done</div><div class="proof"><span class="pf"><b>🐾</b> never fully cornered</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Что закрывает</span>«Это не пиннинг/жестоко?». Открываешь только нужную зону — быстро, кот никогда не загнан целиком.</div>
+        <div class="part"><span class="ml av">Подача</span>Работаешь по одной зоне → быстрее и меньше стресса обоим. Все 4 панели = ОДНА цельная картинка.</div>
+      </div>
+    </div></div>
+
+<h2 class="sec">📸 BEFORE / AFTER (2)</h2><p class="secintro">Момент «это МОЙ кот». Before эмоционально ЗАРЯЖЕН — даже если у тебя иначе, все мгновенно понимают, о чём речь. Рядом «до → после» = неоспоримая трансформация. Сайт: «From war to calm — same cat, same trim; it doesn't force calm, lets your cat settle on its own». 🎯 Бейджи Before/After на сайте расположены красиво — переносим как есть.</p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">BEFORE · хаос (эмоц. заряд)</span><div class="scene">📷 РЕАЛЬНАЯ паника: кот вырывается/убегает, царапает, хозяин в стрессе</div>
+        <div class="head" style="bottom:90px">Every trim = a battle</div><span class="tag" style="background:#B9774F">Before · the usual battle</span></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл (зачем)</span>Узнавание хаоса, в котором клиент живёт СЕЙЧАС: кот срывается, царапает, стресс для всех. Даже если ситуация чуть другая — каждый понимает мгновенно. Кадр должен быть эмоционально ЗАРЯЖЕН — это и есть пруф. Ключевой и самый сложный кадр.</div>
+        <div class="part"><span class="ml av">Как снимаем</span>Настоящая борьба: вырывающийся кот, оцарапанная рука, напряжённый хозяин. НЕ подменять спокойным котом — без реального напряжения контраст слабый.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">AFTER · спокойствие</span><div class="scene">📷 Тот же кот спокойно лежит в врапе, доволен — осталось только подстричь когти</div>
+        <div class="head" style="bottom:90px">Calm. Just the claws left.</div><span class="tag" style="background:#3E5C5A">After · calm &amp; cooperative</span></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл (зачем)</span>Спокойствие, которое клиент хочет. Рядом с before = трансформация «было → стало», в которую веришь без слов.</div>
+        <div class="part"><span class="ml av">Как снимаем</span>Тот же кот, спокойно лежит в врапе, доволен/расслаблен; хозяин спокоен; единственное, что осталось — аккуратно подстричь когти. Тихо, по-доброму.</div>
+      </div>
+    </div></div>
+
+<h2 class="sec">📸 ИНСТРУКЦИЯ + СПЕЦИФИКАЦИЯ — как это РАБОТАЕТ (3 шага · детали продукта)</h2><p class="secintro">⚠️ НЕ блок воды. Роль (Marina): показать САМ продукт и как он реально устроен — велкро-воротник, флапы, молния — чтобы клиент наконец понял «ага, понял»: вот так лежит открытый → так заворачиваю → готов кот, стригу коготь. До этого КАК работает визуально было непонятно — этот блок закрывает. Ориентир: видео конкурента в Instagram (хорошо показан wrap в деле). Сайт: «Easier than the towel trick · if you can wrap a burrito, you can do this». Акцент на ДЕТАЛИ продукта.</p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">Шаг 1 · Wrap (спека)</span><div class="scene">📷 Продукт ОТКРЫТ плашмя — видна конструкция: велкро-воротник, боковые «крылья», флап-открытия, молния · кот уложен, заворачиваем, велкро (снуг, не туго)</div>
+        <div class="head" style="top:24px">Step 1 · Wrap</div><div class="badges"><span class="bg"><b>🔎</b>видно все застёжки</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Что показываем (деталь)</span>Раскрытый продукт = читается вся конструкция: где велкро-воротник, крылья, флапы, молния. Это и есть спецификация — «вот как он устроен».</div>
+        <div class="part"><span class="ml av">Что снимает</span>«Не понимаю, как это работает» → понятно с одного взгляда. Lay the cat on the open wrap, fold sides, fasten velcro.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Шаг 2 · Soothe</span><div class="scene">📷 Кот завёрнут снуг, оседает за ~60с — давление работает, голова наружу</div>
+        <div class="head" style="top:24px">Step 2 · Soothe</div><div class="badges"><span class="bg"><b>⏱️</b>~60s</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Что показываем</span>Как сидит на коте: снуг, голова наружу, тело укрыто. ~60с и борьба уходит.</div>
+        <div class="part"><span class="ml av">Что снимает</span>«А он не задохнётся/перегреется?» → видно: дышащий флис, спокойно, в контроле.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">Шаг 3 · Groom (флап)</span><div class="scene">📷 Открыли ОДИН велкро-флап, наружу одна лапа, стрижём коготь, закрыли</div>
+        <div class="head" style="top:24px">Step 3 · Groom</div><div class="badges"><span class="bg"><b>🐾</b>one flap → one paw</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Что показываем (деталь)</span>Механика флапа: открыл по одной зоне → когти/лекарства/уши → закрыл. Видно «я всегда в контроле, открою за секунду».</div>
+        <div class="part"><span class="ml av">Что снимает</span>«Сложно / напортачу / жестоко» → просто и по-доброму. Then treat &amp; release.</div>
+      </div>
+    </div></div>
+
+<h2 class="sec">📸 БРЕНДОВОЕ ФОТО — «люди за Movaro» (доверие) · ✅ подход A: в работе, без лиц</h2><p class="secintro">Роль: «окей, за этим стоят настоящие люди, которым не всё равно» → доверие, что гарантию исполнят. ✅ ЗАФИКСИРОВАНО (Marina): вариант A — люди В РАБОТЕ/движении (стол/мини-офис), руки/торс, БЕЗ лиц (собственники часто не показывают лица — это нормально и честно читается). Базовое правило отдела: лицо вне кадра.</p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">✅ A · «в работе»</span><div class="scene">📷 Руки/торс пакуют врапы за столом/в мини-офисе: бренд-мешочек, бирки Movaro, продукт в руках · «снято на айфон», тепло, БЕЗ лиц</div>
+        <div class="head" style="bottom:90px">The people behind Movaro</div><div class="badges"><span class="bg"><b>📦</b>made &amp; packed by us</span></div></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл (✅ A)</span>«В работе/в движении» — руки пакуют врапы, реальный стол/мини-офис, бренд-атрибуты, БЕЗ лиц. Читается «реальные люди делают это» без риска фейковых AI-лиц. (B команда-с-лицами и C момент-с-котом отклонены.)</div>
+        <div class="part"><span class="ml av">Как снимаем</span>Тот же «живой айфон»-регистр, что About-story → единый мир «реальные люди». Стыкуется с финальным кадром истории (держим бренд в руках).</div>
+      </div>
+    </div></div>
+
+<h2 class="sec">📖 ABOUT-STORY — лесенка 3 фото (живые, «снято на айфон»)</h2><p class="secintro">Origin: ПОЧЕМУ Movaro есть. Marina: кадры как «снято на айфон», в моменте, РЕАЛЬНЫЕ — это мгновенно решает доверие. Нормальное качество, но НЕ глянцево-инстаграмное; живые, чуть несовершенные. Хаос → поиск → результат. Стыкуется с брендовым фото.</p>
+<div class="grid"><div class="slot">
+      <div class="fr"><span class="stg">1 · Хаос (боль)</span><div class="scene">📷 Человек на полу/диване с котом, кот вырывается/царапает — наш хаос. Сырой айфон-кадр</div>
+        <div class="head" style="bottom:90px">Where it started</div><span class="tag" style="background:#3E5C5A">1 · Хаос</span></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл</span>Узнавание боли: клиент = основатель когда-то. Реальная сцена борьбы, не постановка.</div>
+        <div class="part"><span class="ml av">Как снимаем</span>Намеренно сырой регистр (айфон, в моменте) = подлинность = доверие.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">2 · Поиск</span><div class="scene">📷 Искали решение «в жизни»: у магазина / на парковке / дома пробуем — живой бытовой кадр</div>
+        <div class="head" style="bottom:90px">We tried everything</div><span class="tag" style="background:#3E5C5A">2 · Поиск</span></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл</span>«Я тоже всё перепробовал» — относимость, путь основателя реальный.</div>
+        <div class="part"><span class="ml av">Как снимаем</span>Бытовая живая сцена (магазин/парковка/дом), айфон-регистр.</div>
+      </div>
+    </div><div class="slot">
+      <div class="fr"><span class="stg">3 · Результат</span><div class="scene">📷 Держим наш врап/бренд в руках — решение найдено · тепло</div>
+        <div class="head" style="bottom:90px">So we made Movaro</div><span class="tag" style="background:#3E5C5A">3 · Результат</span></div>
+      <div class="mean">
+        <div class="part"><span class="ml pn">Смысл</span>Развязка → живая связь с брендом, доверие к мотивам.</div>
+        <div class="part"><span class="ml av">Как снимаем</span>Просто держим бренд в руках; стыкуется с брендовым фото «в работе» — единый мир.</div>
+      </div>
+    </div></div>
+
+<div class="foot">Movaro · мастер · ВСЕ блоки (черновик): 🖼 галерея ✅ · 🎁 подарки · 📸 UGC · 🧩 about · 🔬 наука · ⚖️ before/after · 🔧 инструкция · 🤝 бренд · 📖 about-story · RAW</div>
+</div></body></html>
