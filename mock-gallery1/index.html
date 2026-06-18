@@ -1,68 +1,67 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Movaro — Мок Фото-1 (Hook) v2 · боль-первый</title>
+<title>Movaro — Мок Фото-1 (Hook) v3 · боль перечёркнута → решение</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
 .wrap{max-width:760px;margin:0 auto;padding:18px 12px 70px}
 .intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:16px 18px;margin-bottom:18px}
 .intro h1{font-family:'Fraunces',serif;font-size:22px;margin:0 0 8px}
-.intro p{font-size:13px;color:#4f483d;margin:5px 0}
-.intro b{color:#21201C}
-.fix{background:#F1E3DD;color:#8a4a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
+.intro p{font-size:13px;color:#4f483d;margin:5px 0}.intro b{color:#21201C}
+.fix{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:600px){.row{grid-template-columns:1fr}}
 .card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden}
 .vlabel{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3E5C5A;padding:9px 12px;border-bottom:1px solid #EFE8DB}
-.ph{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-3.0/img/hero-1-nailtrim.png');background-size:cover;background-position:50% 38%;overflow:hidden}
-.scrim-t{position:absolute;left:0;right:0;top:0;height:48%;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0))}
-.scrim-b{position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0))}
-.star{position:absolute;top:10px;right:10px;font-size:11px;color:#fff;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.6);z-index:4}
-.star .s{color:#E8A93D}
-/* A */
-.hlpain{position:absolute;left:14px;right:14px;top:16px;text-align:center;font-family:'Fraunces',serif;font-weight:600;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.65);line-height:1.12;font-size:24px;z-index:3}
-.relief{position:absolute;left:10px;right:10px;bottom:12px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;z-index:3}
-.bdg{background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-weight:600;font-size:12px;color:#21201C;box-shadow:0 2px 8px rgba(0,0,0,.22)}
-.solv{position:absolute;left:14px;right:14px;bottom:52px;text-align:center;z-index:3}
-.solv .p{background:#2f6b63;color:#fff;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;display:inline-block;box-shadow:0 2px 8px rgba(0,0,0,.25)}
-/* B */
-.preline{position:absolute;left:14px;right:14px;top:14px;text-align:center;color:#fff;font-weight:600;font-size:14px;text-shadow:0 2px 10px rgba(0,0,0,.6);z-index:3}
-.pains{position:absolute;left:10px;right:10px;top:44px;display:flex;flex-direction:column;gap:6px;align-items:center;z-index:3}
-.pchip{background:rgba(185,90,60,.95);color:#fff;border-radius:999px;padding:6px 13px;font-weight:600;font-size:12.5px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
-.bsolve{position:absolute;left:12px;right:12px;bottom:14px;text-align:center;z-index:3}
-.bsolve .p{background:rgba(255,255,255,.97);color:#21201C;border-radius:12px;padding:8px 12px;font-size:12.5px;font-weight:600;display:inline-block;box-shadow:0 2px 8px rgba(0,0,0,.22)}
-.bsolve .p b{color:#2f6b63}
-.spec{padding:12px 14px;font-size:12.5px;color:#2a2620}
-.spec .k{font-weight:700;color:#3E5C5A}
+.ph{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-3.0/img/hero-1-nailtrim.png');background-size:cover;background-position:50% 40%;overflow:hidden}
+.scrim-t{position:absolute;left:0;right:0;top:0;height:50%;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0))}
+.scrim-b{position:absolute;left:0;right:0;bottom:0;height:50%;background:linear-gradient(0deg,rgba(0,0,0,.62),rgba(0,0,0,0))}
+.star{position:absolute;top:10px;right:10px;font-size:11px;color:#fff;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.6);z-index:5}.star .s{color:#E8A93D}
+/* pains crossed */
+.pains{position:absolute;left:14px;right:14px;top:16px;z-index:3;text-align:center}
+.pains .pl{display:block;font-family:'Jost';font-weight:600;font-size:17px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6);margin:3px 0;text-decoration:line-through;text-decoration-color:#ef5a40;text-decoration-thickness:3px}
+/* A1 left X */
+.xmark{position:absolute;left:8px;top:30px;width:30px;height:30px;border-radius:50%;background:#ef5a40;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+/* A2 stamp */
+.stamp{position:absolute;top:14px;left:50%;transform:translateX(-50%) rotate(-8deg);border:3px solid #ef5a40;color:#ef5a40;background:rgba(255,255,255,.9);font-weight:800;letter-spacing:.08em;font-size:13px;padding:3px 12px;border-radius:7px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.turn{position:absolute;left:14px;right:14px;bottom:78px;text-align:center;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:29px;line-height:1.05;text-shadow:0 2px 14px rgba(0,0,0,.7);z-index:3}
+.sol{position:absolute;left:10px;right:10px;bottom:12px;text-align:center;z-index:3}
+.sol .bar{display:inline-block;background:rgba(255,255,255,.97);border-radius:12px;padding:8px 13px;font-size:12.5px;color:#21201C;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.sol .bar b{color:#2f6b63}
+.spec{padding:12px 14px;font-size:12.5px;color:#2a2620}.spec .k{font-weight:700;color:#3E5C5A}
 .note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:16px}
 </style></head><body><div class="wrap">
-<div class="intro"><h1>Мок Фото-1 · Hook — БОЛЬ-первый (v2)</h1>
-<p>Цель Фото-1: клиент УЗНАЁТ свою боль → «ага, это про меня» → и сразу видит, что есть решение (в кадре). Ведём болью, не «какие мы крутые».</p>
-<div class="fix">Исправил по твоей правке: ❌ убрал абстрактную «war» и крупный соц-пруф «10 000+» (преждевременное «мы крутые»). ✅ теперь на фото — конкретные 3 боли (узнавание) + решение в кадре. ★4.8 ужал до крошечной угловой метки (можно убрать совсем).</div></div>
+<div class="intro"><h1>Мок Фото-1 · Hook v3 — боль перечёркнута → решение</h1>
+<p>Структура (твоя правка): <b>3 боли перечёркнуты</b> (визуальный «stop it» — хватит этого) → <b>«There's a calmer way»</b> крупным акцентом → снизу <b>сам инструмент: «Movaro Calm Wrap» + преимущество</b>. Не outcome-бейджи (их разыграем дальше).</p>
+<div class="fix">2 варианта «stop»-подачи: A1 — красный ✕ слева + зачёркивание · A2 — штамп «ENOUGH» + зачёркивание. Текст одинаковый.</div></div>
 
 <div class="row">
-  <div class="card"><div class="vlabel">A — боль-фраза сверху + решение снизу</div>
+  <div class="card"><div class="vlabel">A1 — ✕ слева + зачёркнутые боли</div>
     <div class="ph"><div class="scrim-t"></div><div class="scrim-b"></div>
       <div class="star"><span class="s">★</span> 4.8</div>
-      <div class="hlpain">Scratched hands.<br>A terrified cat.<br>$90 vet bills.</div>
-      <div class="solv"><span class="p">There's a calmer way ↓</span></div>
-      <div class="relief"><span class="bdg">😌 Calm cat</span><span class="bdg">🖐️ Zero scratches</span><span class="bdg">💸 No vet bill</span></div>
+      <div class="xmark">✕</div>
+      <div class="pains"><span class="pl">Scratched hands</span><span class="pl">A terrified cat</span><span class="pl">$90 vet bills</span></div>
+      <div class="turn">There's a<br>calmer way</div>
+      <div class="sol"><span class="bar"><b>Movaro Calm Wrap</b> — gently calms your cat in ~60s</span></div>
     </div>
   </div>
-  <div class="card"><div class="vlabel">B — 3 боли «чипами» (узнавание) + решение</div>
-    <div class="ph"><div class="scrim-t" style="height:56%"></div><div class="scrim-b"></div>
+  <div class="card"><div class="vlabel">A2 — штамп «ENOUGH» + зачёркивание</div>
+    <div class="ph"><div class="scrim-t"></div><div class="scrim-b"></div>
       <div class="star"><span class="s">★</span> 4.8</div>
-      <div class="preline">Every nail trim:</div>
-      <div class="pains"><span class="pchip">🩹 Scratched hands</span><span class="pchip">😿 A panicked cat</span><span class="pchip">💸 Another vet bill</span></div>
-      <div class="bsolve"><span class="p">Movaro keeps them <b>calm</b> — one paw out, no fight.</span></div>
+      <div class="stamp">ENOUGH</div>
+      <div class="pains" style="top:50px"><span class="pl">Scratched hands</span><span class="pl">A terrified cat</span><span class="pl">$90 vet bills</span></div>
+      <div class="turn">There's a calmer way</div>
+      <div class="sol"><span class="bar"><b>Movaro Calm Wrap</b> — calms your cat, no fight</span></div>
     </div>
   </div>
 </div>
 
 <div class="card" style="margin-top:16px"><div class="spec">
-  <p><span class="k">Логика обоих:</span> сначала БОЛЬ (узнавание «это про меня») → потом решение (спокойный кот в кадре + короткая подсказка). Соц-пруф НЕ ведёт.</p>
-  <p style="margin-top:6px"><span class="k">A:</span> боль одной фразой сверху (Fraunces) → «There's a calmer way ↓» → 3 бейджа-облегчения внизу.</p>
-  <p style="margin-top:4px"><span class="k">B (ближе к тому, что ты описала):</span> «Every nail trim:» → 3 боли чипами (он буквально видит «такая боль, такая боль, такая боль») → внизу одно решение «Movaro keeps them calm».</p>
+  <p><span class="k">Текст (накладываю кодом):</span></p>
+  <p style="margin:6px 0">• <b>Боли (Jost, перечёркнуты красным):</b> Scratched hands · A terrified cat · $90 vet bills — узнавание «это про меня» + «stop it».</p>
+  <p style="margin:4px 0">• <b>Поворот (Fraunces, крупно):</b> «There's a calmer way».</p>
+  <p style="margin:4px 0">• <b>Решение (Jost, белый бар):</b> «Movaro Calm Wrap — gently calms your cat in ~60s» (назвали инструмент + преимущество).</p>
+  <p style="margin-top:8px"><span class="k">Соц-пруф:</span> только крошечная ★4.8 в углу (или убрать совсем — скажи).</p>
 </div></div>
 
-<div class="note">⚠️ Картинка старая (заглушка) — согласуем ТЕКСТ и подачу. Финал перегенерим (серый флис, велкро). Утвердим Фото-1 → той же моделью прогоню Фото 2–5.</div>
+<div class="note">⚠️ Картинка старая (заглушка). Утвердим текст+подачу Фото-1 → той же моделью прогоню Фото 2–5 → потом перегенерим картинки (серый флис, велкро).</div>
 </div></body></html>
