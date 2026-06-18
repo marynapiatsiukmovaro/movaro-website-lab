@@ -66,7 +66,7 @@
 .love .card .tr{text-align:center;font-size:11px;color:#7a715f;margin-top:7px;font-weight:600;border-top:1px solid #eee;padding-top:7px}
 .love .card .tr b{color:#E8A93D}
 .specph2{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-4.0/img/features.jpg');background-size:cover;background-position:center;overflow:hidden;background-color:#f3f1ec}
-.specph2 .hd{position:absolute;top:0;left:0;right:0;text-align:center;padding:12px 14px 22px;background:linear-gradient(180deg,rgba(20,30,28,.82),rgba(20,30,28,0));color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:18px;z-index:3}
+.specph2 .hd{position:absolute;top:14px;left:14px;right:14px;text-align:center;color:#2f6b63;font-family:'Fraunces',serif;font-weight:600;font-size:18px;z-index:3}
 .circles{position:absolute;left:8px;right:8px;top:60px;display:flex;gap:7px;justify-content:center;flex-wrap:wrap;z-index:3}
 .cir{width:72px;height:72px;border-radius:50%;background:#d9503e;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:19px;box-shadow:0 2px 9px rgba(0,0,0,.32)}
 .cir b{font-size:8.5px;font-weight:700;display:block;margin-top:1px;line-height:1.05}
@@ -95,6 +95,20 @@
 .offer5 .li .c{color:#2f7a73;font-weight:800}
 .offer5 .tr{text-align:center;font-size:10.5px;color:#7a715f;margin-top:8px;border-top:1px solid #eee;padding-top:7px;font-weight:600}
 .offer5 .tr b{color:#E8A93D}
+.cmp{position:absolute;left:11px;right:11px;bottom:12px;display:flex;gap:26px;z-index:3}
+.cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:12px;padding:10px 11px;box-shadow:0 3px 13px rgba(0,0,0,.3)}
+.cmp .col .hd{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.cmp .bad .hd{color:#d9503e}.cmp .good .hd{color:#2f7a73}
+.cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:19px;line-height:1;margin:3px 0 7px}
+.cmp .col .big small{font-size:11px;font-weight:600}
+.cmp .bad .big{color:#d9503e}.cmp .good .big{color:#21201C}
+.cmp .it{font-size:9.5px;color:#3a352c;font-weight:500;padding:2px 0;line-height:1.2}
+.cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.grid4 .ofc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:80%;background:rgba(255,255,255,.97);border-radius:13px;padding:11px 13px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
+.grid4 .ofc .ttl{font-family:'Fraunces',serif;font-weight:600;font-size:14px;color:#21201C}
+.grid4 .ofc .pr{margin:5px 0 6px}.grid4 .ofc .pr .o{color:#9a9488;text-decoration:line-through;font-size:13px;margin-right:6px}.grid4 .ofc .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:25px;color:#2f7a73}
+.grid4 .ofc .it{font-size:10.5px;font-weight:600;color:#21201C;padding:1.5px 0}
+.grid4 .ofc .it b{color:#2f7a73}
 </style></head><body><div class="wrap">
 <div class="intro"><h1>🧪 Лаборатория фото — ГАЛЕРЕЯ v4 (по твоей схеме)</h1>
 <p>Фото-1 зафиксировано. 2–5 перестроил по листу: коллажи до/после, применение, спека+бонусы. Картинки — заглушки под раскладку (для «до»-паники и применения возьмём нужные кадры при генерации).</p>
@@ -154,35 +168,41 @@
 
 <div class="sechd">Фото 4 · ДЕНЬГИ — наглядное сравнение</div>
 <div class="card">
-    <div class="moneywrap" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"><div class="veil"></div>
-      <div class="moneyc">
-        <div class="row bad"><div class="lab">Groomer &amp; vet trips</div><div class="big">$300–$600<small>/year</small></div><div class="sub">Every year · appointments · travel · sedation fees</div></div>
+    <div class="moneywrap" style="background-image:url('../stage-3.0/img/hero-4-calm.png');background-position:50% 18%"><div class="veil" style="background:rgba(20,30,28,.26)"></div>
+      <div class="cmp">
+        <div class="col bad"><div class="hd">Groomer &amp; vet</div><div class="big">$300–600+<small> /yr</small></div>
+          <div class="it">😾 Groomer trim — $25–50</div>
+          <div class="it">💉 Vet + sedation — $150+</div>
+          <div class="it">🚗 Travel &amp; time off</div>
+          <div class="it">🔁 Every. Single. Time.</div>
+        </div>
+        <div class="col good"><div class="hd">Movaro</div><div class="big">$64.99<small> once</small></div>
+          <div class="it">🏠 Do it at home, anytime</div>
+          <div class="it">🚫 No driving, ever</div>
+          <div class="it">♾️ Buy once, wash, reuse</div>
+          <div class="it">🧺 Premium soft fleece</div>
+        </div>
         <div class="vs">VS</div>
-        <div class="row good"><div class="lab">Movaro · one-time</div><div class="big">$64.99</div><div class="sub">At home · no appointments · lasts for years</div></div>
       </div>
     </div>
-    <div class="spec"><span class="k">Деньги наглядно:</span> их регулярные расходы (грумер/вет/седация/дорога ≈ $300–$600/год, каждый год) 🔴 VS наш разовый $64.99 🟢. Крупные цифры в центре = контраст бросается. Суммы — прикинул реалистично, на финале уточним.</div>
+    <div class="spec"><span class="k">Сравнение в 2 колонки:</span> 🔴 их расходы списком ($300–600+/год) VS 🟢 Movaro $64.99 once + финансовые преимущества. Опущено ниже (сверху кот). ⚠️ суммы прикинул — уточним по реальным.</div>
 </div>
 
 <div class="sechd">Фото 5 · ВЛЮБИТЬ — применение + сочный оффер</div>
 <div class="card">
-    <div class="offer5">
-      <div class="uses">
-        <div class="u" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"><span class="l">Nails</span></div>
-        <div class="u" style="background-image:url('../stage-3.0/img/use-vet.png')"><span class="l">Meds</span></div>
-        <div class="u" style="background-image:url('../stage-3.0/img/use-ear.png')"><span class="l">Ears</span></div>
-        <div class="u" style="background-image:url('../stage-4.0/img/ba-after.jpg')"><span class="l">Calm</span></div>
-      </div>
-      <div class="ocard">
-        <div class="ttl">One wrap does it all — here's the deal</div>
-        <div class="price"><span class="old">$100</span><span class="new">$64.99</span></div>
-        <div class="li"><span class="c">✓</span> Movaro Calm Wrap — calms in ~60s</div>
-        <div class="li"><span class="c">✓</span> Free Cat-Calm Guide + Stress Cheat-Sheet</div>
-        <div class="li"><span class="c">✓</span> 30-day calm guarantee</div>
-        <div class="tr"><b>★★★★★ 4.8</b> · loved by 10,000+ cats</div>
+    <div class="grid4">
+      <div class="g tl" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"><span class="lab">Nail trims</span></div>
+      <div class="g tr" style="background-image:url('../stage-3.0/img/use-vet.png')"><span class="lab">Meds &amp; pills</span></div>
+      <div class="g bl" style="background-image:url('../stage-3.0/img/use-ear.png')"><span class="lab">Ears &amp; eyes</span></div>
+      <div class="g br" style="background-image:url('../stage-4.0/img/ba-after.jpg')"><span class="lab">Calm-downs</span></div>
+      <div class="ofc">
+        <div class="ttl">One wrap. Everything you get:</div>
+        <div class="pr"><span class="o">$100</span><span class="n">$64.99</span></div>
+        <div class="it">✓ Movaro Calm Wrap + 🎁 <b>2 free guides</b></div>
+        <div class="it">🛡️ 30-day guarantee · ★ 4.8 · 10,000+ cats</div>
       </div>
     </div>
-    <div class="spec"><span class="k">Влюбить + оффер:</span> сверху мини-коллаж применения (одна штука = всё), снизу сочный оффер (старая цена → $64.99 + 2 гайда + гарантия + доверие), белая подложка, скомпоновано. ⚠️ цена-якорь $100 и оффер уточним с сайта.</div>
+    <div class="spec"><span class="k">Применение + оффер:</span> коллаж применения (одна штука = всё) + центр-карта сочного оффера ($100 → $64.99 + 2 гайда + гарантия + доверие). Текст переписал. ⚠️ цена-якорь $100 уточним с сайта.</div>
 </div>
 
 <div class="sechd">Фото 6 · СПЕКА на белом (детали продукта)</div>
