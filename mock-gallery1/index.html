@@ -1,53 +1,96 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Movaro — Мок Фото-1 (Hook) v7 · стрелка на продукт + иконки снизу</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Movaro — Лаборатория фото · ГАЛЕРЕЯ (5 фото)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
-.wrap{max-width:470px;margin:0 auto;padding:18px 12px 70px}
+.wrap{max-width:480px;margin:0 auto;padding:18px 12px 80px}
 .intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:16px 18px;margin-bottom:18px}
 .intro h1{font-family:'Fraunces',serif;font-size:21px;margin:0 0 8px}
 .intro p{font-size:13px;color:#4f483d;margin:5px 0}.intro b{color:#21201C}
-.fix{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
-.card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden}
-.ph{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-3.0/img/hero-1-nailtrim.png');background-size:cover;background-position:50% 32%;overflow:hidden}
+.intro .key{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
+.sechd{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:#21201C;background:#fff;border:1px solid #E6DFD1;border-left:4px solid #3E5C5A;border-radius:9px;padding:9px 12px;margin:22px 0 8px}
+.sechd.done{border-left-color:#2f6b63;background:#F2F7F5}
+.card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden;margin-bottom:6px}
+.ph{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 34%;overflow:hidden}
 .scrim-t{position:absolute;left:0;right:0;top:0;height:40%;background:linear-gradient(180deg,rgba(0,0,0,.58),rgba(0,0,0,0))}
-.scrim-b{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,0))}
+.scrim-b{position:absolute;left:0;right:0;bottom:0;height:36%;background:linear-gradient(0deg,rgba(0,0,0,.74),rgba(0,0,0,0))}
 .star{position:absolute;top:11px;right:12px;font-size:11px;color:#fff;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.6);z-index:5}.star .s{color:#E8A93D}
 .kick{position:absolute;top:13px;left:0;right:0;text-align:center;z-index:4;font-family:'Jost';font-weight:800;font-size:11px;letter-spacing:.2em;color:#ff7a5c;text-shadow:0 1px 6px rgba(0,0,0,.5)}
 .pains{position:absolute;left:14px;right:14px;top:33px;z-index:3;text-align:center}
 .pains .pl{display:block;font-family:'Jost';font-weight:700;font-size:17px;color:#fff;text-shadow:0 2px 9px rgba(0,0,0,.7);margin:4px 0}
 .pains .no{color:#ff7a5c;font-weight:800}
-/* product label + arrow on the wrap */
-.plabel{position:absolute;right:12px;top:47%;text-align:right;z-index:4}
-.plabel .nm{font-family:'Fraunces',serif;font-weight:700;font-size:15px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.8);display:block}
-.plabel .arr{font-size:20px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.8);display:block;line-height:1;margin-top:1px;margin-right:6px}
-/* bottom: calmer way + 3 outlined icons */
+.hl{position:absolute;left:16px;right:16px;top:20px;text-align:center;font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:25px;line-height:1.08;text-shadow:0 2px 12px rgba(0,0,0,.7);z-index:3}
+/* product label w/ stylish handwritten arrow */
+.plabel{position:absolute;right:16px;top:42%;text-align:right;z-index:4}
+.plabel .nm{font-family:'Caveat',cursive;font-weight:600;font-size:25px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.85);line-height:.95;display:block}
+.plabel svg{display:block;margin:2px 0 0 auto}
 .turn{position:absolute;left:0;right:0;bottom:58px;text-align:center;z-index:4}
 .turn .pill{display:inline-block;background:#2f7a73;color:#fff;font-family:'Jost';font-weight:700;font-size:14px;padding:7px 16px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
 .icons{position:absolute;left:8px;right:8px;bottom:14px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;z-index:4}
-.ic{background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-family:'Jost';font-weight:600;font-size:12px;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.22)}
-.spec{padding:12px 14px;font-size:12.5px;color:#2a2620}.spec .k{font-weight:700;color:#3E5C5A}
+.ic{background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-family:'Jost';font-weight:600;font-size:11.5px;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+.proof{position:absolute;left:14px;right:14px;bottom:16px;text-align:center;z-index:3}
+.proof .p{display:inline-block;background:#2f7a73;color:#fff;border-radius:999px;padding:6px 13px;font-size:12px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.proof .p b{color:#f3e5c2}
+.spec{padding:11px 13px;font-size:12px;color:#2a2620;background:#FBF9F4;border-top:1px solid #EFE8DB}
+.spec .k{font-weight:700;color:#3E5C5A}
 .note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:16px}
 </style></head><body><div class="wrap">
-<div class="intro"><h1>Мок Фото-1 · Hook v7</h1>
-<p>Верх = как нравится (ENOUGH + No-боли + ★). На коте — <b>стрелка → «Movaro Calm Wrap»</b> (ясно, ЧТО продаём). Низ = «There's a calmer way» + <b>3 иконки-выгоды</b> (Calm cat · No scratches · Skip the vet bill) — это продаёт.</p>
-<div class="fix">Заменил «брендовый» низ на продающие иконки (как в твоём скрине) + вынес имя продукта стрелкой на сам врап.</div></div>
+<div class="intro"><h1>🧪 Лаборатория фото — ГАЛЕРЕЯ (5 фото)</h1>
+<p><b>Работаем здесь, всё в одном месте.</b> Текст наложен кодом на старые картинки (заглушки) — согласуем ТЕКСТ и раскладку по каждому фото. Картинки потом перегенерим (серый флис, велкро), текст останется. Это прототип-база, переносим на другие продукты.</p>
+<div class="key">Фото-1 — почти финал (добиваем стрелку/мелочи). Фото 2–5 — черновики, идём по очереди. Дальше: батчим → промты → генерация → загрузка в МАСТЕР с ключевыми словами.</div></div>
 
+<div class="sechd done">Фото 1 · ХУК — боль → решение (почти финал)</div>
 <div class="card">
-    <div class="ph"><div class="scrim-t"></div><div class="scrim-b"></div>
+    <div class="ph" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"><div class="scrim-t"></div><div class="scrim-b"></div>
       <div class="star"><span class="s">★</span> 4.8</div>
       <div class="kick">ENOUGH.</div>
       <div class="pains"><span class="pl"><span class="no">No</span> scratched hands</span><span class="pl"><span class="no">No</span> terrified cat</span><span class="pl"><span class="no">No</span> $90 vet bills</span></div>
-      <div class="plabel"><span class="nm">Movaro Calm Wrap</span><span class="arr">↙</span></div>
+      <div class="plabel"><span class="nm">Movaro<br>Calm Wrap</span><svg width="66" height="48" viewBox="0 0 66 48" fill="none"><path d="M62 8 Q22 6 9 38" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M9 38 L12 25 M9 38 L22 41" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div class="turn"><span class="pill">There's a calmer way ↓</span></div>
       <div class="icons"><span class="ic">😌 Calm cat</span><span class="ic">🖐️ No scratches</span><span class="ic">💸 Skip the vet bill</span></div>
     </div>
+    <div class="spec"><span class="k">Фикс по твоей правке:</span> стрелка изогнутая рукописная + «Movaro Calm Wrap» в 2 строки шрифтом Caveat (не жирный). Открыто: повтор «No scratches» верх/низ — переформулировать низ?</div>
 </div>
 
-<div class="card" style="margin-top:16px"><div class="spec">
-  <p><span class="k">Структура:</span> верх = боль (No…) · ★ соцпруф · стрелка на врап = «Movaro Calm Wrap» (что продаём) · низ = «There's a calmer way» + 3 выгоды.</p>
-  <p style="margin-top:6px"><span class="k">⚠️ Лёгкий повтор:</span> верх «No scratched hands…» и низ «No scratches…» — близко. Если режет — низ переформулирую в другие выгоды (напр. <i>😌 Calm in 60s · 🖐️ Do it solo · 💸 At home</i>). Скажи.</p>
-</div></div>
+<div class="sechd">Фото 2 · Боль 1 — ВИНА (удерживать силой = стресс)</div>
+<div class="card">
+    <div class="ph" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"><div class="scrim-t"></div><div class="scrim-b"></div>
+      <div class="hl">Holding them down<br>only makes it worse</div>
+      <div class="turn"><span class="pill">The wrap feels safe — he settles ↓</span></div>
+      <div class="proof"><span class="p"><b>🔬 Deep-pressure</b> — the same calm as swaddling a baby</span></div>
+    </div>
+    <div class="spec"><span class="k">Роль:</span> снять вину «я мучаю того, кого люблю». <span class="k">Текст:</span> заголовок-боль (Fraunces) → пилюля-поворот → proof = НАУКА (не «изобрели»). Картинка = расслабленный кот (видно, ему ок).</div>
+</div>
 
-<div class="note">⚠️ Картинка старая (заглушка); стрелку/имя на врапе на финале посадим точно на ткань. Утвердим Фото-1 → прогоню Фото 2–5.</div>
+<div class="sechd">Фото 3 · Боль 2 — РУКИ (царапины/укусы)</div>
+<div class="card">
+    <div class="ph" style="background-image:url('../stage-3.0/img/hero-2-sitting.png')"><div class="scrim-t"></div><div class="scrim-b"></div>
+      <div class="hl">No more scratches,<br>bites or blood</div>
+      <div class="turn"><span class="pill">Claws tucked, hands safe ↓</span></div>
+      <div class="proof"><span class="p"><b>🧺 Thick soft fleece</b> — full wrap, do it solo</span></div>
+    </div>
+    <div class="spec"><span class="k">Роль:</span> физическая боль хозяина (изрежусь / нужен второй человек). <span class="k">Текст:</span> заголовок-боль → решение «когти спрятаны, руки целы» → материал-конкретика (флис).</div>
+</div>
+
+<div class="sechd">Фото 4 · Боль 3 — ДЕНЬГИ (счета каждый раз)</div>
+<div class="card">
+    <div class="ph" style="background-image:url('../stage-3.0/img/hero-6-product.png')"><div class="scrim-t"></div><div class="scrim-b"></div>
+      <div class="hl">$25–$150 a trim.<br>Every time.</div>
+      <div class="turn"><span class="pill">Movaro pays for itself in ~3 trims ↓</span></div>
+      <div class="icons"><span class="ic">💸 One-time $64.99</span><span class="ic">📉 Save $300+/yr</span><span class="ic">🎁 + free guides</span></div>
+    </div>
+    <div class="spec"><span class="k">Роль:</span> боль кошелька → разовая цена, окупается. <span class="k">Текст:</span> цифры боли сверху → поворот «окупается за ~3 раза» → бейджи выгоды (+ подарки). Картинка = продукт/экономия-визуал.</div>
+</div>
+
+<div class="sechd">Фото 5 · ПОЧЕМУ МЫ — доверие (а не дешёвый мешок)</div>
+<div class="card">
+    <div class="ph" style="background-image:url('../stage-3.0/img/hero-5-portrait.png')"><div class="scrim-t"></div><div class="scrim-b"></div>
+      <div class="hl" style="top:auto;bottom:96px">Calms — doesn't<br>just trap</div>
+      <div class="icons" style="bottom:48px"><span class="ic">★★★★★ 4.8</span><span class="ic">🐾 10,000+ cats</span><span class="ic">🛡️ 30-day guarantee</span></div>
+      <div class="icons"><span class="ic">🧺 Soft quiet fleece</span><span class="ic">✋ One-paw access</span><span class="ic">📏 S/M/L</span></div>
+    </div>
+    <div class="spec"><span class="k">Роль:</span> «почему ЭТОТ, а не мешок за $15?» — стек доверия/уникальности. <span class="k">Текст:</span> заголовок-уникальность (успокаивает, не ловит) + бейджи (рейтинг · коты · гарантия · флис · доступ · размеры). Тут соц-пруф УМЕСТЕН (в отличие от Фото-1).</div>
+</div>
+
+<div class="note">⚠️ Картинки 2–5 — старые заглушки (для примера раскладки текста), на финале перегенерим под реальный продукт. Идём по очереди: добьём Фото-1 → согласуем 2 → 3 → 4 → 5. Потом батчим + промты.</div>
 </div></body></html>
