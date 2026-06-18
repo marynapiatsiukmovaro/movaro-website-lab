@@ -1,0 +1,63 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movaro — Мок Фото-1 (Hook) · текст на реальной картинке</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:18px 12px 70px}
+.intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:16px 18px;margin-bottom:18px}
+.intro h1{font-family:'Fraunces',serif;font-size:22px;margin:0 0 8px}
+.intro p{font-size:13px;color:#4f483d;margin:5px 0}
+.intro b{color:#21201C}
+.legend{background:#F2F7F5;border-radius:9px;padding:10px 12px;font-size:12.5px;color:#2f6b63;margin-top:8px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden}
+.vlabel{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3E5C5A;padding:9px 12px;border-bottom:1px solid #EFE8DB}
+/* composite */
+.ph{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-3.0/img/hero-1-nailtrim.png');background-size:cover;background-position:50% 38%;overflow:hidden}
+.scrim-t{position:absolute;left:0;right:0;top:0;height:42%;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,0))}
+.scrim-b{position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.hl{position:absolute;left:14px;right:14px;text-align:center;font-family:'Fraunces',serif;font-weight:600;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6);line-height:1.06;font-size:27px;z-index:3}
+.stars{position:absolute;left:0;right:0;display:flex;justify-content:center;z-index:3}
+.stars .pill{background:rgba(255,255,255,.95);border-radius:999px;padding:5px 12px;font-family:'Jost';font-weight:600;font-size:12px;color:#21201C;box-shadow:0 2px 8px rgba(0,0,0,.22);display:inline-flex;align-items:center;gap:6px}
+.stars .st{color:#E8A93D;letter-spacing:1px}
+.badges{position:absolute;left:10px;right:10px;bottom:12px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;z-index:3}
+.bdg{background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-family:'Jost';font-weight:600;font-size:12px;color:#21201C;box-shadow:0 2px 8px rgba(0,0,0,.22);display:inline-flex;align-items:center;gap:5px}
+.spec{padding:12px 14px;font-size:12.5px;color:#2a2620}
+.spec .k{font-weight:700;color:#3E5C5A}
+.spec ul{margin:6px 0 0;padding-left:18px}.spec li{margin:3px 0}
+.note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:16px}
+</style></head><body><div class="wrap">
+<div class="intro"><h1>Мок Фото-1 · Hook (боль + УТП) — текст на реальной картинке</h1>
+<p>Текст наложен <b>кодом</b> на нашу СТАРУЮ картинку (текстлес), чтобы увидеть, как ляжет — не вхолостую. Картинку потом перегенерим на реальном спеке, текст останется. Согласуем СНАЧАЛА текст и раскладку → потом картинку.</p>
+<div class="legend"><b>Шрифты:</b> заголовок = <b>Fraunces</b> (премиум) · звёзды/бейджи = <b>Jost</b> в белых «стикер»-пилюлях (IG-вид) · золотые звёзды. Сохранён старый паттерн иконок (Calm cat · No scratches · Skip the vet bill = наши 3 боли 😌🖐️💸).</div></div>
+
+<div class="row">
+  <div class="card"><div class="vlabel">Вариант A — заголовок сверху (рекомендую)</div>
+    <div class="ph"><div class="scrim-t"></div><div class="scrim-b"></div>
+      <div class="hl" style="top:18px">Nail trims<br>without the war</div>
+      <div class="stars" style="top:118px"><span class="pill"><span class="st">★★★★★</span> 4.8 · Loved by 10,000+ cat parents</span></div>
+      <div class="badges"><span class="bdg">😌 Calm cat</span><span class="bdg">🖐️ No scratches</span><span class="bdg">💸 Skip the vet bill</span></div>
+    </div>
+  </div>
+  <div class="card"><div class="vlabel">Вариант B — заголовок снизу</div>
+    <div class="ph"><div class="scrim-b" style="height:58%"></div>
+      <div class="stars" style="top:14px"><span class="pill"><span class="st">★★★★★</span> 4.8 · 10,000+ cats</span></div>
+      <div class="hl" style="bottom:74px;font-size:25px">Nail trims without the war</div>
+      <div class="badges"><span class="bdg">😌 Calm cat</span><span class="bdg">🖐️ No scratches</span><span class="bdg">💸 Skip the vet bill</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:16px"><div class="spec">
+  <p><span class="k">ТЕКСТ (что накладываю кодом):</span></p>
+  <ul>
+    <li><b>Заголовок (Fraunces):</b> «Nail trims without the war» — хук в боль одним ударом.</li>
+    <li><b>Соц-пруф (Jost, белый стикер + золотые ★):</b> «★★★★★ 4.8 · Loved by 10,000+ cat parents».</li>
+    <li><b>3 бейджа-боли (Jost, белые пилюли):</b> 😌 Calm cat · 🖐️ No scratches · 💸 Skip the vet bill.</li>
+  </ul>
+  <p style="margin-top:8px"><span class="k">Раскладка:</span> текст НЕ заходит на морду кота; верх/низ затемнены лёгким градиентом для читаемости. A = премиум-герой (заголовок сверху, воздух); B = больше «реклама» (заголовок над бейджами внизу).</p>
+</div></div>
+
+<div class="note">⚠️ Картинка здесь старая (заглушка) — служит только чтобы согласовать ТЕКСТ и его раскладку. Финальную картинку перегенерим (серый флис, велкро-флапы, кот расслаблен). Когда утвердим текст Фото-1 — той же моделью быстро прогоню Фото 2–5.</div>
+</div></body></html>
