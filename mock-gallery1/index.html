@@ -95,13 +95,16 @@
 .offer5 .li .c{color:#2f7a73;font-weight:800}
 .offer5 .tr{text-align:center;font-size:10.5px;color:#7a715f;margin-top:8px;border-top:1px solid #eee;padding-top:7px;font-weight:600}
 .offer5 .tr b{color:#E8A93D}
-.cmp{position:absolute;left:11px;right:11px;bottom:12px;display:flex;gap:26px;z-index:3}
+.moneywrap .soc{position:absolute;top:11px;left:0;right:0;text-align:center;z-index:4}
+.moneywrap .soc span{display:inline-block;background:rgba(255,255,255,.95);color:#21201C;font-size:10.5px;font-weight:700;padding:4px 12px;border-radius:999px;box-shadow:0 2px 7px rgba(0,0,0,.25)}
+.moneywrap .soc span b{color:#E8A93D}
+.cmp{position:absolute;left:11px;right:11px;top:40%;display:flex;gap:26px;z-index:3}
 .cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:12px;padding:10px 11px;box-shadow:0 3px 13px rgba(0,0,0,.3)}
 .cmp .col .hd{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 .cmp .bad .hd{color:#d9503e}.cmp .good .hd{color:#2f7a73}
 .cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:19px;line-height:1;margin:3px 0 7px}
 .cmp .col .big small{font-size:11px;font-weight:600}
-.cmp .bad .big{color:#d9503e}.cmp .good .big{color:#21201C}
+.cmp .bad .big{color:#d9503e}.cmp .good .big{color:#2f7a73}
 .cmp .it{font-size:9.5px;color:#3a352c;font-weight:500;padding:2px 0;line-height:1.2}
 .cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
 .grid4 .ofc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:80%;background:rgba(255,255,255,.97);border-radius:13px;padding:11px 13px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
@@ -109,6 +112,10 @@
 .grid4 .ofc .pr{margin:5px 0 6px}.grid4 .ofc .pr .o{color:#9a9488;text-decoration:line-through;font-size:13px;margin-right:6px}.grid4 .ofc .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:25px;color:#2f7a73}
 .grid4 .ofc .it{font-size:10.5px;font-weight:600;color:#21201C;padding:1.5px 0}
 .grid4 .ofc .it b{color:#2f7a73}
+.grid4 .ofc .nm{font-family:'Fraunces',serif;font-weight:600;font-size:16px;color:#21201C}
+.grid4 .ofc .gifts{display:flex;gap:6px;justify-content:center;margin:7px 0 5px}
+.grid4 .ofc .gift{background:#F2F7F5;border:1px solid #d6e4e0;border-radius:9px;padding:4px 9px;font-size:9.5px;font-weight:700;color:#2f6b63}
+.grid4 .ofc .guar{font-size:10.5px;font-weight:700;color:#21201C}
 </style></head><body><div class="wrap">
 <div class="intro"><h1>🧪 Лаборатория фото — ГАЛЕРЕЯ v4 (по твоей схеме)</h1>
 <p>Фото-1 зафиксировано. 2–5 перестроил по листу: коллажи до/после, применение, спека+бонусы. Картинки — заглушки под раскладку (для «до»-паники и применения возьмём нужные кадры при генерации).</p>
@@ -168,13 +175,14 @@
 
 <div class="sechd">Фото 4 · ДЕНЬГИ — наглядное сравнение</div>
 <div class="card">
-    <div class="moneywrap" style="background-image:url('../stage-3.0/img/hero-4-calm.png');background-position:50% 18%"><div class="veil" style="background:rgba(20,30,28,.26)"></div>
+    <div class="moneywrap" style="background-image:url('../stage-3.0/img/hero-4-calm.png');background-position:50% 16%"><div class="veil" style="background:rgba(20,30,28,.24)"></div>
+      <div class="soc"><span>🐾 Loved by <b>10,000+</b> cat parents</span></div>
       <div class="cmp">
-        <div class="col bad"><div class="hd">Groomer &amp; vet</div><div class="big">$300–600+<small> /yr</small></div>
-          <div class="it">😾 Groomer trim — $25–50</div>
-          <div class="it">💉 Vet + sedation — $150+</div>
-          <div class="it">🚗 Travel &amp; time off</div>
-          <div class="it">🔁 Every. Single. Time.</div>
+        <div class="col bad"><div class="hd">Groomer &amp; vet</div><div class="big">$300+<small> /yr</small></div>
+          <div class="it">🐾 Nail trim — $20–40 each</div>
+          <div class="it">📅 Every 4–6 weeks, all year</div>
+          <div class="it">💉 Vet sedation if fractious — $150+</div>
+          <div class="it">🔁 Forever, every single time</div>
         </div>
         <div class="col good"><div class="hd">Movaro</div><div class="big">$64.99<small> once</small></div>
           <div class="it">🏠 Do it at home, anytime</div>
@@ -185,7 +193,7 @@
         <div class="vs">VS</div>
       </div>
     </div>
-    <div class="spec"><span class="k">Сравнение в 2 колонки:</span> 🔴 их расходы списком ($300–600+/год) VS 🟢 Movaro $64.99 once + финансовые преимущества. Опущено ниже (сверху кот). ⚠️ суммы прикинул — уточним по реальным.</div>
+    <div class="spec"><span class="k">Сравнение в 2 колонки:</span> 🔴 расходы (честно: $300+/год — стрижка $20–40 каждые 4–6 нед, + вет-седация если дикий) VS 🟢 Movaro $64.99 once (цена зелёным) + преимущества. Сверху соц-пруф 10k. ⚠️ суммы перепроверим по US-ценам.</div>
 </div>
 
 <div class="sechd">Фото 5 · ВЛЮБИТЬ — применение + сочный оффер</div>
@@ -196,18 +204,18 @@
       <div class="g bl" style="background-image:url('../stage-3.0/img/use-ear.png')"><span class="lab">Ears &amp; eyes</span></div>
       <div class="g br" style="background-image:url('../stage-4.0/img/ba-after.jpg')"><span class="lab">Calm-downs</span></div>
       <div class="ofc">
-        <div class="ttl">One wrap. Everything you get:</div>
+        <div class="nm">Movaro Calm Wrap</div>
         <div class="pr"><span class="o">$100</span><span class="n">$64.99</span></div>
-        <div class="it">✓ Movaro Calm Wrap + 🎁 <b>2 free guides</b></div>
-        <div class="it">🛡️ 30-day guarantee · ★ 4.8 · 10,000+ cats</div>
+        <div class="gifts"><span class="gift">🎁 Cat-Calm Guide</span><span class="gift">📋 Stress Cheat-Sheet</span></div>
+        <div class="guar">🛡️ 30-day calm guarantee</div>
       </div>
     </div>
-    <div class="spec"><span class="k">Применение + оффер:</span> коллаж применения (одна штука = всё) + центр-карта сочного оффера ($100 → $64.99 + 2 гайда + гарантия + доверие). Текст переписал. ⚠️ цена-якорь $100 уточним с сайта.</div>
+    <div class="spec"><span class="k">Применение + стильный оффер:</span> коллаж применения + карта: Movaro Calm Wrap · цена $100→$64.99 · 2 гайда отдельными чипами · 30-day гарантия. ★4.8/10k убрал (есть в других кадрах). ⚠️ якорь $100 уточним.</div>
 </div>
 
 <div class="sechd">Фото 6 · СПЕКА на белом (детали продукта)</div>
 <div class="card">
-    <div class="specph2"><div class="hd">Movaro Calm Wrap — in detail</div></div>
+    <div class="specph2"><div class="hd">Movaro Calm Wrap — in detail 🐾</div></div>
     <div class="spec"><span class="k">Смысл:</span> сильная спека на белом отдельным кадром. Качество/конструкция = доверие. <span class="k">⚠️</span> впечатанные подписи = старый спек (quilted/diamond) → перегенерим под флис/велкро-флапы.</div>
 </div>
 
