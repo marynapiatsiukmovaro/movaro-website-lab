@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Movaro — Лаборатория фото · UGC v2 (по реальному IG)</title>
+<title>Movaro — Лаборатория фото · UGC = СТОРИС</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
@@ -8,111 +8,104 @@
 .intro h1{font-family:'Fraunces',serif;font-size:20px;margin:0 0 8px}
 .intro p{font-size:13px;color:#4f483d;margin:5px 0}.intro b{color:#21201C}
 .intro .key{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12px;margin-top:8px;line-height:1.45}
-.h2{font-family:'Fraunces',serif;font-size:15px;margin:22px 4px 8px;border-left:4px solid #3E5C5A;padding-left:10px}
 
-/* ---- IG-native card (true to real IG) ---- */
-.iccard{background:#fff;border:1px solid #E6DFD1;border-radius:12px;overflow:hidden}
-.ic-top{display:flex;align-items:center;gap:8px;padding:8px 10px}
-.ic-av{width:28px;height:28px;border-radius:50%;background-size:cover;background-position:center;flex-shrink:0;border:1px solid #eee}
-.ic-nm{font-size:13px;font-weight:600;color:#21201C}
-.ic-loc{font-size:10.5px;color:#737373;margin-top:-1px}
-.ic-more{margin-left:auto;color:#262626;font-weight:700;letter-spacing:1px;font-size:13px}
-.ic-img{position:relative;width:100%;aspect-ratio:9/13;background-size:cover;background-position:50% 35%}
-.ic-act{display:flex;align-items:center;gap:14px;padding:9px 11px 3px;font-size:19px;color:#262626}
-.ic-act .save{margin-left:auto}
-.ic-likes{padding:1px 11px;font-size:12.5px;font-weight:600;color:#262626}
-.ic-cap{padding:2px 11px 12px;font-size:12.5px;color:#262626;line-height:1.4}
-.ic-cap b{font-weight:600}.ic-cap .mr{color:#8e8e8e}
-
-/* ---- story-on-photo style ---- */
-.stcard{background:#fff;border:1px solid #E6DFD1;border-radius:12px;overflow:hidden}
-.st-img{position:relative;width:100%;aspect-ratio:9/13;background-size:cover;background-position:50% 35%;overflow:hidden}
-.st-fade{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(0deg,rgba(0,0,0,.4),transparent);z-index:1}
-.st-mention{position:absolute;top:11px;left:11px;z-index:3;color:#fff;font-size:12px;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.5)}
-.st-txt{position:absolute;left:13px;right:24px;bottom:14px;z-index:3;color:#fff;font-size:15px;font-weight:500;line-height:1.3;text-shadow:0 1px 5px rgba(0,0,0,.55)}
-.st-foot{padding:8px 11px;font-size:12.5px;color:#737373}.st-foot b{color:#262626;font-weight:600}
-
-.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.lab{font-size:11px;font-weight:700;color:#2f7a73;text-align:center;margin:0 0 6px;text-transform:uppercase;letter-spacing:.04em}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.role{font-size:10px;color:#8a8070;text-align:center;padding:5px 6px 0;font-style:italic}
+
+/* ---- real-story card ---- */
+.story{position:relative;width:100%;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#2a2a2a;background-size:cover;background-position:50% 38%;font-family:system-ui,'Jost',sans-serif;box-shadow:0 3px 12px rgba(0,0,0,.12)}
+.bars{position:absolute;top:7px;left:8px;right:8px;display:flex;gap:3px;z-index:5}
+.bars i{flex:1;height:2.5px;border-radius:2px;background:rgba(255,255,255,.4)}
+.bars i.on{background:rgba(255,255,255,.95)}
+.head{position:absolute;top:16px;left:9px;right:9px;display:flex;align-items:center;gap:7px;z-index:5}
+.head .av{width:25px;height:25px;border-radius:50%;background-size:cover;background-position:center;flex-shrink:0;border:1px solid rgba(255,255,255,.5)}
+.head .nm{color:#fff;font-size:12.5px;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.head .tm{color:rgba(255,255,255,.85);font-size:12px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.head .dots{margin-left:auto;color:#fff;font-size:16px;letter-spacing:1px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+/* caption — black on white highlight box (classic IG story text) */
+.cap{position:absolute;left:14px;z-index:4;background:#fff;color:#1a1a1a;font-weight:700;font-size:15px;line-height:1.18;padding:6px 9px;border-radius:7px;box-shadow:0 1px 6px rgba(0,0,0,.2);max-width:80%}
+.cap.up{top:20%}.cap.mid{top:42%}.cap.lo{bottom:20%}
+/* caption — plain white style */
+.capw{position:absolute;left:14px;right:16px;z-index:4;color:#fff;font-weight:600;font-size:17px;line-height:1.25;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.capw.mid{top:44%}.capw.lo{bottom:19%}
+/* mention sticker */
+.mention{position:absolute;z-index:4;background:rgba(0,0,0,.35);backdrop-filter:blur(2px);color:#fff;font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:6px;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+/* bottom reply bar */
+.reply{position:absolute;left:9px;right:9px;bottom:11px;display:flex;align-items:center;gap:9px;z-index:5}
+.reply .field{flex:1;border:1px solid rgba(255,255,255,.6);border-radius:999px;color:rgba(255,255,255,.92);font-size:12px;padding:7px 13px}
+.reply .ic{color:#fff;font-size:18px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.scrim{position:absolute;left:0;right:0;top:0;height:20%;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent);z-index:1}
+.scrimb{position:absolute;left:0;right:0;bottom:0;height:16%;background:linear-gradient(0deg,rgba(0,0,0,.4),transparent);z-index:1}
+
+.role{font-size:10.5px;color:#8a8070;text-align:center;padding:6px 4px 0;font-style:italic}
 .note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:11px 13px;font-size:12.5px;margin-top:18px;line-height:1.5}
 </style></head><body><div class="wrap">
 
 <div class="intro">
-  <h1>🧪 UGC v2 — по реальному Инстаграму</h1>
-  <p>Пересобрал после просмотра живых аккаунтов. Убрал «фейковый дизайн»: обводку аватара, плашку «✓ verified», крупный текст по центру с затемнением. Теперь — как у реальных людей.</p>
-  <div class="key"><b>2 честных стиля на выбор</b> (сравни на UGC 1) → выберем один на все 5. Картинки = заглушки 9:13, подменим на реальные котофото. Тексты залочены.</div>
+  <h1>🧪 UGC = настоящие СТОРИС</h1>
+  <p>Пересобрал по твоим скринам реальных сторис. Каждая карточка = <b>скрин сторис</b>: 9:16, полоска прогресса + ник/время сверху, текст белой плашкой/белым, «Send message» снизу. Лайков/сохранить НЕТ (это было у постов).</p>
+  <div class="key">Картинки = заглушки 9:16 (подменим на реальные котофото). Тексты залочены. Реагируй: стиль текста (плашка/белым), где стоит, меншн @movaro — оставить или нет.</div>
 </div>
 
-<div class="h2">Выбор стиля — UGC 1 (одно фото, два вида)</div>
-<div class="cmp">
-  <div>
-    <p class="lab">Стиль 1 · нативный пост</p>
-    <div class="iccard">
-      <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"></span><div><div class="ic-nm">leos.mom</div><div class="ic-loc">Austin, TX</div></div><span class="ic-more">⋯</span></div>
-      <div class="ic-img" style="background-image:url('../stage-4.0/img/ugc1.jpg')"></div>
-      <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
-      <div class="ic-likes">312 likes</div>
-      <div class="ic-cap"><b>leos.mom</b> ok he actually likes it 😭 <span class="mr">more</span></div>
-    </div>
-  </div>
-  <div>
-    <p class="lab">Стиль 2 · текст на фото</p>
-    <div class="stcard">
-      <div class="st-img" style="background-image:url('../stage-4.0/img/ugc1.jpg')"><div class="st-fade"></div>
-        <span class="st-mention">@leos.mom</span>
-        <span class="st-txt">ok he actually likes it 😭</span>
-      </div>
-      <div class="st-foot"><b>leos.mom</b> · 312 likes</div>
-    </div>
-  </div>
-</div>
-<p class="role">Стиль 1 = чистое фото, текст под ним (как наш сайт сейчас, максимально «настоящий пост»). Стиль 2 = казуальный текст на фото + ник, как сторис.</p>
-
-<div class="h2">Все 5 в Стиле 1 (нативный пост) — как будет смотреться набор</div>
 <div class="grid">
-  <div><div class="iccard">
-    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"></span><div><div class="ic-nm">leos.mom</div></div><span class="ic-more">⋯</span></div>
-    <div class="ic-img" style="background-image:url('../stage-4.0/img/ugc1.jpg')"></div>
-    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
-    <div class="ic-likes">312 likes</div>
-    <div class="ic-cap"><b>leos.mom</b> ok he actually likes it 😭</div>
-  </div><div class="role">жестоко?</div></div>
 
-  <div><div class="iccard">
-    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/hero-5-portrait.png')"></span><div><div class="ic-nm">bandit.thecat</div></div><span class="ic-more">⋯</span></div>
-    <div class="ic-img" style="background-image:url('../stage-4.0/img/ugc2.jpg')"></div>
-    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
-    <div class="ic-likes">1,204 likes</div>
-    <div class="ic-cap"><b>bandit.thecat</b> the vet won't believe this</div>
-  </div><div class="role">мой кот дикий</div></div>
+  <!-- UGC1 -->
+  <div>
+    <div class="story" style="background-image:url('../stage-4.0/img/ugc1.jpg')"><div class="scrim"></div><div class="scrimb"></div>
+      <div class="bars"><i class="on"></i><i></i><i></i></div>
+      <div class="head"><span class="av" style="background-image:url('../stage-4.0/img/ugc1.jpg')"></span><span class="nm">leos.mom</span><span class="tm">3h</span><span class="dots">⋯</span></div>
+      <div class="cap lo">ok he actually likes it 😭</div>
+      <div class="reply"><span class="field">Send message</span><span class="ic">♡</span><span class="ic">➤</span></div>
+    </div>
+    <div class="role">жестоко? · текст белой плашкой</div>
+  </div>
 
-  <div><div class="iccard">
-    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/use-velcro.png')"></span><div><div class="ic-nm">miso.mochi</div></div><span class="ic-more">⋯</span></div>
-    <div class="ic-img" style="background-image:url('../stage-4.0/img/ugc3.jpg')"></div>
-    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
-    <div class="ic-likes">487 likes</div>
-    <div class="ic-cap"><b>miso.mochi</b> first time doing his nails solo. no blood 😅</div>
-  </div><div class="role">работает? соло?</div></div>
+  <!-- UGC2 -->
+  <div>
+    <div class="story" style="background-image:url('../stage-4.0/img/ugc2.jpg')"><div class="scrim"></div><div class="scrimb"></div>
+      <div class="bars"><i class="on"></i><i></i></div>
+      <div class="head"><span class="av" style="background-image:url('../stage-4.0/img/ugc2.jpg')"></span><span class="nm">bandit.thecat</span><span class="tm">5h</span><span class="dots">⋯</span></div>
+      <div class="cap up">the vet won't believe this</div>
+      <div class="mention" style="bottom:21%;right:16px">@movaro 🐾</div>
+      <div class="reply"><span class="field">Send message</span><span class="ic">♡</span><span class="ic">➤</span></div>
+    </div>
+    <div class="role">дикий кот · + меншн @movaro</div>
+  </div>
 
-  <div><div class="iccard">
-    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/use-emotional.png')"></span><div><div class="ic-nm">theo.luna</div></div><span class="ic-more">⋯</span></div>
-    <div class="ic-img" style="background-image:url('../stage-3.0/img/use-emotional.png')"></div>
-    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
-    <div class="ic-likes">926 likes</div>
-    <div class="ic-cap"><b>theo.luna</b> cheaper than one vet trip honestly</div>
-  </div><div class="role">бренд + деньги</div></div>
+  <!-- UGC3 -->
+  <div>
+    <div class="story" style="background-image:url('../stage-4.0/img/ugc3.jpg')"><div class="scrim"></div><div class="scrimb"></div>
+      <div class="bars"><i class="on"></i><i></i><i></i><i></i></div>
+      <div class="head"><span class="av" style="background-image:url('../stage-4.0/img/ugc3.jpg')"></span><span class="nm">miso.mochi</span><span class="tm">1h</span><span class="dots">⋯</span></div>
+      <div class="cap lo">first time doing his nails solo. no blood 😅</div>
+      <div class="reply"><span class="field">Send message</span><span class="ic">♡</span><span class="ic">➤</span></div>
+    </div>
+    <div class="role">работает? соло? · текст белой плашкой</div>
+  </div>
 
-  <div><div class="iccard">
-    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"></span><div><div class="ic-nm">our.senior.girl</div></div><span class="ic-more">⋯</span></div>
-    <div class="ic-img" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"></div>
-    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
-    <div class="ic-likes">2,051 likes</div>
-    <div class="ic-cap"><b>our.senior.girl</b> why didn't i get this sooner 💛</div>
-  </div><div class="role">бренд + эмоция</div></div>
+  <!-- UGC4 -->
+  <div>
+    <div class="story" style="background-image:url('../stage-3.0/img/use-emotional.png')"><div class="scrim"></div><div class="scrimb"></div>
+      <div class="bars"><i class="on"></i><i></i></div>
+      <div class="head"><span class="av" style="background-image:url('../stage-3.0/img/use-emotional.png')"></span><span class="nm">theo.luna</span><span class="tm">8h</span><span class="dots">⋯</span></div>
+      <div class="capw mid">cheaper than one vet trip honestly</div>
+      <div class="reply"><span class="field">Send message</span><span class="ic">♡</span><span class="ic">➤</span></div>
+    </div>
+    <div class="role">бренд + деньги · текст белым</div>
+  </div>
+
+  <!-- UGC5 -->
+  <div>
+    <div class="story" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"><div class="scrim"></div><div class="scrimb"></div>
+      <div class="bars"><i class="on"></i><i></i><i></i></div>
+      <div class="head"><span class="av" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"></span><span class="nm">our.senior.girl</span><span class="tm">1d</span><span class="dots">⋯</span></div>
+      <div class="capw lo">why didn't i get this sooner 💛</div>
+      <div class="reply"><span class="field">Send message</span><span class="ic">♡</span><span class="ic">➤</span></div>
+    </div>
+    <div class="role">бренд + эмоция · текст белым</div>
+  </div>
+
 </div>
 
-<div class="note">⚠️ Заглушки. Реальные изменения vs прошлой версии: аватар = мелкий простой кружок (без обводки), ник = простой текст (без «✓ verified»), подпись = под фото инлайн, лайки/иконки как в IG. Скажи: <b>Стиль 1 или 2</b> на все 5? Лайки/гео/иконки — оставить или убрать?</div>
+<div class="note">⚠️ Заглушки 9:16. Показал оба стиля текста: <b>белая плашка</b> (UGC 1-3, читаемо для возражений) и <b>просто белым</b> (UGC 4-5, мягче). + меншн <b>@movaro</b> на UGC2 (как реальные UGC тегают бренд). Скажи: какой стиль текста, где ставить, меншн нужен?</div>
 
 </div></body></html>
