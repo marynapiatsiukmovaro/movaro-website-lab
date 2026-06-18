@@ -1,0 +1,208 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movaro — Сборка фото сайта (рабочее поле)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
+.wrap{max-width:500px;margin:0 auto;padding:18px 12px 80px}
+.intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:16px 18px;margin-bottom:16px}
+.intro h1{font-family:'Fraunces',serif;font-size:21px;margin:0 0 8px}
+.intro p{font-size:13px;color:#4f483d;margin:5px 0}.intro b{color:#21201C}
+.intro .key{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12px;margin-top:8px;line-height:1.45}
+.intro .leg{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:999px}
+.A{background:#F3E3DC;color:#a85a3e}.B{background:#E2E9E7;color:#2f6b63}.N{background:#ece8df;color:#8a8372}.Q{background:#F6ECC9;color:#8a6a32}
+
+/* block card */
+.blk{background:#fff;border:1px solid #E6DFD1;border-radius:14px;margin-bottom:14px;overflow:hidden}
+.bh{display:flex;align-items:center;gap:8px;padding:11px 14px;border-bottom:1px solid #F0E9DC;flex-wrap:wrap}
+.bh .num{font-family:'Fraunces',serif;font-weight:600;font-size:15px;color:#3E5C5A}
+.bh .ttl{font-family:'Fraunces',serif;font-weight:600;font-size:15px;flex:1;min-width:120px}
+.bh .cnt{font-size:10.5px;font-weight:700;color:#6A6256;background:#F4EFE4;border-radius:999px;padding:3px 9px}
+.body{padding:12px 14px}
+.note{font-size:12px;color:#5b5347;margin:0 0 10px;line-height:1.45}
+.note b{color:#2a2620}
+
+/* photo slots */
+.slots{display:flex;gap:8px;flex-wrap:wrap}
+.slot{position:relative;width:calc(50% - 4px);aspect-ratio:4/5;border-radius:11px;border:2px dashed #cdc1aa;background:repeating-linear-gradient(45deg,#EDE7DC,#EDE7DC 9px,#E6DFD1 9px,#E6DFD1 18px);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.slot.one{width:100%;aspect-ratio:16/10}
+.slot.third{width:calc(33.33% - 6px)}
+.slot .lbl{font-size:11px;color:#8a8070;padding:10px;font-weight:600;line-height:1.35}
+.slot .tz{position:absolute;top:6px;left:6px;right:6px;font-size:9px;font-weight:700;letter-spacing:.03em;color:#fff;background:rgba(62,92,90,.85);border-radius:6px;padding:3px 7px;text-transform:uppercase}
+.empty{font-size:12px;color:#9a9180;font-style:italic;padding:6px 0}
+
+/* status pills */
+.st{display:inline-block;font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px;margin-left:auto}
+.st.done{background:#dff0e9;color:#2f7a73}.st.todo{background:#f4efe4;color:#8a8372}.st.flag{background:#F6ECC9;color:#8a6a32}
+
+.go{display:inline-block;margin-top:8px;background:#2f7a73;color:#fff;text-decoration:none;font-weight:700;font-size:12px;padding:7px 14px;border-radius:999px}
+.divider{font-family:'Fraunces',serif;font-size:13px;color:#6A6256;text-transform:uppercase;letter-spacing:.06em;margin:22px 4px 8px;font-weight:600}
+.foot{text-align:center;font-size:12px;color:#6A6256;margin-top:20px;line-height:1.5}
+</style></head><body><div class="wrap">
+
+<div class="intro">
+  <h1>🧩 Сборка фото сайта — рабочее поле</h1>
+  <p>Здесь <b>копим и согласовываем РЕАЛЬНЫЕ фото по каждому блоку сайта</b> (зеркало продуктовой страницы сверху вниз). Когда ВСЁ согласовано → переношу разом на сайт.</p>
+  <p><b>Это «блюдо».</b> «Рецепт» (смыслы/тексты/пачки) живёт отдельно в <i>photo-map-master-plus</i> — туда не вносим фото, чтобы не путать план и сборку.</p>
+  <div class="leg">
+    <span class="chip A">A · текст НА фото</span>
+    <span class="chip B">B · чистое фото + текст в секции</span>
+    <span class="chip N">— без фото</span>
+    <span class="chip Q">❓ решить</span>
+  </div>
+  <div class="key">Поток: ① скелет (этот файл) → ② идём ПО ОДНОМУ блоку: раскладка+текст на заглушке → согласуем → генерим на реальном Vetnutro → вставляю реальное → финал → ③ всё согласовано → порт на сайт + сжатие/все устройства. Ссылку открывать с <b>?v=число</b>.</div>
+</div>
+
+<!-- 1 GALLERY -->
+<div class="blk">
+  <div class="bh"><span class="num">1</span><span class="ttl">Галерея (карусель)</span><span class="chip A">A</span><span class="cnt">6 кадров</span><span class="st done">готов шаблон</span></div>
+  <div class="body">
+    <p class="note"><b>Наш первый шаблон.</b> 6 кадров с текстом: ХУК · ВИНА · РУКИ · ДЕНЬГИ · ВЛЮБИТЬ · СПЕКА (+ вариант 3.1). Раскладка/тексты согласованы — осталось перегенерить картинки под реальный Vetnutro.</p>
+    <a class="go" href="../mock-gallery1/?v=20">→ Открыть готовую галерею</a>
+  </div>
+</div>
+
+<!-- 2 TRUST -->
+<div class="blk">
+  <div class="bh"><span class="num">2</span><span class="ttl">Trust (звёзды/иконки)</span><span class="chip N">—</span><span class="st todo">без фото</span></div>
+  <div class="body"><p class="empty">Полоска доверия — иконки/звёзды, фото не нужно.</p></div>
+</div>
+
+<!-- 3 UGC -->
+<div class="blk">
+  <div class="bh"><span class="num">3</span><span class="ttl">UGC — обработка возражений</span><span class="chip A">A</span><span class="cnt">5 кадров</span><span class="st todo">след.</span></div>
+  <div class="body">
+    <p class="note"><b>Скрин-стиль</b> (живые люди+коты, имя кота, ✓). 1-3 = три возражения по силе (жестоко? · мой кот дикий · работает/соло), 4-5 = бренд+деньги / бренд+эмоция. Текст на фото.</p>
+    <div class="slots">
+      <div class="slot third"><span class="tz">UGC1 · жестоко?</span><span class="lbl">кот доволен/мурчит</span></div>
+      <div class="slot third"><span class="tz">UGC2 · дикий кот</span><span class="lbl">спайси-кот спокоен</span></div>
+      <div class="slot third"><span class="tz">UGC3 · соло</span><span class="lbl">один стрижёт, без крови</span></div>
+      <div class="slot third"><span class="tz">UGC4 · бренд+деньги</span><span class="lbl">упаковка Movaro</span></div>
+      <div class="slot third"><span class="tz">UGC5 · бренд+эмоция</span><span class="lbl">тёплый момент</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 4 SPINE -->
+<div class="blk">
+  <div class="bh"><span class="num">4</span><span class="ttl">Spine (линия прокрутки)</span><span class="chip N">—</span><span class="st todo">без фото</span></div>
+  <div class="body"><p class="empty">Тонкая декоративная линия — фото не нужно.</p></div>
+</div>
+
+<!-- 5 ABOUT -->
+<div class="blk">
+  <div class="bh"><span class="num">5</span><span class="ttl">About (продукт + 3 выгоды)</span><span class="chip B">B</span><span class="cnt">1 + 3</span><span class="st todo">переиспользуем</span></div>
+  <div class="body">
+    <p class="note">1 hotspot-герой (тап-точки = HTML) + 3 выгоды (спокойствие · соло · окупается). Текст уже в секции → фото <b>чистые</b>. 3 выгоды <b>можно пересобрать из галереи</b> (тот же кот/врап).</p>
+    <div class="slots">
+      <div class="slot one"><span class="tz">Hotspot · герой</span><span class="lbl">спокойный кот в врапе, чисто/премиум + тап-точки</span></div>
+      <div class="slot third"><span class="tz">Выгода · спокойствие</span><span class="lbl">расслабл. морда</span></div>
+      <div class="slot third"><span class="tz">Выгода · соло</span><span class="lbl">одна рука стрижёт</span></div>
+      <div class="slot third"><span class="tz">Выгода · деньги</span><span class="lbl">value-визуал</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 6 MECHANISM -->
+<div class="blk">
+  <div class="bh"><span class="num">6</span><span class="ttl">Наука спокойствия</span><span class="chip B">B</span><span class="cnt">1 коллаж</span><span class="st flag">нет фото на сайте</span></div>
+  <div class="body">
+    <p class="note">⚠️ Сейчас в секции фото НЕТ. Добавляем <b>1 картинку из 4 панелей</b> (давление · нервная система · меньше хаоса · одна лапа), «картинка → текст под ней» (твой эталон). Честно: научный принцип, не «изобрели».</p>
+    <div class="slots"><div class="slot one"><span class="tz">Коллаж · 4 панели</span><span class="lbl">deep-pressure / swaddle — почему врап успокаивает, а мешок паникует</span></div></div>
+  </div>
+</div>
+
+<!-- 7 BEFORE/AFTER -->
+<div class="blk">
+  <div class="bh"><span class="num">7</span><span class="ttl">Before / After</span><span class="chip B">B</span><span class="cnt">2 кадра</span><span class="st flag">нужен before-паника</span></div>
+  <div class="body">
+    <p class="note">Бейджи Before/After = HTML. Фото чистые. ⚠️ <b>Before = реальный кадр паники</b> (вырывается/царапает) — ключевой недостающий. After = тот же кот спокоен.</p>
+    <div class="slots">
+      <div class="slot"><span class="tz">BEFORE · хаос</span><span class="lbl">реальная борьба/паника</span></div>
+      <div class="slot"><span class="tz">AFTER · спокойствие</span><span class="lbl">тот же кот спокоен в врапе</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 8 COMPARE -->
+<div class="blk">
+  <div class="bh"><span class="num">8</span><span class="ttl">Compare (сравнение)</span><span class="chip N">—</span><span class="st todo">фото опц.</span></div>
+  <div class="body"><p class="empty">Таблица «почему переходят на Movaro» — HTML. Фото опционально (1 чистый продукт на белом, если решим).</p></div>
+</div>
+
+<!-- 9 VET -->
+<div class="blk">
+  <div class="bh"><span class="num">9</span><span class="ttl">Vet</span><span class="chip Q">❓</span><span class="st flag">решить судьбу</span></div>
+  <div class="body"><p class="note">⚠️ «vet-designed» убрали (B7) → контента в блоке нет. <b>Решение до генерации:</b> слить в «Науку спокойствия» / убрать / переосмыслить. Фото пока НЕ планируем.</p></div>
+</div>
+
+<!-- 10 INSTRUCTION -->
+<div class="blk">
+  <div class="bh"><span class="num">10</span><span class="ttl">Инструкция (3 шага) + спека</span><span class="chip B">B</span><span class="cnt">3 кадра</span><span class="st todo">конструкция</span></div>
+  <div class="body">
+    <p class="note">Wrap → Soothe → Groom. Текст в секции → фото чистые. Это и есть наши <b>кадры реальной конструкции</b>: открытый продукт (велкро-воротник/флапы/крылья) → кот завёрнут → один флап/одна лапа.</p>
+    <div class="slots">
+      <div class="slot third"><span class="tz">Шаг 1 · Wrap</span><span class="lbl">продукт открыт, видна конструкция</span></div>
+      <div class="slot third"><span class="tz">Шаг 2 · Soothe</span><span class="lbl">завёрнут снуг, голова наружу</span></div>
+      <div class="slot third"><span class="tz">Шаг 3 · Groom</span><span class="lbl">флап → одна лапа, стрижём</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 11 OFFER -->
+<div class="blk">
+  <div class="bh"><span class="num">11</span><span class="ttl">Оффер — Calm Kit (+ гайды)</span><span class="chip A">A</span><span class="cnt">2 гайда</span><span class="st todo">ТЗ согласовать</span></div>
+  <div class="body">
+    <p class="note"><b>2 мокапа цифровых подарков</b> (генерит GPT). Название = часть дизайна обложки/листа; бейджи «Free·instant» накладываю кодом. ⚠️ ТЗ под GPT докрутим тут. Контент гайдов пишем позже (перед 2Checkout).</p>
+    <div class="slots">
+      <div class="slot"><span class="tz">Гайд 1 · Cat-Calm Guide</span><span class="lbl">обложка + раскрытый разворот, палитра Movaro</span></div>
+      <div class="slot"><span class="tz">Гайд 2 · Stress Cheat-Sheet</span><span class="lbl">1-страничник, иконки сигналов стресса</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 12 FAQ -->
+<div class="blk">
+  <div class="bh"><span class="num">12</span><span class="ttl">FAQ</span><span class="chip N">—</span><span class="st todo">без фото</span></div>
+  <div class="body"><p class="empty">Аккордеон вопросов — фото не нужно.</p></div>
+</div>
+
+<!-- 13 REVIEWS -->
+<div class="blk">
+  <div class="bh"><span class="num">13</span><span class="ttl">Reviews (отзывы)</span><span class="chip B">B</span><span class="cnt">0 новых</span><span class="st done">переиспользует UGC</span></div>
+  <div class="body"><p class="note"><b>Переиспользует фото из UGC</b> (так и на сайте сейчас). Новых фото не генерим.</p></div>
+</div>
+
+<!-- 14 CLOSE -->
+<div class="blk">
+  <div class="bh"><span class="num">14</span><span class="ttl">Close (финальный CTA)</span><span class="chip B">B</span><span class="cnt">0–1</span><span class="st todo">переиспользуем</span></div>
+  <div class="body"><p class="note">«Ready to end the war?» — текст в секции. Можно <b>переиспользовать спокойный кадр из галереи</b> фоном (новое не обязательно).</p></div>
+</div>
+
+<div class="divider">— Страница About (футер) —</div>
+
+<!-- ABOUT-STORY -->
+<div class="blk">
+  <div class="bh"><span class="num">A</span><span class="ttl">About-story (лесенка)</span><span class="chip B">B</span><span class="cnt">3 кадра</span><span class="st todo">айфон-регистр</span></div>
+  <div class="body">
+    <p class="note">«Снято на айфон», живые: хаос → поиск → результат. Текст в секции → фото чистые.</p>
+    <div class="slots">
+      <div class="slot third"><span class="tz">1 · Хаос</span><span class="lbl">борьба с котом</span></div>
+      <div class="slot third"><span class="tz">2 · Поиск</span><span class="lbl">пробуем решения</span></div>
+      <div class="slot third"><span class="tz">3 · Результат</span><span class="lbl">держим врап Movaro</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- BRAND -->
+<div class="blk">
+  <div class="bh"><span class="num">B</span><span class="ttl">Brand — «люди за Movaro»</span><span class="chip B">B</span><span class="cnt">1 кадр</span><span class="st todo">без лиц</span></div>
+  <div class="body">
+    <p class="note">Вариант A: руки/торс пакуют врапы за столом, бирки Movaro, тепло, <b>без лиц</b>. Текст в секции.</p>
+    <div class="slots"><div class="slot one"><span class="tz">Бренд · в работе</span><span class="lbl">руки пакуют врапы, атрибуты Movaro, «снято на айфон»</span></div></div>
+  </div>
+</div>
+
+<div class="foot">Movaro · рабочее поле сборки фото · все блоки сайта<br>пустые слоты заполняем по одному → согласуем → порт. RAW.</div>
+
+</div></body></html>
