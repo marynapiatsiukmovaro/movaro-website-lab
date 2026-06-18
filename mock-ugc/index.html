@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Movaro — Лаборатория фото · UGC (5 карточек 9:13)</title>
+<title>Movaro — Лаборатория фото · UGC v2 (по реальному IG)</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
@@ -8,99 +8,111 @@
 .intro h1{font-family:'Fraunces',serif;font-size:20px;margin:0 0 8px}
 .intro p{font-size:13px;color:#4f483d;margin:5px 0}.intro b{color:#21201C}
 .intro .key{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12px;margin-top:8px;line-height:1.45}
-.sec-eye{text-align:center;font-size:11px;font-weight:700;letter-spacing:.12em;color:#2f7a73;margin:6px 0 2px}
-.sec-h{text-align:center;font-family:'Fraunces',serif;font-size:18px;margin:0 0 16px;color:#21201C}
+.h2{font-family:'Fraunces',serif;font-size:15px;margin:22px 4px 8px;border-left:4px solid #3E5C5A;padding-left:10px}
 
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-.ph{position:relative;width:100%;aspect-ratio:9/13;background-size:cover;background-position:50% 35%;overflow:hidden}
-.gt{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,0));z-index:1}
-.gb{position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(0deg,rgba(0,0,0,.58),rgba(0,0,0,0));z-index:1}
-/* tagged-account sticker (top) */
-.tag{position:absolute;top:9px;left:9px;z-index:3;display:flex;align-items:center;gap:5px;background:rgba(0,0,0,.32);backdrop-filter:blur(3px);border-radius:999px;padding:3px 9px 3px 3px}
-.tag .av{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#bcd2cd,#8fb3ac)}
-.tag .h{color:#fff;font-size:11px;font-weight:600}
-.tag .vf{color:#7fd3c6;font-size:10px;font-weight:700}
-/* stories-style caption typed on the photo */
-.cap{position:absolute;left:12px;right:12px;bottom:14px;z-index:3;color:#fff;font-size:16px;font-weight:600;line-height:1.25;text-shadow:0 2px 8px rgba(0,0,0,.6);letter-spacing:.01em}
-/* footer chrome under photo (handle; caption dup optional) */
-.foot{display:flex;align-items:center;gap:7px;padding:9px 11px}
-.foot .av{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#bcd2cd,#8fb3ac);flex-shrink:0}
-.foot .h{font-size:12px;font-weight:600;color:#21201C}
-.foot .vf{margin-left:auto;font-size:8.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#2f7a73}
-.dup{padding:0 11px 11px;font-size:12px;color:#6b6256;line-height:1.45;margin-top:-2px}
-.role{font-size:10.5px;color:#8a8070;text-align:center;padding:4px 8px 10px;font-style:italic}
+/* ---- IG-native card (true to real IG) ---- */
+.iccard{background:#fff;border:1px solid #E6DFD1;border-radius:12px;overflow:hidden}
+.ic-top{display:flex;align-items:center;gap:8px;padding:8px 10px}
+.ic-av{width:28px;height:28px;border-radius:50%;background-size:cover;background-position:center;flex-shrink:0;border:1px solid #eee}
+.ic-nm{font-size:13px;font-weight:600;color:#21201C}
+.ic-loc{font-size:10.5px;color:#737373;margin-top:-1px}
+.ic-more{margin-left:auto;color:#262626;font-weight:700;letter-spacing:1px;font-size:13px}
+.ic-img{position:relative;width:100%;aspect-ratio:9/13;background-size:cover;background-position:50% 35%}
+.ic-act{display:flex;align-items:center;gap:14px;padding:9px 11px 3px;font-size:19px;color:#262626}
+.ic-act .save{margin-left:auto}
+.ic-likes{padding:1px 11px;font-size:12.5px;font-weight:600;color:#262626}
+.ic-cap{padding:2px 11px 12px;font-size:12.5px;color:#262626;line-height:1.4}
+.ic-cap b{font-weight:600}.ic-cap .mr{color:#8e8e8e}
 
+/* ---- story-on-photo style ---- */
+.stcard{background:#fff;border:1px solid #E6DFD1;border-radius:12px;overflow:hidden}
+.st-img{position:relative;width:100%;aspect-ratio:9/13;background-size:cover;background-position:50% 35%;overflow:hidden}
+.st-fade{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(0deg,rgba(0,0,0,.4),transparent);z-index:1}
+.st-mention{position:absolute;top:11px;left:11px;z-index:3;color:#fff;font-size:12px;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.st-txt{position:absolute;left:13px;right:24px;bottom:14px;z-index:3;color:#fff;font-size:15px;font-weight:500;line-height:1.3;text-shadow:0 1px 5px rgba(0,0,0,.55)}
+.st-foot{padding:8px 11px;font-size:12.5px;color:#737373}.st-foot b{color:#262626;font-weight:600}
+
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lab{font-size:11px;font-weight:700;color:#2f7a73;text-align:center;margin:0 0 6px;text-transform:uppercase;letter-spacing:.04em}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.role{font-size:10px;color:#8a8070;text-align:center;padding:5px 6px 0;font-style:italic}
 .note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:11px 13px;font-size:12.5px;margin-top:18px;line-height:1.5}
-.note b{color:#6e5526}
 </style></head><body><div class="wrap">
 
 <div class="intro">
-  <h1>🧪 Лаборатория фото — UGC (5 карточек)</h1>
-  <p>Формат: <b>фото 9:13</b> (сторис) · текст <b>НА фото</b> в сторис-стиле (как человек сам подписал) + <b>@ярлычок</b> сверху · под фото — handle, подпись-дубль <b>опц.</b> Без звёзд, без видео.</p>
-  <div class="key">Картинки = заглушки (подменим на реальные котофото 9:13). Сейчас фиксируем <b>текст + где он стоит + как выглядит</b>. Реагируй: размер/место текста, дубль снизу — нужен или убрать.</div>
+  <h1>🧪 UGC v2 — по реальному Инстаграму</h1>
+  <p>Пересобрал после просмотра живых аккаунтов. Убрал «фейковый дизайн»: обводку аватара, плашку «✓ verified», крупный текст по центру с затемнением. Теперь — как у реальных людей.</p>
+  <div class="key"><b>2 честных стиля на выбор</b> (сравни на UGC 1) → выберем один на все 5. Картинки = заглушки 9:13, подменим на реальные котофото. Тексты залочены.</div>
 </div>
 
-<div class="sec-eye">★★★★★ REAL CAT PARENTS</div>
-<div class="sec-h">"I genuinely can't believe it worked."</div>
+<div class="h2">Выбор стиля — UGC 1 (одно фото, два вида)</div>
+<div class="cmp">
+  <div>
+    <p class="lab">Стиль 1 · нативный пост</p>
+    <div class="iccard">
+      <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"></span><div><div class="ic-nm">leos.mom</div><div class="ic-loc">Austin, TX</div></div><span class="ic-more">⋯</span></div>
+      <div class="ic-img" style="background-image:url('../stage-4.0/img/ugc1.jpg')"></div>
+      <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
+      <div class="ic-likes">312 likes</div>
+      <div class="ic-cap"><b>leos.mom</b> ok he actually likes it 😭 <span class="mr">more</span></div>
+    </div>
+  </div>
+  <div>
+    <p class="lab">Стиль 2 · текст на фото</p>
+    <div class="stcard">
+      <div class="st-img" style="background-image:url('../stage-4.0/img/ugc1.jpg')"><div class="st-fade"></div>
+        <span class="st-mention">@leos.mom</span>
+        <span class="st-txt">ok he actually likes it 😭</span>
+      </div>
+      <div class="st-foot"><b>leos.mom</b> · 312 likes</div>
+    </div>
+  </div>
+</div>
+<p class="role">Стиль 1 = чистое фото, текст под ним (как наш сайт сейчас, максимально «настоящий пост»). Стиль 2 = казуальный текст на фото + ник, как сторис.</p>
 
+<div class="h2">Все 5 в Стиле 1 (нативный пост) — как будет смотреться набор</div>
 <div class="grid">
+  <div><div class="iccard">
+    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"></span><div><div class="ic-nm">leos.mom</div></div><span class="ic-more">⋯</span></div>
+    <div class="ic-img" style="background-image:url('../stage-4.0/img/ugc1.jpg')"></div>
+    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
+    <div class="ic-likes">312 likes</div>
+    <div class="ic-cap"><b>leos.mom</b> ok he actually likes it 😭</div>
+  </div><div class="role">жестоко?</div></div>
 
-  <!-- UGC1 -->
-  <div class="card">
-    <div class="ph" style="background-image:url('../stage-4.0/img/ugc1.jpg')"><div class="gt"></div><div class="gb"></div>
-      <div class="tag"><span class="av"></span><span class="h">@leos.mom</span><span class="vf">✓</span></div>
-      <div class="cap">ok he actually likes it 😭</div>
-    </div>
-    <div class="foot"><span class="av"></span><span class="h">@leos.mom</span><span class="vf">✓ verified</span></div>
-    <div class="dup">ok he actually likes it 😭</div>
-    <div class="role">возражение «это жестоко?»</div>
-  </div>
+  <div><div class="iccard">
+    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/hero-5-portrait.png')"></span><div><div class="ic-nm">bandit.thecat</div></div><span class="ic-more">⋯</span></div>
+    <div class="ic-img" style="background-image:url('../stage-4.0/img/ugc2.jpg')"></div>
+    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
+    <div class="ic-likes">1,204 likes</div>
+    <div class="ic-cap"><b>bandit.thecat</b> the vet won't believe this</div>
+  </div><div class="role">мой кот дикий</div></div>
 
-  <!-- UGC2 -->
-  <div class="card">
-    <div class="ph" style="background-image:url('../stage-4.0/img/ugc2.jpg')"><div class="gt"></div><div class="gb"></div>
-      <div class="tag"><span class="av"></span><span class="h">@bandit.thecat</span><span class="vf">✓</span></div>
-      <div class="cap">the vet won't believe this</div>
-    </div>
-    <div class="foot"><span class="av"></span><span class="h">@bandit.thecat</span><span class="vf">✓ verified</span></div>
-    <div class="dup">the vet won't believe this</div>
-    <div class="role">возражение «мой кот дикий»</div>
-  </div>
+  <div><div class="iccard">
+    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/use-velcro.png')"></span><div><div class="ic-nm">miso.mochi</div></div><span class="ic-more">⋯</span></div>
+    <div class="ic-img" style="background-image:url('../stage-4.0/img/ugc3.jpg')"></div>
+    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
+    <div class="ic-likes">487 likes</div>
+    <div class="ic-cap"><b>miso.mochi</b> first time doing his nails solo. no blood 😅</div>
+  </div><div class="role">работает? соло?</div></div>
 
-  <!-- UGC3 -->
-  <div class="card">
-    <div class="ph" style="background-image:url('../stage-4.0/img/ugc3.jpg')"><div class="gt"></div><div class="gb"></div>
-      <div class="tag"><span class="av"></span><span class="h">@miso.mochi</span><span class="vf">✓</span></div>
-      <div class="cap">first time doing his nails solo. no blood 😅</div>
-    </div>
-    <div class="foot"><span class="av"></span><span class="h">@miso.mochi</span><span class="vf">✓ verified</span></div>
-    <div class="dup">first time doing his nails solo. no blood 😅</div>
-    <div class="role">возражение «работает? соло?»</div>
-  </div>
+  <div><div class="iccard">
+    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/use-emotional.png')"></span><div><div class="ic-nm">theo.luna</div></div><span class="ic-more">⋯</span></div>
+    <div class="ic-img" style="background-image:url('../stage-3.0/img/use-emotional.png')"></div>
+    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
+    <div class="ic-likes">926 likes</div>
+    <div class="ic-cap"><b>theo.luna</b> cheaper than one vet trip honestly</div>
+  </div><div class="role">бренд + деньги</div></div>
 
-  <!-- UGC4 -->
-  <div class="card">
-    <div class="ph" style="background-image:url('../stage-3.0/img/use-emotional.png')"><div class="gt"></div><div class="gb"></div>
-      <div class="tag"><span class="av"></span><span class="h">@theo.luna</span><span class="vf">✓</span></div>
-      <div class="cap">cheaper than one vet trip honestly</div>
-    </div>
-    <div class="foot"><span class="av"></span><span class="h">@theo.luna</span><span class="vf">✓ verified</span></div>
-    <div class="role">бренд + деньги · подпись снизу убрана (фото играет)</div>
-  </div>
-
-  <!-- UGC5 -->
-  <div class="card">
-    <div class="ph" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"><div class="gt"></div><div class="gb"></div>
-      <div class="tag"><span class="av"></span><span class="h">@our.senior.girl</span><span class="vf">✓</span></div>
-      <div class="cap">why didn't i get this sooner 💛</div>
-    </div>
-    <div class="foot"><span class="av"></span><span class="h">@our.senior.girl</span><span class="vf">✓ verified</span></div>
-    <div class="role">бренд + эмоция · подпись снизу убрана</div>
-  </div>
-
+  <div><div class="iccard">
+    <div class="ic-top"><span class="ic-av" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"></span><div><div class="ic-nm">our.senior.girl</div></div><span class="ic-more">⋯</span></div>
+    <div class="ic-img" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"></div>
+    <div class="ic-act"><span>♡</span><span>💬</span><span>➤</span><span class="save">🔖</span></div>
+    <div class="ic-likes">2,051 likes</div>
+    <div class="ic-cap"><b>our.senior.girl</b> why didn't i get this sooner 💛</div>
+  </div><div class="role">бренд + эмоция</div></div>
 </div>
 
-<div class="note">⚠️ Заглушки под раскладку. UGC1 и UGC4–5 показывают разные варианты: <b>1-3 = с дублём подписи снизу</b> (закрывают возражение словом), <b>4-5 = только @handle снизу</b> (фото играет, текст лишь на фото). Скажи, какой вариант нравится — и оставим единым или смешанным.</div>
+<div class="note">⚠️ Заглушки. Реальные изменения vs прошлой версии: аватар = мелкий простой кружок (без обводки), ник = простой текст (без «✓ verified»), подпись = под фото инлайн, лайки/иконки как в IG. Скажи: <b>Стиль 1 или 2</b> на все 5? Лайки/гео/иконки — оставить или убрать?</div>
 
 </div></body></html>
