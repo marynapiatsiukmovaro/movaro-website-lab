@@ -107,7 +107,7 @@ section{padding:60px 24px}
 .opt .rb{width:21px;height:21px;border-radius:50%;border:2px solid var(--muted);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color .15s}
 .opt.sel .rb{border-color:var(--ink)} .opt.sel .rb::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--ink)}
 .opt .o-main{flex:1}.opt .o-main b{font-size:14.5px;font-family:'Jost';font-weight:600}.opt .o-main small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;line-height:1.4}
-.opt .o-price{text-align:right}.opt .o-price b{font-size:17px;font-family:'Fraunces';font-weight:600}.opt .o-price s{display:block;color:var(--muted);font-size:12px}
+.opt .o-price{text-align:right}.opt .o-price b{font-size:21px;font-family:'Fraunces';font-weight:600}.opt .o-price s{display:block;color:var(--muted);font-size:12px}
 .save-tag{position:absolute;top:-10px;right:15px;background:var(--sage);color:#fff;font-family:'Jost';font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 11px;border-radius:var(--pill)}
 .field-label{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:20px 0 9px;display:flex;justify-content:space-between}
 .field-label a{color:var(--sage)}
@@ -123,8 +123,8 @@ section{padding:60px 24px}
 .price-row .pill-save{font-family:'Jost';font-size:11px;font-weight:600;color:var(--sage);background:var(--sage-tint);padding:4px 10px;border-radius:var(--pill)}
 /* smaller cents — reads as a clean 2-digit price, not a big 4-digit number */
 .ct{font-size:.56em;font-weight:inherit;vertical-align:.42em;letter-spacing:0}
-/* kit options keep FULL-size price (like Calm Wrap) — small cents only on the big headline price */
-.opt .o-price .ct{font-size:1em;vertical-align:baseline;letter-spacing:normal}
+/* kit options: keep the small-cents format, but bump the dollar figure so the sum reads as big as Calm Wrap */
+.opt .o-price .ct{font-size:.6em;vertical-align:.38em}
 .sticky .sp .ct{font-size:.6em;vertical-align:.4em}
 .under-cta{margin-top:15px}
 .under-cta .row{display:flex;align-items:center;justify-content:center;gap:20px;font-size:11.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em}
