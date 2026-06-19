@@ -329,6 +329,27 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 .mv-spine-dot{position:absolute;left:0;top:0;width:14px;height:14px;border-radius:50%;background:#3E5C5A;box-shadow:0 0 0 4px #E2E9E7,0 2px 8px rgba(0,0,0,.18);transform:translate(-50%,-50%)}
 .mv-spine-label{position:absolute;left:50%;top:0;transform:translateX(-50%);white-space:nowrap;background:#2F7A73;color:#fff;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.01em;padding:6px 12px;border-radius:999px;box-shadow:0 3px 12px rgba(33,32,28,.2);pointer-events:none;opacity:0;transition:opacity .25s,background .35s}
 .mv-spine-label.end{box-shadow:0 5px 18px rgba(194,143,46,.45);font-weight:700}
+/* ---- DESKTOP (≥990): theme gives the 2-col hero/shell; here we CONTAIN our body + add side air (full-bleed colour bands, centred content) — mirrors Cat Wrap 5.0.1 ---- */
+@media (min-width:990px){
+  .wrap{max-width:none}                                  /* Lab-only: preview full width (dropped on Shopify) */
+  section{padding:80px 24px}
+  section > *{max-width:760px;margin-left:auto;margin-right:auto}   /* contain content; bg stays full-bleed */
+  .sect-head{max-width:620px}
+  .lead-p{max-width:680px}
+  /* UGC — 5 cards in a row, wider band */
+  [data-block="ugc"] .sect-head{max-width:720px}
+  [data-block="ugc"] .scroll{max-width:1160px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;overflow:visible;margin:28px auto 0;padding:0}
+  [data-block="ugc"] .ugc-card{min-width:0}
+  [data-block="ugc"] .ugc-card .ill{aspect-ratio:9/13}
+  /* Instruction — 3 steps in a row */
+  [data-block="instruction"] .scroll{max-width:960px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;overflow:visible;margin:28px auto 0;padding:0}
+  [data-block="instruction"] .step-card{min-width:0}
+  [data-block="instruction"] .step-card .ill{aspect-ratio:4/3}
+  /* before/after + compare read nicely a touch wider */
+  [data-block="before-after"] .ba-grid,[data-block="compare"] .cmp{max-width:720px}
+  /* spine = a mobile scroll-delight; hide on desktop (centred narrow thread looks off on wide screens) */
+  .mv-spine{display:none}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 </head>
