@@ -362,6 +362,8 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   [data-block="science"] .mpt summary .ch{display:none}
   /* reviews — a touch more side air */
   [data-block="reviews"] > *{max-width:700px}
+  /* offer — centre every row (the guarantee card had margin:20px 0 which killed its auto side-margins → it drifted left) */
+  [data-block="offer"] > *{margin-left:auto;margin-right:auto}
   /* spine = a mobile scroll-delight; hide on desktop (centred narrow thread looks off on wide screens) */
   .mv-spine{display:none}
 }
