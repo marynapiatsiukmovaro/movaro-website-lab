@@ -309,6 +309,14 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 .hl{background:linear-gradient(transparent 58%, var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
 .hlw{background:linear-gradient(transparent 56%, var(--honey-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
 .hlr{background:linear-gradient(transparent 56%, var(--clay-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
+/* spine — scroll thread + travelling dot + benefit ticker (ported 1:1 from live Cat Wrap; data-block bindings + our benefits) */
+.mv-spine{position:absolute;left:0;right:0;margin:0 auto;width:100%;max-width:480px;z-index:2;pointer-events:none}
+.mv-spine svg{width:100%;height:100%;display:block;overflow:visible}
+.mv-spine-track{fill:none;stroke:#E6DFD1;stroke-width:1.2;vector-effect:non-scaling-stroke;opacity:.13}
+.mv-spine-draw{fill:none;stroke:#C8BAA3;stroke-width:1.4;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;opacity:.22}
+.mv-spine-dot{position:absolute;left:0;top:0;width:14px;height:14px;border-radius:50%;background:#3E5C5A;box-shadow:0 0 0 4px #E2E9E7,0 2px 8px rgba(0,0,0,.18);transform:translate(-50%,-50%)}
+.mv-spine-label{position:absolute;left:50%;top:0;transform:translateX(-50%);white-space:nowrap;background:#2F7A73;color:#fff;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.01em;padding:6px 12px;border-radius:999px;box-shadow:0 3px 12px rgba(33,32,28,.2);pointer-events:none;opacity:0;transition:opacity .25s,background .35s}
+.mv-spine-label.end{box-shadow:0 5px 18px rgba(194,143,46,.45);font-weight:700}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 </head>
@@ -726,6 +734,10 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   </footer>
 
 </div>
+
+<!-- SPINE — scroll thread + travelling dot + benefit ticker (runs UGC → offer) -->
+<div class="mv-spine" id="mvSpine" aria-hidden="true"><svg viewBox="0 0 100 1600" preserveAspectRatio="none"><path class="mv-spine-track" d="M50 0 C90 55 90 70 50 120 C12 175 12 190 50 240 C88 300 88 312 50 362 C14 430 14 448 50 512 C86 600 86 620 50 706 C18 820 18 850 50 952 C82 1110 82 1150 50 1292 C50 1420 50 1510 50 1600"/><path class="mv-spine-draw" id="mvSpineDraw" d="M50 0 C90 55 90 70 50 120 C12 175 12 190 50 240 C88 300 88 312 50 362 C14 430 14 448 50 512 C86 600 86 620 50 706 C18 820 18 850 50 952 C82 1110 82 1150 50 1292 C50 1420 50 1510 50 1600"/></svg><div class="mv-spine-dot" id="mvSpineDot"></div><div class="mv-spine-label" id="mvSpineLabel"></div></div>
+
 <div class="sticky" id="sticky">
   <div class="sp"><span id="st-px"><b>$59.99</b><s>$109.99</s></span><small id="st-lbl">Wrestle Kit</small></div>
   <button class="btn" onclick="addToCart()">Add to cart</button>
@@ -771,6 +783,44 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
   fmt();
+</script>
+
+<!-- SPINE motion (ported 1:1 from live Cat Wrap: dot=label::before, pulse=label::after, layout-once + rAF for smooth fast-scroll) -->
+<script>
+(function(){
+function init(){
+var spine=document.getElementById('mvSpine'),draw=document.getElementById('mvSpineDraw'),dot=document.getElementById('mvSpineDot'),label=document.getElementById('mvSpineLabel');
+if(!spine||!draw||!dot)return;
+dot.style.display='none';
+var st=document.createElement('style');st.textContent='.mv-spine-label::before{content:"";position:absolute;left:50%;top:-22px;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:#3E5C5A;box-shadow:0 0 0 4px #E2E9E7,0 2px 8px rgba(0,0,0,.2);pointer-events:none;z-index:1}.mv-spine-label::after{content:"";position:absolute;left:50%;top:-22px;width:14px;height:14px;border-radius:50%;border:2px solid #3E5C5A;box-sizing:border-box;transform:translateX(-50%);animation:mvpulse 2.2s ease-out infinite;pointer-events:none;z-index:1}@keyframes mvpulse{0%{transform:translateX(-50%) scale(.7);opacity:.6}100%{transform:translateX(-50%) scale(2.4);opacity:0}}.mv-spine-label{transition:opacity .2s,background .3s}';document.head.appendChild(st);
+var startEl=document.querySelector('[data-block="ugc"]'),endEl=document.querySelector('[data-block="offer"]');
+if(!startEl||!endEl){spine.style.display='none';return;}
+if(spine.parentNode!==document.body)document.body.appendChild(spine);
+var len=draw.getTotalLength();draw.style.strokeDasharray=len;
+var trail=[[0,"🎁 Follow me — your gift's at the end","#B9774F"],[0.16,"🥊 Cats go feral for it","#246159"],[0.34,"🐾 Scratch-free for you","#B9774F"],[0.52,"😴 Burns the 4am zoomies","#3E5C5A"],[0.70,"💛 Loved by 1,200+ cats","#246159"],[0.84,"🎁 $80 in free gifts","#C28F2E"]];
+function trailItem(p){var t=trail[0];for(var i=0;i<trail.length;i++){if(p>=trail[i][0])t=trail[i];}return t;}
+var mvTop=0,mvH=1;function layout(){var sy=window.scrollY||window.pageYOffset;var sr=startEl.getBoundingClientRect(),er=endEl.getBoundingClientRect();mvTop=sr.top+sy;mvH=(er.top+sy+er.height)-mvTop;spine.style.top=mvTop+'px';spine.style.height=mvH+'px';}
+function upd(){
+var sy=window.scrollY||window.pageYOffset;
+var top=mvTop,h=mvH;
+var p=(sy+window.innerHeight*0.55-top)/h;p=Math.max(0,Math.min(1,p));
+draw.style.strokeDashoffset=len*(1-p);
+var pt=draw.getPointAtLength(len*p);var w=spine.clientWidth;
+var dx=Math.max(14,Math.min(w-14,pt.x/100*w)),dy=pt.y/1600*h;
+dot.style.left=dx+'px';dot.style.top=dy+'px';
+if(label){
+label.style.left=Math.max(82,Math.min(w-82,dx))+'px';
+label.style.top=(dy+20)+'px';
+if(p>=0.94){label.classList.add('end');label.textContent="🎉 You made it — your gift's inside!";label.style.background='#C28F2E';}
+else{label.classList.remove('end');var it=trailItem(p);label.textContent=it[1];label.style.background=it[2];}
+label.style.opacity=(p>0.015&&p<0.992)?'1':'0';
+}
+}
+var mvT=false;function mvOn(){if(!mvT){mvT=true;requestAnimationFrame(function(){upd();mvT=false;});}}
+layout();upd();window.addEventListener('scroll',mvOn,{passive:true});window.addEventListener('resize',function(){layout();upd();});window.addEventListener('load',function(){layout();upd();});setTimeout(function(){layout();upd();},120);setTimeout(function(){layout();upd();},600);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
 </script>
 </body>
 </html>
