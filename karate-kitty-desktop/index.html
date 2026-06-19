@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karate Cat — Desktop Blueprint</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Jost',sans-serif;background:#F8F4ED;color:#22201C;line-height:1.6;padding:34px 22px;max-width:1180px;margin:0 auto}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5E7052;margin-bottom:8px}
+  h1{font-family:'Cabin';font-size:30px;margin-bottom:8px}
+  .sub{color:#5C544A;margin-bottom:14px;font-size:15px}
+  .note{background:#fff;border:1px dashed #C7BCA9;border-radius:10px;padding:13px 15px;font-size:13px;color:#5C544A;margin-bottom:24px}
+  .note b{color:#22201C}
+  h2{font-family:'Cabin';font-size:20px;margin:30px 0 12px;color:#3E5C5A}
+  .renders{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start}
+  .rcol{flex:1;min-width:280px}
+  .rcol h3{font-family:'Cabin';font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#5E7052;margin-bottom:8px}
+  .rcol img{width:100%;border:1px solid #D9D0C2;border-radius:10px;display:block;background:#fff}
+  .rcol.mob img{max-width:300px}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #D9D0C2;border-radius:10px;overflow:hidden;font-size:13px;margin-top:6px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #EFE8DB;vertical-align:top}
+  th{background:#F1EADB;font-family:'Cabin';font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#5E7052}
+  td b{color:#22201C}
+  tr:last-child td{border-bottom:none}
+  code{background:#F1EADB;border-radius:4px;padding:1px 5px;font-size:12px}
+  .open{background:#F6E1DA;border:1px solid #E3B5A8;border-radius:10px;padding:13px 15px;font-size:13px;margin-top:18px}
+  footer{margin-top:30px;font-size:12px;color:#8A8174}
+</style>
+</head>
+<body>
+  <div class="eyebrow">Movaro · Website · Karate Cat</div>
+  <h1>Desktop Blueprint (KK)</h1>
+  <p class="sub">Первый десктоп-перенос второго продукта. Полные правила → <a href="DESKTOP-SPEC.md">DESKTOP-SPEC.md</a>. Мобильная страница → <a href="../karate-kitty/index.html">karate-kitty/</a>.</p>
+
+  <div class="note">⚠️ <b>Сырая база, первый опыт.</b> Это наш ПЕРВЫЙ перенос десктопа на уже готовой теме. Мобайл прошёл быстро; десктоп — менее гладко (структура секций отличается от Cat Wrap → трюк с боковым padding). Записываем как опыт: что сработало и что вылезло, чтобы следующий перенос был проще. Не «всегда так» — наша первая попытка.</div>
+
+  <div class="note">Десктоп-<b>каркас</b> (2-кол hero, announcement bar, header, footer, корзина-плашка) даёт <b>купленная тема</b> Be Yours — рендерится только на Shopify. Наша работа = CSS тела под <code>@media (min-width:990px)</code>. Мобайл не тронут.</div>
+
+  <h2>Рендеры — мобайл → десктоп (наше тело; каркас темы не в рендере)</h2>
+  <div class="renders">
+    <div class="rcol mob"><h3>📱 Мобайл</h3><img src="renders/mobile-full.png" alt="mobile"></div>
+    <div class="rcol"><h3>🖥️ Десктоп (@≥990)</h3><img src="renders/desktop-full.png" alt="desktop"></div>
+  </div>
+
+  <h2>Правило на каждый блок (мобайл → десктоп)</h2>
+  <table>
+    <tr><th>Блок</th><th>Мобайл</th><th>Десктоп (@≥990)</th></tr>
+    <tr><td><b>База секции</b></td><td>полная ширина, padding 60/24</td><td>контент сужен до ~760 по центру + воздух; фон во всю ширину (трюк <code>padding-inline:max(24px,calc((100% − 1040px)/2))</code>)</td></tr>
+    <tr><td><b>Hero / buy-box</b></td><td>галерея сверху, buy-box ниже</td><td>тема: 2 кол — галерея слева / buy-box справа (sticky). Кнопка = родная форма темы</td></tr>
+    <tr><td><b>UGC</b></td><td>горизонтальный скролл</td><td>5 карточек в ряд, grid, без скролла (max 1160)</td></tr>
+    <tr><td><b>About</b></td><td>картинка сверху, brow-ряды стопкой</td><td>2 кол: картинка-хотспоты слева (sticky) / 3 brow-ряда справа; заголовок+вступление по центру сверху</td></tr>
+    <tr><td><b>Science</b></td><td>коллаж + аккордеоны стопкой (свёрнуты)</td><td>2 кол: коллаж слева (sticky) / пункты справа в одном <code>.mech-pts</code>; аккордеоны раскрыты (JS), шеврон скрыт</td></tr>
+    <tr><td><b>Before/After · Compare</b></td><td>как есть</td><td>контейнер ~720, по центру</td></tr>
+    <tr><td><b>Instruction</b></td><td>скролл-карусель шагов</td><td>3 шага в ряд, grid (max 960)</td></tr>
+    <tr><td><b>Offer</b></td><td>стопка по центру</td><td>контейнер; <code>&gt; * margin-inline:auto</code> (гарантия съезжала влево из-за <code>margin:20px 0</code>)</td></tr>
+    <tr><td><b>FAQ · Reviews · Close</b></td><td>как есть</td><td>контейнер; reviews чуть уже (~700) для воздуха</td></tr>
+    <tr><td><b>Спайн</b></td><td>есть (бегущий кружок+текст)</td><td>есть (как у Calm Wrap), по центру над телом</td></tr>
+  </table>
+
+  <div class="open">🔴 <b>ОТКРЫТО (на следующую сессию):</b> кнопка добавляет в корзину, но всё ещё <b>уводит на страницу /cart</b>, а не открывает плашку. Вшили родную форму темы (`&lt;product-form&gt;` + `product-form.js`), требованиям соответствует — но вживую редиректит. Не гадаем: <b>идём в интернет, изучаем Be Yours/Shopify</b>, решаем правильно. Также: реальные фото в галерею; привести Calm Wrap к той же кнопке.</div>
+
+  <footer>Karate Cat desktop blueprint · 2026-06-19 · спека = <a href="DESKTOP-SPEC.md">DESKTOP-SPEC.md</a> · мобайл-источник = <code>karate-kitty/index.html</code></footer>
+</body>
+</html>
