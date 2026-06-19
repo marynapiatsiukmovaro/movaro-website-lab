@@ -121,6 +121,10 @@ section{padding:60px 24px}
 .price-row .now{font-size:33px;font-weight:600;font-family:'Fraunces'}
 .price-row .was{color:var(--muted);text-decoration:line-through;font-size:18px}
 .price-row .pill-save{font-family:'Jost';font-size:11px;font-weight:600;color:var(--sage);background:var(--sage-tint);padding:4px 10px;border-radius:var(--pill)}
+/* smaller cents — reads as a clean 2-digit price, not a big 4-digit number */
+.ct{font-size:.56em;font-weight:inherit;vertical-align:.42em;letter-spacing:0}
+.opt .o-price .ct{font-size:.62em;vertical-align:.35em}
+.sticky .sp .ct{font-size:.6em;vertical-align:.4em}
 .under-cta{margin-top:15px}
 .under-cta .row{display:flex;align-items:center;justify-content:center;gap:20px;font-size:11.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em}
 .pay{display:flex;gap:6px;justify-content:center;margin-top:15px;flex-wrap:wrap}
@@ -160,7 +164,14 @@ section{padding:60px 24px}
 .lead-h{font-size:32px;font-weight:500;margin:12px 0 16px;letter-spacing:-.015em}
 .lead-p{font-size:16px;color:var(--ink-soft)}
 .lead-p b{color:var(--ink)}
-.tape{aspect-ratio:4/5;margin:26px 0}
+.tape{aspect-ratio:3/2;margin:24px 0}
+/* hotspots — tap "+" dots reveal how it works (ported from Cat Wrap) */
+.hotspot{position:absolute;z-index:6;width:26px;height:26px;border-radius:50%;background:var(--sage);border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.22);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Jost';font-weight:700;font-size:14px}
+.hotspot::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--sage);opacity:.55;animation:mvhp 2.2s ease-out infinite}
+.hotspot .tip{position:absolute;bottom:132%;left:50%;transform:translateX(-50%) translateY(6px);background:var(--accent);color:#fff;font-family:'Jost';font-weight:500;font-size:11px;line-height:1.35;padding:8px 12px;border-radius:9px;width:max-content;max-width:165px;opacity:0;pointer-events:none;transition:.2s;text-align:center;z-index:7}
+.hotspot.on .tip{opacity:1;transform:translateX(-50%) translateY(0)}
+.hotspot.on{background:#fff;color:var(--sage)}
+@keyframes mvhp{0%{transform:scale(.8);opacity:.6}100%{transform:scale(1.8);opacity:0}}
 .brow{display:flex;gap:17px;align-items:flex-start;margin-top:34px}
 .brow:nth-child(even){flex-direction:row-reverse}
 .brow .ill{flex-shrink:0;width:120px;aspect-ratio:3/4}
@@ -458,7 +469,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <div class="cred"><span>🥊 Cats go feral for it</span><span>🐾 Scratch-free for you</span><span>🇺🇸 Ships from the US</span></div>
 
     <!-- PRICE high — cold buyer scans photo → price first -->
-    <div class="price-row"><span class="now" id="px-now">$59.99</span><span class="was" id="px-was">$109.99</span><span class="pill-save" id="px-save">Save $50</span></div>
+    <div class="price-row"><span class="now" id="px-now">$59<span class="ct">.99</span></span><span class="was" id="px-was">$109<span class="ct">.99</span></span><span class="pill-save" id="px-save">Save $50</span></div>
 
     <p class="promise">The 15-minute fight your cat's been begging for. 🥊 Give them the pounce-and-wrestle play they go wild for — pure feline joy — and <b class="hl">your hands stay scratch-free.</b></p>
 
@@ -486,10 +497,10 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <div id="bundle">
       <div class="opt sel" data-price="59.99" data-was="109.99" data-label="Wrestle Kit"><span class="save-tag">+$80 free</span><div class="rb"></div>
         <div class="o-main"><b>Wrestle Kit · most popular</b><small>Karate Cat puppet + 2nd toy + bonding guide + gift box</small></div>
-        <div class="o-price"><b>$59.99</b><s>$109.99</s></div></div>
+        <div class="o-price"><b>$59<span class="ct">.99</span></b><s>$109<span class="ct">.99</span></s></div></div>
       <div class="opt" data-price="44.99" data-was="69.99" data-label="Single"><div class="rb"></div>
         <div class="o-main"><b>Single Puppet</b><small>Just the Movaro Karate Cat</small></div>
-        <div class="o-price"><b>$44.99</b><s>$69.99</s></div></div>
+        <div class="o-price"><b>$44<span class="ct">.99</span></b><s>$69<span class="ct">.99</span></s></div></div>
     </div>
 
     <!-- SIZE — one universal size; range hidden, no size-guide (Marina) -->
@@ -548,7 +559,11 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <h2 class="lead-h reveal">The 15-minute fight your cat's been begging for.</h2>
     <p class="lead-p reveal">Under every couch-napping cat is a little hunter that needs to pounce, chase and wrestle something. With nowhere to aim it, that energy comes out as 4am zoomies, shredded furniture and ambushed ankles. The Karate Cat finally gives it those 15 minutes — your cat pounces, bunny-kicks and <b class="hl">"wins" to their heart's content</b>, and every claw lands on the padded sleeve, not on you.</p>
 
-    <div class="ill tape reveal"><div class="scene"><svg viewBox="0 0 100 80"><rect x="8" y="50" width="58" height="22" rx="11" transform="rotate(-12 37 61)" fill="#3E5C5A"/><ellipse cx="58" cy="38" rx="18" ry="15" fill="#D98A52"/><path d="M43 23 l-3 -11 l10 6Z M73 23 l3 -11 l-10 6Z" fill="#D98A52"/><circle cx="51" cy="36" r="2.2" fill="#21201C"/><circle cx="63" cy="36" r="2.2" fill="#21201C"/><g transform="translate(26 30)"><ellipse cx="0" cy="0" rx="14" ry="11" fill="#C8BAA3"/><path d="M-11 4 l-9 5 M-10 -3 l-9 1" stroke="#C8BAA3" stroke-width="4" stroke-linecap="round"/></g></svg></div><span class="ph-tag">Photo → owner wearing it, cat mid-pounce (real shot later)</span></div>
+    <div class="ill tape reveal"><div class="scene"><svg viewBox="0 0 100 80"><rect x="8" y="50" width="58" height="22" rx="11" transform="rotate(-12 37 61)" fill="#3E5C5A"/><ellipse cx="58" cy="38" rx="18" ry="15" fill="#D98A52"/><path d="M43 23 l-3 -11 l10 6Z M73 23 l3 -11 l-10 6Z" fill="#D98A52"/><circle cx="51" cy="36" r="2.2" fill="#21201C"/><circle cx="63" cy="36" r="2.2" fill="#21201C"/><g transform="translate(26 30)"><ellipse cx="0" cy="0" rx="14" ry="11" fill="#C8BAA3"/><path d="M-11 4 l-9 5 M-10 -3 l-9 1" stroke="#C8BAA3" stroke-width="4" stroke-linecap="round"/></g></svg></div><span class="chip" style="top:14px;left:50%;transform:translateX(-50%)">👆 Tap the + dots to see how it works</span>
+      <button class="hotspot" style="top:62%;left:28%" aria-label="sleeve">+<span class="tip">🥊 Padded sleeve — claws &amp; bites land here, not your skin</span></button>
+      <button class="hotspot" style="top:38%;left:62%" aria-label="puppet">+<span class="tip">🐾 Soft plush puppet your cat loves to wrestle</span></button>
+      <button class="hotspot" style="top:70%;left:52%" aria-label="hand">+<span class="tip">🙌 Your hand inside — you lead the play</span></button>
+      <span class="ph-tag">Photo → owner wearing it, cat mid-pounce (real shot later)</span></div>
 
     <div class="brow reveal">
       <div class="ill"><div class="scene"><svg viewBox="0 0 90 120"><rect x="22" y="60" width="46" height="50" rx="22" fill="#3E5C5A"/><ellipse cx="45" cy="44" rx="24" ry="20" fill="#D98A52"/><path d="M25 26 l-3 -13 l12 7Z M65 26 l3 -13 l-12 7Z" fill="#D98A52"/></svg></div></div>
@@ -622,7 +637,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
         <span class="ph-tag">Brand photo → the people behind Movaro (TBD)</span>
       </div>
       <div class="brand-body">
-        <p><b>We're cat people first.</b> Movaro started because we were tired of choosing between a happy, played-out cat and arms that didn't look like a scratch-post — so we made the toy we wished existed. The first time we tried our own prototype, our spiciest tester went full feral, then flopped over purring — and we were <b>hooked.</b> Not right for your cat? We'll make it right. A question? Write to <b>support@movaro.com</b> — a real person answers, usually same day.</p>
+        <p><b>We're cat people first.</b> Movaro started with this very toy — we were tired of choosing between a happy, played-out cat and arms that looked like a scratch-post, so we built the one we wished existed. Not right for your cat? We'll make it right — write to <b>support@movaro.com</b> and a real person answers, usually same day.</p>
         <div class="brand-trust"><span>🐾 Play, not aggression — it aims the instinct at the toy, not you</span><span>💛 30-day guarantee</span></div>
       </div>
     </div>
@@ -756,12 +771,13 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 
   // ---- bundle -> price ----
   var state={price:59.99,was:109.99,label:'Wrestle Kit'};
+  function money(v){var p=(''+v).split('.');return '$'+p[0]+'<span class="ct">.'+((p[1]||'00')+'00').slice(0,2)+'</span>';}
   function fmt(){
     var save=Math.round(state.was-state.price);
-    document.getElementById('px-now').textContent='$'+state.price;
-    document.getElementById('px-was').textContent='$'+state.was;
+    document.getElementById('px-now').innerHTML=money(state.price);
+    document.getElementById('px-was').innerHTML=money(state.was);
     document.getElementById('px-save').textContent='Save $'+save;
-    document.getElementById('st-px').innerHTML='<b>$'+state.price+'</b><s>$'+state.was+'</s>';
+    document.getElementById('st-px').innerHTML='<b>'+money(state.price)+'</b><s>'+money(state.was)+'</s>';
     document.getElementById('st-lbl').textContent=state.label;
   }
   document.querySelectorAll('#bundle .opt').forEach(function(o){
@@ -781,6 +797,9 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   // ---- scroll reveal ----
   var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // hotspots — tap a + dot to reveal a tip
+  document.querySelectorAll('.hotspot').forEach(function(h){h.addEventListener('click',function(e){e.preventDefault();var was=h.classList.contains('on');document.querySelectorAll('.hotspot').forEach(function(x){x.classList.remove('on');});if(!was)h.classList.add('on');});});
 
   fmt();
 </script>
