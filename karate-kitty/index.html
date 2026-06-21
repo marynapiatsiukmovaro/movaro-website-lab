@@ -184,6 +184,12 @@ section{padding:60px 24px}
 .kab .cmp .bad .big{color:#d9503e}.kab .cmp .good .big{color:#2f7a73}
 .kab .cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:9px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
 .kab .bcap{text-align:center;font-family:'Jost';font-size:12px;font-weight:600;color:var(--accent-deep);margin:10px 0 2px}
+/* about выгода row = heading + designed mini-frame (overlaid text) + paragraph + proof (both, per blueprint brow rows) */
+.abv{margin-top:34px}
+.abv .abv-h{font-size:21px;font-weight:500;text-align:center;margin-bottom:12px;font-family:'Fraunces',Georgia,serif}
+.abv .abv-p{font-size:14px;color:var(--ink-soft);margin-top:14px;text-align:center;line-height:1.55}
+.abv .abv-p b{color:var(--ink)}
+.abv .abv-proof{display:flex;align-items:center;justify-content:center;gap:6px;font-family:'Jost';font-size:12px;color:var(--sage);margin-top:10px;font-weight:600}
 
 /* buy-box */
 .buybox{background:var(--paper);padding-top:30px;padding-bottom:44px}
@@ -687,9 +693,9 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
       <button class="hotspot" style="top:38%;left:62%" aria-label="puppet">+<span class="tip">🐾 Soft plush puppet your cat loves to wrestle</span></button>
       <button class="hotspot" style="top:70%;left:52%" aria-label="hand">+<span class="tip">🙌 Your hand inside — you lead the play</span></button></div>
 
-    <div class="kab reveal" style="margin-top:32px">
-      <h3 style="font-size:21px;font-weight:500;text-align:center;margin-bottom:12px">Pure joy for your cat</h3>
-      <div class="mini"><div class="col2">
+    <div class="abv reveal">
+      <h3 class="abv-h">Pure joy for your cat</h3>
+      <div class="kab"><div class="mini"><div class="col2">
         <div class="cc left">
           <div class="cell" style="background-image:url('../kk-photos/E3.jpg?v=2');background-position:50% 35%"></div>
           <div class="cell" style="background-image:url('../kk-photos/E2.jpg?v=2');background-position:50% 40%"></div>
@@ -702,24 +708,30 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
         </div>
         <div class="mid"></div>
         <div class="cap"><span>Bored cat → happy hunter</span></div>
-      </div></div>
+      </div></div></div>
+      <p class="abv-p">This isn't a toy they sniff once and abandon on the floor. It's full-contact, pounce-and-wrestle play — the thing cats love most — so they <b class="hlw">light up, go feral, and come back for it every day.</b></p>
+      <span class="abv-proof">● The play your cat actually wants</span>
     </div>
-    <div class="kab reveal" style="margin-top:32px">
-      <h3 style="font-size:21px;font-weight:500;text-align:center;margin-bottom:12px">And you stop being the chew toy</h3>
-      <div class="mini"><div class="use" style="background-image:url('../kk-photos/C5.jpg?v=2');background-position:50% 45%"><div class="gt"></div><div class="gb"></div>
+    <div class="abv reveal">
+      <h3 class="abv-h">And you stop being the chew toy</h3>
+      <div class="kab"><div class="mini"><div class="use" style="background-image:url('../kk-photos/C5.jpg?v=2');background-position:50% 45%"><div class="gt"></div><div class="gb"></div>
         <div class="blk top"><span class="pill r">They bite &amp; kick hard 🥊</span></div>
         <div class="blk bot"><span class="pill t">Your hands stay safe</span><span class="wt">Padded sleeve takes the claws &amp; kicks — not you.</span></div>
-      </div></div>
+      </div></div></div>
+      <p class="abv-p">A bored, under-played cat takes it out on <i>you</i> — the ankle ambush, the bite mid-pet. The padded sleeve gives all that energy a target that isn't your hands, so you can finally play rough and walk away <b class="hl">without a single scratch.</b></p>
+      <span class="abv-proof">● Padded sleeve — they bite the toy, not you</span>
     </div>
-    <div class="kab reveal" style="margin-top:32px">
-      <h3 style="font-size:21px;font-weight:500;text-align:center;margin-bottom:12px">Two toys, one smart kit</h3>
-      <div class="mini"><div class="money" style="background-image:url('../kk-photos/C8.jpg?v=2');background-position:50% 35%">
+    <div class="abv reveal">
+      <h3 class="abv-h">Two toys, one smart kit</h3>
+      <div class="kab"><div class="mini"><div class="money" style="background-image:url('../kk-photos/C8.jpg?v=2');background-position:50% 35%">
         <div class="cmp">
           <div class="col bad"><div class="clbl">Pointless toys</div><div class="big">$500<small> wasted</small></div></div>
           <div class="col good"><div class="clbl">Karate Cat</div><div class="big">$59.99<small> once</small></div></div>
           <div class="vs">VS</div>
         </div>
-      </div></div>
+      </div></div></div>
+      <p class="abv-p">Stop buying toy after toy your cat ignores. The Wrestle Kit packs <b class="hlw">two different toys + a bonding guide for $59.99</b> — about what you'd waste on toys they snub anyway, except your cat actually loves these.</p>
+      <span class="abv-proof">● More play, less money</span>
     </div>
   </section>
 
