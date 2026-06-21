@@ -90,6 +90,100 @@ section{padding:60px 24px}
 .g-thumbs .ill{flex:1;aspect-ratio:1;border-radius:9px;cursor:pointer;transition:outline .15s}
 .g-thumbs .ill.on{outline:2px solid var(--ink);outline-offset:-2px}
 .g-thumbs .scene{position:absolute;inset:0}.g-thumbs .scene svg{width:66%;height:66%}
+.g-thumbs .ill.photo{background-size:cover;background-position:center}
+/* ---- gallery frames: REAL photos + overlays (scoped .kg) — ported from approved karate-gallery mock v4 ---- */
+.kg{width:100%;height:100%}
+.kg .ph,.kg .col2,.kg .use,.kg .moneywrap,.kg .grid4,.kg .specf{position:relative;width:100%;height:100%;background-size:cover;overflow:hidden}
+.kg .scrim-t{position:absolute;left:0;right:0;top:0;height:40%;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,0))}
+.kg .scrim-b{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.kg .star{position:absolute;top:11px;right:12px;font-size:11px;color:#fff;font-weight:700;text-shadow:0 1px 5px rgba(0,0,0,.7);z-index:5}.kg .star .s{color:#E8A93D}
+.kg .kick{position:absolute;top:12px;left:0;right:0;text-align:center;z-index:4;font-family:'Jost';font-weight:800;font-size:12px;letter-spacing:.22em;color:#ffd9a8;text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.kg .pains{position:absolute;left:14px;right:14px;top:32px;z-index:3;text-align:center}
+.kg .pains .pl{display:block;font-weight:700;font-size:17px;color:#fff;text-shadow:0 2px 9px rgba(0,0,0,.8);margin:4px 0}.kg .pains .no{color:#ff7a5c;font-weight:800}
+.kg .plabel{position:absolute;z-index:4}
+.kg .plabel .nm{font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:#fff;text-shadow:0 2px 9px rgba(0,0,0,.9);line-height:1.02;display:block}
+.kg .turn{position:absolute;left:0;right:0;bottom:56px;text-align:center;z-index:4}
+.kg .turn .pill{display:inline-block;background:#2f7a73;color:#fff;font-weight:700;font-size:13px;padding:6px 15px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.kg .chips{position:absolute;left:8px;right:8px;bottom:14px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;z-index:4}
+.kg .chip{position:static;background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-weight:600;font-size:11.5px;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.22);backdrop-filter:none}
+.kg .col2{display:flex}
+.kg .col2 .cc{position:relative;width:50%;display:flex;flex-direction:column}
+.kg .col2 .cell{flex:1;background-size:cover;background-position:center}
+.kg .col2 .tg{position:absolute;top:9px;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;padding:3px 10px;border-radius:999px;z-index:4;box-shadow:0 1px 5px rgba(0,0,0,.3)}
+.kg .col2 .left .tg{left:9px;background:#d9503e}.kg .col2 .right .tg{right:9px;background:#2f7a73}
+.kg .col2 .ovl{position:absolute;left:8px;right:8px;top:50%;transform:translateY(-50%);text-align:center;color:#fff;border-radius:11px;padding:10px 11px;z-index:3;box-shadow:0 3px 12px rgba(0,0,0,.34)}
+.kg .col2 .ovl.pain{background:#d9503e}.kg .col2 .ovl.sol{background:#2f7a73}
+.kg .col2 .ovl .h{font-family:'Fraunces',serif;font-weight:600;font-size:14px;line-height:1.12;display:block}
+.kg .col2 .ovl .s{display:block;font-size:10.5px;margin-top:5px;font-weight:500;line-height:1.28}
+.kg .col2 .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:4}
+.kg .seamadv{position:absolute;left:0;right:0;bottom:12px;display:flex;flex-direction:column;align-items:center;gap:5px;z-index:6}
+.kg .seamadv .l{background:rgba(255,255,255,.95);color:#21201C;border-radius:999px;padding:4px 12px;font-size:10.5px;font-weight:600;box-shadow:0 1px 6px rgba(0,0,0,.25)}.kg .seamadv .l b{color:#2f7a73}
+.kg .use{background-position:50% 45%}
+.kg .use .gt{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.36),rgba(0,0,0,0));z-index:1}
+.kg .use .gb{position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(0deg,rgba(0,0,0,.48),rgba(0,0,0,0));z-index:1}
+.kg .use .blk{position:absolute;left:12px;right:12px;text-align:center;z-index:3}
+.kg .use .blk.top{top:14px}.kg .use .blk.bot{bottom:15px}
+.kg .use .pill{display:inline-block;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.kg .use .pill.r{background:#d9503e}.kg .use .pill.t{background:#2f7a73}
+.kg .use .wt{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11.5px;font-weight:600;margin-top:7px;padding:6px 11px;border-radius:10px;line-height:1.3;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+.kg .moneywrap .soc{position:absolute;top:11px;left:0;right:0;text-align:center;z-index:4}
+.kg .moneywrap .soc span{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11px;font-weight:700;padding:5px 13px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.28)}.kg .moneywrap .soc span b{color:#E8A93D}
+.kg .cmp{position:absolute;left:11px;right:11px;display:flex;gap:24px;z-index:3}
+.kg .cmp.bot{bottom:12px}
+.kg .cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:12px;padding:9px 11px;box-shadow:0 3px 13px rgba(0,0,0,.3);text-align:center}
+.kg .cmp .col .hd{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.kg .cmp .bad .hd{color:#d9503e}.kg .cmp .good .hd{color:#2f7a73}
+.kg .cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:23px;line-height:1;margin:3px 0 4px}
+.kg .cmp .col .big small{font-size:11px;font-weight:600}
+.kg .cmp .bad .big{color:#d9503e}.kg .cmp .good .big{color:#2f7a73}
+.kg .cmp .it{font-size:9.5px;color:#3a352c;font-weight:500;line-height:1.2}
+.kg .cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.kg .grid4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;background:#fff}
+.kg .grid4 .g{position:relative;background-size:cover;background-position:center}
+.kg .grid4 .g .lab{position:absolute;background:rgba(47,122,115,.94);color:#fff;font-weight:600;font-size:10px;padding:3px 8px;border-radius:6px;z-index:3}
+.kg .grid4 .g.tl .lab{top:6px;left:6px}.kg .grid4 .g.tr .lab{top:6px;right:6px}.kg .grid4 .g.bl .lab{bottom:6px;left:6px}.kg .grid4 .g.br .lab{bottom:6px;right:6px}
+.kg .grid4 .veil5{position:absolute;inset:0;background:rgba(20,30,28,.22);z-index:2}
+.kg .grid4 .ofc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74%;background:rgba(255,255,255,.97);border-radius:13px;padding:11px 13px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
+.kg .grid4 .ofc .nm{font-family:'Fraunces',serif;font-weight:600;font-size:15px;color:#2f7a73}
+.kg .grid4 .ofc .pr{margin:5px 0 6px}.kg .grid4 .ofc .pr .o{color:#9a9488;text-decoration:line-through;font-size:13px;margin-right:6px}.kg .grid4 .ofc .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:24px;color:#21201C}
+.kg .grid4 .ofc .save{display:inline-block;background:#E8A93D;color:#fff;font-size:9px;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.kg .grid4 .ofc .divln{height:1px;background:#ececec;margin:8px 2px}
+.kg .grid4 .ofc .giftrow{display:flex;gap:8px;justify-content:center;margin:2px 0 7px}
+.kg .grid4 .ofc .gi{display:flex;align-items:center;gap:6px;background:#F2F7F5;border:1px solid #d6e4e0;border-radius:9px;padding:4px 8px}
+.kg .grid4 .ofc .gi .th{width:30px;height:30px;border-radius:6px;background-size:cover;background-position:center;flex-shrink:0}
+.kg .grid4 .ofc .gi .gx b{font-size:10px;color:#21201C;line-height:1.1;display:block}
+.kg .grid4 .ofc .gi .gx small{font-size:9px;color:#2f7a73;font-weight:800}
+.kg .grid4 .ofc .guar{font-size:10.5px;font-weight:700;color:#21201C}
+.kg .specf{background-position:50% 42%}
+.kg .specf .hd{position:absolute;top:13px;left:14px;right:14px;text-align:center;color:#2f6b63;font-family:'Fraunces',serif;font-weight:600;font-size:18px;z-index:3;text-shadow:0 1px 6px rgba(255,255,255,.6)}
+.kg .cal{position:absolute;background:rgba(255,255,255,.96);border-radius:999px;padding:5px 10px;font-size:10.5px;font-weight:700;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.18);z-index:4}.kg .cal b{color:#2f7a73}
+/* ---- about benefits: mini-copies of gallery frames 2/3/4 (scoped .kab) — ported from approved karate-about mock v3 ---- */
+.kab .mini{width:78%;margin:0 auto}
+.kab .col2{position:relative;width:100%;aspect-ratio:4/5;display:flex;overflow:hidden;border-radius:4px}
+.kab .col2 .cc{position:relative;width:50%;display:flex;flex-direction:column}
+.kab .col2 .cell{flex:1;background-size:cover;background-position:center}
+.kab .col2 .tg{position:absolute;top:50%;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:4px 12px;border-radius:999px;z-index:4;box-shadow:0 1px 6px rgba(0,0,0,.4)}
+.kab .col2 .left .tg{left:25%;transform:translate(-50%,-50%);background:#d9503e}.kab .col2 .right .tg{left:75%;transform:translate(-50%,-50%);background:#2f7a73}
+.kab .col2 .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:4}
+.kab .col2 .cap{position:absolute;left:8px;right:8px;bottom:10px;text-align:center;z-index:5}
+.kab .col2 .cap span{background:rgba(255,255,255,.96);color:#21201C;font-size:11px;font-weight:700;padding:5px 11px;border-radius:999px;box-shadow:0 1px 6px rgba(0,0,0,.25)}
+.kab .use{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 45%;overflow:hidden;border-radius:4px}
+.kab .use .gt{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.36),transparent);z-index:1}
+.kab .use .gb{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(0deg,rgba(0,0,0,.5),transparent);z-index:1}
+.kab .use .blk{position:absolute;left:12px;right:12px;text-align:center;z-index:3}
+.kab .use .blk.top{top:13px}.kab .use .blk.bot{bottom:14px}
+.kab .use .pill{display:inline-block;font-weight:700;font-size:12.5px;padding:6px 13px;border-radius:999px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.kab .use .pill.r{background:#d9503e}.kab .use .pill.t{background:#2f7a73}
+.kab .use .wt{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11px;font-weight:600;margin-top:6px;padding:5px 10px;border-radius:9px;line-height:1.28;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+.kab .money{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 45%;overflow:hidden;border-radius:4px}
+.kab .cmp{position:absolute;left:10px;right:10px;top:12px;display:flex;gap:22px;z-index:3}
+.kab .cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:11px;padding:8px 9px;box-shadow:0 3px 12px rgba(0,0,0,.3);text-align:center}
+.kab .cmp .col .hd{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.kab .cmp .bad .hd{color:#d9503e}.kab .cmp .good .hd{color:#2f7a73}
+.kab .cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:20px;line-height:1;margin:2px 0 0}.kab .cmp .col .big small{font-size:10px;font-weight:600}
+.kab .cmp .bad .big{color:#d9503e}.kab .cmp .good .big{color:#2f7a73}
+.kab .cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:9px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.kab .bcap{text-align:center;font-family:'Jost';font-size:12px;font-weight:600;color:var(--accent-deep);margin:10px 0 2px}
 
 /* buy-box */
 .buybox{background:var(--paper);padding-top:30px;padding-bottom:44px}
@@ -392,108 +486,100 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
       <button class="g-arrow next" onclick="gnav(1)" aria-label="next">›</button>
       <div class="g-carousel" id="gcar">
 
-        <!-- slide 1: HOOK -->
-        <div class="g-slide">
-          <span class="stg">Photo 1 · HOOK · funny feral demo</span>
-          <div class="scene"><svg viewBox="0 0 100 100" fill="none">
-            <!-- forearm sleeve from bottom-left -->
-            <rect x="2" y="64" width="56" height="26" rx="13" transform="rotate(-20 30 77)" fill="#3E5C5A"/>
-            <!-- puppet cat head (orange) at sleeve end -->
-            <g transform="translate(52 40)"><ellipse cx="0" cy="6" rx="17" ry="15" fill="#D98A52"/><path d="M-14 -6 l-3 -12 l11 6Z M14 -6 l3 -12 l-11 6Z" fill="#D98A52"/><circle cx="-6" cy="3" r="2.1" fill="#21201C"/><circle cx="6" cy="3" r="2.1" fill="#21201C"/><path d="M-2 9 h4 l-2 3Z" fill="#21201C"/><path d="M-17 7 h-7 M-17 11 h-6 M17 7 h7 M17 11 h6" stroke="#fff" stroke-width="1" stroke-linecap="round"/></g>
-            <!-- cat bunny-kicking (taupe) -->
-            <g transform="translate(70 70)"><ellipse cx="0" cy="0" rx="15" ry="11" fill="#C8BAA3"/><circle cx="-13" cy="-6" r="7" fill="#C8BAA3"/><path d="M-17 -11 l-2 -6 l5 3Z M-11 -12 l1 -6 l3 5Z" fill="#C8BAA3"/><path d="M10 -7 l9 -6 M12 0 l10 -2" stroke="#C8BAA3" stroke-width="4" stroke-linecap="round"/></g>
-            <!-- impact star -->
-            <path d="M45 34 l3 6 l6 -2 l-3 6 l4 5 l-7 0 l-2 6 l-3 -6 l-7 1 l4 -6 l-3 -5 l6 1Z" fill="#D7A94E" opacity=".9"/>
-          </svg></div>
-          <div class="g-over">
-            <div class="eb">★★★★★ Movaro Karate Cat</div>
-            <h1>Let your cat go full feral.</h1>
-            <p>The pounce-and-wrestle fight they've been begging for — and not a scratch on you.</p>
-            <div class="g-chips"><span>🥊 Cats go feral for it</span><span>🐾 Scratch-free</span><span>🎂 Any age</span></div>
+        <!-- slide 1: HOOK (B7 + No-list + arrow → puppet) -->
+        <div class="g-slide"><div class="kg">
+          <div class="ph" style="background-image:url('../kk-photos/B7.jpg?v=2');background-position:50% 48%"><div class="scrim-t"></div><div class="scrim-b"></div>
+            <div class="star"><span class="s">★</span> 4.8</div>
+            <div class="kick">ENOUGH.</div>
+            <div class="pains"><span class="pl"><span class="no">No</span> scratched hands</span><span class="pl"><span class="no">No</span> bored, restless cat</span><span class="pl"><span class="no">No</span> $100/mo on toys they ignore</span></div>
+            <div class="plabel" style="left:13px;bottom:60px;text-align:left"><span class="nm">Movaro<br>Karate Cat</span><svg width="78" height="46" viewBox="0 0 78 46" fill="none"><path d="M6 8 Q56 6 70 40" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M70 40 L66 28 M70 40 L55 42" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+            <div class="turn"><span class="pill">There's a better way ↓</span></div>
+            <div class="chips"><span class="chip">🥊 Cats go feral</span><span class="chip">🐾 No scratches</span><span class="chip">💸 Buy once</span></div>
           </div>
-        </div>
+        </div></div>
 
-        <!-- slide 2: DEMO — before/after arm (pain red -> solution teal) -->
-        <div class="g-slide">
-          <span class="stg">Photo 2 · DEMO · scratched arm → calm</span>
-          <div class="scene" style="background:linear-gradient(150deg,#EAE3D4,#DCD2BF)"><svg viewBox="0 0 100 100" fill="none">
-            <!-- left: bare scratched arm -->
-            <g><rect x="6" y="20" width="22" height="60" rx="11" fill="#E8C9A8"/><path d="M12 34 l10 8 M11 46 l11 7 M13 58 l9 6" stroke="#C0492F" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="14" r="4" fill="#C0492F"/><path d="M17 9 v-4 M13 12 l-3 -2 M21 12 l3 -2" stroke="#C0492F" stroke-width="1.4" stroke-linecap="round"/></g>
-            <!-- divider -->
-            <path d="M50 12 v76" stroke="#fff" stroke-width="2" stroke-dasharray="3 4"/>
-            <!-- right: arm in sleeve + happy puppet, clean -->
-            <g><rect x="62" y="20" width="24" height="60" rx="12" fill="#3E5C5A"/><circle cx="74" cy="14" r="4" fill="#3E5C5A"/><ellipse cx="74" cy="40" rx="11" ry="9" fill="#D98A52"/><path d="M65 31 l-2 -7 l6 4Z M83 31 l2 -7 l-6 4Z" fill="#D98A52"/><circle cx="70" cy="39" r="1.5" fill="#21201C"/><circle cx="78" cy="39" r="1.5" fill="#21201C"/></g>
-          </svg></div>
-          <div class="g-over">
-            <h2>Real play. <span style="color:#8FD3C8">Zero scratches.</span></h2>
-            <p>Every claw and bunny-kick lands on the padded sleeve — never on your skin.</p>
+        <!-- slide 2: COLLAGE before/after (E3/E2 → C7/C4, Before/After on the seam) -->
+        <div class="g-slide"><div class="kg">
+          <div class="col2">
+            <div class="cc left">
+              <div class="cell" style="background-image:url('../kk-photos/E3.jpg?v=2');background-position:50% 35%"></div>
+              <div class="cell" style="background-image:url('../kk-photos/E2.jpg?v=2');background-position:50% 40%"></div>
+              <span class="tg">Before</span>
+              <div class="ovl pain"><span class="h">Bored. Ignoring everything.</span><span class="s">Same naps, same toys — then 3 a.m. zoomies because that hunter has nothing to chase.</span></div>
+            </div>
+            <div class="cc right">
+              <div class="cell" style="background-image:url('../kk-photos/C7.jpg?v=2');background-position:50% 25%"></div>
+              <div class="cell" style="background-image:url('../kk-photos/C4.jpg?v=2');background-position:50% 35%"></div>
+              <span class="tg">After</span>
+              <div class="ovl sol"><span class="h">A happy little hunter</span><span class="s">Real prey-drive play — they stalk, pounce and wrestle it out, then finally switch off.</span></div>
+            </div>
+            <div class="mid"></div>
+            <div class="seamadv"><span class="l">🥊 <b>Real wrestle play</b></span><span class="l">🐾 <b>Hands stay safe</b></span><span class="l">😴 <b>Burns the zoomies</b></span></div>
           </div>
-        </div>
+        </div></div>
 
-        <!-- slide 3: CONTACT PLAY -->
-        <div class="g-slide">
-          <span class="stg">Photo 3 · contact play (hand = the toy)</span>
-          <div class="scene"><svg viewBox="0 0 100 100" fill="none">
-            <rect x="6" y="58" width="60" height="26" rx="13" transform="rotate(-14 36 71)" fill="#3E5C5A"/>
-            <g transform="translate(58 44)"><ellipse cx="0" cy="4" rx="16" ry="14" fill="#D98A52"/><path d="M-13 -7 l-3 -11 l10 6Z M13 -7 l3 -11 l-10 6Z" fill="#D98A52"/><circle cx="-5" cy="2" r="2" fill="#21201C"/><circle cx="5" cy="2" r="2" fill="#21201C"/><path d="M-2 8 h4 l-2 3Z" fill="#21201C"/></g>
-            <g transform="translate(30 30)"><ellipse cx="0" cy="0" rx="13" ry="10" fill="#C8BAA3"/><circle cx="11" cy="-5" r="6" fill="#C8BAA3"/><path d="M8 -9 l0 -6 l4 4Z M14 -9 l3 -5 l1 5Z" fill="#C8BAA3"/><path d="M-10 4 l-8 5 M-9 -2 l-9 1" stroke="#C8BAA3" stroke-width="3.5" stroke-linecap="round"/></g>
-          </svg></div>
-          <div class="g-over">
-            <h2>Your hand becomes the toy.</h2>
-            <p>Not a toy they bat alone on the floor — the one you and your cat wrestle <i>together</i>.</p>
+        <!-- slide 3: HANDS SAFE (A4) -->
+        <div class="g-slide"><div class="kg">
+          <div class="use" style="background-image:url('../kk-photos/A4.jpg?v=2');background-position:50% 45%"><div class="gt"></div><div class="gb"></div>
+            <div class="blk top"><span class="pill r">They bunny-kick &amp; bite hard 🥊</span></div>
+            <div class="blk bot"><span class="pill t">Your hands stay safe</span><span class="wt">Padded forearm sleeve takes the claws &amp; kicks — your cat fights the toy, not you.</span></div>
           </div>
-        </div>
+        </div></div>
 
-        <!-- slide 4: THE KIT (2nd toy = black cat) -->
-        <div class="g-slide">
-          <span class="stg">Photo 4 · the Wrestle Kit (2 toys)</span>
-          <div class="scene"><svg viewBox="0 0 100 100" fill="none">
-            <!-- orange puppet -->
-            <g transform="translate(34 50)"><rect x="-12" y="6" width="24" height="34" rx="12" fill="#3E5C5A"/><ellipse cx="0" cy="0" rx="16" ry="14" fill="#D98A52"/><path d="M-13 -8 l-3 -11 l10 6Z M13 -8 l3 -11 l-10 6Z" fill="#D98A52"/><circle cx="-5" cy="-1" r="2" fill="#21201C"/><circle cx="5" cy="-1" r="2" fill="#21201C"/></g>
-            <!-- black cat puppet -->
-            <g transform="translate(70 56)"><rect x="-11" y="5" width="22" height="30" rx="11" fill="#2F4A48"/><ellipse cx="0" cy="0" rx="14" ry="12" fill="#3A3632"/><path d="M-11 -7 l-3 -10 l9 5Z M11 -7 l3 -10 l-9 5Z" fill="#3A3632"/><circle cx="-4" cy="-1" r="1.8" fill="#D7A94E"/><circle cx="4" cy="-1" r="1.8" fill="#D7A94E"/></g>
-          </svg></div>
-          <div class="g-over">
-            <h2>Two sparring buddies.</h2>
-            <p>The Wrestle Kit packs a 2nd character — if your cat snubs one, they'll pounce the other.</p>
+        <!-- slide 4: MONEY (B6 + compare at bottom, no dark veil) -->
+        <div class="g-slide"><div class="kg">
+          <div class="moneywrap" style="background-image:url('../kk-photos/B6.jpg?v=2');background-position:45% 32%">
+            <div class="soc"><span>🐾 <b>★ 4.8</b> — cats can't put it down</span></div>
+            <div class="cmp bot">
+              <div class="col bad"><div class="hd">Pointless toys</div><div class="big">$500<small> wasted</small></div><div class="it">Ignored in days · buy another · repeat</div></div>
+              <div class="col good"><div class="hd">Karate Cat</div><div class="big">$59.99<small> once</small></div><div class="it">Interactive · never gets old</div></div>
+              <div class="vs">VS</div>
+            </div>
           </div>
-        </div>
+        </div></div>
 
-        <!-- slide 5: VALUE / OFFER card -->
-        <div class="g-slide">
-          <span class="stg">Photo 5 · value / offer card</span>
-          <div class="scene" style="background:linear-gradient(150deg,#E2E9E7,#CFE0DD)"><svg viewBox="0 0 100 100" fill="none">
-            <rect x="20" y="30" width="60" height="44" rx="6" fill="#D98A52"/><rect x="20" y="30" width="60" height="14" rx="6" fill="#C77F45"/><path d="M50 30 v44 M20 44 h60" stroke="#fff" stroke-width="1.5" opacity=".5"/><path d="M50 30 c-6 -10 -16 -10 -16 -3 c0 5 10 5 16 3Z M50 30 c6 -10 16 -10 16 -3 c0 5 -10 5 -16 3Z" fill="#3E5C5A"/>
-          </svg></div>
-          <div class="g-over">
-            <h2><span style="color:#8FD3C8">$125 value</span>, yours for $59.99.</h2>
-            <p>Puppet + 2nd toy + 15-min bonding guide + premium gift box. Free US shipping.</p>
+        <!-- slide 5: PLAY collage + offer card (2 gifts, photos) -->
+        <div class="g-slide"><div class="kg">
+          <div class="grid4">
+            <div class="g tl" style="background-image:url('../kk-photos/B3.jpg?v=2')"><span class="lab">Pounce</span></div>
+            <div class="g tr" style="background-image:url('../kk-photos/C8.jpg?v=2')"><span class="lab">Snuggle</span></div>
+            <div class="g bl" style="background-image:url('../kk-photos/D1.jpg?v=2')"><span class="lab">Stalk</span></div>
+            <div class="g br" style="background-image:url('../kk-photos/F1.jpg?v=2')"><span class="lab">Play together</span></div>
+            <div class="veil5"></div>
+            <div class="ofc">
+              <div class="nm">The Wrestle Kit</div>
+              <div class="pr"><span class="o">$109.99</span><span class="n">$59.99</span><span class="save">Save $50</span></div>
+              <div class="divln"></div>
+              <div class="giftrow">
+                <div class="gi"><span class="th" style="background-image:url('../kk-photos/H4.jpg?v=2')"></span><span class="gx"><b>2nd Karate Cat</b><small>FREE</small></span></div>
+                <div class="gi"><span class="th" style="background-image:url('../kk-photos/H1.jpg?v=2')"></span><span class="gx"><b>Bonding guide</b><small>FREE</small></span></div>
+              </div>
+              <div class="guar">🛡️ 30-day Go-Feral Guarantee</div>
+            </div>
           </div>
-        </div>
+        </div></div>
 
-        <!-- slide 6: SPEC -->
-        <div class="g-slide">
-          <span class="stg">Photo 6 · spec (clean, on white)</span>
-          <div class="scene" style="background:#F4F1EA"><svg viewBox="0 0 100 100" fill="none">
-            <rect x="30" y="46" width="40" height="44" rx="20" fill="#3E5C5A"/><ellipse cx="50" cy="40" rx="22" ry="19" fill="#D98A52"/><path d="M30 26 l-4 -15 l14 8Z M70 26 l4 -15 l-14 8Z" fill="#D98A52"/><circle cx="42" cy="38" r="2.6" fill="#21201C"/><circle cx="58" cy="38" r="2.6" fill="#21201C"/><path d="M47 45 h6 l-3 4Z" fill="#21201C"/>
-            <circle cx="22" cy="40" r="3" fill="#2F7A73"/><circle cx="78" cy="62" r="3" fill="#2F7A73"/><circle cx="50" cy="86" r="3" fill="#2F7A73"/>
-          </svg></div>
-          <div class="g-over">
-            <h2>Built for the fight.</h2>
-            <p>Soft plush puppet on a padded forearm sleeve. One size — fits most adult arms.</p>
+        <!-- slide 6: SPEC (A1 + callouts) -->
+        <div class="g-slide"><div class="kg">
+          <div class="specf" style="background-image:url('../kk-photos/A1.jpg?v=2');background-position:50% 42%">
+            <div class="hd">Movaro Karate Cat — in detail 🥊</div>
+            <span class="cal" style="top:30%;left:8px">🐱 <b>Lifelike puppet face</b></span>
+            <span class="cal" style="top:46%;right:8px">🧸 <b>Soft plush body</b></span>
+            <span class="cal" style="top:66%;left:8px">🛡️ <b>Padded forearm sleeve</b></span>
+            <span class="cal" style="top:80%;right:8px">📏 <b>One size fits all</b></span>
           </div>
-        </div>
+        </div></div>
 
       </div>
       <div class="g-dots" id="gdots"></div>
     </div>
     <div class="g-thumbs" id="gthumbs">
-      <div class="ill on"><div class="scene"><svg viewBox="0 0 40 40"><ellipse cx="20" cy="22" rx="13" ry="11" fill="#D98A52"/><path d="M9 13 l-2 -8 l7 4Z M31 13 l2 -8 l-7 4Z" fill="#D98A52"/><circle cx="15" cy="21" r="1.6" fill="#21201C"/><circle cx="25" cy="21" r="1.6" fill="#21201C"/></svg></div></div>
-      <div class="ill"><div class="scene"><svg viewBox="0 0 40 40"><rect x="8" y="8" width="9" height="24" rx="4" fill="#E8C9A8"/><path d="M11 14 l4 4 M11 22 l4 3" stroke="#C0492F" stroke-width="1.6" stroke-linecap="round"/><rect x="24" y="8" width="9" height="24" rx="4" fill="#3E5C5A"/></svg></div></div>
-      <div class="ill"><div class="scene"><svg viewBox="0 0 40 40"><ellipse cx="24" cy="20" rx="11" ry="9" fill="#D98A52"/><ellipse cx="11" cy="24" rx="8" ry="6" fill="#C8BAA3"/></svg></div></div>
-      <div class="ill"><div class="scene"><svg viewBox="0 0 40 40"><ellipse cx="14" cy="20" rx="9" ry="8" fill="#D98A52"/><ellipse cx="28" cy="22" rx="8" ry="7" fill="#3A3632"/></svg></div></div>
-      <div class="ill"><div class="scene"><svg viewBox="0 0 40 40"><rect x="9" y="13" width="22" height="16" rx="2" fill="#D98A52"/><rect x="9" y="13" width="22" height="5" fill="#C77F45"/></svg></div></div>
-      <div class="ill"><div class="scene"><svg viewBox="0 0 40 40"><rect x="14" y="20" width="12" height="14" rx="6" fill="#3E5C5A"/><ellipse cx="20" cy="17" rx="9" ry="8" fill="#D98A52"/></svg></div></div>
+      <div class="ill photo on" style="background-image:url('../kk-photos/B7.jpg?v=2')"></div>
+      <div class="ill photo" style="background-image:url('../kk-photos/E3.jpg?v=2')"></div>
+      <div class="ill photo" style="background-image:url('../kk-photos/A4.jpg?v=2')"></div>
+      <div class="ill photo" style="background-image:url('../kk-photos/B6.jpg?v=2')"></div>
+      <div class="ill photo" style="background-image:url('../kk-photos/B3.jpg?v=2')"></div>
+      <div class="ill photo" style="background-image:url('../kk-photos/A1.jpg?v=2')"></div>
     </div>
   </section>
 
@@ -523,18 +609,17 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <div class="reassure">🐾 <b>Worried your cat won't play?</b> Most go feral on the very first try — and the Wrestle Kit adds a 2nd toy + a warm-up guide so shy cats get there too. Not playing in 30 days? Full refund.</div>
 
     <!-- VALUE-STACK — gifts shown BEFORE the kit choice (value ≫ price) -->
-    <div class="gift-head">Free with the Wrestle Kit <span class="pv">$80 value</span></div>
+    <div class="gift-head">Free with the Wrestle Kit <span class="pv">$64 value</span></div>
     <div class="gifts">
-      <div class="gift"><span class="g-badge">Free $45</span><div class="ill"><div class="scene" style="background:#ECE7DC"><svg viewBox="0 0 60 60"><rect x="22" y="30" width="16" height="20" rx="8" fill="#3A3632"/><ellipse cx="30" cy="26" rx="11" ry="9" fill="#3A3632"/><path d="M21 18 l-2 -8 l7 4Z M39 18 l2 -8 l-7 4Z" fill="#3A3632"/><circle cx="26" cy="25" r="1.6" fill="#D7A94E"/><circle cx="34" cy="25" r="1.6" fill="#D7A94E"/></svg></div></div><small>2nd toy — black-cat sparring buddy</small></div>
-      <div class="gift"><span class="g-badge">Free $19</span><div class="ill"><div class="scene" style="background:#ECE7DC"><svg viewBox="0 0 60 60"><rect x="18" y="14" width="24" height="32" rx="2" fill="#fff" stroke="#C9BFAE"/><path d="M23 22 h13 M23 28 h13 M23 34 h9" stroke="#6E8B89" stroke-width="2" stroke-linecap="round"/><path d="M42 14 v32 l4 -3 V17Z" fill="#6E8B89"/></svg></div></div><small>15-min Bonding &amp; Warm-Up guide</small></div>
-      <div class="gift"><span class="g-badge">Free $16</span><div class="ill"><div class="scene" style="background:#ECE7DC"><svg viewBox="0 0 60 60"><rect x="16" y="26" width="28" height="22" rx="2" fill="#D98A52"/><rect x="16" y="26" width="28" height="7" fill="#C77F45"/><path d="M30 26 c-5 -8 -13 -8 -13 -2 c0 4 8 4 13 2Z M30 26 c5 -8 13 -8 13 -2 c0 4 -8 4 -13 2Z" fill="#3E5C5A"/></svg></div></div><small>Premium gift box</small></div>
+      <div class="gift"><span class="g-badge">Free $45</span><div class="ill" style="background-image:url('../kk-photos/H4.jpg?v=2');background-size:cover;background-position:center"></div><small>2nd Karate Cat — sparring buddy</small></div>
+      <div class="gift"><span class="g-badge">Free $19</span><div class="ill" style="background-image:url('../kk-photos/H1.jpg?v=2');background-size:cover;background-position:center"></div><small>15-min Bonding &amp; Warm-Up guide</small></div>
     </div>
 
     <!-- OFFERS — kit vs single; +$10 doubles the value = no-brainer -->
     <div class="field-label">Choose your kit</div>
     <div id="bundle">
-      <div class="opt sel" data-price="59.99" data-was="109.99" data-label="Wrestle Kit"><span class="save-tag">+$80 free</span><div class="rb"></div>
-        <div class="o-main"><b>Wrestle Kit · most popular</b><small>Karate Cat puppet + 2nd toy + bonding guide + gift box</small></div>
+      <div class="opt sel" data-price="59.99" data-was="109.99" data-label="Wrestle Kit"><span class="save-tag">+$64 free</span><div class="rb"></div>
+        <div class="o-main"><b>Wrestle Kit · most popular</b><small>Karate Cat puppet + 2nd toy + bonding guide</small></div>
         <div class="o-price"><b>$59<span class="ct">.99</span></b><s>$109<span class="ct">.99</span></s></div></div>
       <div class="opt" data-price="44.99" data-was="69.99" data-label="Single"><div class="rb"></div>
         <div class="o-main"><b>Single Puppet</b><small>Just the Movaro Karate Cat</small></div>
@@ -555,7 +640,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 
     <!-- ACCORDION — so the buyer never leaves for a policy page -->
     <div class="bb-acc">
-      <details><summary>What's in the box <span class="pm">+</span></summary><div class="ans">The Movaro Karate Cat — a soft plush cat-puppet on a padded forearm sleeve. The <b>Wrestle Kit</b> adds a 2nd character (black-cat sparring buddy), the 15-minute Bonding &amp; Warm-Up guide (digital) and our premium gift box. <i>(Exact contents finalised with our supplier — Sourcing.)</i></div></details>
+      <details><summary>What's in the box <span class="pm">+</span></summary><div class="ans">The Movaro Karate Cat — a soft plush cat-puppet on a padded forearm sleeve. The <b>Wrestle Kit</b> adds a 2nd character (a sparring buddy) and the 15-minute Bonding &amp; Warm-Up guide (digital). <i>(Exact contents finalised with our supplier — Sourcing.)</i></div></details>
       <details><summary>Shipping &amp; returns <span class="pm">+</span></summary><div class="ans">Free US shipping, dispatched in 24–48h, typically 5–8 business days. Not feeling it? <b>30-day money-back</b> — and keep the guide as our gift. Questions: support@movaro.com.</div></details>
       <details><summary>Materials &amp; care <span class="pm">+</span></summary><div class="ans">Soft polyester plush puppet on a padded forearm sleeve; one universal size (≈53×22cm), fits most adult arms. Spot-clean and air-dry. Made for play — keep an eye on rough chewers and retire it if it ever tears. <i>(Final materials confirmed with sourcing.)</i></div></details>
     </div>
@@ -574,20 +659,20 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <div class="sect-head reveal"><div class="eyebrow">★★★★★ Real cat parents</div><h2>"My cat lost his MIND (in the best way)."</h2><p>Real owners, real spicy cats — filmed on their own phones, not in a studio.</p></div>
     <div class="scroll reveal">
       <div class="ugc-card">
-        <div class="ill"><div class="scene"><svg viewBox="0 0 90 130"><rect x="22" y="78" width="46" height="40" rx="18" fill="#3E5C5A"/><ellipse cx="45" cy="60" rx="26" ry="22" fill="#D98A52"/><path d="M24 38 l-4 -16 l14 8Z M66 38 l4 -16 l-14 8Z" fill="#D98A52"/><circle cx="37" cy="57" r="3" fill="#21201C"/><circle cx="53" cy="57" r="3" fill="#21201C"/></svg></div></div>
-        <div class="ugc-handle"><span class="dot"></span>@theferalfloof<span class="vf">✓</span></div><div class="ugc-txt">"He bunny-kicked the living daylights out of it for 20 minutes then passed OUT. Worth every penny. #notsponsored"</div></div>
+        <div class="ill" style="background-image:url('../kk-photos/G7.jpg?v=2');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('../kk-photos/G7.jpg?v=2');background-size:cover"></span>@mia.q<span class="vf" style="text-transform:none;color:var(--muted);margin-left:auto">2h</span></div></div>
       <div class="ugc-card">
-        <div class="ill"><div class="scene" style="background:linear-gradient(150deg,#E2E9E7,#CFE0DD)"><svg viewBox="0 0 90 130"><ellipse cx="45" cy="70" rx="30" ry="20" fill="#C8BAA3"/><circle cx="45" cy="48" r="16" fill="#C8BAA3"/><path d="M32 36 l-2 -10 l9 6Z M58 36 l2 -10 l-9 6Z" fill="#C8BAA3"/><path d="M40 50 q5 3 10 0" stroke="#21201C" stroke-width="1.6" fill="none" stroke-linecap="round"/><text x="60" y="34" font-size="14">💤</text></svg></div></div>
-        <div class="ugc-handle"><span class="dot"></span>@momof3cats<span class="vf">✓</span></div><div class="ugc-txt">"Finally something that tires him out before bed. First full night's sleep in months 🙏"</div></div>
+        <div class="ill" style="background-image:url('../kk-photos/G1.jpg?v=2');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('../kk-photos/G1.jpg?v=2');background-size:cover"></span>@jess.mariee<span class="vf" style="text-transform:none;color:var(--muted);margin-left:auto">3h</span></div></div>
       <div class="ugc-card">
-        <div class="ill"><div class="scene"><svg viewBox="0 0 90 130"><rect x="10" y="64" width="50" height="22" rx="11" transform="rotate(-16 35 75)" fill="#3E5C5A"/><ellipse cx="56" cy="50" rx="20" ry="17" fill="#D98A52"/><path d="M40 34 l-3 -12 l11 6Z M72 34 l3 -12 l-11 6Z" fill="#D98A52"/><ellipse cx="35" cy="88" rx="16" ry="12" fill="#3A3632"/></svg></div></div>
-        <div class="ugc-handle"><span class="dot"></span>@biscuit.the.menace<span class="vf">✓</span></div><div class="ugc-txt">"My hands used to be in PIECES after playtime. Now he attacks the puppet like it owes him money and I don't bleed 😹"</div></div>
+        <div class="ill" style="background-image:url('../kk-photos/G2.jpg?v=2');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('../kk-photos/G2.jpg?v=2');background-size:cover"></span>@ryan.kessler<span class="vf" style="text-transform:none;color:var(--muted);margin-left:auto">5h</span></div></div>
       <div class="ugc-card">
-        <div class="ill"><div class="scene"><svg viewBox="0 0 90 130"><ellipse cx="45" cy="66" rx="28" ry="20" fill="#D98A52"/><circle cx="45" cy="46" r="16" fill="#D98A52"/><path d="M32 34 l-2 -10 l9 6Z M58 34 l2 -10 l-9 6Z" fill="#D98A52"/><circle cx="39" cy="46" r="2.4" fill="#21201C"/><circle cx="51" cy="46" r="2.4" fill="#21201C"/></svg><span class="ugc-vtag">▶ 0:38</span><span class="ugc-play"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="#21201C"><path d="M8 5v14l11-7z"/></svg></span></span></div></div>
-        <div class="ugc-handle"><span class="dot"></span>@oldmancat_leo<span class="vf">✓</span></div><div class="ugc-txt">"Watch — my 14-year-old 'lazy' cat went FULL feral. Didn't think he had it in him 🎥"</div></div>
+        <div class="ill" style="background-image:url('../kk-photos/G5.jpg?v=2');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('../kk-photos/G5.jpg?v=2');background-size:cover"></span>@amanda.lewis<span class="vf" style="text-transform:none;color:var(--muted);margin-left:auto">1d</span></div></div>
       <div class="ugc-card">
-        <div class="ill"><div class="scene" style="background:linear-gradient(150deg,#F4E5D8,#E7D2BF)"><svg viewBox="0 0 90 130"><ellipse cx="45" cy="64" rx="26" ry="19" fill="#3A3632"/><circle cx="45" cy="46" r="15" fill="#3A3632"/><path d="M33 34 l-2 -10 l9 6Z M57 34 l2 -10 l-9 6Z" fill="#3A3632"/><circle cx="40" cy="46" r="2.2" fill="#D7A94E"/><circle cx="50" cy="46" r="2.2" fill="#D7A94E"/></svg></div></div>
-        <div class="ugc-handle"><span class="dot"></span>@shy.cat.sasha<span class="vf">✓</span></div><div class="ugc-txt">"Honestly she ignored it day one. I rubbed the warm-up tips, by day three she was obsessed. Stick with it!"</div></div>
+        <div class="ill" style="background-image:url('../kk-photos/G6.jpg?v=2');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('../kk-photos/G6.jpg?v=2');background-size:cover"></span>@sofia.r<span class="vf" style="text-transform:none;color:var(--muted);margin-left:auto">1d</span></div></div>
     </div>
   </section>
 
@@ -597,29 +682,44 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <h2 class="lead-h reveal">The 15-minute fight your cat's been begging for.</h2>
     <p class="lead-p reveal">Under every couch-napping cat is a little hunter that needs to pounce, chase and wrestle something. With nowhere to aim it, that energy comes out as 4am zoomies, shredded furniture and ambushed ankles. The Karate Cat finally gives it those 15 minutes — your cat pounces, bunny-kicks and <b class="hl">"wins" to their heart's content</b>, and every claw lands on the padded sleeve, not on you.</p>
 
-    <div class="ill tape reveal"><div class="scene"><svg viewBox="0 0 100 80"><rect x="8" y="50" width="58" height="22" rx="11" transform="rotate(-12 37 61)" fill="#3E5C5A"/><ellipse cx="58" cy="38" rx="18" ry="15" fill="#D98A52"/><path d="M43 23 l-3 -11 l10 6Z M73 23 l3 -11 l-10 6Z" fill="#D98A52"/><circle cx="51" cy="36" r="2.2" fill="#21201C"/><circle cx="63" cy="36" r="2.2" fill="#21201C"/><g transform="translate(26 30)"><ellipse cx="0" cy="0" rx="14" ry="11" fill="#C8BAA3"/><path d="M-11 4 l-9 5 M-10 -3 l-9 1" stroke="#C8BAA3" stroke-width="4" stroke-linecap="round"/></g></svg></div><span class="chip" style="top:14px;left:50%;transform:translateX(-50%)">👆 Tap the + dots to see how it works</span>
+    <div class="ill tape reveal" style="background-image:url('../kk-photos/B4.jpg?v=2');background-size:cover;background-position:50% 42%"><span class="chip" style="top:14px;left:50%;transform:translateX(-50%)">👆 Tap the + dots to see how it works</span>
       <button class="hotspot" style="top:62%;left:28%" aria-label="sleeve">+<span class="tip">🥊 Padded sleeve — claws &amp; bites land here, not your skin</span></button>
       <button class="hotspot" style="top:38%;left:62%" aria-label="puppet">+<span class="tip">🐾 Soft plush puppet your cat loves to wrestle</span></button>
-      <button class="hotspot" style="top:70%;left:52%" aria-label="hand">+<span class="tip">🙌 Your hand inside — you lead the play</span></button>
-      <span class="ph-tag">Photo → owner wearing it, cat mid-pounce (real shot later)</span></div>
+      <button class="hotspot" style="top:70%;left:52%" aria-label="hand">+<span class="tip">🙌 Your hand inside — you lead the play</span></button></div>
 
-    <div class="brow reveal">
-      <div class="ill"><div class="scene"><svg viewBox="0 0 90 120"><rect x="22" y="60" width="46" height="50" rx="22" fill="#3E5C5A"/><ellipse cx="45" cy="44" rx="24" ry="20" fill="#D98A52"/><path d="M25 26 l-3 -13 l12 7Z M65 26 l3 -13 l-12 7Z" fill="#D98A52"/></svg></div></div>
-      <div class="bt"><h3>Pure joy for your cat</h3>
-        <p>This isn't a toy they sniff once and abandon on the floor. It's full-contact, pounce-and-wrestle play — the thing cats love most — so they <b class="hlw">light up, go feral, and come back for it every day.</b></p>
-        <span class="proof">● The play your cat actually wants</span></div>
+    <div class="kab reveal" style="margin-top:30px">
+      <h3 style="font-size:21px;font-weight:500;text-align:center;margin-bottom:12px">Pure joy for your cat</h3>
+      <div class="mini"><div class="col2">
+        <div class="cc left">
+          <div class="cell" style="background-image:url('../kk-photos/E3.jpg?v=2');background-position:50% 35%"></div>
+          <div class="cell" style="background-image:url('../kk-photos/E2.jpg?v=2');background-position:50% 40%"></div>
+          <span class="tg">Before</span>
+        </div>
+        <div class="cc right">
+          <div class="cell" style="background-image:url('../kk-photos/C7.jpg?v=2');background-position:50% 25%"></div>
+          <div class="cell" style="background-image:url('../kk-photos/C4.jpg?v=2');background-position:50% 35%"></div>
+          <span class="tg">After</span>
+        </div>
+        <div class="mid"></div>
+        <div class="cap"><span>Bored cat → happy hunter</span></div>
+      </div></div>
     </div>
-    <div class="brow reveal">
-      <div class="ill"><div class="scene" style="background:var(--clay-tint)"><svg viewBox="0 0 90 120"><rect x="30" y="20" width="30" height="80" rx="15" fill="#3E5C5A"/><path d="M38 36 l14 10 M38 54 l14 9 M40 72 l12 8" stroke="#8FD3C8" stroke-width="2.4" stroke-linecap="round"/></svg></div></div>
-      <div class="bt"><h3>And you stop being the chew toy</h3>
-        <p>A bored, under-played cat takes it out on <i>you</i> — the ankle ambush, the bite mid-pet. The padded sleeve gives all that energy a target that isn't your hands, so you can finally play rough and walk away <b class="hl">without a single scratch.</b></p>
-        <span class="proof">● Padded sleeve — they bite the toy, not you</span></div>
+    <div class="kab reveal" style="margin-top:30px">
+      <h3 style="font-size:21px;font-weight:500;text-align:center;margin-bottom:12px">And you stop being the chew toy</h3>
+      <div class="mini"><div class="use" style="background-image:url('../kk-photos/C5.jpg?v=2');background-position:50% 45%"><div class="gt"></div><div class="gb"></div>
+        <div class="blk top"><span class="pill r">They bite &amp; kick hard 🥊</span></div>
+        <div class="blk bot"><span class="pill t">Your hands stay safe</span><span class="wt">Padded sleeve takes the claws &amp; kicks — not you.</span></div>
+      </div></div>
     </div>
-    <div class="brow reveal">
-      <div class="ill"><div class="scene" style="background:var(--sage-tint)"><svg viewBox="0 0 90 120"><ellipse cx="45" cy="34" rx="24" ry="8" fill="#D7A94E"/><rect x="21" y="34" width="48" height="11" fill="#D7A94E"/><ellipse cx="45" cy="45" rx="24" ry="8" fill="#C28F2E"/><rect x="21" y="45" width="48" height="11" fill="#C28F2E"/><ellipse cx="45" cy="56" rx="24" ry="8" fill="#D7A94E"/><text x="34" y="92" font-size="24">🐾</text></svg></div></div>
-      <div class="bt"><h3>Two toys, one smart kit</h3>
-        <p>Stop buying toy after toy your cat ignores. The Wrestle Kit packs <b class="hlw">two different toys + a bonding guide for $59.99</b> — about what you'd waste on toys they snub anyway, except your cat actually loves these.</p>
-        <span class="proof">● More play, less money</span></div>
+    <div class="kab reveal" style="margin-top:30px">
+      <h3 style="font-size:21px;font-weight:500;text-align:center;margin-bottom:12px">Two toys, one smart kit</h3>
+      <div class="mini"><div class="money" style="background-image:url('../kk-photos/C8.jpg?v=2');background-position:50% 35%">
+        <div class="cmp">
+          <div class="col bad"><div class="hd">Pointless toys</div><div class="big">$500<small> wasted</small></div></div>
+          <div class="col good"><div class="hd">Karate Cat</div><div class="big">$59.99<small> once</small></div></div>
+          <div class="vs">VS</div>
+        </div>
+      </div></div>
     </div>
   </section>
 
@@ -627,8 +727,8 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   <section class="s-ivory" data-block="before-after">
     <div class="sect-head reveal"><div class="eyebrow">5 days, 10 minutes a day</div><h2>From bored-and-bitey to blissed-out</h2><p>Same cat, same wild energy — now it goes into the toy instead of your furniture and your skin.</p></div>
     <div class="ba-grid reveal">
-      <div class="col"><div class="ill"><div class="scene" style="background:var(--clay-tint)"><svg viewBox="0 0 90 120"><ellipse cx="45" cy="80" rx="28" ry="17" fill="#C8BAA3"/><circle cx="45" cy="58" r="15" fill="#C8BAA3"/><path d="M33 47 l-2 -9 l8 5Z M57 47 l2 -9 l-8 5Z" fill="#C8BAA3"/><circle cx="40" cy="58" r="1.6" fill="#21201C"/><circle cx="50" cy="58" r="1.6" fill="#21201C"/><path d="M40 66 q5 -3 10 0" stroke="#21201C" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M12 22 l9 6 M11 34 l10 5 M13 46 l9 5" stroke="#C0492F" stroke-width="2.2" stroke-linecap="round"/></svg></div><span class="chip" style="top:12px;left:12px;background:var(--clay);color:#fff">Before</span></div><div class="ba-cap b">A bored cat + shredded you</div></div>
-      <div class="col"><div class="ill"><div class="scene" style="background:var(--sage-tint)"><svg viewBox="0 0 90 120"><ellipse cx="45" cy="78" rx="30" ry="19" fill="#D98A52"/><circle cx="45" cy="55" r="16" fill="#D98A52"/><path d="M31 43 l-2 -10 l9 6Z M59 43 l2 -10 l-9 6Z" fill="#D98A52"/><circle cx="40" cy="54" r="1.8" fill="#21201C"/><circle cx="50" cy="54" r="1.8" fill="#21201C"/><path d="M38 59 q7 6 14 0" stroke="#21201C" stroke-width="1.8" fill="none" stroke-linecap="round"/><text x="63" y="40" font-size="15">💤</text></svg></div><span class="chip" style="top:12px;left:12px;background:var(--sage);color:#fff">After</span></div><div class="ba-cap a">One happy, worn-out cat</div></div>
+      <div class="col"><div class="ill" style="background-image:url('../kk-photos/E3.jpg?v=2');background-size:cover;background-position:50% 35%"><span class="chip" style="top:12px;left:12px;background:var(--clay);color:#fff">Before</span></div><div class="ba-cap b">A bored cat + shredded you</div></div>
+      <div class="col"><div class="ill" style="background-image:url('../kk-photos/C6.jpg?v=2');background-size:cover;background-position:50% 30%"><span class="chip" style="top:12px;left:12px;background:var(--sage);color:#fff">After</span></div><div class="ba-cap a">One happy, worn-out cat</div></div>
     </div>
     <p class="ba-note reveal">After 5 days of 10-minute wrestles: <b>no more 4am ankle attacks, no more shredded forearms</b> — just a happy, worn-out cat that finally got the fight it was begging for.</p>
   </section>
@@ -637,10 +737,10 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   <section class="mech" data-block="science">
     <div class="sect-head reveal"><div class="eyebrow">The science of play</div><h2>Not just fun — it's physiology</h2><p>Real hunt-and-wrestle play isn't only fun — it's physiology. It floods your cat with feel-good chemistry and gives their body a genuine workout. Here's what's actually happening:</p></div>
     <div class="mech-collage reveal">
-      <div class="mc-tile"><div class="mc-ill"><svg viewBox="0 0 60 60" fill="none"><ellipse cx="25" cy="35" rx="13" ry="11" fill="#D98A52"/><path d="M15 26 l-2 -8 l7 4Z M35 26 l2 -8 l-7 4Z" fill="#D98A52"/><circle cx="21" cy="34" r="1.6" fill="#21201C"/><circle cx="29" cy="34" r="1.6" fill="#21201C"/><path d="M44 18 c-3 -4 -9 -1 -9 4 c0 5 9 10 9 10 c0 0 9 -5 9 -10 c0 -5 -6 -8 -9 -4Z" fill="#C0492F"/></svg></div><div class="mc-cap">Feel-good chemistry<small>dopamine + endorphins</small></div></div>
-      <div class="mc-tile"><div class="mc-ill"><svg viewBox="0 0 60 60" fill="none"><path d="M30 46 c-11 -7 -17 -14 -17 -22 c0 -5 4 -9 9 -9 c3 0 6 2 8 5 c2 -3 5 -5 8 -5 c5 0 9 4 9 9 c0 8 -6 15 -17 22Z" fill="#2F7A73"/><path d="M7 30 h9 l4 -9 l5 18 l4 -9 h13" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="mc-cap">A real workout<small>heart pumping, energy burned</small></div></div>
-      <div class="mc-tile"><div class="mc-ill"><svg viewBox="0 0 60 60" fill="none"><ellipse cx="30" cy="37" rx="15" ry="12" fill="#C8BAA3"/><path d="M18 27 l-2 -9 l8 5Z M42 27 l2 -9 l-8 5Z" fill="#C8BAA3"/><path d="M23 34 q3 2.5 6 0 M31 34 q3 2.5 6 0" stroke="#21201C" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M26 41 q4 3 8 0" stroke="#21201C" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><div class="mc-cap">Calm &amp; content<small>a satisfied hunter</small></div></div>
-      <div class="mc-tile"><div class="mc-ill"><svg viewBox="0 0 60 60" fill="none"><ellipse cx="29" cy="41" rx="17" ry="9" fill="#D98A52"/><circle cx="16" cy="36" r="6.5" fill="#D98A52"/><path d="M11 31 l-1 -6 l5 3Z M21 31 l1 -6 l-5 3Z" fill="#D98A52"/><path d="M12 36 q2 1.5 4 0" stroke="#21201C" stroke-width="1.2" fill="none" stroke-linecap="round"/><text x="39" y="27" font-size="14">💤</text></svg></div><div class="mc-cap">Sleeps through<small>maybe no 5am alarm</small></div></div>
+      <div class="mc-tile"><div class="mc-ill" style="background-image:url('../kk-photos/B8.jpg?v=2');background-size:cover;background-position:center"></div><div class="mc-cap">Feel-good chemistry<small>dopamine + endorphins</small></div></div>
+      <div class="mc-tile"><div class="mc-ill" style="background-image:url('../kk-photos/F4.jpg?v=2');background-size:cover;background-position:center"></div><div class="mc-cap">A real workout<small>heart pumping, energy burned</small></div></div>
+      <div class="mc-tile"><div class="mc-ill" style="background-image:url('../kk-photos/C1.jpg?v=2');background-size:cover;background-position:center"></div><div class="mc-cap">Calm &amp; content<small>a satisfied hunter</small></div></div>
+      <div class="mc-tile"><div class="mc-ill" style="background-image:url('../kk-photos/E1.jpg?v=2');background-size:cover;background-position:center"></div><div class="mc-cap">Sleeps through<small>maybe no 5am alarm</small></div></div>
     </div>
     <div class="mech-pts">
     <details class="mpt reveal"><summary><b>Feel-good chemistry</b><span>A real play session releases the "happy" chemicals a hunt would.</span><i class="ch">+</i></summary><div class="ans">Chasing, pouncing and "catching" trigger a rush of dopamine and endorphins — the same reward loop a wild hunt gives. The result is a visibly happier, calmer, less bored cat.</div></details>
@@ -656,7 +756,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <div class="cmp reveal">
       <div class="cmp-head">
         <div class="h"></div>
-        <div class="h us"><div class="mini"><div class="scene" style="background:#E2E9E7"><svg viewBox="0 0 54 54"><rect x="18" y="30" width="18" height="20" rx="9" fill="#3E5C5A"/><ellipse cx="27" cy="24" rx="14" ry="12" fill="#D98A52"/><path d="M15 12 l-2 -8 l8 5Z M39 12 l2 -8 l-8 5Z" fill="#D98A52"/></svg></div></div><b>Karate Cat</b></div>
+        <div class="h us"><div class="mini"><div style="width:100%;height:100%;background-image:url('../kk-photos/A1.jpg?v=2');background-size:cover;background-position:center"></div></div><b>Karate Cat</b></div>
         <div class="h them"><b>Bare hands<br>· floor toy</b></div>
       </div>
       <div class="cmp-row"><div class="c lbl">The rough wrestling your cat loves</div><div class="c us"><span class="tick">✓</span></div><div class="c">½</div></div>
@@ -671,11 +771,8 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 
   <!-- SECTION: brand block (replaces "vet authority" — honest story, NO fake vet; the one light "play not aggression" line) -->
   <section class="brand" data-block="brand">
-    <div class="brandblock reveal">
-      <div class="brand-photo" aria-label="brand photo placeholder">
-        <div class="scene" style="background:#E2E9E7"><svg viewBox="0 0 92 92" fill="none"><circle cx="46" cy="37" r="14" fill="#C8BAA3"/><path d="M18 80 q0 -22 28 -22 q28 0 28 22Z" fill="#6E8B89"/><ellipse cx="70" cy="64" rx="9" ry="8" fill="#D98A52"/><path d="M64 58 l-1 -6 l5 3Z M76 58 l1 -6 l-5 3Z" fill="#D98A52"/></svg></div>
-        <span class="ph-tag">Brand photo → the people behind Movaro (TBD)</span>
-      </div>
+    <div class="brandblock reveal" style="flex-direction:column;align-items:stretch;gap:14px">
+      <div style="width:100%;aspect-ratio:16/10;border-radius:12px;background-image:url('../kk-photos/D2.jpg?v=2');background-size:cover;background-position:50% 40%"></div>
       <div class="brand-body">
         <p><b>We're cat people first.</b> We got tired of choosing between a happy, played-out cat and arms that looked like a scratch-post — so we built the toy we wished existed. Not right for your cat? We'll make it right — just write to <b>support@movaro.com</b>.</p>
         <div class="brand-trust"><span>🐾 Play, not aggression — it aims the instinct at the toy, not you</span><span>💛 30-day guarantee</span></div>
@@ -687,22 +784,21 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   <section class="s-cream" data-block="instruction">
     <div class="sect-head reveal"><div class="eyebrow">No training, no second person</div><h2>Start wrestling in 3 steps</h2><p>If you can wave a sock puppet, you can do this. Most cats are all-in within seconds.</p></div>
     <div class="scroll reveal">
-      <div class="step-card"><div class="ill"><div class="scene"><svg viewBox="0 0 80 60"><rect x="14" y="30" width="40" height="18" rx="9" transform="rotate(-10 34 39)" fill="#3E5C5A"/><ellipse cx="52" cy="26" rx="13" ry="11" fill="#D98A52"/><path d="M41 16 l-2 -8 l8 5Z M63 16 l2 -8 l-8 5Z" fill="#D98A52"/></svg></div></div><div class="s-body"><div class="s-num">STEP 1</div><h4>Slip it on</h4><p>Slide your hand and forearm into the padded sleeve. Snug, comfy, ready.</p></div></div>
-      <div class="step-card"><div class="ill"><div class="scene"><svg viewBox="0 0 80 60"><ellipse cx="40" cy="34" rx="14" ry="12" fill="#D98A52"/><path d="M28 22 l-2 -8 l8 5Z M52 22 l2 -8 l-8 5Z" fill="#D98A52"/><path d="M58 18 q8 -4 12 2 M60 30 q8 0 11 5" stroke="#2F7A73" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div></div><div class="s-body"><div class="s-num">STEP 2</div><h4>Make it move</h4><p>Wiggle it like prey — a little dart, a little pounce-bait. Their hunter brain switches on.</p></div></div>
-      <div class="step-card"><div class="ill"><div class="scene"><svg viewBox="0 0 80 60"><ellipse cx="30" cy="38" rx="13" ry="9" fill="#C8BAA3"/><path d="M20 30 l-7 -6 M26 27 l-4 -8" stroke="#C8BAA3" stroke-width="4" stroke-linecap="round"/><ellipse cx="52" cy="30" rx="11" ry="9" fill="#D98A52"/><path d="M58 22 l3 6 l5 -1 l-2 5 l3 4 l-6 0 l-2 5 l-2 -5" fill="#D7A94E" opacity=".85"/></svg></div></div><div class="s-body"><div class="s-num">STEP 3</div><h4>Let them go feral</h4><p>Bunny-kicks, bites, the full wrestle — all on the sleeve. You stay scratch-free. They tire out happy.</p></div></div>
+      <div class="step-card"><div class="ill" style="background-image:url('../kk-photos/A2.jpg?v=2');background-size:cover;background-position:50% 40%"></div><div class="s-body"><div class="s-num">STEP 1</div><h4>Slip it on</h4><p>Slide your hand and forearm into the padded sleeve. Snug, comfy, ready.</p></div></div>
+      <div class="step-card"><div class="ill" style="background-image:url('../kk-photos/A4.jpg?v=2');background-size:cover;background-position:50% 45%"></div><div class="s-body"><div class="s-num">STEP 2</div><h4>Make it move</h4><p>Wiggle it like prey — a little dart, a little pounce-bait. Their hunter brain switches on.</p></div></div>
+      <div class="step-card"><div class="ill" style="background-image:url('../kk-photos/C4.jpg?v=2');background-size:cover;background-position:50% 30%"></div><div class="s-body"><div class="s-num">STEP 3</div><h4>Let them go feral</h4><p>Bunny-kicks, bites, the full wrestle — all on the sleeve. You stay scratch-free. They tire out happy.</p></div></div>
     </div>
     <div class="warmup reveal">🐾 <b>Got a shy or older cat?</b> Don't worry — start by dragging it slowly like a chase toy, rub the puppet so it smells "theirs," and keep the first few sessions short. The free <b>Bonding &amp; Warm-Up guide</b> walks you through it. Most cautious cats come around within a few days.</div>
   </section>
 
   <!-- SECTION: offer / value stack -->
   <section class="offer" data-block="offer">
-    <div class="sect-head reveal"><div class="eyebrow">Everything in the kit</div><h2>The whole Wrestle Kit</h2><p>Two toys, a guide and premium packaging — for less than two takeout dinners.</p></div>
+    <div class="sect-head reveal"><div class="eyebrow">Everything in the kit</div><h2>The whole Wrestle Kit</h2><p>Two toys and a bonding guide — for less than two takeout dinners.</p></div>
     <div class="stack reveal">
       <div class="row"><span>🥊 Movaro Karate Cat puppet</span><span>$44.99</span></div>
-      <div class="row"><span>🐈‍⬛ 2nd toy — black-cat sparring buddy</span><span><s>$45</s> <span class="free">Free</span></span></div>
+      <div class="row"><span>🐈‍⬛ 2nd Karate Cat — sparring buddy</span><span><s>$44.99</s> <span class="free">Free</span></span></div>
       <div class="row"><span>📖 15-min Bonding &amp; Warm-Up guide</span><span><s>$19</s> <span class="free">Free</span></span></div>
-      <div class="row"><span>🎁 Premium gift box</span><span><s>$16</s> <span class="free">Free</span></span></div>
-      <div class="row"><span>You pay today</span><span class="total">$59.99&nbsp; <s style="font-weight:400">$124.99</s></span></div>
+      <div class="row"><span>You pay today</span><span class="total">$59.99&nbsp; <s style="font-weight:400">$108.98</s></span></div>
     </div>
     <div class="guarantee reveal">
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -737,12 +833,12 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     </div>
     <div class="rev reveal"><div class="top"><span class="name">Danielle R. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★★</span></div><h4>"My hands have HEALED"</h4><p>My forearms used to look like I lost a knife fight. Now he goes absolutely nuclear on the puppet and I don't have a scratch. He flops over exhausted after and I finally get my evenings back. Obsessed.</p>
       <div class="rphoto">
-        <div class="ill"><div class="scene"><svg viewBox="0 0 66 66"><ellipse cx="33" cy="38" rx="18" ry="14" fill="#D98A52"/><circle cx="33" cy="26" r="11" fill="#D98A52"/></svg></div></div>
-        <div class="ill"><div class="scene" style="background:#E2E9E7"><svg viewBox="0 0 66 66"><rect x="24" y="20" width="18" height="30" rx="9" fill="#3E5C5A"/></svg></div></div>
+        <div class="ill" style="background-image:url('../kk-photos/C6.jpg?v=2');background-size:cover;background-position:center"></div>
+        <div class="ill" style="background-image:url('../kk-photos/C3.jpg?v=2');background-size:cover;background-position:center"></div>
       </div></div>
     <div class="rev reveal"><div class="top"><span class="name">Marcus T. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★★</span></div><h4>"The only thing that tires him out"</h4><p>Tried the laser, the fish, the wand — nothing burned his 4am energy. Fifteen minutes wrestling this thing before bed and he sleeps through. Wish I'd bought it a year ago.</p></div>
     <div class="rev reveal"><div class="top"><span class="name">Priya N. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★☆</span></div><h4>"Took my shy girl a few days"</h4><p>Honest review: she was suspicious of it at first. I followed the warm-up guide, dragged it around like a toy for a couple days, and now she ambushes it from behind the couch. Glad I stuck with it — the 2nd toy helped too.</p>
-      <div class="rphoto"><div class="ill"><div class="scene" style="background:#F4E5D8"><svg viewBox="0 0 66 66"><ellipse cx="33" cy="38" rx="17" ry="13" fill="#3A3632"/><circle cx="33" cy="26" r="10" fill="#3A3632"/></svg></div></div></div></div>
+      <div class="rphoto"><div class="ill" style="background-image:url('../kk-photos/G3.jpg?v=2');background-size:cover;background-position:center"></div></div></div>
     <p class="muted" style="font-size:12px;text-align:center;margin-top:16px">Reviews load from our review app with real buyer photos — drawn placeholders shown here.</p>
   </section>
 
@@ -860,7 +956,7 @@ var startEl=document.querySelector('[data-block="ugc"]'),endEl=document.querySel
 if(!startEl||!endEl){spine.style.display='none';return;}
 if(spine.parentNode!==document.body)document.body.appendChild(spine);
 var len=draw.getTotalLength();draw.style.strokeDasharray=len;
-var trail=[[0,"🎁 Follow me — your gift's at the end","#B9774F"],[0.16,"🥊 Cats go feral for it","#246159"],[0.34,"🐾 Scratch-free for you","#B9774F"],[0.52,"😴 Burns the 4am zoomies","#3E5C5A"],[0.70,"💛 Loved by 1,200+ cats","#246159"],[0.84,"🎁 $80 in free gifts","#C28F2E"]];
+var trail=[[0,"🎁 Follow me — your gift's at the end","#B9774F"],[0.16,"🥊 Cats go feral for it","#246159"],[0.34,"🐾 Scratch-free for you","#B9774F"],[0.52,"😴 Burns the 4am zoomies","#3E5C5A"],[0.70,"💛 Loved by 1,200+ cats","#246159"],[0.84,"🎁 $64 in free gifts","#C28F2E"]];
 function trailItem(p){var t=trail[0];for(var i=0;i<trail.length;i++){if(p>=trail[i][0])t=trail[i];}return t;}
 var mvTop=0,mvH=1;function layout(){var sy=window.scrollY||window.pageYOffset;var sr=startEl.getBoundingClientRect(),er=endEl.getBoundingClientRect();mvTop=sr.top+sy;mvH=(er.top+sy+er.height)-mvTop;spine.style.top=mvTop+'px';spine.style.height=mvH+'px';}
 function upd(){
