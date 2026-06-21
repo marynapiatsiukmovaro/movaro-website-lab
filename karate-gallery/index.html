@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Movaro — Karate Cat · ГАЛЕРЕЯ (мок v1)</title>
+<title>Movaro — Karate Cat · ГАЛЕРЕЯ (мок v2)</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
@@ -11,113 +11,172 @@
 .card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden;margin-bottom:6px}
 .spec{padding:10px 12px;font-size:11.5px;color:#2a2620;background:#FBF9F4;border-top:1px solid #EFE8DB}.spec .k{font-weight:700;color:#2f7a73}
 .note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:16px}
-/* base photo frame */
+/* frame1 hook */
 .ph{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;overflow:hidden}
-.st{position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,rgba(0,0,0,.6),transparent);z-index:1}
-.sb{position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent);z-index:1}
+.scrim-t{position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,rgba(0,0,0,.62),rgba(0,0,0,0))}
+.scrim-b{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(0deg,rgba(0,0,0,.74),rgba(0,0,0,0))}
 .star{position:absolute;top:11px;right:12px;font-size:11px;color:#fff;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.6);z-index:5}.star .s{color:#E8A93D}
 .kick{position:absolute;top:13px;left:0;right:0;text-align:center;z-index:4;font-family:'Jost';font-weight:800;font-size:11px;letter-spacing:.22em;color:#ffd9a8;text-shadow:0 1px 6px rgba(0,0,0,.6)}
 .hl{position:absolute;left:14px;right:14px;z-index:3;text-align:center;font-family:'Fraunces',serif;font-weight:600;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.7);line-height:1.06}
-.hl.top{top:34px;font-size:27px}.hl.mid{top:50%;transform:translateY(-50%);font-size:26px}
-.sub{position:absolute;left:18px;right:18px;text-align:center;color:#fff;font-size:13px;font-weight:500;text-shadow:0 1px 8px rgba(0,0,0,.7);z-index:3}
+.hl.top{top:32px;font-size:27px}
 .chips{position:absolute;left:8px;right:8px;bottom:14px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;z-index:4}
 .chip{background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-weight:600;font-size:11.5px;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.22)}
 .plabel{position:absolute;z-index:4}
 .plabel .nm{font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.85);line-height:1.02;display:block}
-.plabel svg{display:block}
-/* offer frame */
-.kit{position:relative;width:100%;aspect-ratio:4/5;background:#fff;display:flex;flex-direction:column;overflow:hidden}
-.kit .toys{display:flex;height:42%}
-.kit .toys .t{flex:1;background-size:cover;background-position:center;position:relative;border-right:2px solid #fff}
-.kit .toys .t:last-child{border-right:none}
-.kit .toys .t .l{position:absolute;left:0;right:0;bottom:0;background:rgba(47,122,115,.92);color:#fff;font-size:9px;font-weight:700;text-align:center;padding:3px}
-.kit .oc{flex:1;padding:11px 16px;display:flex;flex-direction:column;justify-content:center}
-.kit .nm{font-family:'Fraunces',serif;font-weight:600;font-size:16px;text-align:center;color:#21201C}
-.kit .pr{text-align:center;margin:5px 0 7px}
-.kit .pr .o{color:#9a9488;text-decoration:line-through;font-size:15px;margin-right:8px}
-.kit .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:30px;color:#2f7a73}
-.kit .pr .sv{display:inline-block;background:#E8A93D;color:#fff;font-size:10px;font-weight:800;padding:3px 9px;border-radius:999px;margin-left:7px;vertical-align:middle}
-.kit .li{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#21201C;padding:2.5px 0;justify-content:center}
-.kit .li .c{color:#2f7a73;font-weight:800}
-.kit .tr{text-align:center;font-size:10.5px;color:#7a715f;margin-top:7px;border-top:1px solid #eee;padding-top:7px;font-weight:600}
-/* spec frame */
+/* frame2 collage col2 */
+.col2{position:relative;width:100%;aspect-ratio:4/5;display:flex;overflow:hidden}
+.col2 .cc{position:relative;width:50%;display:flex;flex-direction:column}
+.col2 .cell{flex:1;background-size:cover;background-position:center}
+.col2 .tg{position:absolute;top:9px;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;padding:3px 10px;border-radius:999px;z-index:4;box-shadow:0 1px 5px rgba(0,0,0,.3)}
+.col2 .left .tg{left:9px;background:#d9503e}.col2 .right .tg{right:9px;background:#2f7a73}
+.col2 .ovl{position:absolute;left:8px;right:8px;top:50%;transform:translateY(-50%);text-align:center;color:#fff;border-radius:11px;padding:10px 11px;z-index:3;box-shadow:0 3px 12px rgba(0,0,0,.34)}
+.col2 .ovl.pain{background:#d9503e}.col2 .ovl.sol{background:#2f7a73}
+.col2 .ovl .h{font-family:'Fraunces',serif;font-weight:600;font-size:14px;line-height:1.12;display:block}
+.col2 .ovl .s{display:block;font-size:10.5px;margin-top:5px;font-weight:500;line-height:1.28}
+.col2 .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:4}
+.seamadv{position:absolute;left:0;right:0;bottom:12px;display:flex;flex-direction:column;align-items:center;gap:5px;z-index:6}
+.seamadv .l{background:rgba(255,255,255,.95);color:#21201C;border-radius:999px;padding:4px 12px;font-size:10.5px;font-weight:600;box-shadow:0 1px 6px rgba(0,0,0,.25)}.seamadv .l b{color:#2f7a73}
+/* frame3 use */
+.use{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 45%;overflow:hidden}
+.use .gt{position:absolute;left:0;right:0;top:0;height:34%;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0));z-index:1}
+.use .gb{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(0deg,rgba(0,0,0,.64),rgba(0,0,0,0));z-index:1}
+.use .blk{position:absolute;left:12px;right:12px;text-align:center;z-index:3}
+.use .blk.top{top:14px}.use .blk.bot{bottom:15px}
+.use .pill{display:inline-block;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.use .pill.r{background:#d9503e}.use .pill.t{background:#2f7a73}
+.use .wt{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11.5px;font-weight:600;margin-top:7px;padding:6px 11px;border-radius:10px;line-height:1.3;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+/* frame4 money */
+.moneywrap{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 30%;overflow:hidden}
+.moneywrap .veil{position:absolute;inset:0;background:rgba(20,30,28,.30)}
+.moneywrap .soc{position:absolute;top:10px;left:0;right:0;text-align:center;z-index:4}
+.moneywrap .soc span{display:inline-block;background:rgba(255,255,255,.95);color:#21201C;font-size:10.5px;font-weight:700;padding:4px 12px;border-radius:999px;box-shadow:0 2px 7px rgba(0,0,0,.25)}.moneywrap .soc span b{color:#E8A93D}
+.cmp{position:absolute;left:11px;right:11px;top:24%;display:flex;gap:26px;z-index:3}
+.cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:12px;padding:10px 11px;box-shadow:0 3px 13px rgba(0,0,0,.3)}
+.cmp .col .hd{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.cmp .bad .hd{color:#d9503e}.cmp .good .hd{color:#2f7a73}
+.cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:18px;line-height:1;margin:3px 0 7px}
+.cmp .col .big small{font-size:11px;font-weight:600}
+.cmp .bad .big{color:#d9503e}.cmp .good .big{color:#2f7a73}
+.cmp .it{font-size:9.5px;color:#3a352c;font-weight:500;padding:2px 0;line-height:1.2}
+.cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+/* frame5 grid4 + offer */
+.grid4{position:relative;width:100%;aspect-ratio:4/5;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;overflow:hidden;gap:2px;background:#fff}
+.grid4 .g{position:relative;background-size:cover;background-position:center}
+.grid4 .g .lab{position:absolute;background:rgba(47,122,115,.94);color:#fff;font-weight:600;font-size:10px;padding:3px 8px;border-radius:6px;z-index:3}
+.grid4 .g.tl .lab{top:6px;left:6px}.grid4 .g.tr .lab{top:6px;right:6px}.grid4 .g.bl .lab{bottom:6px;left:6px}.grid4 .g.br .lab{bottom:6px;right:6px}
+.grid4 .veil5{position:absolute;inset:0;background:rgba(20,30,28,.3);z-index:2}
+.grid4 .ofc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74%;background:rgba(255,255,255,.97);border-radius:13px;padding:11px 13px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
+.grid4 .ofc .nm{font-family:'Fraunces',serif;font-weight:600;font-size:15px;color:#2f7a73}
+.grid4 .ofc .pr{margin:5px 0 6px}.grid4 .ofc .pr .o{color:#9a9488;text-decoration:line-through;font-size:13px;margin-right:6px}.grid4 .ofc .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:24px;color:#21201C}
+.grid4 .ofc .save{display:inline-block;background:#E8A93D;color:#fff;font-size:9px;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.grid4 .ofc .divln{height:1px;background:#ececec;margin:8px 2px}
+.grid4 .ofc .gifts{display:flex;gap:6px;justify-content:center;margin:0 0 6px}
+.grid4 .ofc .gift{background:#F2F7F5;border:1px solid #d6e4e0;border-radius:9px;padding:4px 9px;font-size:9.5px;font-weight:700;color:#2f6b63}
+.grid4 .ofc .guar{font-size:10.5px;font-weight:700;color:#21201C}
+/* frame6 spec */
 .specf{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 42%;overflow:hidden}
 .specf .hd{position:absolute;top:13px;left:14px;right:14px;text-align:center;color:#2f6b63;font-family:'Fraunces',serif;font-weight:600;font-size:18px;z-index:3;text-shadow:0 1px 6px rgba(255,255,255,.6)}
-.cal{position:absolute;background:rgba(255,255,255,.96);border-radius:999px;padding:5px 10px;font-size:10.5px;font-weight:700;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.18);z-index:4}
-.cal b{color:#2f7a73}
+.cal{position:absolute;background:rgba(255,255,255,.96);border-radius:999px;padding:5px 10px;font-size:10.5px;font-weight:700;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.18);z-index:4}.cal b{color:#2f7a73}
 </style></head><body><div class="wrap">
-<div class="intro"><h1>🥊 Karate Cat — ГАЛЕРЕЯ (мок v1)</h1>
-<p>6 кадров на ТВОИХ реальных фото, текст наложен кодом (Fraunces/Jost, teal). Угол — <b>радость кота</b> (fun ведёт), защита рук = рациональный хук. Без раздутых цифр (под 2Checkout).</p>
-<div class="key">Реагируй по каждому кадру: фото (можно заменить кодом с доски A–H) · текст · цвет/место. Потом докрутим и перенесём на Shopify.</div></div>
+<div class="intro"><h1>🥊 Karate Cat — ГАЛЕРЕЯ (мок v2)</h1>
+<p>Раскладка <b>как у Cat Wrap</b>: 1 единичная · 2 коллаж до/после · 3 цельная · 4 цельная + сравнение цены · 5 коллаж игры · 6 спека. <b>Только британский кот.</b> Угол — радость кота (fun), защита рук = рацио. Без раздутых цифр.</p>
+<div class="key">Реагируй по кадрам: фото (код с доски A–H) · текст · цвет/место.</div></div>
 
-<div class="sechd">Кадр 1 · ХУК — «go feral» (радость)</div>
+<div class="sechd">Кадр 1 · ХУК (единичная)</div>
 <div class="card">
-  <div class="ph" style="background-image:url('../kk-photos/B1.jpg?v=2');background-position:50% 52%"><div class="st"></div><div class="sb"></div>
+  <div class="ph" style="background-image:url('../kk-photos/B3.jpg?v=2');background-position:50% 50%"><div class="scrim-t"></div><div class="scrim-b"></div>
     <div class="star"><span class="s">★</span> 4.8</div>
     <div class="kick">PLAYTIME, UNLEASHED</div>
     <div class="hl top">Let your cat<br>go full feral</div>
-    <div class="plabel" style="right:14px;bottom:62px;text-align:right"><span class="nm">Movaro<br>Karate Cat</span><svg width="76" height="50" viewBox="0 0 76 50" fill="none" style="margin-left:auto"><path d="M72 8 Q24 6 10 42" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M10 42 L13 30 M10 42 L23 44" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+    <div class="plabel" style="right:14px;bottom:60px;text-align:right"><span class="nm">Movaro<br>Karate Cat</span><svg width="74" height="48" viewBox="0 0 74 48" fill="none" style="margin-left:auto"><path d="M70 8 Q22 6 10 40" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M10 40 L13 28 M10 40 L23 42" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
     <div class="chips"><span class="chip">🥊 Cats go feral</span><span class="chip">🐾 Not a scratch on you</span></div>
   </div>
-  <div class="spec"><span class="k">Смысл:</span> хук = РАДОСТЬ + смех (fun-продукт продаёт эмоция кота). Имя продукта стрелкой на куклу. ★4.8 — посевной, без числа клиентов. <span class="k">Фото:</span> B1 (прыжок, воздух сверху под заголовок) — заменимо на B2/B3.</div>
+  <div class="spec"><span class="k">Смысл:</span> хук = РАДОСТЬ/энергия (fun продаёт эмоция). Имя стрелкой на куклу. ★4.8 посевной, без числа клиентов. <span class="k">Фото:</span> B3 (британец в прыжке). Альт: B7.</div>
 </div>
 
-<div class="sechd">Кадр 2 · ЭМОЦИЯ — кот реально обожает</div>
+<div class="sechd">Кадр 2 · КОЛЛАЖ до/после</div>
 <div class="card">
-  <div class="ph" style="background-image:url('../kk-photos/C1.jpg?v=2');background-position:50% 38%"><div class="sb"></div>
-    <div class="hl" style="bottom:88px;font-size:25px">Cats genuinely<br>love it</div>
-    <div class="chips"><span class="chip">😻 Obsessed in minutes</span><span class="chip">🤍 A real bond</span></div>
-  </div>
-  <div class="spec"><span class="k">Смысл:</span> доказательство эмоции — кот обнимает/тискает куклу. Для fun-продукта это и есть «продажа». <span class="k">Фото:</span> C1 (объятие). Альт: C2/U1.</div>
-</div>
-
-<div class="sechd">Кадр 3 · РУКИ — scratch-free (рациональный хук)</div>
-<div class="card">
-  <div class="ph" style="background-image:url('../kk-photos/A4.jpg?v=2');background-position:50% 45%"><div class="sb"></div><div class="st"></div>
-    <div class="hl top" style="font-size:24px">Wrestle hard —<br>hands stay safe</div>
-    <div class="chips"><span class="chip">🛡️ Padded forearm sleeve</span><span class="chip">✋ Scratch-free play</span></div>
-  </div>
-  <div class="spec"><span class="k">Смысл:</span> рациональная причина купить — кот «дерётся» с куклой, а не с твоей рукой; рукав защищает. <span class="k">Фото:</span> A4 (POV рукав на руке + кот напротив).</div>
-</div>
-
-<div class="sechd">Кадр 4 · ЗДОРОВЬЕ — выматывает зумис</div>
-<div class="card">
-  <div class="ph" style="background-image:url('../kk-photos/B4.jpg?v=2');background-position:50% 42%"><div class="st"></div><div class="sb"></div>
-    <div class="hl top" style="font-size:24px">Burns the<br>3 a.m. zoomies</div>
-    <div class="chips"><span class="chip">😴 Sleeps through the night</span><span class="chip">🐈 Any age</span></div>
-  </div>
-  <div class="spec"><span class="k">Смысл:</span> польза — настоящая физнагрузка/охота → кот доволен и спокоен (не будит в 3 ночи). <span class="k">Фото:</span> B4 (экшн). Альт: B6/B7.</div>
-</div>
-
-<div class="sechd">Кадр 5 · КИТ — ценность / оффер</div>
-<div class="card">
-  <div class="kit">
-    <div class="toys">
-      <div class="t" style="background-image:url('../kk-photos/A1.jpg?v=2');background-position:50% 30%"><span class="l">Karate Cat</span></div>
-      <div class="t" style="background-image:url('../kk-photos/H2.jpg?v=2');background-position:50% 30%"><span class="l">2nd cat — FREE</span></div>
-      <div class="t" style="background-image:url('../kk-photos/H1.jpg?v=2');background-position:50% 30%"><span class="l">Guide — FREE</span></div>
+  <div class="col2">
+    <div class="cc left">
+      <div class="cell" style="background-image:url('../kk-photos/B5.jpg?v=2');background-position:50% 30%"></div>
+      <div class="cell" style="background-image:url('../kk-photos/E1.jpg?v=2');background-position:50% 40%"></div>
+      <span class="tg">Before</span>
+      <div class="ovl pain"><span class="h">Bored. Ignoring everything.</span><span class="s">Same naps, same toys — then 3 a.m. zoomies because that hunter has nothing to chase.</span></div>
     </div>
-    <div class="oc">
+    <div class="cc right">
+      <div class="cell" style="background-image:url('../kk-photos/C7.jpg?v=2');background-position:50% 25%"></div>
+      <div class="cell" style="background-image:url('../kk-photos/B7.jpg?v=2');background-position:50% 30%"></div>
+      <span class="tg">After</span>
+      <div class="ovl sol"><span class="h">A happy little hunter</span><span class="s">Real prey-drive play — they stalk, pounce and wrestle it out, then finally switch off.</span></div>
+    </div>
+    <div class="mid"></div>
+    <div class="seamadv"><span class="l">🥊 <b>Real wrestle play</b></span><span class="l">🐾 <b>Hands stay safe</b></span><span class="l">😴 <b>Burns the zoomies</b></span></div>
+  </div>
+  <div class="spec"><span class="k">Простым языком:</span> слева 🔴 скучающий кот (тот же диван, те же игрушки → зумис в 3 ночи) · справа 🟢 счастливый «охотник» (выслеживает, прыгает, борется → выматывается). <span class="k">Фото:</span> B5+E1 (до) · C7+B7 (после).</div>
+</div>
+
+<div class="sechd">Кадр 3 · ЦЕЛЬНАЯ — руки в безопасности</div>
+<div class="card">
+  <div class="use" style="background-image:url('../kk-photos/A4.jpg?v=2');background-position:50% 45%"><div class="gt"></div><div class="gb"></div>
+    <div class="blk top"><span class="pill r">They bunny-kick & bite hard 🥊</span></div>
+    <div class="blk bot"><span class="pill t">Your hands stay safe</span><span class="wt">Padded forearm sleeve takes the claws & kicks — your cat fights the toy, not you.</span></div>
+  </div>
+  <div class="spec"><span class="k">Простым языком:</span> 🔴 коты дерутся жёстко (кусают, лупят задними) → 🟢 рукав-предплечье принимает удар, кот бьёт игрушку, а не тебя. <span class="k">Фото:</span> A4 (POV рукав + кот).</div>
+</div>
+
+<div class="sechd">Кадр 4 · ЦЕЛЬНАЯ + сравнение цены</div>
+<div class="card">
+  <div class="moneywrap" style="background-image:url('../kk-photos/D1.jpg?v=2');background-position:50% 35%"><div class="veil"></div>
+    <div class="soc"><span>🐾 <b>★ 4.8</b> — cats can't put it down</span></div>
+    <div class="cmp">
+      <div class="col bad"><div class="hd">Cheap toys</div><div class="big">$$$<small> wasted</small></div>
+        <div class="it">🧸 $15 toy → ignored in days</div>
+        <div class="it">🔁 Buy another… and another</div>
+        <div class="it">🗑️ Drawer full of dead toys</div>
+        <div class="it">😼 Cat still bored</div>
+      </div>
+      <div class="col good"><div class="hd">Karate Cat</div><div class="big">$59.99<small> once</small></div>
+        <div class="it">🤝 Interactive — YOU bring it alive</div>
+        <div class="it">♾️ Never gets old</div>
+        <div class="it">🥊 Played with daily</div>
+        <div class="it">😻 Cat obsessed</div>
+      </div>
+      <div class="vs">VS</div>
+    </div>
+  </div>
+  <div class="spec"><span class="k">Сравнение (ценность):</span> 🔴 гора дешёвых игрушек, которые кот игнорит (деньги на ветер) VS 🟢 один Karate Cat $59.99 — интерактивный, не надоедает. <span class="k">Фото:</span> D1 (фон). Суммы уточним.</div>
+</div>
+
+<div class="sechd">Кадр 5 · КОЛЛАЖ игры + оффер</div>
+<div class="card">
+  <div class="grid4">
+    <div class="g tl" style="background-image:url('../kk-photos/B3.jpg?v=2')"><span class="lab">Pounce</span></div>
+    <div class="g tr" style="background-image:url('../kk-photos/C7.jpg?v=2')"><span class="lab">Snuggle</span></div>
+    <div class="g bl" style="background-image:url('../kk-photos/D1.jpg?v=2')"><span class="lab">Stalk</span></div>
+    <div class="g br" style="background-image:url('../kk-photos/B7.jpg?v=2')"><span class="lab">Wrestle</span></div>
+    <div class="veil5"></div>
+    <div class="ofc">
       <div class="nm">The Wrestle Kit</div>
-      <div class="pr"><span class="o">$109.99</span><span class="n">$59.99</span><span class="sv">Save $50</span></div>
-      <div class="li"><span class="c">✓</span> 2 puppets &nbsp;<span class="c">✓</span> Bonding &amp; Warm-Up guide</div>
-      <div class="tr">🛡️ 30-day Go-Feral Guarantee · 🇺🇸 Free US shipping</div>
+      <div class="pr"><span class="o">$109.99</span><span class="n">$59.99</span><span class="save">Save $50</span></div>
+      <div class="divln"></div>
+      <div class="gifts"><span class="gift">🥊 2 puppets</span><span class="gift">📖 Bonding guide</span></div>
+      <div class="guar">🛡️ 30-day Go-Feral Guarantee</div>
     </div>
   </div>
-  <div class="spec"><span class="k">Смысл:</span> ценность ≫ цены — 2 игрушки (рыжий + чёрный) + гайд, цена-якорь $109.99 → $59.99. <span class="k">Фото:</span> A1 + H2 (2-я игрушка) + H1 (гайд). Суммы уточним под COGS.</div>
+  <div class="spec"><span class="k">Коллаж игры + оффер:</span> 4 момента игры британца + карта: Wrestle Kit · $109.99→$59.99 · подарки чипами · гарантия. <span class="k">⚠️</span> «2 puppets» = кит со 2-й игрушкой — подтверди, оставляем ли (или 1 игрушка).</div>
 </div>
 
 <div class="sechd">Кадр 6 · СПЕКА — детали продукта</div>
 <div class="card">
-  <div class="specf" style="background-image:url('../kk-photos/A1.jpg?v=2')">
+  <div class="specf" style="background-image:url('../kk-photos/A1.jpg?v=2');background-position:50% 42%">
     <div class="hd">Movaro Karate Cat — in detail 🥊</div>
     <span class="cal" style="top:30%;left:8px">🐱 <b>Lifelike puppet face</b></span>
     <span class="cal" style="top:46%;right:8px">🧸 <b>Soft plush body</b></span>
     <span class="cal" style="top:66%;left:8px">🛡️ <b>Padded forearm sleeve</b></span>
     <span class="cal" style="top:80%;right:8px">📏 <b>One size fits all</b></span>
   </div>
-  <div class="spec"><span class="k">Смысл:</span> чистый продукт на белом + выноски = качество/конструкция = доверие. <span class="k">Фото:</span> A1 (продукт на бежевом).</div>
+  <div class="spec"><span class="k">Смысл:</span> чистый продукт + выноски = качество/конструкция = доверие. <span class="k">Фото:</span> A1.</div>
 </div>
 
-<div class="note">⚠️ Мок v1 — фото твои реальные, текст черновой. Реагируй по кадрам (фото/текст/цвет/место) → докрутим → перенос на Shopify (галерея = product images, WebP 4:5).</div>
+<div class="note">⚠️ Мок v2 — раскладка как у Cat Wrap, только британский кот. Реагируй по кадрам → докрутим → перенос на Shopify (галерея = product images, WebP 4:5).</div>
 </div></body></html>
