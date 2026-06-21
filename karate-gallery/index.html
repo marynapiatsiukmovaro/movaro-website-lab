@@ -1,0 +1,123 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movaro — Karate Cat · ГАЛЕРЕЯ (мок v1)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
+.wrap{max-width:470px;margin:0 auto;padding:18px 12px 80px}
+.intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:16px 18px;margin-bottom:18px}
+.intro h1{font-family:'Fraunces',serif;font-size:21px;margin:0 0 8px}.intro p{font-size:13px;color:#4f483d;margin:5px 0}.intro b{color:#21201C}
+.intro .key{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
+.sechd{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:#21201C;background:#fff;border:1px solid #E6DFD1;border-left:4px solid #2f7a73;border-radius:9px;padding:9px 12px;margin:22px 0 8px}
+.card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden;margin-bottom:6px}
+.spec{padding:10px 12px;font-size:11.5px;color:#2a2620;background:#FBF9F4;border-top:1px solid #EFE8DB}.spec .k{font-weight:700;color:#2f7a73}
+.note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:16px}
+/* base photo frame */
+.ph{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;overflow:hidden}
+.st{position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(180deg,rgba(0,0,0,.6),transparent);z-index:1}
+.sb{position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent);z-index:1}
+.star{position:absolute;top:11px;right:12px;font-size:11px;color:#fff;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.6);z-index:5}.star .s{color:#E8A93D}
+.kick{position:absolute;top:13px;left:0;right:0;text-align:center;z-index:4;font-family:'Jost';font-weight:800;font-size:11px;letter-spacing:.22em;color:#ffd9a8;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.hl{position:absolute;left:14px;right:14px;z-index:3;text-align:center;font-family:'Fraunces',serif;font-weight:600;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.7);line-height:1.06}
+.hl.top{top:34px;font-size:27px}.hl.mid{top:50%;transform:translateY(-50%);font-size:26px}
+.sub{position:absolute;left:18px;right:18px;text-align:center;color:#fff;font-size:13px;font-weight:500;text-shadow:0 1px 8px rgba(0,0,0,.7);z-index:3}
+.chips{position:absolute;left:8px;right:8px;bottom:14px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;z-index:4}
+.chip{background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-weight:600;font-size:11.5px;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+.plabel{position:absolute;z-index:4}
+.plabel .nm{font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.85);line-height:1.02;display:block}
+.plabel svg{display:block}
+/* offer frame */
+.kit{position:relative;width:100%;aspect-ratio:4/5;background:#fff;display:flex;flex-direction:column;overflow:hidden}
+.kit .toys{display:flex;height:42%}
+.kit .toys .t{flex:1;background-size:cover;background-position:center;position:relative;border-right:2px solid #fff}
+.kit .toys .t:last-child{border-right:none}
+.kit .toys .t .l{position:absolute;left:0;right:0;bottom:0;background:rgba(47,122,115,.92);color:#fff;font-size:9px;font-weight:700;text-align:center;padding:3px}
+.kit .oc{flex:1;padding:11px 16px;display:flex;flex-direction:column;justify-content:center}
+.kit .nm{font-family:'Fraunces',serif;font-weight:600;font-size:16px;text-align:center;color:#21201C}
+.kit .pr{text-align:center;margin:5px 0 7px}
+.kit .pr .o{color:#9a9488;text-decoration:line-through;font-size:15px;margin-right:8px}
+.kit .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:30px;color:#2f7a73}
+.kit .pr .sv{display:inline-block;background:#E8A93D;color:#fff;font-size:10px;font-weight:800;padding:3px 9px;border-radius:999px;margin-left:7px;vertical-align:middle}
+.kit .li{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#21201C;padding:2.5px 0;justify-content:center}
+.kit .li .c{color:#2f7a73;font-weight:800}
+.kit .tr{text-align:center;font-size:10.5px;color:#7a715f;margin-top:7px;border-top:1px solid #eee;padding-top:7px;font-weight:600}
+/* spec frame */
+.specf{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 42%;overflow:hidden}
+.specf .hd{position:absolute;top:13px;left:14px;right:14px;text-align:center;color:#2f6b63;font-family:'Fraunces',serif;font-weight:600;font-size:18px;z-index:3;text-shadow:0 1px 6px rgba(255,255,255,.6)}
+.cal{position:absolute;background:rgba(255,255,255,.96);border-radius:999px;padding:5px 10px;font-size:10.5px;font-weight:700;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.18);z-index:4}
+.cal b{color:#2f7a73}
+</style></head><body><div class="wrap">
+<div class="intro"><h1>🥊 Karate Cat — ГАЛЕРЕЯ (мок v1)</h1>
+<p>6 кадров на ТВОИХ реальных фото, текст наложен кодом (Fraunces/Jost, teal). Угол — <b>радость кота</b> (fun ведёт), защита рук = рациональный хук. Без раздутых цифр (под 2Checkout).</p>
+<div class="key">Реагируй по каждому кадру: фото (можно заменить кодом с доски A–H) · текст · цвет/место. Потом докрутим и перенесём на Shopify.</div></div>
+
+<div class="sechd">Кадр 1 · ХУК — «go feral» (радость)</div>
+<div class="card">
+  <div class="ph" style="background-image:url('../kk-photos/B1.jpg?v=2');background-position:50% 52%"><div class="st"></div><div class="sb"></div>
+    <div class="star"><span class="s">★</span> 4.8</div>
+    <div class="kick">PLAYTIME, UNLEASHED</div>
+    <div class="hl top">Let your cat<br>go full feral</div>
+    <div class="plabel" style="right:14px;bottom:62px;text-align:right"><span class="nm">Movaro<br>Karate Cat</span><svg width="76" height="50" viewBox="0 0 76 50" fill="none" style="margin-left:auto"><path d="M72 8 Q24 6 10 42" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M10 42 L13 30 M10 42 L23 44" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+    <div class="chips"><span class="chip">🥊 Cats go feral</span><span class="chip">🐾 Not a scratch on you</span></div>
+  </div>
+  <div class="spec"><span class="k">Смысл:</span> хук = РАДОСТЬ + смех (fun-продукт продаёт эмоция кота). Имя продукта стрелкой на куклу. ★4.8 — посевной, без числа клиентов. <span class="k">Фото:</span> B1 (прыжок, воздух сверху под заголовок) — заменимо на B2/B3.</div>
+</div>
+
+<div class="sechd">Кадр 2 · ЭМОЦИЯ — кот реально обожает</div>
+<div class="card">
+  <div class="ph" style="background-image:url('../kk-photos/C1.jpg?v=2');background-position:50% 38%"><div class="sb"></div>
+    <div class="hl" style="bottom:88px;font-size:25px">Cats genuinely<br>love it</div>
+    <div class="chips"><span class="chip">😻 Obsessed in minutes</span><span class="chip">🤍 A real bond</span></div>
+  </div>
+  <div class="spec"><span class="k">Смысл:</span> доказательство эмоции — кот обнимает/тискает куклу. Для fun-продукта это и есть «продажа». <span class="k">Фото:</span> C1 (объятие). Альт: C2/U1.</div>
+</div>
+
+<div class="sechd">Кадр 3 · РУКИ — scratch-free (рациональный хук)</div>
+<div class="card">
+  <div class="ph" style="background-image:url('../kk-photos/A4.jpg?v=2');background-position:50% 45%"><div class="sb"></div><div class="st"></div>
+    <div class="hl top" style="font-size:24px">Wrestle hard —<br>hands stay safe</div>
+    <div class="chips"><span class="chip">🛡️ Padded forearm sleeve</span><span class="chip">✋ Scratch-free play</span></div>
+  </div>
+  <div class="spec"><span class="k">Смысл:</span> рациональная причина купить — кот «дерётся» с куклой, а не с твоей рукой; рукав защищает. <span class="k">Фото:</span> A4 (POV рукав на руке + кот напротив).</div>
+</div>
+
+<div class="sechd">Кадр 4 · ЗДОРОВЬЕ — выматывает зумис</div>
+<div class="card">
+  <div class="ph" style="background-image:url('../kk-photos/B4.jpg?v=2');background-position:50% 42%"><div class="st"></div><div class="sb"></div>
+    <div class="hl top" style="font-size:24px">Burns the<br>3 a.m. zoomies</div>
+    <div class="chips"><span class="chip">😴 Sleeps through the night</span><span class="chip">🐈 Any age</span></div>
+  </div>
+  <div class="spec"><span class="k">Смысл:</span> польза — настоящая физнагрузка/охота → кот доволен и спокоен (не будит в 3 ночи). <span class="k">Фото:</span> B4 (экшн). Альт: B6/B7.</div>
+</div>
+
+<div class="sechd">Кадр 5 · КИТ — ценность / оффер</div>
+<div class="card">
+  <div class="kit">
+    <div class="toys">
+      <div class="t" style="background-image:url('../kk-photos/A1.jpg?v=2');background-position:50% 30%"><span class="l">Karate Cat</span></div>
+      <div class="t" style="background-image:url('../kk-photos/H2.jpg?v=2');background-position:50% 30%"><span class="l">2nd cat — FREE</span></div>
+      <div class="t" style="background-image:url('../kk-photos/H1.jpg?v=2');background-position:50% 30%"><span class="l">Guide — FREE</span></div>
+    </div>
+    <div class="oc">
+      <div class="nm">The Wrestle Kit</div>
+      <div class="pr"><span class="o">$109.99</span><span class="n">$59.99</span><span class="sv">Save $50</span></div>
+      <div class="li"><span class="c">✓</span> 2 puppets &nbsp;<span class="c">✓</span> Bonding &amp; Warm-Up guide</div>
+      <div class="tr">🛡️ 30-day Go-Feral Guarantee · 🇺🇸 Free US shipping</div>
+    </div>
+  </div>
+  <div class="spec"><span class="k">Смысл:</span> ценность ≫ цены — 2 игрушки (рыжий + чёрный) + гайд, цена-якорь $109.99 → $59.99. <span class="k">Фото:</span> A1 + H2 (2-я игрушка) + H1 (гайд). Суммы уточним под COGS.</div>
+</div>
+
+<div class="sechd">Кадр 6 · СПЕКА — детали продукта</div>
+<div class="card">
+  <div class="specf" style="background-image:url('../kk-photos/A1.jpg?v=2')">
+    <div class="hd">Movaro Karate Cat — in detail 🥊</div>
+    <span class="cal" style="top:30%;left:8px">🐱 <b>Lifelike puppet face</b></span>
+    <span class="cal" style="top:46%;right:8px">🧸 <b>Soft plush body</b></span>
+    <span class="cal" style="top:66%;left:8px">🛡️ <b>Padded forearm sleeve</b></span>
+    <span class="cal" style="top:80%;right:8px">📏 <b>One size fits all</b></span>
+  </div>
+  <div class="spec"><span class="k">Смысл:</span> чистый продукт на белом + выноски = качество/конструкция = доверие. <span class="k">Фото:</span> A1 (продукт на бежевом).</div>
+</div>
+
+<div class="note">⚠️ Мок v1 — фото твои реальные, текст черновой. Реагируй по кадрам (фото/текст/цвет/место) → докрутим → перенос на Shopify (галерея = product images, WebP 4:5).</div>
+</div></body></html>
