@@ -1,0 +1,141 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movaro — Karate Cat · остальные блоки (мок v1)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
+.wrap{max-width:470px;margin:0 auto;padding:18px 12px 80px}
+.intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:16px 18px;margin-bottom:18px}
+.intro h1{font-family:'Fraunces',serif;font-size:21px;margin:0 0 8px}.intro p{font-size:13px;color:#4f483d;margin:5px 0}.intro b{color:#21201C}
+.intro .key{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
+.sechd{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:#21201C;background:#fff;border:1px solid #E6DFD1;border-left:4px solid #2f7a73;border-radius:9px;padding:9px 12px;margin:24px 0 8px}
+.card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden;margin-bottom:6px}
+.cbody{padding:14px}
+.spec{padding:10px 12px;font-size:11.5px;color:#2a2620;background:#FBF9F4;border-top:1px solid #EFE8DB}.spec .k{font-weight:700;color:#2f7a73}
+.note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:16px}
+.shead{text-align:center;margin-bottom:12px}
+.shead .eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2f7a73;margin-bottom:5px}
+.shead h2{font-family:'Fraunces',serif;font-size:19px;margin:0 0 6px;line-height:1.15}
+.shead p{font-size:12.5px;color:#4f483d;margin:0}
+/* UGC */
+.ugcgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.story{position:relative;width:100%;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background-size:cover;background-position:50% 40%;box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.story .scrim{position:absolute;left:0;right:0;top:0;height:22%;background:linear-gradient(180deg,rgba(0,0,0,.4),transparent);z-index:1}
+.story .hd{position:absolute;top:10px;left:9px;right:9px;display:flex;align-items:center;gap:6px;z-index:3}
+.story .av{width:23px;height:23px;border-radius:50%;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,.6);flex-shrink:0}
+.story .nm{color:#fff;font-size:11px;font-weight:600;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.story .tm{color:rgba(255,255,255,.8);font-size:10px;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+/* before/after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ba .col{position:relative}
+.ba .im{width:100%;aspect-ratio:4/5;background-size:cover;background-position:center;border-radius:10px}
+.ba .chip{position:absolute;top:9px;left:9px;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;box-shadow:0 1px 5px rgba(0,0,0,.3)}
+.ba .chip.b{background:#C0492F}.ba .chip.a{background:#2f7a73}
+.ba .cap{font-size:11.5px;font-weight:600;margin-top:6px;text-align:center}.ba .cap.b{color:#9a5a44}.ba .cap.a{color:#2f6b63}
+.banote{font-size:12px;color:#4f483d;margin:12px 4px 0;text-align:center}.banote b{color:#21201C}
+/* science 2x2 */
+.sci{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sci .t{position:relative;border-radius:10px;overflow:hidden}
+.sci .im{width:100%;aspect-ratio:1/1;background-size:cover;background-position:center}
+.sci .cap{padding:7px 8px;background:#fff}
+.sci .cap b{font-size:12px;display:block;color:#21201C}.sci .cap small{font-size:10px;color:#7a715f}
+/* instruction */
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:11px;align-items:center}
+.step .im{width:88px;height:110px;border-radius:10px;background-size:cover;background-position:center;flex-shrink:0}
+.step .n{width:22px;height:22px;border-radius:50%;background:#2f7a73;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step .tx h4{margin:0 0 3px;font-family:'Fraunces',serif;font-size:14px}
+.step .tx p{margin:0;font-size:12px;color:#4f483d}
+/* brand */
+.brand .im{width:100%;aspect-ratio:16/10;background-size:cover;background-position:50% 40%;border-radius:10px}
+.brand p{font-size:13px;color:#4f483d;margin:10px 2px 0}.brand p b{color:#21201C}
+/* reviews */
+.rev{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.rev .im{width:100%;aspect-ratio:1/1;background-size:cover;background-position:center;border-radius:8px}
+.revtop{text-align:center;margin-bottom:10px}.revtop .st{color:#E8A93D;font-size:16px}.revtop b{font-size:15px}
+</style></head><body><div class="wrap">
+<div class="intro"><h1>🥊 Karate Cat — остальные блоки (мок v1)</h1>
+<p>Один скоп: UGC (без надписей) · before/after · наука · инструкция · бренд · отзывы. Фото — по твоим раскладкам.</p>
+<div class="key">Реагируй по блокам: фото / текст / порядок.</div></div>
+
+<!-- UGC -->
+<div class="sechd">UGC · 5–7 сторис (без надписей)</div>
+<div class="card"><div class="cbody">
+  <div class="ugcgrid">
+    <div class="story" style="background-image:url('../kk-photos/G7.jpg?v=2')"><div class="scrim"></div><div class="hd"><span class="av" style="background-image:url('../kk-photos/G7.jpg?v=2')"></span><span class="nm">mia.q</span><span class="tm">2h</span></div></div>
+    <div class="story" style="background-image:url('../kk-photos/G1.jpg?v=2')"><div class="scrim"></div><div class="hd"><span class="av" style="background-image:url('../kk-photos/G1.jpg?v=2')"></span><span class="nm">jess.mariee</span><span class="tm">3h</span></div></div>
+    <div class="story" style="background-image:url('../kk-photos/G2.jpg?v=2')"><div class="scrim"></div><div class="hd"><span class="av" style="background-image:url('../kk-photos/G2.jpg?v=2')"></span><span class="nm">ryan.kessler</span><span class="tm">5h</span></div></div>
+    <div class="story" style="background-image:url('../kk-photos/G4.jpg?v=2')"><div class="scrim"></div><div class="hd"><span class="av" style="background-image:url('../kk-photos/G4.jpg?v=2')"></span><span class="nm">the.bennetts</span><span class="tm">8h</span></div></div>
+    <div class="story" style="background-image:url('../kk-photos/G5.jpg?v=2')"><div class="scrim"></div><div class="hd"><span class="av" style="background-image:url('../kk-photos/G5.jpg?v=2')"></span><span class="nm">amanda.lewis</span><span class="tm">1d</span></div></div>
+    <div class="story" style="background-image:url('../kk-photos/G6.jpg?v=2')"><div class="scrim"></div><div class="hd"><span class="av" style="background-image:url('../kk-photos/G6.jpg?v=2')"></span><span class="nm">sofia.r</span><span class="tm">1d</span></div></div>
+  </div>
+</div>
+  <div class="spec"><span class="k">UGC без надписей</span> (твои UGC-кадры). Первый = G7 (девочка играет с котом). На странице берём 5 — порядок/набор скажи. IG-шапка (ник+время) — оставить или убрать?</div>
+</div>
+
+<!-- before/after -->
+<div class="sechd">Before / After (отдельный блок, с таймфреймом)</div>
+<div class="card"><div class="cbody">
+  <div class="shead"><div class="eyebrow">5 days, 10 minutes a day</div><h2>From bored-and-bitey to blissed-out</h2><p>Same wild energy — now it goes into the toy, not your furniture or your skin.</p></div>
+  <div class="ba">
+    <div class="col"><div class="im" style="background-image:url('../kk-photos/E3.jpg?v=2');background-position:50% 35%"></div><span class="chip b">Before</span><div class="cap b">A bored cat + shredded you</div></div>
+    <div class="col"><div class="im" style="background-image:url('../kk-photos/C1.jpg?v=2');background-position:50% 25%"></div><span class="chip a">After</span><div class="cap a">One happy, worn-out cat</div></div>
+  </div>
+  <p class="banote">After 5 days of 10-minute wrestles: <b>no more 4am ankle attacks, no more shredded forearms</b> — just a happy cat that finally got the fight it was begging for.</p>
+</div>
+  <div class="spec"><span class="k">Before = E3</span> · <span class="k">After = C1</span> (весёлый кот). Текст с таймфреймом.</div>
+</div>
+
+<!-- science -->
+<div class="sechd">Наука / физиология (4 панели)</div>
+<div class="card"><div class="cbody">
+  <div class="shead"><div class="eyebrow">The science of play</div><h2>Not just fun — it's physiology</h2><p>Real hunt-and-wrestle play floods your cat with feel-good chemistry and gives the body a real workout.</p></div>
+  <div class="sci">
+    <div class="t"><div class="im" style="background-image:url('../kk-photos/B8.jpg?v=2')"></div><div class="cap"><b>Feel-good chemistry</b><small>dopamine + endorphins</small></div></div>
+    <div class="t"><div class="im" style="background-image:url('../kk-photos/F4.jpg?v=2')"></div><div class="cap"><b>A real workout</b><small>heart pumping, energy burned</small></div></div>
+    <div class="t"><div class="im" style="background-image:url('../kk-photos/C6.jpg?v=2')"></div><div class="cap"><b>Calm &amp; content</b><small>a satisfied hunter</small></div></div>
+    <div class="t"><div class="im" style="background-image:url('../kk-photos/E1.jpg?v=2')"></div><div class="cap"><b>Sleeps through</b><small>maybe no 5am alarm</small></div></div>
+  </div>
+</div>
+  <div class="spec"><span class="k">Кот играет</span> (B8/F4/C6) + <span class="k">сон = E1</span> (как ты сказала). Честно, без выдуманных цифр.</div>
+</div>
+
+<!-- instruction -->
+<div class="sechd">Инструкция · 3 шага</div>
+<div class="card"><div class="cbody">
+  <div class="shead"><div class="eyebrow">Easier than it looks</div><h2>Start wrestling in 3 steps</h2></div>
+  <div class="steps">
+    <div class="step"><div class="im" style="background-image:url('../kk-photos/A2.jpg?v=2');background-position:50% 40%"></div><div class="tx"><h4><span class="n" style="display:inline-flex;vertical-align:middle;margin-right:6px">1</span>Slip it on</h4><p>Slide your hand into the padded sleeve — your fingers work the puppet's paws.</p></div></div>
+    <div class="step"><div class="im" style="background-image:url('../kk-photos/A4.jpg?v=2');background-position:50% 45%"></div><div class="tx"><h4><span class="n" style="display:inline-flex;vertical-align:middle;margin-right:6px">2</span>Wave &amp; wiggle</h4><p>Bring the puppet to life — dart it, bop it, let it "run away" to trigger the chase.</p></div></div>
+    <div class="step"><div class="im" style="background-image:url('../kk-photos/C4.jpg?v=2');background-position:50% 30%"></div><div class="tx"><h4><span class="n" style="display:inline-flex;vertical-align:middle;margin-right:6px">3</span>Let them go feral</h4><p>Your cat pounces, bunny-kicks and wrestles — every claw on the sleeve, not on you.</p></div></div>
+  </div>
+</div>
+  <div class="spec"><span class="k">Шаг1 = A2 · Шаг2 = A4 · Шаг3 = C4</span> (кот играет; C1 ушёл в Before/After). Текст — простыми шагами.</div>
+</div>
+
+<!-- brand -->
+<div class="sechd">Бренд · «We're cat people»</div>
+<div class="card"><div class="cbody brand">
+  <div class="im" style="background-image:url('../kk-photos/D2.jpg?v=2')"></div>
+  <p><b>We're cat people first.</b> Karate Cat started on our own living-room floor — a notebook full of ideas, a very judgmental cat, and one goal: give bored indoor cats the rough-and-tumble play they're built for, without anyone getting scratched. Every detail is tested on real cats before it ships.</p>
+</div>
+  <div class="spec"><span class="k">Бренд = D2</span> — акцент на бумаги (видно, как мы всё прорабатываем). Реальные люди за брендом, без фейк-эксперта.</div>
+</div>
+
+<!-- reviews -->
+<div class="sechd">Отзывы · фото-грид (заглушка)</div>
+<div class="card"><div class="cbody">
+  <div class="revtop"><span class="st">★★★★★</span> <b>4.8</b></div>
+  <div class="rev">
+    <div class="im" style="background-image:url('../kk-photos/G1.jpg?v=2')"></div>
+    <div class="im" style="background-image:url('../kk-photos/G3.jpg?v=2')"></div>
+    <div class="im" style="background-image:url('../kk-photos/C6.jpg?v=2')"></div>
+    <div class="im" style="background-image:url('../kk-photos/G5.jpg?v=2')"></div>
+    <div class="im" style="background-image:url('../kk-photos/C3.jpg?v=2')"></div>
+    <div class="im" style="background-image:url('../kk-photos/B5.jpg?v=2')"></div>
+  </div>
+</div>
+  <div class="spec"><span class="k">Отзывы = заглушка</span> (любые кадры). Реальные потом сгенерим/возьмём (Amazon/конкуренты) — спланируем отдельно.</div>
+</div>
+
+<div class="note">⚠️ Мок v1 остальных блоков. Реагируй по блокам → правки → перенос на Shopify.</div>
+</div></body></html>
