@@ -19,10 +19,10 @@ C6	ChatGPT Image 20 июн. 2026 г., 21_59_03.png
 C7	ChatGPT Image 21 июн. 2026 г., 11_01_55.png
 C8	ChatGPT Image 21 июн. 2026 г., 11_48_12.png
 D1	ChatGPT Image 20 июн. 2026 г., 21_58_51.png
-D2	ChatGPT Image 20 июн. 2026 г., 22_08_47 (2).png
-D3	ChatGPT Image 21 июн. 2026 г., 11_48_19.png
+D2	ChatGPT Image 21 июн. 2026 г., 11_48_19.png
 E1	ChatGPT Image 20 июн. 2026 г., 22_08_48 (5).png
 E2	ChatGPT Image 20 июн. 2026 г., 22_08_48 (4).png
+E3	ChatGPT Image 20 июн. 2026 г., 22_08_47 (2).png
 F1	ChatGPT Image 20 июн. 2026 г., 22_03_58.png
 F2	ChatGPT Image 21 июн. 2026 г., 11_01_50.png
 F3	ChatGPT Image 21 июн. 2026 г., 11_27_32.png
