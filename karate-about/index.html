@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Movaro — Karate Cat · ABOUT-блок (мок v1)</title>
+<title>Movaro — Karate Cat · ABOUT-блок (мок v2)</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
@@ -15,24 +15,45 @@
 .card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden;margin-bottom:6px}
 .spec{padding:10px 12px;font-size:11.5px;color:#2a2620;background:#FBF9F4;border-top:1px solid #EFE8DB}.spec .k{font-weight:700;color:#2f7a73}
 .note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:16px}
-/* tile (benefit, text-on-photo, SMALLER than gallery) */
-.tile{position:relative;width:78%;margin:0 auto;aspect-ratio:4/5;background-size:cover;overflow:hidden;border-radius:4px}
-.sct{position:absolute;left:0;right:0;top:0;height:34%;background:linear-gradient(180deg,rgba(0,0,0,.4),transparent)}
-.scb{position:absolute;left:0;right:0;bottom:0;height:36%;background:linear-gradient(0deg,rgba(0,0,0,.5),transparent)}
-.th{position:absolute;left:12px;right:12px;top:16px;z-index:3;text-align:center;font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:19px;text-shadow:0 2px 10px rgba(0,0,0,.75);line-height:1.08}
-.tchips{position:absolute;left:8px;right:8px;bottom:12px;display:flex;gap:5px;justify-content:center;flex-wrap:wrap;z-index:3}
-.tchip{background:rgba(255,255,255,.96);border-radius:999px;padding:5px 10px;font-weight:600;font-size:11px;color:#21201C;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.mini{width:78%;margin:0 auto}
 /* hotspot product */
 .hot{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 42%;overflow:hidden}
 .hot .hd{position:absolute;top:13px;left:0;right:0;text-align:center;z-index:4}
 .hot .hd span{background:rgba(255,255,255,.95);color:#21201C;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;box-shadow:0 2px 7px rgba(0,0,0,.22)}
 .dot{position:absolute;z-index:5;display:flex;align-items:center}
 .dot .b{width:24px;height:24px;border-radius:50%;background:#fff;color:#2f7a73;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;box-shadow:0 1px 6px rgba(0,0,0,.4);flex-shrink:0}
-.dot .tp{background:rgba(33,32,28,.9);color:#fff;font-size:10px;font-weight:600;padding:4px 8px;border-radius:7px;margin-left:6px;white-space:nowrap;max-width:160px}
+.dot .tp{background:rgba(33,32,28,.9);color:#fff;font-size:10px;font-weight:600;padding:4px 8px;border-radius:7px;margin-left:6px;white-space:nowrap}
+/* benefit1 — mini collage (same as gallery frame2, minimal text) */
+.col2{position:relative;width:100%;aspect-ratio:4/5;display:flex;overflow:hidden;border-radius:4px}
+.col2 .cc{position:relative;width:50%;display:flex;flex-direction:column}
+.col2 .cell{flex:1;background-size:cover;background-position:center}
+.col2 .tg{position:absolute;top:9px;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:4px 12px;border-radius:999px;z-index:4;box-shadow:0 1px 5px rgba(0,0,0,.35)}
+.col2 .left .tg{left:9px;background:#d9503e}.col2 .right .tg{right:9px;background:#2f7a73}
+.col2 .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:4}
+.col2 .cap{position:absolute;left:8px;right:8px;bottom:10px;text-align:center;z-index:5}
+.col2 .cap span{background:rgba(255,255,255,.96);color:#21201C;font-size:11px;font-weight:700;padding:5px 11px;border-radius:999px;box-shadow:0 1px 6px rgba(0,0,0,.25)}
+/* benefit2 — mini use (same text as gallery frame3) */
+.use{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 45%;overflow:hidden;border-radius:4px}
+.use .gt{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.36),transparent);z-index:1}
+.use .gb{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(0deg,rgba(0,0,0,.5),transparent);z-index:1}
+.use .blk{position:absolute;left:12px;right:12px;text-align:center;z-index:3}
+.use .blk.top{top:13px}.use .blk.bot{bottom:14px}
+.use .pill{display:inline-block;font-weight:700;font-size:12.5px;padding:6px 13px;border-radius:999px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.use .pill.r{background:#d9503e}.use .pill.t{background:#2f7a73}
+.use .wt{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11px;font-weight:600;margin-top:6px;padding:5px 10px;border-radius:9px;line-height:1.28;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+/* benefit3 — mini money (same compare as gallery frame4, at TOP) */
+.money{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 45%;overflow:hidden;border-radius:4px}
+.cmp{position:absolute;left:10px;right:10px;top:12px;display:flex;gap:22px;z-index:3}
+.cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:11px;padding:8px 9px;box-shadow:0 3px 12px rgba(0,0,0,.3);text-align:center}
+.cmp .col .hd{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.cmp .bad .hd{color:#d9503e}.cmp .good .hd{color:#2f7a73}
+.cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:20px;line-height:1;margin:2px 0 0}.cmp .col .big small{font-size:10px;font-weight:600}
+.cmp .bad .big{color:#d9503e}.cmp .good .big{color:#2f7a73}
+.cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:9px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
 </style></head><body><div class="wrap">
-<div class="intro"><h1>🥊 Karate Cat — ABOUT-блок (мок v1)</h1>
-<p>Блок About: вводный текст + продукт с тап-точками + <b>3 выгоды = кадры 2/3/4</b> (радость · руки · ценность). Фото <b>другие</b>, не из галереи. Текст легче, фото меньше (≈78% ширины) — но стиль как в галерее.</p>
-<div class="key">⚠️ Вопрос формата: сейчас сделал текст НА фото (как в галерее). На странице сейчас текст СБОКУ от фото. Скажи, какой вариант — оставлю/переключу.</div></div>
+<div class="intro"><h1>🥊 Karate Cat — ABOUT-блок (мок v2)</h1>
+<p>3 выгоды = <b>те же кадры 2/3/4 галереи</b>, только меньше и текста меньше (повтор оффера для тех, кто не листал). Хотспот-продукт сверху.</p>
+<div class="key">Реагируй: фото · текст · размер. Дальше — одним скопом остальные блоки.</div></div>
 
 <div class="lead">
   <div class="eyebrow">What your cat actually wants</div>
@@ -40,7 +61,7 @@
   <p>Under every couch-napping cat is a little hunter. With nowhere to aim it, that energy becomes 4 a.m. zoomies and shredded furniture. Karate Cat gives it those 15 minutes — every claw lands on the <span class="hl">padded sleeve, not on you.</span></p>
 </div>
 
-<div class="sechd">Продукт · тап-точки «как устроено»</div>
+<div class="sechd">Продукт · тап-точки «как устроено» (оставляем)</div>
 <div class="card">
   <div class="hot" style="background-image:url('../kk-photos/B4.jpg?v=2')">
     <div class="hd"><span>👆 See how it works</span></div>
@@ -48,35 +69,54 @@
     <div class="dot" style="top:30%;right:30%"><span class="b">+</span><span class="tp">🐾 Soft plush puppet</span></div>
     <div class="dot" style="top:70%;left:30%"><span class="b">+</span><span class="tp">🙌 Your hand leads the play</span></div>
   </div>
-  <div class="spec"><span class="k">Продукт-хотспот:</span> B4 (рука с куклой + кот) + 3 точки (рукав · кукла · рука). <span class="k">Фото:</span> B4.</div>
+  <div class="spec"><span class="k">Хотспот:</span> B4 + 3 точки. Оставляем.</div>
 </div>
 
-<div class="sechd">Выгода 1 · радость (= кадр 2)</div>
+<div class="sechd">Выгода 1 = Кадр 2 (до/после, те же фото, текст минимум)</div>
 <div class="card">
-  <div class="tile" style="background-image:url('../kk-photos/C1.jpg?v=2');background-position:50% 30%"><div class="sct"></div><div class="scb"></div>
-    <div class="th">Pure joy for your cat</div>
-    <div class="tchips"><span class="tchip">😻 Back for it every day</span></div>
+  <div class="mini">
+  <div class="col2">
+    <div class="cc left">
+      <div class="cell" style="background-image:url('../kk-photos/E3.jpg?v=2');background-position:50% 35%"></div>
+      <div class="cell" style="background-image:url('../kk-photos/E2.jpg?v=2');background-position:50% 40%"></div>
+      <span class="tg">Before</span>
+    </div>
+    <div class="cc right">
+      <div class="cell" style="background-image:url('../kk-photos/C7.jpg?v=2');background-position:50% 25%"></div>
+      <div class="cell" style="background-image:url('../kk-photos/C4.jpg?v=2');background-position:50% 35%"></div>
+      <span class="tg">After</span>
+    </div>
+    <div class="mid"></div>
+    <div class="cap"><span>Bored cat → happy hunter</span></div>
   </div>
-  <div class="spec"><span class="k">Радость:</span> то, что коты любят больше всего — контактная игра. Короткий заголовок + 1 чип. <span class="k">Фото:</span> C1.</div>
+  </div>
+  <div class="spec"><span class="k">= кадр 2, меньше:</span> те же фото (E3/E2 · C7/C4), только теги 🔴 Before / 🟢 After + 1 подпись. Без больших текстов.</div>
 </div>
 
-<div class="sechd">Выгода 2 · руки (= кадр 3)</div>
+<div class="sechd">Выгода 2 = Кадр 3 (тот же текст, фото A3)</div>
 <div class="card">
-  <div class="tile" style="background-image:url('../kk-photos/A3.jpg?v=2');background-position:50% 35%"><div class="sct"></div><div class="scb"></div>
-    <div class="th">You stop being<br>the chew toy</div>
-    <div class="tchips"><span class="tchip">🛡️ Claws hit the sleeve, not you</span></div>
+  <div class="mini">
+  <div class="use" style="background-image:url('../kk-photos/A3.jpg?v=2');background-position:50% 35%"><div class="gt"></div><div class="gb"></div>
+    <div class="blk top"><span class="pill r">They bite & kick hard 🥊</span></div>
+    <div class="blk bot"><span class="pill t">Your hands stay safe</span><span class="wt">Padded sleeve takes the claws & kicks — not you.</span></div>
   </div>
-  <div class="spec"><span class="k">Руки:</span> вся энергия в рукав, а не в твои руки. <span class="k">Фото:</span> A3 (рукав/продукт).</div>
+  </div>
+  <div class="spec"><span class="k">= кадр 3, меньше:</span> текст тот же (руки в безопасности), фото A3 (продукт/рукав).</div>
 </div>
 
-<div class="sechd">Выгода 3 · ценность (= кадр 4)</div>
+<div class="sechd">Выгода 3 = Кадр 4 (сравнение цены вверху, фото D2)</div>
 <div class="card">
-  <div class="tile" style="background-image:url('../kk-photos/D2.jpg?v=2');background-position:50% 35%"><div class="sct"></div><div class="scb"></div>
-    <div class="th">Two toys,<br>one smart kit</div>
-    <div class="tchips"><span class="tchip">💸 More play, less money</span></div>
+  <div class="mini">
+  <div class="money" style="background-image:url('../kk-photos/D2.jpg?v=2');background-position:50% 45%">
+    <div class="cmp">
+      <div class="col bad"><div class="hd">Pointless toys</div><div class="big">$500<small> wasted</small></div></div>
+      <div class="col good"><div class="hd">Karate Cat</div><div class="big">$59.99<small> once</small></div></div>
+      <div class="vs">VS</div>
+    </div>
   </div>
-  <div class="spec"><span class="k">Ценность:</span> 2 игрушки + гайд за $59.99 вместо горы игнор-игрушек. <span class="k">Фото:</span> D2 (на столе виден и гайд).</div>
+  </div>
+  <div class="spec"><span class="k">= кадр 4, меньше:</span> сравнение 🔴 $500 / 🟢 $59.99 вверху, фото заменено на D2 (виден и гайд). Суммы уточним.</div>
 </div>
 
-<div class="note">⚠️ Мок v1 About-блока. Реагируй: формат (текст на фото / сбоку) · фото · текст. Дальше — одним скопом остальные блоки.</div>
+<div class="note">⚠️ Мок v2 About — выгоды = мини-копии кадров 2/3/4. Реагируй → дальше одним скопом остальные блоки.</div>
 </div></body></html>
