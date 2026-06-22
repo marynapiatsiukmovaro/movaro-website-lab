@@ -77,13 +77,227 @@
 .ladder .row{display:flex;gap:11px;align-items:center}
 .ladder .im{width:100px;height:78px;border-radius:10px;background-size:cover;background-position:center;flex-shrink:0;border:1px solid #E6DFD1}
 .ladder .tx b{font-size:13px}.ladder .tx p{margin:2px 0 0;font-size:11.5px;color:#4f483d}
+/* ===== HERO/GALLERY + ABOUT frames (from calmwrap-gallery / calmwrap-about) ===== */
+.ph{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 34%;overflow:hidden}
+.scrim-t{position:absolute;left:0;right:0;top:0;height:42%;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,0))}
+.scrim-b{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(0deg,rgba(0,0,0,.76),rgba(0,0,0,0))}
+.star{position:absolute;top:11px;right:12px;font-size:11px;color:#fff;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.6);z-index:5}.star .s{color:#E8A93D}
+.kick{position:absolute;top:13px;left:0;right:0;text-align:center;z-index:4;font-family:'Jost';font-weight:800;font-size:11px;letter-spacing:.2em;color:#ff7a5c;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.pains{position:absolute;left:14px;right:14px;top:33px;z-index:3;text-align:center}
+.pains .pl{display:block;font-weight:700;font-size:17px;color:#fff;text-shadow:0 2px 9px rgba(0,0,0,.7);margin:4px 0}.pains .no{color:#ff7a5c;font-weight:800}
+.plabel{position:absolute;right:14px;top:42%;text-align:right;z-index:4}
+.plabel .nm{font-family:'Fraunces',serif;font-weight:500;font-size:17px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.85);line-height:1.02;display:block}.plabel svg{display:block;margin:3px 0 0 auto}
+.turn{position:absolute;left:0;right:0;bottom:58px;text-align:center;z-index:4}
+.turn .pill{display:inline-block;background:#2f7a73;color:#fff;font-weight:700;font-size:13px;padding:6px 15px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.icons{position:absolute;left:8px;right:8px;bottom:14px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;z-index:4}
+.ic{background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-weight:600;font-size:11.5px;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+.col2{position:relative;width:100%;aspect-ratio:4/5;display:flex;overflow:hidden}
+.col2 .cc{position:relative;width:50%;display:flex;flex-direction:column}
+.col2 .cell{flex:1;background-size:cover;background-position:center}
+.col2 .tg{position:absolute;top:9px;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;padding:3px 10px;border-radius:999px;z-index:4;box-shadow:0 1px 5px rgba(0,0,0,.3)}
+.col2 .left .tg{left:9px;background:#d9503e}.col2 .right .tg{right:9px;background:#2f7a73}
+.col2 .ovl{position:absolute;left:8px;right:8px;top:50%;transform:translateY(-50%);text-align:center;color:#fff;border-radius:11px;padding:10px 11px;z-index:3;box-shadow:0 3px 12px rgba(0,0,0,.34)}
+.col2 .ovl.pain{background:#d9503e}.col2 .ovl.sol{background:#2f7a73}
+.col2 .ovl .h{font-family:'Fraunces',serif;font-weight:600;font-size:14px;line-height:1.12;display:block}
+.col2 .ovl .s{display:block;font-size:10.5px;margin-top:5px;font-weight:500;line-height:1.28}
+.col2 .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:4}
+.seamadv{position:absolute;left:0;right:0;bottom:12px;display:flex;flex-direction:column;align-items:center;gap:5px;z-index:6}
+.seamadv .l{background:rgba(255,255,255,.95);color:#21201C;border-radius:999px;padding:4px 12px;font-size:10.5px;font-weight:600;box-shadow:0 1px 6px rgba(0,0,0,.25)}.seamadv .l b{color:#2f7a73}
+.use{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 42%;overflow:hidden}
+.use .gt{position:absolute;left:0;right:0;top:0;height:34%;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0));z-index:1}
+.use .gb{position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(0deg,rgba(0,0,0,.62),rgba(0,0,0,0));z-index:1}
+.use .blk{position:absolute;left:12px;right:12px;text-align:center;z-index:3}
+.use .blk.top{top:14px}.use .blk.bot{bottom:15px}
+.use .pill{display:inline-block;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.use .pill.r{background:#d9503e}.use .pill.t{background:#2f7a73}
+.use .wt{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11.5px;font-weight:600;margin-top:7px;padding:6px 11px;border-radius:10px;line-height:1.3;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+.grid4{position:relative;width:100%;aspect-ratio:4/5;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;overflow:hidden;gap:2px;background:#fff}
+.grid4 .g{position:relative;background-size:cover;background-position:center}
+.grid4 .g .lab{position:absolute;background:rgba(47,122,115,.94);color:#fff;font-weight:600;font-size:10px;padding:3px 8px;border-radius:6px;z-index:3}
+.grid4 .g.tl .lab{top:6px;left:6px}.grid4 .g.tr .lab{top:6px;right:6px}.grid4 .g.bl .lab{bottom:6px;left:6px}.grid4 .g.br .lab{bottom:6px;right:6px}
+.circles{position:absolute;left:8px;right:8px;top:60px;display:flex;gap:7px;justify-content:center;flex-wrap:wrap;z-index:3}
+.cir{width:72px;height:72px;border-radius:50%;background:#d9503e;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:19px;box-shadow:0 2px 9px rgba(0,0,0,.32)}
+.cir b{font-size:8.5px;font-weight:700;display:block;margin-top:1px;line-height:1.05}
+.specph2{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../cw-photos/A1.jpg');background-size:72%;background-repeat:no-repeat;background-position:center;overflow:hidden;background-color:#fff}
+.specph2 .hd{position:absolute;top:14px;left:14px;right:14px;text-align:center;color:#2f6b63;font-family:'Fraunces',serif;font-weight:600;font-size:18px;z-index:3}
+.specph2 .cal{position:absolute;background:rgba(255,255,255,.96);border-radius:999px;padding:5px 11px;font-size:10.5px;font-weight:700;color:#21201C;box-shadow:0 2px 8px rgba(0,0,0,.2);z-index:4;display:flex;align-items:center;gap:5px}.specph2 .cal b{color:#2f7a73;font-weight:700}.specph2 .cal::after{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:#2f7a73;box-shadow:0 0 0 3px rgba(47,122,115,.25)}.specph2 .cal.l::after{right:-13px}.specph2 .cal.r::after{left:-13px}
+.moneywrap{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:center;overflow:hidden}
+.moneywrap .veil{position:absolute;inset:0;background:rgba(20,30,28,.42)}
+.moneywrap .soc{position:absolute;top:10px;left:0;right:0;text-align:center;z-index:4}
+.moneywrap .soc span{display:inline-block;background:rgba(255,255,255,.95);color:#21201C;font-size:10.5px;font-weight:700;padding:4px 12px;border-radius:999px;box-shadow:0 2px 7px rgba(0,0,0,.25)}
+.moneywrap .soc span b{color:#E8A93D}
+.cmp{position:absolute;left:11px;right:11px;bottom:14px;display:flex;gap:26px;z-index:3}
+.cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:12px;padding:10px 11px;box-shadow:0 3px 13px rgba(0,0,0,.3)}
+.cmp .col .hd{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.cmp .bad .hd{color:#d9503e}.cmp .good .hd{color:#2f7a73}
+.cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:19px;line-height:1;margin:3px 0 7px}
+.cmp .col .big small{font-size:11px;font-weight:600}
+.cmp .bad .big{color:#d9503e}.cmp .good .big{color:#2f7a73}
+.cmp .it{font-size:9.5px;color:#3a352c;font-weight:500;padding:2px 0;line-height:1.2}
+.cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.grid4 .ofc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72%;background:rgba(255,255,255,.97);border-radius:13px;padding:9px 12px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
+.grid4 .ofc .pr{margin:5px 0 6px}.grid4 .ofc .pr .o{color:#9a9488;text-decoration:line-through;font-size:13px;margin-right:6px}
+.grid4 .ofc .it{font-size:10.5px;font-weight:600;color:#21201C;padding:1.5px 0}.grid4 .ofc .it b{color:#2f7a73}
+.grid4 .ofc .nm{font-family:'Fraunces',serif;font-weight:600;font-size:15px;color:#2f7a73}
+.grid4 .ofc .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:23px;color:#2f7a73}
+.grid4 .ofc .save{display:inline-block;background:#E8A93D;color:#fff;font-size:9px;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:middle}
+.grid4 .ofc .divln{height:1px;background:#ececec;margin:8px 2px}
+.grid4 .ofc .gifts{display:flex;gap:6px;justify-content:center;margin:0 0 6px}
+.grid4 .ofc .gift{background:#F2F7F5;border:1px solid #d6e4e0;border-radius:9px;padding:4px 9px;font-size:9.5px;font-weight:700;color:#2f6b63}
+.grid4 .ofc .guar{font-size:10.5px;font-weight:700;color:#21201C}
+.grid4 .veil5{position:absolute;inset:0;background:rgba(20,30,28,.3);z-index:2}
+.hero-hot{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../cw-photos/B11.jpg');background-size:cover;background-position:50% 28%;border-radius:6px;overflow:hidden}
+.hero-hot .chip{position:absolute;top:13px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.96);border-radius:999px;padding:6px 13px;font-size:11.5px;font-weight:600;color:#21201C;box-shadow:0 2px 9px rgba(0,0,0,.18)}
+.hero-hot .hot{position:absolute;width:27px;height:27px;border-radius:50%;background:#3E5C5A;border:2px solid #fff;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;box-shadow:0 2px 9px rgba(0,0,0,.25)}
+.lockhd{border-left-color:#3E5C5A !important;background:#F2F7F5 !important}
 </style></head><body><div class="wrap">
 
-<div class="intro"><h1>🧣 Calm Wrap — блоки тела (реальные фото · мок v1)</h1>
-<p>Один скоп для согласования: <b>UGC · before/after · механизм · «мы-они» · инструкция · отзывы · бренд · оффер+гайды · About-футер.</b> Фото — реальные (твои кадры), уже вставлены.</p>
-<div class="key">Реагируй по блокам: фото / порядок / что заменить. Тексты — рабочие (формула «боль→решение», правим по желанию).</div>
-<div class="lock">🔒 <b>УЖЕ СОГЛАСОВАНО, не пересматриваем:</b> Галерея → <a href="../calmwrap-gallery/index.html?v=3" target="_blank">открыть</a> (P1·P2·P3.1·P4·P5·P6) · About → <a href="../calmwrap-about/index.html?v=1" target="_blank">открыть</a> (хотспот B11 + P2/P3/P4). Доска всех фото → <a href="../cw-photos/index.html?v=3" target="_blank">A–H + Гайды G</a>.</div>
+<div class="intro"><h1>🧣 Calm Wrap — ВСЯ страница в одном файле (реальные фото)</h1>
+<p>Единое место: <b>HERO/галерея · ABOUT · тело (UGC · before/after · механизм · мы-они · инструкция · отзывы · бренд) · оффер+гайды · About-футер.</b> Все фото реальные, вставлены. Отсюда и будем переносить на продуктовую страницу.</p>
+<div class="key">Реагируй по блокам: фото / порядок / что заменить. Галерея + About уже 🔒 (вверху). Тексты — рабочие.</div>
+<div class="lock">🔒 <b>ЕДИНЫЙ ФАЙЛ:</b> теперь тут ВСЁ — галерея (hero) + about + тело + гайды + About-футер. Галерея и About уже согласованы (ниже, помечены 🔒). Доска всех фото → <a href="../cw-photos/index.html?v=4" target="_blank">A–H + Гайды G</a>.</div>
 </div>
+
+<!-- ===== HERO / ГАЛЕРЕЯ (6 кадров) ===== -->
+<div class="sechd lockhd">🖼 HERO · Галерея — 6 кадров (🔒 согласовано · текст запечём в файлы позже)</div>
+<div class="card">
+    <div class="ph" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"><div class="scrim-t"></div><div class="scrim-b"></div>
+      <div class="star"><span class="s">★</span> 4.8</div>
+      <div class="kick">ENOUGH.</div>
+      <div class="pains"><span class="pl"><span class="no">No</span> scratched hands</span><span class="pl"><span class="no">No</span> terrified cat</span><span class="pl"><span class="no">No</span> $90 vet bills</span></div>
+      <div class="plabel"><span class="nm">Movaro<br>Calm Wrap</span><svg width="80" height="56" viewBox="0 0 80 56" fill="none"><path d="M76 8 Q26 4 9 48" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M9 48 L12 35 M9 48 L23 50" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+      <div class="turn"><span class="pill">There's a calmer way ↓</span></div>
+      <div class="icons"><span class="ic">😌 Calm cat</span><span class="ic">🖐️ No scratches</span><span class="ic">💸 No vet bill</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="col2">
+      <div class="cc left">
+        <div class="cell" style="background-image:url('../cw-photos/C4.jpg');background-position:50% 30%"></div>
+        <div class="cell" style="background-image:url('../cw-photos/C3.jpg')"></div>
+        <span class="tg">Before</span>
+        <div class="ovl pain"><span class="h">It terrifies him, too</span><span class="s">Chasing &amp; pinning a scared cat spikes his stress — racing heart, panic, no clue what's happening.</span></div>
+      </div>
+      <div class="cc right">
+        <div class="cell" style="background-image:url('../cw-photos/B8.jpg');background-position:50% 30%"></div>
+        <div class="cell" style="background-image:url('../cw-photos/B7.jpg')"></div>
+        <span class="tg">After</span>
+        <div class="ovl sol"><span class="h">Calm in ~60 seconds</span><span class="s">Soft fleece holds him in an even, gentle pressure — like a swaddle. Never clamped: it's fabric, he steps out anytime.</span></div>
+      </div>
+      <div class="mid"></div>
+      <div class="seamadv"><span class="l">🧺 <b>Soft quiet fleece</b></span><span class="l">🐾 <b>Frees one paw at a time</b></span><span class="l">⏱️ <b>Calm in ~60 seconds</b></span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="use" style="background-image:url('../cw-photos/B16.jpg');background-position:50% 42%"><div class="gt"></div><div class="gb"></div>
+      <div class="blk top"><span class="pill r">It scares you, too 😬</span><span class="wt">Every trim is a war — scratches, bites, 20 min of chasing, and you still don't finish.</span></div>
+      <div class="blk bot"><span class="pill t">Free one paw, trim, done</span><span class="wt">Velcro flap opens just the paw you need — one minute, on your own, not a scratch.</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="use" style="background-image:url('../cw-photos/B16.jpg');background-position:50% 42%"><div class="gt"></div><div class="gb"></div>
+      <div class="blk top"><span class="pill r">It scares you, too 😬</span></div>
+      <div class="circles"><span class="cir">😾<b>Scratches</b></span><span class="cir">🩸<b>Bites</b></span><span class="cir">⏱️<b>20-min chase</b></span><span class="cir">😩<b>Not done</b></span></div>
+      <div class="blk bot"><span class="pill t">Free one paw, trim, done</span><span class="wt">Velcro flap opens just the paw you need — one minute, on your own, not a scratch.</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="moneywrap" style="background-image:url('../cw-photos/B13.jpg');background-position:50% 22%"><div class="veil" style="background:linear-gradient(to top,rgba(20,30,28,.62),rgba(20,30,28,0) 52%)"></div>
+      <div class="soc"><span>🐾 <b>Happy cats</b></span></div>
+      <div class="cmp">
+        <div class="col bad"><div class="hd">Groomer &amp; vet</div><div class="big">$500+<small> /yr</small></div>
+          <div class="it">🐾 Nail trim — $25–45 each</div>
+          <div class="it">📅 Every few weeks, all year</div>
+          <div class="it">💉 Vet sedation if fractious — $150+</div>
+          <div class="it">🔁 Forever, every single time</div>
+        </div>
+        <div class="col good"><div class="hd">Movaro</div><div class="big">$64.99<small> once</small></div>
+          <div class="it">🏠 Do it at home, anytime</div>
+          <div class="it">🚫 No driving, ever</div>
+          <div class="it">♾️ Buy once, wash, reuse</div>
+          <div class="it">🧺 Premium soft fleece</div>
+        </div>
+        <div class="vs">VS</div>
+      </div>
+    </div>
+</div>
+<div class="card">
+    <div class="grid4">
+      <div class="g tl" style="background-image:url('../cw-photos/B18.jpg')"><span class="lab">Ears &amp; eyes</span></div>
+      <div class="g tr" style="background-image:url('../cw-photos/B23.jpg')"><span class="lab">Meds &amp; pills</span></div>
+      <div class="g bl" style="background-image:url('../cw-photos/B21.jpg')"><span class="lab">Soothe &amp; wipe</span></div>
+      <div class="g br" style="background-image:url('../cw-photos/D1.jpg')"><span class="lab">Calm-downs</span></div>
+      <div class="veil5"></div>
+      <div class="ofc">
+        <div class="nm">Movaro Calm Wrap</div>
+        <div class="pr"><span class="o">$100</span><span class="n">$64.99</span><span class="save">Save $35</span></div>
+        <div class="divln"></div>
+        <div class="gifts"><span class="gift">🎁 Cat-Calm Guide</span><span class="gift">📋 Stress Cheat-Sheet</span></div>
+        <div class="guar">🛡️ 30-day calm guarantee</div>
+      </div>
+    </div>
+</div>
+<div class="card">
+    <div class="specph2"><div class="hd">Movaro Calm Wrap — in detail 🐾</div>
+      <span class="cal l" style="top:31%;left:10px">🔒 <b>Secure velcro collar</b></span>
+      <span class="cal r" style="top:46%;right:10px">🧺 <b>Soft quiet fleece</b></span>
+      <span class="cal l" style="top:63%;left:10px">🐾 <b>Velcro paw flaps</b></span>
+    </div>
+</div>
+<div class="spec" style="border:1px solid #E6DFD1;border-top:0;border-radius:0 0 14px 14px;margin-bottom:6px"><span class="k">🔒 Галерея = 6 кадров</span> (хук · вина · руки[+вариант 3.1] · деньги · влюбить+оффер · спека). Текст запечём в отдельные jpg перед портом.</div>
+
+<!-- ===== ABOUT (хотспот + 3 кадра) ===== -->
+<div class="sechd lockhd">🧣 ABOUT — хотспот-герой + 3 кадра (🔒 согласовано)</div>
+<div class="card"><div class="hero-hot"><span class="chip">👆 Tap the + dots to see how it works</span>
+  <span class="hot" style="top:58%;left:30%">+</span><span class="hot" style="top:40%;left:60%">+</span><span class="hot" style="top:72%;left:50%">+</span>
+</div></div>
+<div class="card">
+    <div class="col2">
+      <div class="cc left">
+        <div class="cell" style="background-image:url('../cw-photos/C4.jpg');background-position:50% 30%"></div>
+        <div class="cell" style="background-image:url('../cw-photos/C3.jpg')"></div>
+        <span class="tg">Before</span>
+        <div class="ovl pain"><span class="h">It terrifies him, too</span></div>
+      </div>
+      <div class="cc right">
+        <div class="cell" style="background-image:url('../cw-photos/B8.jpg');background-position:50% 30%"></div>
+        <div class="cell" style="background-image:url('../cw-photos/B7.jpg')"></div>
+        <span class="tg">After</span>
+        <div class="ovl sol"><span class="h">Calm in ~60 seconds</span></div>
+      </div>
+      <div class="mid"></div>
+      <div class="seamadv"><span class="l">🧺 <b>Soft quiet fleece</b></span><span class="l">🐾 <b>Frees one paw at a time</b></span><span class="l">⏱️ <b>Calm in ~60 seconds</b></span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="use" style="background-image:url('../cw-photos/B16.jpg');background-position:50% 42%"><div class="gt"></div><div class="gb"></div>
+      <div class="blk top"><span class="pill r">It scares you, too 😬</span><span class="wt">Every trim is a war — scratches, bites, 20 min of chasing, and you still don't finish.</span></div>
+      <div class="blk bot"><span class="pill t">Free one paw, trim, done</span><span class="wt">Velcro flap opens just the paw you need — one minute, on your own, not a scratch.</span></div>
+    </div>
+</div>
+<div class="card">
+    <div class="moneywrap" style="background-image:url('../cw-photos/B13.jpg');background-position:50% 22%"><div class="veil" style="background:linear-gradient(to top,rgba(20,30,28,.62),rgba(20,30,28,0) 52%)"></div>
+      <div class="soc"><span>🐾 <b>Happy cats</b></span></div>
+      <div class="cmp">
+        <div class="col bad"><div class="hd">Groomer &amp; vet</div><div class="big">$500+<small> /yr</small></div>
+          <div class="it">🐾 Nail trim — $25–45 each</div>
+          <div class="it">📅 Every few weeks, all year</div>
+          <div class="it">💉 Vet sedation if fractious — $150+</div>
+          <div class="it">🔁 Forever, every single time</div>
+        </div>
+        <div class="col good"><div class="hd">Movaro</div><div class="big">$64.99<small> once</small></div>
+          <div class="it">🏠 Do it at home, anytime</div>
+          <div class="it">🚫 No driving, ever</div>
+          <div class="it">♾️ Buy once, wash, reuse</div>
+          <div class="it">🧺 Premium soft fleece</div>
+        </div>
+        <div class="vs">VS</div>
+      </div>
+    </div>
+</div>
+<div class="spec" style="border:1px solid #E6DFD1;border-top:0;border-radius:0 0 14px 14px;margin-bottom:6px"><span class="k">🔒 About = хотспот B11 + 3 кадра</span> (P2 крупный текст · P3 руки · P4 деньги). Это блок about + страница `about.html`.</div>
+
+<div class="sechd" style="margin-top:30px">⬇️ НИЖЕ — блоки тела (на согласовании)</div>
 
 <!-- UGC -->
 <div class="sechd">UGC · 5 карточек (живой формат: фото + аватар + @имя + текст)</div>
@@ -117,13 +331,13 @@
 <div class="card"><div class="cbody">
   <div class="shead"><div class="eyebrow">The science of calm</div><h2>Why a wrap calms when a bag panics</h2><p>Not magic, not force — the same gentle-pressure principle vets and parents have used for decades.</p></div>
   <div class="mc">
-    <div class="t" style="outline:2px dashed #E8A93D;outline-offset:-2px"><div class="im" style="background-image:url('../cw-photos/B3.jpg?v=4')"></div><div class="cap"><b>Even, all-over pressure</b><small>⏳ код уточнить ("AC"?) — пока B3</small></div></div>
+    <div class="t"><div class="im" style="background-image:url('../cw-photos/A7.jpg?v=5')"></div><div class="cap"><b>Even, all-over pressure</b><small>like a swaddle — "you're safe"</small></div></div>
     <div class="t"><div class="im" style="background-image:url('../cw-photos/A5.jpg?v=4')"></div><div class="cap"><b>Nervous system settles</b><small>the fight drains out</small></div></div>
     <div class="t"><div class="im" style="background-image:url('../cw-photos/A6.jpg?v=4')"></div><div class="cap"><b>One limb out at a time</b><small>quick — never cornered</small></div></div>
     <div class="t"><div class="im" style="background-image:url('../cw-photos/A8.jpg?v=4')"></div><div class="cap"><b>Soft, quiet fleece</b><small>nothing scary to panic at</small></div></div>
   </div>
 </div>
-  <div class="spec"><span class="k">Коллаж = ⏳ · A5 · A6 · A8</span> (Marina: 2-я=A5, 3-я=A6, 4-я soft-quiet=оставил A8). <b>1-я плитка: расслышал «AC» — уточни код (A1/A3/A4?).</b></div>
+  <div class="spec"><span class="k">Коллаж = A7 · A5 · A6 · A8</span> (Marina).</div>
 </div>
 
 <!-- us vs them -->
