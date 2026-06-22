@@ -41,4 +41,12 @@ D4	p39
 D5	p40
 D6	p42 F01_FOLDED_BED_REFERENCE
 D7	p44 запас
-H1	p43 H01_HERO_CAT_FOLDED_WRAP
+H1	p43 H01_HERO_CAT_FOLDED_WRAP--- ГАЙДЫ (G) ---
+G1	Calm & Longevity Guide — большой, кот+сложенный врап, «Daily habits for calmer days...» (БЕЗ vet)
+G2	Calm & Longevity Guide — квадрат, кот+сложенный врап, «Calm care, stress support and daily comfort»
+G3	Calm & Longevity Guide — большой, кот+врап+иконки, «Vet-informed calm care...» (⚠ есть слово vet)
+G4	Stress Signals Cheatsheet — квадрат, планшет, «Know the signs before stress escalates»
+G5	Stress Signals Cheatsheet — квадрат, 4 арки-иконки (ears/hiding/tail/pupils), «A quick reference...»
+G6	Stress Signals Cheatsheet — минимал-квадрат, «Read your cat early, respond gently»
+G7	Stress Signals Cheatsheet — квадрат, планшет+иконки, «Spot stress signs. Support calm sooner.»
+G8	Stress Signals Cheatsheet — большой, кот-фото, «The small signals that matter most»
