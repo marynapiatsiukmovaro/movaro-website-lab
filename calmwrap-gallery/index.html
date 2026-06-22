@@ -1,0 +1,229 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movaro — Лаборатория фото · ГАЛЕРЕЯ v4 (по схеме Marina)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#EDE7DC;font-family:'Jost',system-ui,sans-serif;color:#21201C;line-height:1.5}
+.wrap{max-width:470px;margin:0 auto;padding:18px 12px 80px}
+.intro{background:#fff;border:1px solid #E6DFD1;border-radius:14px;padding:16px 18px;margin-bottom:18px}
+.intro h1{font-family:'Fraunces',serif;font-size:21px;margin:0 0 8px}.intro p{font-size:13px;color:#4f483d;margin:5px 0}.intro b{color:#21201C}
+.intro .key{background:#F2F7F5;color:#2f6b63;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:8px}
+.sechd{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:#21201C;background:#fff;border:1px solid #E6DFD1;border-left:4px solid #3E5C5A;border-radius:9px;padding:9px 12px;margin:22px 0 8px}
+.sechd.done{border-left-color:#2f6b63;background:#F2F7F5}
+.card{background:#fff;border:1px solid #E6DFD1;border-radius:14px;overflow:hidden;margin-bottom:6px}
+.spec{padding:10px 12px;font-size:11.5px;color:#2a2620;background:#FBF9F4;border-top:1px solid #EFE8DB}.spec .k{font-weight:700;color:#3E5C5A}
+.note{background:#FBF3E6;color:#8a6a32;border-radius:9px;padding:10px 12px;font-size:12.5px;margin-top:16px}
+/* photo1 */
+.ph{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 34%;overflow:hidden}
+.scrim-t{position:absolute;left:0;right:0;top:0;height:42%;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,0))}
+.scrim-b{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(0deg,rgba(0,0,0,.76),rgba(0,0,0,0))}
+.star{position:absolute;top:11px;right:12px;font-size:11px;color:#fff;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.6);z-index:5}.star .s{color:#E8A93D}
+.kick{position:absolute;top:13px;left:0;right:0;text-align:center;z-index:4;font-family:'Jost';font-weight:800;font-size:11px;letter-spacing:.2em;color:#ff7a5c;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.pains{position:absolute;left:14px;right:14px;top:33px;z-index:3;text-align:center}
+.pains .pl{display:block;font-weight:700;font-size:17px;color:#fff;text-shadow:0 2px 9px rgba(0,0,0,.7);margin:4px 0}.pains .no{color:#ff7a5c;font-weight:800}
+.plabel{position:absolute;right:14px;top:42%;text-align:right;z-index:4}
+.plabel .nm{font-family:'Fraunces',serif;font-weight:500;font-size:17px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.85);line-height:1.02;display:block}.plabel svg{display:block;margin:3px 0 0 auto}
+.turn{position:absolute;left:0;right:0;bottom:58px;text-align:center;z-index:4}
+.turn .pill{display:inline-block;background:#2f7a73;color:#fff;font-weight:700;font-size:13px;padding:6px 15px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.icons{position:absolute;left:8px;right:8px;bottom:14px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;z-index:4}
+.ic{background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-weight:600;font-size:11.5px;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+/* col2 collage (photo2) */
+.col2{position:relative;width:100%;aspect-ratio:4/5;display:flex;overflow:hidden}
+.col2 .cc{position:relative;width:50%;display:flex;flex-direction:column}
+.col2 .cell{flex:1;background-size:cover;background-position:center}
+.col2 .tg{position:absolute;top:9px;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;padding:3px 10px;border-radius:999px;z-index:4;box-shadow:0 1px 5px rgba(0,0,0,.3)}
+.col2 .left .tg{left:9px;background:#d9503e}.col2 .right .tg{right:9px;background:#2f7a73}
+.col2 .ovl{position:absolute;left:8px;right:8px;top:50%;transform:translateY(-50%);text-align:center;color:#fff;border-radius:11px;padding:10px 11px;z-index:3;box-shadow:0 3px 12px rgba(0,0,0,.34)}
+.col2 .ovl.pain{background:#d9503e}.col2 .ovl.sol{background:#2f7a73}
+.col2 .ovl .h{font-family:'Fraunces',serif;font-weight:600;font-size:14px;line-height:1.12;display:block}
+.col2 .ovl .s{display:block;font-size:10.5px;margin-top:5px;font-weight:500;line-height:1.28}
+.col2 .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:4}
+.seamadv{position:absolute;left:0;right:0;bottom:12px;display:flex;flex-direction:column;align-items:center;gap:5px;z-index:6}
+.seamadv .l{background:rgba(255,255,255,.95);color:#21201C;border-radius:999px;padding:4px 12px;font-size:10.5px;font-weight:600;box-shadow:0 1px 6px rgba(0,0,0,.25)}.seamadv .l b{color:#2f7a73}
+/* photo3 single use */
+.use{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 42%;overflow:hidden}
+.use .gt{position:absolute;left:0;right:0;top:0;height:34%;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0));z-index:1}
+.use .gb{position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(0deg,rgba(0,0,0,.62),rgba(0,0,0,0));z-index:1}
+.use .blk{position:absolute;left:12px;right:12px;text-align:center;z-index:3}
+.use .blk.top{top:14px}.use .blk.bot{bottom:15px}
+.use .pill{display:inline-block;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.use .pill.r{background:#d9503e}.use .pill.t{background:#2f7a73}
+.use .wt{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11.5px;font-weight:600;margin-top:7px;padding:6px 11px;border-radius:10px;line-height:1.3;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+/* photo4 grid4 use-cases */
+.grid4{position:relative;width:100%;aspect-ratio:4/5;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;overflow:hidden;gap:2px;background:#fff}
+.grid4 .g{position:relative;background-size:cover;background-position:center}
+.grid4 .g .lab{position:absolute;background:rgba(47,122,115,.94);color:#fff;font-weight:600;font-size:10px;padding:3px 8px;border-radius:6px;z-index:3}
+.grid4 .g.tl .lab{top:6px;left:6px}.grid4 .g.tr .lab{top:6px;right:6px}.grid4 .g.bl .lab{bottom:6px;left:6px}.grid4 .g.br .lab{bottom:6px;right:6px}
+.grid4 .money{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:82%;background:rgba(255,255,255,.97);border-radius:13px;padding:11px 13px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
+.grid4 .money .p{color:#d9503e;font-weight:700;font-size:12px;line-height:1.18;display:block}
+.grid4 .money .s{color:#21201C;font-weight:700;font-size:15px;font-family:'Fraunces',serif;margin-top:5px;line-height:1.12;display:block}
+.grid4 .money .save{display:inline-block;margin-top:7px;background:#2f7a73;color:#fff;font-size:10.5px;font-weight:700;padding:4px 11px;border-radius:999px}
+/* photo5 split spec+brand+bonus */
+.love{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-4.0/img/ba-after.jpg');background-size:cover;background-position:50% 26%;overflow:hidden}
+.love .gt{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.love .hd{position:absolute;top:15px;left:14px;right:14px;text-align:center;font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:21px;text-shadow:0 2px 10px rgba(0,0,0,.7);z-index:3}
+.love .card{position:absolute;left:13px;right:13px;bottom:13px;background:rgba(255,255,255,.97);border-radius:14px;padding:11px 14px;z-index:3;box-shadow:0 4px 16px rgba(0,0,0,.32)}
+.love .card .it{display:flex;align-items:flex-start;gap:8px;font-size:12px;font-weight:600;color:#21201C;padding:3px 0;line-height:1.25}
+.love .card .tr{text-align:center;font-size:11px;color:#7a715f;margin-top:7px;font-weight:600;border-top:1px solid #eee;padding-top:7px}
+.love .card .tr b{color:#E8A93D}
+.specph2{position:relative;width:100%;aspect-ratio:4/5;background-image:url('../stage-4.0/img/features.jpg');background-size:cover;background-position:center;overflow:hidden;background-color:#f3f1ec}
+.specph2 .hd{position:absolute;top:14px;left:14px;right:14px;text-align:center;color:#2f6b63;font-family:'Fraunces',serif;font-weight:600;font-size:18px;z-index:3}
+.circles{position:absolute;left:8px;right:8px;top:60px;display:flex;gap:7px;justify-content:center;flex-wrap:wrap;z-index:3}
+.cir{width:72px;height:72px;border-radius:50%;background:#d9503e;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:19px;box-shadow:0 2px 9px rgba(0,0,0,.32)}
+.cir b{font-size:8.5px;font-weight:700;display:block;margin-top:1px;line-height:1.05}
+.moneywrap{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:center;overflow:hidden}
+.moneywrap .veil{position:absolute;inset:0;background:rgba(20,30,28,.42)}
+.moneyc{position:absolute;left:14px;right:14px;top:50%;transform:translateY(-50%);z-index:3}
+.moneyc .row{background:rgba(255,255,255,.97);border-radius:13px;padding:11px 14px;box-shadow:0 3px 13px rgba(0,0,0,.28);text-align:center}
+.moneyc .lab{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.moneyc .bad .lab{color:#d9503e}.moneyc .good .lab{color:#2f7a73}
+.moneyc .big{font-family:'Fraunces',serif;font-weight:700;font-size:27px;line-height:1;margin:3px 0}
+.moneyc .bad .big{color:#d9503e}.moneyc .good .big{color:#21201C}
+.moneyc .big small{font-size:13px;font-weight:600}
+.moneyc .sub{font-size:10px;color:#6b6256;font-weight:500}
+.moneyc .vs{text-align:center;color:#fff;font-weight:800;font-size:12px;margin:7px 0;text-shadow:0 1px 5px rgba(0,0,0,.6)}
+.offer5{position:relative;width:100%;aspect-ratio:4/5;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.offer5 .uses{display:flex;height:30%}
+.offer5 .uses .u{flex:1;background-size:cover;background-position:center;position:relative;border-right:2px solid #fff}
+.offer5 .uses .u:last-child{border-right:none}
+.offer5 .uses .u .l{position:absolute;left:0;right:0;bottom:0;background:rgba(47,122,115,.92);color:#fff;font-size:8.5px;font-weight:700;text-align:center;padding:2px}
+.offer5 .ocard{flex:1;padding:12px 16px;display:flex;flex-direction:column;justify-content:center}
+.offer5 .ttl{font-family:'Fraunces',serif;font-weight:600;font-size:15px;text-align:center;color:#21201C;line-height:1.15}
+.offer5 .price{text-align:center;margin:6px 0 8px}
+.offer5 .price .old{color:#9a9488;text-decoration:line-through;font-size:15px;margin-right:8px}
+.offer5 .price .new{font-family:'Fraunces',serif;font-weight:700;font-size:31px;color:#2f7a73}
+.offer5 .li{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:600;color:#21201C;padding:2.5px 0}
+.offer5 .li .c{color:#2f7a73;font-weight:800}
+.offer5 .tr{text-align:center;font-size:10.5px;color:#7a715f;margin-top:8px;border-top:1px solid #eee;padding-top:7px;font-weight:600}
+.offer5 .tr b{color:#E8A93D}
+.moneywrap .soc{position:absolute;top:10px;left:0;right:0;text-align:center;z-index:4}
+.moneywrap .soc span{display:inline-block;background:rgba(255,255,255,.95);color:#21201C;font-size:10.5px;font-weight:700;padding:4px 12px;border-radius:999px;box-shadow:0 2px 7px rgba(0,0,0,.25)}
+.moneywrap .soc span b{color:#E8A93D}
+.cmp{position:absolute;left:11px;right:11px;top:25%;display:flex;gap:26px;z-index:3}
+.cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:12px;padding:10px 11px;box-shadow:0 3px 13px rgba(0,0,0,.3)}
+.cmp .col .hd{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.cmp .bad .hd{color:#d9503e}.cmp .good .hd{color:#2f7a73}
+.cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:19px;line-height:1;margin:3px 0 7px}
+.cmp .col .big small{font-size:11px;font-weight:600}
+.cmp .bad .big{color:#d9503e}.cmp .good .big{color:#2f7a73}
+.cmp .it{font-size:9.5px;color:#3a352c;font-weight:500;padding:2px 0;line-height:1.2}
+.cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.grid4 .ofc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72%;background:rgba(255,255,255,.97);border-radius:13px;padding:9px 12px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
+.grid4 .ofc .ttl{font-family:'Fraunces',serif;font-weight:600;font-size:14px;color:#21201C}
+.grid4 .ofc .pr{margin:5px 0 6px}.grid4 .ofc .pr .o{color:#9a9488;text-decoration:line-through;font-size:13px;margin-right:6px}.grid4 .ofc .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:25px;color:#2f7a73}
+.grid4 .ofc .it{font-size:10.5px;font-weight:600;color:#21201C;padding:1.5px 0}
+.grid4 .ofc .it b{color:#2f7a73}
+.grid4 .ofc .nm{font-family:'Fraunces',serif;font-weight:600;font-size:15px;color:#2f7a73}
+.grid4 .ofc .pr .n{font-size:23px}
+.grid4 .ofc .save{display:inline-block;background:#E8A93D;color:#fff;font-size:9px;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:middle}
+.grid4 .ofc .divln{height:1px;background:#ececec;margin:8px 2px}
+.grid4 .ofc .gifts{display:flex;gap:6px;justify-content:center;margin:0 0 6px}
+.grid4 .ofc .gift{background:#F2F7F5;border:1px solid #d6e4e0;border-radius:9px;padding:4px 9px;font-size:9.5px;font-weight:700;color:#2f6b63}
+.grid4 .ofc .guar{font-size:10.5px;font-weight:700;color:#21201C}
+.grid4 .veil5{position:absolute;inset:0;background:rgba(20,30,28,.3);z-index:2}
+</style></head><body><div class="wrap">
+<div class="intro"><h1>🧪 Лаборатория фото — ГАЛЕРЕЯ v4 (по твоей схеме)</h1>
+<p>Фото-1 зафиксировано. 2–5 перестроил по листу: коллажи до/после, применение, спека+бонусы. Картинки — заглушки под раскладку (для «до»-паники и применения возьмём нужные кадры при генерации).</p>
+<div class="key">Главное сейчас — СТРУКТУРА + ТЕКСТ. Реагируй по каждому, потом батчи+промты.</div></div>
+
+<div class="sechd done">Фото 1 · ХУК (зафиксировано ✓)</div>
+<div class="card">
+    <div class="ph" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"><div class="scrim-t"></div><div class="scrim-b"></div>
+      <div class="star"><span class="s">★</span> 4.8</div>
+      <div class="kick">ENOUGH.</div>
+      <div class="pains"><span class="pl"><span class="no">No</span> scratched hands</span><span class="pl"><span class="no">No</span> terrified cat</span><span class="pl"><span class="no">No</span> $90 vet bills</span></div>
+      <div class="plabel"><span class="nm">Movaro<br>Calm Wrap</span><svg width="80" height="56" viewBox="0 0 80 56" fill="none"><path d="M76 8 Q26 4 9 48" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M9 48 L12 35 M9 48 L23 50" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+      <div class="turn"><span class="pill">There's a calmer way ↓</span></div>
+      <div class="icons"><span class="ic">😌 Calm cat</span><span class="ic">🖐️ No scratches</span><span class="ic">💸 No vet bill</span></div>
+    </div>
+</div>
+
+<div class="sechd">Фото 2 · ВИНА — коллаж 4 (2 «До» / 2 «После»)</div>
+<div class="card">
+    <div class="col2">
+      <div class="cc left">
+        <div class="cell" style="background-image:url('../stage-4.0/img/ba-before.jpg');background-position:50% 25%"></div>
+        <div class="cell" style="background-image:url('../stage-3.0/img/hero-5-portrait.png')"></div>
+        <span class="tg">Before</span>
+        <div class="ovl pain"><span class="h">It terrifies him, too</span><span class="s">Chasing &amp; pinning a scared cat spikes his stress — racing heart, panic, no clue what's happening.</span></div>
+      </div>
+      <div class="cc right">
+        <div class="cell" style="background-image:url('../stage-4.0/img/ba-after.jpg');background-position:50% 25%"></div>
+        <div class="cell" style="background-image:url('../stage-3.0/img/hero-4-calm.png')"></div>
+        <span class="tg">After</span>
+        <div class="ovl sol"><span class="h">Calm in ~60 seconds</span><span class="s">Soft fleece holds him in an even, gentle pressure — like a swaddle. Never clamped: it's fabric, he steps out anytime.</span></div>
+      </div>
+      <div class="mid"></div>
+      <div class="seamadv"><span class="l">🧺 <b>Soft quiet fleece</b></span><span class="l">🐾 <b>Frees one paw at a time</b></span><span class="l">⏱️ <b>Calm in ~60 seconds</b></span></div>
+    </div>
+    <div class="spec"><span class="k">Простым языком:</span> слева 🔴 боль (ловить и сдавливать испуганного кота = огромный стресс, он не понимает, что происходит) · справа 🟢 решение (мягкие объятия, не силой, успокаивается за секунды, может выйти сам). Цвет-код, без затемнения, Before/After. <span class="k">⚠️</span> «Before» = заглушки (нужны кадры паники/убегания).</div>
+</div>
+
+<div class="sechd">Фото 3 · РУКИ — кадр применения (боль → решение)</div>
+<div class="card">
+    <div class="use" style="background-image:url('../stage-3.0/img/use-velcro.png');background-position:50% 42%"><div class="gt"></div><div class="gb"></div>
+      <div class="blk top"><span class="pill r">It scares you, too 😬</span><span class="wt">Every trim is a war — scratches, bites, 20 min of chasing, and you still don't finish.</span></div>
+      <div class="blk bot"><span class="pill t">Free one paw, trim, done</span><span class="wt">Velcro flap opens just the paw you need — one minute, on your own, not a scratch.</span></div>
+    </div>
+    <div class="spec"><span class="k">Простым языком:</span> 🔴 боль (без него каждая стрижка — война: царапины, укусы, 20 минут беготни) → 🟢 решение (спокойно, за минуту, в одни руки, без царапин). Цвет-код, без затемнения, без слоганов.</div>
+</div>
+
+<div class="sechd">Фото 3.1 · РУКИ — вариант с кружочками (для сравнения)</div>
+<div class="card">
+    <div class="use" style="background-image:url('../stage-3.0/img/use-velcro.png');background-position:50% 42%"><div class="gt"></div><div class="gb"></div>
+      <div class="blk top"><span class="pill r">It scares you, too 😬</span></div>
+      <div class="circles"><span class="cir">😾<b>Scratches</b></span><span class="cir">🩸<b>Bites</b></span><span class="cir">⏱️<b>20-min chase</b></span><span class="cir">😩<b>Not done</b></span></div>
+      <div class="blk bot"><span class="pill t">Free one paw, trim, done</span><span class="wt">Velcro flap opens just the paw you need — one minute, on your own, not a scratch.</span></div>
+    </div>
+    <div class="spec"><span class="k">Вариант 2:</span> боль — красными кружочками с эмодзи (нагляднее, чем строкой). Сравни с Фото-3. Бело-красный/цвета покрутим.</div>
+</div>
+
+<div class="sechd">Фото 4 · ДЕНЬГИ — наглядное сравнение</div>
+<div class="card">
+    <div class="moneywrap" style="background-image:url('../stage-3.0/img/hero-4-calm.png');background-position:50% 8%"><div class="veil" style="background:rgba(20,30,28,.24)"></div>
+      <div class="soc"><span>🐾 <b>10,000+</b> happy cats</span></div>
+      <div class="cmp">
+        <div class="col bad"><div class="hd">Groomer &amp; vet</div><div class="big">$500+<small> /yr</small></div>
+          <div class="it">🐾 Nail trim — $25–45 each</div>
+          <div class="it">📅 Every few weeks, all year</div>
+          <div class="it">💉 Vet sedation if fractious — $150+</div>
+          <div class="it">🔁 Forever, every single time</div>
+        </div>
+        <div class="col good"><div class="hd">Movaro</div><div class="big">$64.99<small> once</small></div>
+          <div class="it">🏠 Do it at home, anytime</div>
+          <div class="it">🚫 No driving, ever</div>
+          <div class="it">♾️ Buy once, wash, reuse</div>
+          <div class="it">🧺 Premium soft fleece</div>
+        </div>
+        <div class="vs">VS</div>
+      </div>
+    </div>
+    <div class="spec"><span class="k">Сравнение в 2 колонки:</span> 🔴 расходы (честно: $300+/год — стрижка $20–40 каждые 4–6 нед, + вет-седация если дикий) VS 🟢 Movaro $64.99 once (цена зелёным) + преимущества. Сверху соц-пруф 10k. ⚠️ суммы перепроверим по US-ценам.</div>
+</div>
+
+<div class="sechd">Фото 5 · ВЛЮБИТЬ — применение + сочный оффер</div>
+<div class="card">
+    <div class="grid4">
+      <div class="g tl" style="background-image:url('../stage-3.0/img/hero-1-nailtrim.png')"><span class="lab">Nail trims</span></div>
+      <div class="g tr" style="background-image:url('../stage-3.0/img/use-vet.png')"><span class="lab">Meds &amp; pills</span></div>
+      <div class="g bl" style="background-image:url('../stage-3.0/img/use-ear.png')"><span class="lab">Ears &amp; eyes</span></div>
+      <div class="g br" style="background-image:url('../stage-4.0/img/ba-after.jpg')"><span class="lab">Calm-downs</span></div>
+      <div class="veil5"></div>
+      <div class="ofc">
+        <div class="nm">Movaro Calm Wrap</div>
+        <div class="pr"><span class="o">$100</span><span class="n">$64.99</span><span class="save">Save $35</span></div>
+        <div class="divln"></div>
+        <div class="gifts"><span class="gift">🎁 Cat-Calm Guide</span><span class="gift">📋 Stress Cheat-Sheet</span></div>
+        <div class="guar">🛡️ 30-day calm guarantee</div>
+      </div>
+    </div>
+    <div class="spec"><span class="k">Применение + стильный оффер:</span> коллаж применения + карта: Movaro Calm Wrap · цена $100→$64.99 · 2 гайда отдельными чипами · 30-day гарантия. ★4.8/10k убрал (есть в других кадрах). ⚠️ якорь $100 уточним.</div>
+</div>
+
+<div class="sechd">Фото 6 · СПЕКА на белом (детали продукта)</div>
+<div class="card">
+    <div class="specph2"><div class="hd">Movaro Calm Wrap — in detail 🐾</div></div>
+    <div class="spec"><span class="k">Смысл:</span> сильная спека на белом отдельным кадром. Качество/конструкция = доверие. <span class="k">⚠️</span> впечатанные подписи = старый спек (quilted/diamond) → перегенерим под флис/велкро-флапы.</div>
+</div>
+
+<div class="note">⚠️ Все картинки — заглушки под раскладку/текст; финал генерим. Галерея теперь = 6 кадров (хук · вина · руки · деньги · влюбить · спека). Реагируй по 4–6 — потом батчи + промты.</div>
+</div></body></html>
