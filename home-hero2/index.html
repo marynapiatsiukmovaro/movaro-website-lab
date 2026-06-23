@@ -8,17 +8,19 @@ body{margin:0;font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#e
 .hero{position:relative;width:100%;overflow:hidden;background:#f5efe6}
 .hero img.bg{width:100%;display:block}
 .hero img.bg.desk{display:none}
-.hero .scrim{position:absolute;inset:auto 0 0 0;height:62%;background:linear-gradient(to top,rgba(40,40,38,.46),rgba(40,40,38,.10) 55%,transparent)}
-.hero .txt{position:absolute;left:0;bottom:0;padding:26px 22px 30px;max-width:560px}
-.hero h1{font-family:Fraunces,Georgia,serif;color:#fff;font-weight:600;line-height:1.04;margin:0 0 10px;font-size:40px;text-shadow:0 2px 12px rgba(0,0,0,.28)}
-.hero p{color:#fff;font-size:16px;line-height:1.45;margin:0 0 18px;text-shadow:0 1px 8px rgba(0,0,0,.32)}
+/* MOBILE (default): text bottom, light gradient only under text */
+.hero .scrim{position:absolute;inset:auto 0 0 0;height:50%;background:linear-gradient(to top,rgba(40,40,38,.42),rgba(40,40,38,.06) 60%,transparent)}
+.hero .txt{position:absolute;left:0;right:0;bottom:0;padding:24px 22px 30px;text-align:left}
+.hero h1{font-family:Fraunces,Georgia,serif;color:#fff;font-weight:600;line-height:1.04;margin:0 0 10px;font-size:38px;text-shadow:0 2px 12px rgba(0,0,0,.30)}
+.hero p{color:#fff;font-size:15.5px;line-height:1.45;margin:0 0 18px;text-shadow:0 1px 8px rgba(0,0,0,.34);max-width:440px}
 .hero a.btn{display:inline-block;background:#fff;color:var(--sage);font-weight:600;font-size:15px;padding:13px 26px;border-radius:40px;text-decoration:none}
+/* DESKTOP: centered like slide 1, NO scrim band */
 @media(min-width:760px){
   .hero img.bg.mob{display:none}.hero img.bg.desk{display:block}
-  .hero .scrim{height:78%;width:52%;background:linear-gradient(to top,rgba(40,40,38,.40),rgba(40,40,38,.06) 60%,transparent)}
-  .hero .txt{padding:48px 44px 52px;max-width:46%}
-  .hero h1{font-size:58px}
-  .hero p{font-size:18px;max-width:440px}
+  .hero .scrim{display:none}
+  .hero .txt{left:50%;top:46%;right:auto;bottom:auto;transform:translate(-50%,-50%);text-align:center;max-width:640px;padding:0 24px}
+  .hero h1{font-size:60px;text-shadow:0 2px 18px rgba(0,0,0,.22)}
+  .hero p{font-size:18px;max-width:520px;margin-left:auto;margin-right:auto;text-shadow:0 1px 12px rgba(0,0,0,.26)}
 }
 </style></head><body>
 <div class="note">🧪 Lab preview — Home Hero, Slide 2 (Karate). Фото textless, текст накладывает тема (как слайд 1). Десктоп = коллаж E3+C7, моб = C7.</div>
