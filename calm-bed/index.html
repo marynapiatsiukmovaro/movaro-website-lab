@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movaro Calm Bed — calming cat bed product page (Lab draft v1)</title>
+<!--
+  MOVARO — Calm Bed (working product name: "Movaro Calm Bed") — Website Lab DRAFT v1.
+  THIRD product Card. DUPLICATE of the Karate Kitty page (same block system + design system: Fraunces/Jost,
+  petrol palette, pill buttons, spine, sticky) — we only SWAP PHOTOS + rewrite TEXT (Marina's fast method).
+  Source product: round anti-slip faux-fur calming cat bed (CJ), fits up to ~25 lbs.
+  Angle (Marina, agreed): CALMING / anti-anxiety — the raised rim wraps an anxious cat so it finally
+  settles & sleeps deeply. Brand thread = CALM (sister to Calm Wrap).
+  All photos = beige PLACEHOLDER (_ph.jpg) — Marina swaps in the real shots; final gallery slides are
+  baked flat jpgs (text-on-photo) per the locked photo method.
+  ⚠ PLACEHOLDER NUMBERS — confirm with Marina/Sourcing: price ($49.99/$79.99), SIZES (S/M/L weights — CJ
+  lists one 24in/25lb; 3 sizes assumed, verify), exact materials. Compliance (S15): ★4.8 only, no hard
+  review counts — reconcile before 2Checkout. Honesty red line = product QUALITY only.
+  Modular: every <section data-block> = a future Shopify section.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF; --ivory:#F2EEE6; --sand:#E7E1D4; --cream:#ECE7DC;
+  --ink:#21201C; --ink-soft:#6A6256; --muted:#9C9385;
+  --line:#E6DFD1; --line-soft:#F0EBDF;
+  --sage:#3E5C5A; --sage-soft:#6E8B89; --sage-tint:#E2E9E7;
+  --clay:#B9774F; --clay-soft:#D9A47F; --clay-tint:#F4E5D8; --taupe:#C8BAA3;
+  --honey:#D7A94E; --honey-deep:#C28F2E; --honey-tint:#F3E5C2;
+  --accent:#2F7A73; --accent-deep:#246159;
+  --red:#C0492F; --red-tint:#F6E1DA;
+  --r:14px; --pill:999px;
+  --shadow:0 1px 2px rgba(33,32,28,.04), 0 8px 28px rgba(33,32,28,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:#E4DFD5;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:480px;margin:0 auto;background:var(--ivory);overflow:hidden;padding-bottom:78px;position:relative}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+section{padding:60px 24px}
+.s-paper{background:var(--paper)} .s-ivory{background:var(--ivory)} .s-sand{background:var(--sand)} .s-cream{background:var(--cream)}
+.eyebrow{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--sage)}
+.muted{color:var(--ink-soft)}
+.stars{color:var(--clay);letter-spacing:2px;font-size:14px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--accent);color:#fff;
+  border:1px solid var(--accent);border-radius:var(--pill);font-family:'Jost';font-size:13.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;min-height:58px;padding:17px 24px;cursor:pointer;transition:transform .12s,opacity .15s}
+.btn:active{transform:scale(.985);opacity:.92}
+.btn.ghost{background:transparent;color:var(--ink)}
+.sect-head{max-width:400px;margin:0 auto 30px;text-align:center}
+.sect-head h2{font-size:31px;margin:11px 0 9px;font-weight:500}
+.sect-head p{font-size:15px;color:var(--ink-soft)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.ill{position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--cream)}
+.ill svg{display:block;width:100%;height:100%}
+.chip{position:absolute;background:rgba(255,255,255,.95);color:var(--ink);font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:8px 13px;border-radius:var(--pill);box-shadow:0 2px 10px rgba(33,32,28,.09);backdrop-filter:blur(4px)}
+/* placeholder tag — marks a DRAWN stand-in (real photo later) */
+.ph-tag{position:absolute;bottom:0;left:0;right:0;background:rgba(33,32,28,.62);color:#fff;font-family:'Jost';font-size:9px;font-weight:600;letter-spacing:.04em;text-align:center;padding:4px 6px;z-index:3}
+.scene{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,#EAE3D4,#DCD2BF)}
+.scene svg{width:78%;height:78%}
+/* announce + header */
+.announce{background:var(--accent);color:#fff;text-align:center;font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:11px 12px;white-space:nowrap}
+.announce .dotsep{opacity:.5;margin:0 8px}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--paper);border-bottom:1px solid var(--line-soft);position:sticky;top:0;z-index:40}
+.logo{font-family:'Fraunces';font-weight:600;font-size:23px;letter-spacing:.02em}
+.hd-ic{display:flex;gap:18px}
+
+/* gallery / hero */
+.gallery{padding:0;background:var(--paper)}
+.g-wrap{position:relative}
+.g-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;aspect-ratio:4/5;-webkit-overflow-scrolling:touch;touch-action:pan-x;overscroll-behavior-x:contain}
+.g-carousel::-webkit-scrollbar{display:none}
+.g-slide{position:relative;min-width:100%;scroll-snap-align:center}
+.g-slide .scene{position:absolute;inset:0}
+.g-over{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 22px;background:linear-gradient(to top,rgba(20,17,14,.62),rgba(20,17,14,.12) 55%,transparent);color:#fff}
+.g-over .eb{font-family:'Jost';font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E2E9E7;opacity:.95}
+.g-over h1{color:#fff;font-size:32px;font-weight:500;margin:8px 0 6px;letter-spacing:-.015em}
+.g-over h2{color:#fff;font-size:27px;font-weight:500;margin:8px 0 6px;letter-spacing:-.015em}
+.g-over p{font-size:14px;color:rgba(255,255,255,.92);max-width:320px}
+.g-chips{display:flex;gap:7px;margin-top:13px;flex-wrap:wrap}
+.g-chips span{background:rgba(255,255,255,.92);color:var(--ink);font-family:'Jost';font-size:11px;font-weight:600;padding:6px 11px;border-radius:var(--pill)}
+.stg{position:absolute;top:12px;left:12px;z-index:4;background:rgba(33,32,28,.74);color:#fff;font-family:'Jost';font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:var(--pill)}
+.g-arrow{position:absolute;top:42%;transform:translateY(-50%);z-index:5;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.86);color:#21201C;font-size:21px;line-height:1;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center}
+.g-arrow.prev{left:12px}.g-arrow.next{right:12px}
+.g-dots{position:absolute;bottom:14px;left:0;right:0;display:flex;gap:6px;justify-content:center;z-index:5}
+.g-dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55)}
+.g-dots i.on{background:#fff;width:18px;border-radius:3px}
+.g-thumbs{display:flex;gap:8px;padding:12px 16px;background:var(--paper)}
+.g-thumbs .ill{flex:1;aspect-ratio:1;border-radius:9px;cursor:pointer;transition:outline .15s}
+.g-thumbs .ill.on{outline:2px solid var(--ink);outline-offset:-2px}
+.g-thumbs .scene{position:absolute;inset:0}.g-thumbs .scene svg{width:66%;height:66%}
+.g-thumbs .ill.photo{background-size:cover;background-position:center}
+/* ---- gallery frames: REAL photos + overlays (scoped .kg) — ported from approved karate-gallery mock v4 ---- */
+.kg{width:100%;height:100%}
+.kg .ph,.kg .col2,.kg .use,.kg .moneywrap,.kg .grid4,.kg .specf{position:relative;width:100%;height:100%;background-size:cover;overflow:hidden}
+.kg .scrim-t{position:absolute;left:0;right:0;top:0;height:40%;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,0))}
+.kg .scrim-b{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0))}
+.kg .star{position:absolute;top:11px;right:12px;font-size:11px;color:#fff;font-weight:700;text-shadow:0 1px 5px rgba(0,0,0,.7);z-index:5}.kg .star .s{color:#E8A93D}
+.kg .kick{position:absolute;top:12px;left:0;right:0;text-align:center;z-index:4;font-family:'Jost';font-weight:800;font-size:12px;letter-spacing:.22em;color:#ffd9a8;text-shadow:0 1px 6px rgba(0,0,0,.7)}
+.kg .pains{position:absolute;left:14px;right:14px;top:32px;z-index:3;text-align:center}
+.kg .pains .pl{display:block;font-weight:700;font-size:17px;color:#fff;text-shadow:0 2px 9px rgba(0,0,0,.8);margin:4px 0}.kg .pains .no{color:#ff7a5c;font-weight:800}
+.kg .plabel{position:absolute;z-index:4}
+.kg .plabel .nm{font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:#fff;text-shadow:0 2px 9px rgba(0,0,0,.9);line-height:1.02;display:block}
+.kg .turn{position:absolute;left:0;right:0;bottom:56px;text-align:center;z-index:4}
+.kg .turn .pill{display:inline-block;background:#2f7a73;color:#fff;font-weight:700;font-size:13px;padding:6px 15px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+.kg .chips{position:absolute;left:8px;right:8px;bottom:14px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;z-index:4}
+.kg .chip{position:static;background:rgba(255,255,255,.96);border-radius:999px;padding:6px 11px;font-weight:600;font-size:11.5px;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.22);backdrop-filter:none}
+.kg .col2{display:flex}
+.kg .col2 .cc{position:relative;width:50%;display:flex;flex-direction:column}
+.kg .col2 .cell{flex:1;background-size:cover;background-position:center}
+.kg .col2 .tg{position:absolute;top:9px;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;padding:3px 10px;border-radius:999px;z-index:4;box-shadow:0 1px 5px rgba(0,0,0,.3)}
+.kg .col2 .left .tg{left:9px;background:#d9503e}.kg .col2 .right .tg{right:9px;background:#2f7a73}
+.kg .col2 .ovl{position:absolute;left:8px;right:8px;top:50%;transform:translateY(-50%);text-align:center;color:#fff;border-radius:11px;padding:10px 11px;z-index:3;box-shadow:0 3px 12px rgba(0,0,0,.34)}
+.kg .col2 .ovl.pain{background:#d9503e}.kg .col2 .ovl.sol{background:#2f7a73}
+.kg .col2 .ovl .h{font-family:'Fraunces',serif;font-weight:600;font-size:14px;line-height:1.12;display:block}
+.kg .col2 .ovl .s{display:block;font-size:10.5px;margin-top:5px;font-weight:500;line-height:1.28}
+.kg .col2 .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:4}
+.kg .seamadv{position:absolute;left:0;right:0;bottom:12px;display:flex;flex-direction:column;align-items:center;gap:5px;z-index:6}
+.kg .seamadv .l{background:rgba(255,255,255,.95);color:#21201C;border-radius:999px;padding:4px 12px;font-size:10.5px;font-weight:600;box-shadow:0 1px 6px rgba(0,0,0,.25)}.kg .seamadv .l b{color:#2f7a73}
+.kg .use{background-position:50% 45%}
+.kg .use .gt{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.36),rgba(0,0,0,0));z-index:1}
+.kg .use .gb{position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(0deg,rgba(0,0,0,.48),rgba(0,0,0,0));z-index:1}
+.kg .use .blk{position:absolute;left:12px;right:12px;text-align:center;z-index:3}
+.kg .use .blk.top{top:14px}.kg .use .blk.bot{bottom:15px}
+.kg .use .pill{display:inline-block;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.kg .use .pill.r{background:#d9503e}.kg .use .pill.t{background:#2f7a73}
+.kg .use .wt{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11.5px;font-weight:600;margin-top:7px;padding:6px 11px;border-radius:10px;line-height:1.3;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+.kg .moneywrap .soc{position:absolute;top:11px;left:0;right:0;text-align:center;z-index:4}
+.kg .moneywrap .soc span{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11px;font-weight:700;padding:5px 13px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.28)}.kg .moneywrap .soc span b{color:#E8A93D}
+.kg .cmp{position:absolute;left:11px;right:11px;display:flex;gap:24px;z-index:3}
+.kg .cmp.bot{bottom:12px}
+.kg .cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:12px;padding:9px 11px;box-shadow:0 3px 13px rgba(0,0,0,.3);text-align:center}
+.kg .cmp .col .clbl{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:none;border:0;padding:0;position:static}
+.kg .cmp .bad .clbl{color:#d9503e}.kg .cmp .good .clbl{color:#2f7a73}
+.kg .cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:23px;line-height:1;margin:3px 0 4px}
+.kg .cmp .col .big small{font-size:11px;font-weight:600}
+.kg .cmp .bad .big{color:#d9503e}.kg .cmp .good .big{color:#2f7a73}
+.kg .cmp .it{font-size:9.5px;color:#3a352c;font-weight:500;line-height:1.2}
+.kg .cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.kg .grid4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;background:#fff}
+.kg .grid4 .g{position:relative;background-size:cover;background-position:center}
+.kg .grid4 .g .lab{position:absolute;background:rgba(47,122,115,.94);color:#fff;font-weight:600;font-size:10px;padding:3px 8px;border-radius:6px;z-index:3}
+.kg .grid4 .g.tl .lab{top:6px;left:6px}.kg .grid4 .g.tr .lab{top:6px;right:6px}.kg .grid4 .g.bl .lab{bottom:6px;left:6px}.kg .grid4 .g.br .lab{bottom:6px;right:6px}
+.kg .grid4 .veil5{position:absolute;inset:0;background:rgba(20,30,28,.22);z-index:2}
+.kg .grid4 .ofc{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74%;background:rgba(255,255,255,.97);border-radius:13px;padding:11px 13px;text-align:center;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.42)}
+.kg .grid4 .ofc .nm{font-family:'Fraunces',serif;font-weight:600;font-size:15px;color:#2f7a73}
+.kg .grid4 .ofc .pr{margin:5px 0 6px}.kg .grid4 .ofc .pr .o{color:#9a9488;text-decoration:line-through;font-size:13px;margin-right:6px}.kg .grid4 .ofc .pr .n{font-family:'Fraunces',serif;font-weight:700;font-size:24px;color:#21201C}
+.kg .grid4 .ofc .save{display:inline-block;background:#E8A93D;color:#fff;font-size:9px;font-weight:800;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.kg .grid4 .ofc .divln{height:1px;background:#ececec;margin:8px 2px}
+.kg .grid4 .ofc .giftrow{display:flex;gap:8px;justify-content:center;margin:2px 0 7px}
+.kg .grid4 .ofc .gi{display:flex;align-items:center;gap:6px;background:#F2F7F5;border:1px solid #d6e4e0;border-radius:9px;padding:4px 8px}
+.kg .grid4 .ofc .gi .th{width:30px;height:30px;border-radius:6px;background-size:cover;background-position:center;flex-shrink:0}
+.kg .grid4 .ofc .gi .gx b{font-size:10px;color:#21201C;line-height:1.1;display:block}
+.kg .grid4 .ofc .gi .gx small{font-size:9px;color:#2f7a73;font-weight:800}
+.kg .grid4 .ofc .guar{font-size:10.5px;font-weight:700;color:#21201C}
+.kg .specf{background-position:50% 42%}
+.kg .specf .shd{position:absolute;top:12px;left:14px;right:14px;text-align:center;color:#2f6b63;font-family:'Fraunces',serif;font-weight:600;font-size:15px;white-space:nowrap;z-index:3;background:none;border:0;padding:0;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.kg .cal{position:absolute;background:rgba(255,255,255,.96);border-radius:999px;padding:5px 10px;font-size:10.5px;font-weight:700;color:#21201C;box-shadow:0 2px 7px rgba(0,0,0,.18);z-index:4}.kg .cal b{color:#2f7a73}
+/* ---- about benefits: mini-copies of gallery frames 2/3/4 (scoped .kab) — ported from approved karate-about mock v3 ---- */
+.kab .mini{width:78%;margin:0 auto}
+.kab .col2{position:relative;width:100%;aspect-ratio:4/5;display:flex;overflow:hidden;border-radius:4px}
+.kab .col2 .cc{position:relative;width:50%;display:flex;flex-direction:column}
+.kab .col2 .cell{flex:1;background-size:cover;background-position:center}
+.kab .col2 .tg{position:absolute;top:50%;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:4px 12px;border-radius:999px;z-index:4;box-shadow:0 1px 6px rgba(0,0,0,.4)}
+.kab .col2 .left .tg{left:25%;transform:translate(-50%,-50%);background:#d9503e}.kab .col2 .right .tg{left:75%;transform:translate(-50%,-50%);background:#2f7a73}
+.kab .col2 .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:4}
+.kab .col2 .cap{position:absolute;left:8px;right:8px;bottom:10px;text-align:center;z-index:5}
+.kab .col2 .cap span{background:rgba(255,255,255,.96);color:#21201C;font-size:11px;font-weight:700;padding:5px 11px;border-radius:999px;box-shadow:0 1px 6px rgba(0,0,0,.25)}
+.kab .use{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 45%;overflow:hidden;border-radius:4px}
+.kab .use .gt{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,rgba(0,0,0,.36),transparent);z-index:1}
+.kab .use .gb{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(0deg,rgba(0,0,0,.5),transparent);z-index:1}
+.kab .use .blk{position:absolute;left:12px;right:12px;text-align:center;z-index:3}
+.kab .use .blk.top{top:13px}.kab .use .blk.bot{bottom:14px}
+.kab .use .pill{display:inline-block;font-weight:700;font-size:12.5px;padding:6px 13px;border-radius:999px;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.kab .use .pill.r{background:#d9503e}.kab .use .pill.t{background:#2f7a73}
+.kab .use .wt{display:inline-block;background:rgba(255,255,255,.96);color:#21201C;font-size:11px;font-weight:600;margin-top:6px;padding:5px 10px;border-radius:9px;line-height:1.28;box-shadow:0 2px 7px rgba(0,0,0,.22)}
+.kab .money{position:relative;width:100%;aspect-ratio:4/5;background-size:cover;background-position:50% 45%;overflow:hidden;border-radius:4px}
+.kab .cmp{position:absolute;left:10px;right:10px;top:12px;display:flex;gap:22px;z-index:3}
+.kab .cmp .col{flex:1;background:rgba(255,255,255,.97);border-radius:11px;padding:8px 9px;box-shadow:0 3px 12px rgba(0,0,0,.3);text-align:center}
+.kab .cmp .col .clbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:none;border:0;padding:0;position:static}
+.kab .cmp .bad .clbl{color:#d9503e}.kab .cmp .good .clbl{color:#2f7a73}
+.kab .cmp .col .big{font-family:'Fraunces',serif;font-weight:700;font-size:20px;line-height:1;margin:2px 0 0}.kab .cmp .col .big small{font-size:10px;font-weight:600}
+.kab .cmp .bad .big{color:#d9503e}.kab .cmp .good .big{color:#2f7a73}
+.kab .cmp .vs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#21201C;color:#fff;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:9px;z-index:4;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.kab .bcap{text-align:center;font-family:'Jost';font-size:12px;font-weight:600;color:var(--accent-deep);margin:10px 0 2px}
+/* about выгода row = heading + designed mini-frame (overlaid text) + paragraph + proof (both, per blueprint brow rows) */
+.abv{margin-top:34px}
+.abv .abv-h{font-size:21px;font-weight:500;text-align:center;margin-bottom:12px;font-family:'Fraunces',Georgia,serif}
+.abv .abv-p{font-size:14px;color:var(--ink-soft);margin-top:14px;text-align:center;line-height:1.55}
+.abv .abv-p b{color:var(--ink)}
+.abv .abv-proof{display:flex;align-items:center;justify-content:center;gap:6px;font-family:'Jost';font-size:12px;color:var(--sage);margin-top:10px;font-weight:600}
+/* about выгода = full-width designed mini-frame (overlay text fits exactly, like the mock) + heading/paragraph/proof */
+.abf{margin-top:36px;text-align:center}
+.abf .kab{width:100%;max-width:380px;margin:0 auto}
+.abf .abf-h{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:500;margin:16px 0 8px}
+.abf .abf-p{font-size:14px;color:var(--ink-soft);line-height:1.55}
+.abf .abf-p b{color:var(--ink)}
+.abf .abf-proof{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--sage);margin-top:11px;font-weight:600}
+
+/* buy-box */
+.buybox{background:var(--paper);padding-top:30px;padding-bottom:44px}
+.descriptor{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sage)}
+.buybox h1{font-size:33px;font-weight:500;margin:9px 0}
+.rating-row{display:flex;align-items:center;gap:9px;margin-bottom:4px;font-size:12.5px;color:var(--ink-soft)}
+.rating-row a{color:var(--ink-soft);text-underline-offset:2px}
+.promise{font-size:16px;color:var(--ink-soft);margin:14px 0 20px}
+.promise b{color:var(--ink);font-weight:600}
+.trio{display:flex;gap:9px;margin:20px 0}
+.trio .t{flex:1;background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:14px 6px;text-align:center}
+.trio .t b{display:block;font-family:'Jost';font-size:10px;font-weight:600;margin-top:8px;line-height:1.3;letter-spacing:.02em}
+.opt{position:relative;display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:13px;padding:16px;margin-top:11px;cursor:pointer;background:var(--paper);transition:border-color .15s,background .15s}
+.opt.sel{border:1.5px solid var(--ink);background:#fff;box-shadow:var(--shadow)}
+.opt .rb{width:21px;height:21px;border-radius:50%;border:2px solid var(--muted);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color .15s}
+.opt.sel .rb{border-color:var(--ink)} .opt.sel .rb::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--ink)}
+.opt .o-main{flex:1}.opt .o-main b{font-size:14.5px;font-family:'Jost';font-weight:600}.opt .o-main small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;line-height:1.4}
+.opt .o-price{text-align:right}.opt .o-price b{font-size:21px;font-family:'Fraunces';font-weight:600}.opt .o-price s{display:block;color:var(--muted);font-size:12px}
+.save-tag{position:absolute;top:-10px;right:15px;background:var(--sage);color:#fff;font-family:'Jost';font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 11px;border-radius:var(--pill)}
+.field-label{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:20px 0 9px;display:flex;justify-content:space-between}
+.field-label a{color:var(--sage)}
+.onesize{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--ink-soft);background:var(--ivory);border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-bottom:24px}
+.gifts{display:flex;gap:8px;margin:22px 0}
+.gift{flex:1;text-align:center}
+.gift .g-badge{display:inline-block;background:var(--ink);color:#fff;font-family:'Jost';font-size:9px;font-weight:600;letter-spacing:.04em;padding:3px 9px;border-radius:var(--pill);margin-bottom:7px}
+.gift .ill{aspect-ratio:1;border-radius:11px;margin-bottom:6px}
+.gift small{font-size:9.5px;color:var(--ink-soft);line-height:1.25;display:block}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:12px}
+.price-row .now{font-size:33px;font-weight:600;font-family:'Fraunces'}
+.price-row .was{color:var(--muted);text-decoration:line-through;font-size:18px}
+.price-row .pill-save{font-family:'Jost';font-size:11px;font-weight:600;color:var(--sage);background:var(--sage-tint);padding:4px 10px;border-radius:var(--pill)}
+/* smaller cents — reads as a clean 2-digit price, not a big 4-digit number */
+.ct{font-size:.56em;font-weight:inherit;vertical-align:.42em;letter-spacing:0}
+/* kit options: keep the small-cents format, but bump the dollar figure so the sum reads as big as Calm Wrap */
+.opt .o-price .ct{font-size:.6em;vertical-align:.38em}
+.sticky .sp .ct{font-size:.6em;vertical-align:.4em}
+.under-cta{margin-top:15px}
+.under-cta .row{display:flex;align-items:center;justify-content:center;gap:20px;font-size:11.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em}
+.pay{display:flex;gap:6px;justify-content:center;margin-top:15px;flex-wrap:wrap}
+.pay span{font-family:'Jost';font-size:8px;font-weight:700;letter-spacing:.03em;color:var(--ink-soft);background:var(--ivory);border:1px solid var(--line);border-radius:5px;padding:5px 9px}
+.benefits{list-style:none;margin:18px 0 4px;display:flex;flex-direction:column;gap:11px}
+.benefits li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--ink);line-height:1.45}
+.benefits li .bem{font-size:18px;line-height:1.15;flex-shrink:0;width:22px;text-align:center;margin-top:1px}
+.benefits li b{font-weight:600}
+.cred{font-family:'Jost';font-size:11.5px;color:var(--ink-soft);margin:9px 0 2px;display:flex;flex-wrap:wrap;gap:3px 10px}
+.reassure{background:var(--sage-tint);border:1px solid #CFE0DD;border-radius:11px;padding:12px 14px;font-size:13px;color:var(--ink);line-height:1.45;margin:18px 0 2px}
+.gift-head{font-family:'Jost';font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:24px 0 10px;display:flex;align-items:center;gap:8px}
+.gift-head .pv{margin-left:auto;color:var(--sage);background:var(--sage-tint);font-size:10px;padding:3px 9px;border-radius:var(--pill);letter-spacing:.04em}
+.bb-acc{margin-top:24px}
+.bb-acc details{margin-top:10px}
+/* trust strip */
+.tstrip{display:flex;align-items:stretch;background:var(--accent);color:#fff;padding:0}
+.tstrip .ti{flex:1;text-align:center;padding:16px 6px;border-right:1px solid rgba(255,255,255,.12)}
+.tstrip .ti:last-child{border:none}
+.tstrip .ti b{display:block;font-family:'Fraunces';font-size:16px;font-weight:600}
+.tstrip .ti small{font-family:'Jost';font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.62);display:block;margin-top:3px}
+
+/* ugc */
+.scroll{display:flex;gap:13px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory;margin:0 -24px;padding-left:24px;padding-right:24px}
+.scroll::-webkit-scrollbar{display:none}
+.scroll > *{scroll-snap-align:start}
+.ugc-card{min-width:218px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.ugc-card .ill{aspect-ratio:9/13;border:none;border-radius:0}
+.ugc-handle{display:flex;align-items:center;gap:8px;padding:11px 13px 2px;font-size:12.5px;font-weight:600}
+.ugc-handle .dot{width:22px;height:22px;border-radius:50%;background:var(--sage-tint)}
+.ugc-handle .vf{margin-left:auto;font-size:9px;color:var(--sage);letter-spacing:.04em;text-transform:uppercase}
+.ugc-txt{padding:5px 13px 14px;font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.ugc-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.ugc-play span{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.22)}
+.ugc-vtag{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.55);color:#fff;font-family:'Jost';font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:var(--pill)}
+
+/* about / benefits */
+.lead-h{font-size:32px;font-weight:500;margin:12px 0 16px;letter-spacing:-.015em}
+.lead-p{font-size:16px;color:var(--ink-soft)}
+.lead-p b{color:var(--ink)}
+.tape{aspect-ratio:4/5;margin:26px 0}
+/* hotspots — tap "+" dots reveal how it works (ported from Cat Wrap) */
+.hotspot{position:absolute;z-index:6;width:26px;height:26px;border-radius:50%;background:var(--sage);border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.22);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Jost';font-weight:700;font-size:14px}
+.hotspot::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--sage);opacity:.55;animation:mvhp 2.2s ease-out infinite}
+.hotspot .tip{position:absolute;bottom:132%;left:50%;transform:translateX(-50%) translateY(6px);background:var(--accent);color:#fff;font-family:'Jost';font-weight:500;font-size:11px;line-height:1.35;padding:8px 12px;border-radius:9px;width:max-content;max-width:165px;opacity:0;pointer-events:none;transition:.2s;text-align:center;z-index:7}
+.hotspot.on .tip{opacity:1;transform:translateX(-50%) translateY(0)}
+.hotspot.on{background:#fff;color:var(--sage)}
+@keyframes mvhp{0%{transform:scale(.8);opacity:.6}100%{transform:scale(1.8);opacity:0}}
+.brow{display:flex;gap:17px;align-items:flex-start;margin-top:34px}
+.brow:nth-child(even){flex-direction:row-reverse}
+.brow .ill{flex-shrink:0;width:120px;aspect-ratio:3/4}
+.brow .bt h3{font-size:22px;font-weight:500;margin-bottom:8px}
+.brow .bt p{font-size:14px;color:var(--ink-soft)}
+.brow .bt .proof{display:inline-flex;align-items:center;gap:6px;font-family:'Jost';font-size:12px;color:var(--sage);margin-top:11px;font-weight:600}
+
+/* mechanism / play-moves */
+.mech{background:var(--cream)}
+.mech-collage{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:6px 0 16px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper)}
+.mc-tile{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mc-tile:nth-child(2n){border-right:0}
+.mc-tile:nth-child(n+3){border-bottom:0}
+.mc-ill{aspect-ratio:5/4;background:var(--sage-tint);display:flex;align-items:center;justify-content:center}
+.mc-ill svg{width:72%;height:72%;display:block}
+.mc-cap{padding:9px 11px;font-family:'Jost';font-size:11.5px;font-weight:600;color:var(--accent-deep);line-height:1.25}
+.mc-cap small{display:block;font-weight:400;color:var(--ink-soft);font-size:10px;margin-top:3px}
+.mpt{background:var(--paper);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-top:11px}
+.mpt summary{list-style:none;cursor:pointer;padding:14px 16px;display:grid;grid-template-columns:1fr auto;column-gap:10px;align-items:center}
+.mpt summary::-webkit-details-marker{display:none}
+.mpt summary b{font-family:'Jost';font-size:14px;font-weight:600;grid-column:1;line-height:1.3;color:var(--accent-deep)}
+.mpt summary span{font-size:12px;color:var(--ink-soft);grid-column:1;line-height:1.4;margin-top:3px}
+.mpt summary .ch{grid-column:2;grid-row:1 / span 2;font-style:normal;font-size:22px;font-weight:300;color:var(--accent);transition:transform .2s}
+.mpt[open] summary .ch{transform:rotate(45deg)}
+.mpt .ans{padding:0 16px 14px;font-size:12.5px;color:var(--ink-soft);line-height:1.55}
+
+/* before/after */
+.ba-grid{display:flex;gap:12px;margin-top:24px}
+.ba-grid .col{flex:1}
+.ba-grid .ill{aspect-ratio:3/4}
+.ba-cap{text-align:center;font-family:'Jost';font-weight:600;font-size:11px;margin-top:11px;letter-spacing:.12em;text-transform:uppercase}
+.ba-cap.b{color:var(--clay)} .ba-cap.a{color:var(--sage)}
+.ba-note{text-align:center;font-size:13px;color:var(--ink-soft);margin-top:18px}
+.ba-note b{color:var(--ink)}
+
+/* comparison */
+.cmp{margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.cmp-head{display:table;table-layout:fixed;width:100%}
+.cmp-head .h{display:table-cell;vertical-align:bottom;width:29%;padding:18px 6px 13px;text-align:center}
+.cmp-head .h:first-child{width:42%}
+.cmp-head .us{background:var(--sage-tint);border-radius:13px 13px 0 0}
+.cmp-head .mini{aspect-ratio:1;width:48px;margin:0 auto 7px;border-radius:9px;overflow:hidden}
+.cmp-head .us b{font-family:'Fraunces';font-size:15px;font-weight:600}
+.cmp-head .them b{font-family:'Jost';font-size:11.5px;font-weight:600;color:var(--muted);line-height:1.3;display:block}
+.cmp-row{display:table;table-layout:fixed;width:100%;border-top:1px solid var(--line-soft);font-size:12.5px}
+.cmp-row .c{display:table-cell;vertical-align:middle;width:29%;padding:14px 7px;text-align:center}
+.cmp-row .lbl{width:42%;text-align:left;color:var(--ink-soft);font-weight:500}
+.cmp-row .us{background:var(--sage-tint);font-weight:600}
+.cmp-row:last-child .us{border-radius:0 0 13px 13px}
+.tick{color:var(--sage);font-weight:700;font-size:15px} .cross{color:var(--muted);font-size:11px}
+.cmp-trust{display:flex;flex-wrap:wrap;gap:5px 16px;justify-content:center;margin-top:22px;font-family:'Jost';font-size:12px;color:var(--ink-soft)}
+.cmp-trust span{white-space:nowrap}
+
+/* brand block */
+.brand{background:var(--sand)}
+.brandblock{display:flex;gap:16px;align-items:center}
+.brand-photo{position:relative;width:92px;height:92px;flex-shrink:0;border-radius:12px;overflow:hidden}
+.brand-photo svg{width:100%;height:100%;display:block}
+.brand-body p{font-size:13.5px;color:var(--ink-soft);line-height:1.55}
+.brand-body p b{color:var(--ink)}
+.brand-trust{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+.brand-trust span{font-family:'Jost';font-size:10.5px;font-weight:600;color:var(--accent-deep);background:var(--sage-tint);border:1px solid #CFE0DD;border-radius:var(--pill);padding:5px 10px}
+
+/* steps */
+.step-card{min-width:218px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.step-card .ill{aspect-ratio:4/3;border:none;border-radius:0}
+.step-card .s-body{padding:14px}
+.step-card .s-num{font-family:'Jost';font-weight:700;font-size:11px;color:var(--sage);letter-spacing:.1em}
+.step-card h4{font-size:17px;font-weight:500;margin:4px 0 5px}
+.step-card p{font-size:12.5px;color:var(--ink-soft)}
+.warmup{background:var(--honey-tint);border:1px solid #E9D49B;border-radius:12px;padding:14px 16px;font-size:13px;color:var(--ink);line-height:1.5;margin-top:20px}
+.warmup b{font-weight:600}
+
+/* offer / stack */
+.offer{background:var(--sage)}
+.offer .sect-head h2{color:#fff}.offer .sect-head p{color:rgba(255,255,255,.78)}
+.offer .eyebrow{color:#CFE0DD}
+.stack{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-top:8px;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.stack .row{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:11px 0;border-bottom:1px solid var(--line-soft);color:var(--ink)}
+.stack .row:last-child{border:none;font-weight:700;font-size:17px;padding-bottom:0;color:var(--ink)}
+.stack .row .free{color:var(--accent-deep);font-weight:600}
+.stack .row s{color:var(--muted)}
+.stack .row .total{font-family:'Fraunces'}
+.guarantee{display:flex;align-items:center;gap:14px;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:var(--r);padding:18px;margin:20px 0}
+.guarantee b{font-size:13.5px;font-family:'Jost';color:#fff}.guarantee small{font-size:12px;color:rgba(255,255,255,.8)}
+.offer .btn{background:#fff;color:var(--accent-deep);border-color:#fff}
+
+/* faq */
+details{background:var(--paper);border:1px solid var(--line);border-radius:13px;margin-top:11px;overflow:hidden}
+summary{list-style:none;cursor:pointer;padding:18px;font-family:'Jost';font-weight:600;font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary .pm{font-size:23px;color:var(--sage);font-weight:300;line-height:1;transition:transform .2s}
+details[open] summary .pm{transform:rotate(45deg)}
+details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
+
+/* reviews */
+.rev-summary{display:flex;gap:22px;align-items:center;margin-top:8px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.rev-summary .big{font-family:'Fraunces';font-size:46px;font-weight:600;line-height:1}
+.bars{flex:1}
+.bar-row{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted);margin:2px 0}
+.bar{flex:1;height:6px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--clay)}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:18px;margin-top:13px}
+.rev .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.rev .name{font-family:'Jost';font-weight:600;font-size:13px;display:flex;align-items:center;gap:8px}
+.rev .vbadge{font-size:9px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.rev h4{font-family:'Fraunces';font-size:16px;font-weight:600;margin-bottom:6px}
+.rev p{font-size:13.5px;color:var(--ink-soft)}
+.rev .rphoto{display:flex;gap:8px;margin-top:12px}
+.rev .rphoto .ill{width:66px;height:66px;border-radius:9px}
+
+/* close */
+.close-cta{text-align:center;background:var(--cream)}
+.close-cta h3{font-size:28px;font-weight:500;margin-bottom:10px}
+.close-cta p{font-size:14px;color:var(--ink-soft);margin-bottom:20px}
+
+/* sticky + footer */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;max-width:480px;margin:0 auto;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:12px;align-items:center;transform:translateY(120%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky .sp b{font-size:18px;font-family:'Fraunces';font-weight:600}.sticky .sp s{color:var(--muted);font-size:13px;margin-left:5px}
+.sticky .sp small{display:block;font-size:9.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em}
+.sticky .btn{flex:1;min-height:48px;padding:13px;font-size:11px}
+.footer{background:var(--sage);color:rgba(255,255,255,.72)}
+.footer .top{text-align:center;padding:34px 24px 20px;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer .top .logo{color:#fff;font-size:24px;margin-bottom:6px}
+.footer .top .tag{color:rgba(255,255,255,.7);font-size:13px}
+.footer details{background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.14);border-radius:0;margin:0;overflow:visible}
+.footer summary{list-style:none;cursor:pointer;padding:17px 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Jost';font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.footer summary::-webkit-details-marker{display:none}
+.footer summary .chev{font-size:18px;font-weight:300;transition:transform .2s;color:rgba(255,255,255,.7)}
+.footer details[open] summary .chev{transform:rotate(180deg)}
+.footer .links{padding:0 24px 18px}
+.footer .links a{display:block;color:rgba(255,255,255,.72);text-decoration:none;padding:7px 0;font-size:13.5px}
+.footer .sub{padding:4px 24px 20px}
+.footer .sub p{font-size:12.5px;color:rgba(255,255,255,.7);margin-bottom:11px}
+.footer .sub .row{display:flex;border:1px solid rgba(255,255,255,.3);border-radius:var(--pill);overflow:hidden}
+.footer .sub input{flex:1;background:transparent;border:none;padding:13px 16px;color:#fff;font-family:'Jost';font-size:13px}
+.footer .sub input::placeholder{color:rgba(255,255,255,.55)}
+.footer .sub button{background:#fff;border:none;color:var(--sage);padding:0 18px;font-size:18px;cursor:pointer}
+.footer .trust{text-align:center;padding:18px 24px;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer .trust .tp{display:inline-flex;align-items:center;gap:8px;font-family:'Jost';font-size:12px;color:rgba(255,255,255,.85)}
+.footer .trust .tp .tp-stars{color:#fff;letter-spacing:1px}
+.footer .bottom{padding:20px 24px 30px;text-align:center;font-size:11px;color:rgba(255,255,255,.6)}
+.footer .pay{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.footer .pay span{font-family:'Jost';font-size:8px;font-weight:700;letter-spacing:.03em;color:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.28);border-radius:5px;padding:5px 9px}
+.hl{background:linear-gradient(transparent 58%, var(--sage-tint) 58%);padding:0 1px;font-weight:600;color:var(--ink)}
+.hlw{background:linear-gradient(transparent 56%, var(--honey-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
+.hlr{background:linear-gradient(transparent 56%, var(--clay-tint) 56%);padding:0 2px;font-weight:600;color:var(--ink)}
+/* spine — scroll thread + travelling dot + benefit ticker (ported 1:1 from live Cat Wrap; data-block bindings + our benefits) */
+.mv-spine{position:absolute;left:0;right:0;margin:0 auto;width:100%;max-width:480px;z-index:2;pointer-events:none}
+.mv-spine svg{width:100%;height:100%;display:block;overflow:visible}
+.mv-spine-track{fill:none;stroke:#E6DFD1;stroke-width:1.2;vector-effect:non-scaling-stroke;opacity:.13}
+.mv-spine-draw{fill:none;stroke:#C8BAA3;stroke-width:1.4;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;opacity:.22}
+.mv-spine-dot{position:absolute;left:0;top:0;width:14px;height:14px;border-radius:50%;background:#3E5C5A;box-shadow:0 0 0 4px #E2E9E7,0 2px 8px rgba(0,0,0,.18);transform:translate(-50%,-50%)}
+.mv-spine-label{position:absolute;left:50%;top:0;transform:translateX(-50%);white-space:nowrap;background:#2F7A73;color:#fff;font-family:'Jost',system-ui,sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.01em;padding:6px 12px;border-radius:999px;box-shadow:0 3px 12px rgba(33,32,28,.2);pointer-events:none;opacity:0;transition:opacity .25s,background .35s}
+.mv-spine-label.end{box-shadow:0 5px 18px rgba(194,143,46,.45);font-weight:700}
+/* ---- DESKTOP (≥990): theme gives the 2-col hero/shell; here we CONTAIN our body + add side air (full-bleed colour bands, centred content) — mirrors Cat Wrap 5.0.1 ---- */
+@media (min-width:990px){
+  .wrap{max-width:none}                                  /* Lab-only: preview full width (dropped on Shopify) */
+  section{padding:80px 24px}
+  section > *{max-width:760px;margin-left:auto;margin-right:auto}   /* contain content; bg stays full-bleed */
+  .sect-head{max-width:620px}
+  .lead-p{max-width:680px}
+  /* UGC — 5 cards in a row, wider band */
+  [data-block="ugc"] .sect-head{max-width:720px}
+  [data-block="ugc"] .scroll{max-width:1160px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;overflow:visible;margin:28px auto 0;padding:0}
+  [data-block="ugc"] .ugc-card{min-width:0}
+  [data-block="ugc"] .ugc-card .ill{aspect-ratio:9/13}
+  /* Instruction — 3 steps in a row */
+  [data-block="instruction"] .scroll{max-width:960px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;overflow:visible;margin:28px auto 0;padding:0}
+  [data-block="instruction"] .step-card{min-width:0}
+  [data-block="instruction"] .step-card .ill{aspect-ratio:4/3}
+  /* before/after + compare read nicely a touch wider */
+  [data-block="before-after"] .ba-grid,[data-block="compare"] .cmp{max-width:720px}
+  /* About — 2-col: tape image (sticky) left / 3 brow rows right; eyebrow+heading+lead centred on top. Full-bleed bg kept via side-padding trick. */
+  [data-block="about"]{padding-left:max(24px,calc((100% - 1040px)/2));padding-right:max(24px,calc((100% - 1040px)/2));display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);column-gap:50px;align-items:start}
+  [data-block="about"] > *{max-width:none;margin-left:0;margin-right:0}
+  [data-block="about"] > .eyebrow,[data-block="about"] > .lead-h,[data-block="about"] > .lead-p{grid-column:1 / -1;text-align:center;max-width:680px;margin-left:auto;margin-right:auto}
+  [data-block="about"] > .tape{grid-column:1;grid-row:4 / span 3;position:sticky;top:100px;margin:28px 0 0}
+  [data-block="about"] > .brow{grid-column:2;margin-top:26px}
+  /* Science — 2-col: collage (sticky) left / points right; head spans; accordions opened on desktop (JS), chevron hidden. */
+  [data-block="science"]{padding-left:max(24px,calc((100% - 1040px)/2));padding-right:max(24px,calc((100% - 1040px)/2));display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:48px;align-items:start}
+  [data-block="science"] > *{max-width:none;margin-left:0;margin-right:0}
+  [data-block="science"] > .sect-head{grid-column:1 / -1;max-width:760px;margin-left:auto;margin-right:auto}
+  [data-block="science"] > .mech-collage{grid-column:1;position:sticky;top:100px;margin-top:6px}
+  [data-block="science"] > .mech-pts{grid-column:2;margin-top:0}
+  [data-block="science"] .mpt summary .ch{display:none}
+  /* reviews — a touch more side air */
+  [data-block="reviews"] > *{max-width:700px}
+  /* offer — centre every row (the guarantee card had margin:20px 0 which killed its auto side-margins → it drifted left) */
+  [data-block="offer"] > *{margin-left:auto;margin-right:auto}
+  /* spine stays on desktop too (matches Calm Wrap); centred over the contained body */
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- SECTION: announce — shared site shell (universal, multi-product store) -->
+  <div class="announce">Free US Shipping<span class="dotsep">·</span>Free Gifts With Every Order</div>
+
+  <!-- SECTION: header — shared site shell -->
+  <header class="hd">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="#21201C" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <div class="logo">Movaro</div>
+    <div class="hd-ic">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#21201C" stroke-width="1.7"/><path d="M20 20l-4-4" stroke="#21201C" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 7h13l-1.2 9a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6 7zM6 7L5 4H3" stroke="#21201C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </header>
+
+  <!-- SECTION: hero-gallery (drawn SVG placeholders + our overlay text) -->
+  <section class="gallery" data-block="gallery">
+    <div class="g-wrap">
+      <button class="g-arrow prev" onclick="gnav(-1)" aria-label="previous">‹</button>
+      <button class="g-arrow next" onclick="gnav(1)" aria-label="next">›</button>
+      <div class="g-carousel" id="gcar">
+
+        <!-- slide 1: HOOK — pain-first (no-list) + product name → bed -->
+        <div class="g-slide"><div class="kg">
+          <div class="ph" style="background-image:url('_ph.jpg');background-position:50% 50%"><div class="scrim-t"></div><div class="scrim-b"></div>
+            <div class="star"><span class="s">★</span> 4.8</div>
+            <div class="kick">FINALLY.</div>
+            <div class="pains"><span class="pl"><span class="no">No</span> more sleeping on your bed</span><span class="pl"><span class="no">No</span> more hiding when it's loud</span><span class="pl"><span class="no">No</span> more restless, on-edge cat</span></div>
+            <div class="plabel" style="left:13px;bottom:60px;text-align:left"><span class="nm">Movaro<br>Calm Bed</span><svg width="78" height="46" viewBox="0 0 78 46" fill="none"><path d="M6 8 Q56 6 70 40" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M70 40 L66 28 M70 40 L55 42" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+            <div class="turn"><span class="pill">There's a calmer way ↓</span></div>
+            <div class="chips"><span class="chip">🛋️ Melts right in</span><span class="chip">🐾 Feels safe</span><span class="chip">😴 Sleeps deep</span></div>
+          </div>
+        </div></div>
+
+        <!-- slide 2: COLLAGE before/after (E3/E2 → C7/C4, Before/After on the seam) -->
+        <div class="g-slide"><div class="kg">
+          <div class="col2">
+            <div class="cc left">
+              <div class="cell" style="background-image:url('_ph.jpg');background-position:50% 35%"></div>
+              <div class="cell" style="background-image:url('_ph.jpg');background-position:50% 40%"></div>
+              <span class="tg">Before</span>
+              <div class="ovl pain"><span class="h">Restless &amp; on edge</span><span class="s">Sleeps anywhere but settles nowhere — your bed, the laundry, the cold floor, always half-awake.</span></div>
+            </div>
+            <div class="cc right">
+              <div class="cell" style="background-image:url('_ph.jpg');background-position:50% 25%"></div>
+              <div class="cell" style="background-image:url('_ph.jpg');background-position:50% 35%"></div>
+              <span class="tg">After</span>
+              <div class="ovl sol"><span class="h">Curled up and calm</span><span class="s">Their own safe nest — they sink into the rim, breathe out, and finally sleep deeply.</span></div>
+            </div>
+            <div class="mid"></div>
+            <div class="seamadv"><span class="l">🛋️ <b>Deep-pressure calm</b></span><span class="l">🐾 <b>Safe, enclosed feel</b></span><span class="l">😴 <b>Real, deep sleep</b></span></div>
+          </div>
+        </div></div>
+
+        <!-- slide 3: HANDS SAFE (A4) -->
+        <div class="g-slide"><div class="kg">
+          <div class="use" style="background-image:url('_ph.jpg');background-position:50% 45%"><div class="gt"></div><div class="gb"></div>
+            <div class="blk top"><span class="pill r">Out in the open, anxious cats can't switch off 😿</span></div>
+            <div class="blk bot"><span class="pill t">The raised rim hugs them calm</span><span class="wt">High, soft sides support the head and wrap around them — like a safe pair of arms. They curl in and let go.</span></div>
+          </div>
+        </div></div>
+
+        <!-- slide 4: MONEY (B6 + compare at bottom, no dark veil) -->
+        <div class="g-slide"><div class="kg">
+          <div class="moneywrap" style="background-image:url('_ph.jpg');background-position:45% 32%">
+            <div class="soc"><span>🐾 <b>★ 4.8</b> — cats claim it on day one</span></div>
+            <div class="cmp bot">
+              <div class="col bad"><div class="clbl">Beds they ignore</div><div class="big">$150+<small> wasted</small></div><div class="it">Flat pads &amp; stiff cushions · snubbed in days</div></div>
+              <div class="col good"><div class="clbl">Calm Bed</div><div class="big">$49.99<small> once</small></div><div class="it">The one they actually choose</div></div>
+              <div class="vs">VS</div>
+            </div>
+          </div>
+        </div></div>
+
+        <!-- slide 5: PLAY collage + offer card (2 gifts, photos) -->
+        <div class="g-slide"><div class="kg">
+          <div class="grid4">
+            <div class="g tl" style="background-image:url('_ph.jpg')"><span class="lab">Curl</span></div>
+            <div class="g tr" style="background-image:url('_ph.jpg')"><span class="lab">Stretch</span></div>
+            <div class="g bl" style="background-image:url('_ph.jpg')"><span class="lab">Sink in</span></div>
+            <div class="g br" style="background-image:url('_ph.jpg')"><span class="lab">Doze off</span></div>
+            <div class="veil5"></div>
+            <div class="ofc">
+              <div class="nm">The Calm Bed</div>
+              <div class="pr"><span class="o">$79.99</span><span class="n">$49.99</span><span class="save">Save $30</span></div>
+              <div class="divln"></div>
+              <div class="giftrow">
+                <div class="gi"><span class="th" style="background-image:url('_ph.jpg')"></span><span class="gx"><b>Calm-at-Home guide</b><small>FREE</small></span></div>
+                <div class="gi"><span class="th" style="background-image:url('_ph.jpg')"></span><span class="gx"><b>New-bed checklist</b><small>FREE</small></span></div>
+              </div>
+              <div class="guar">🛡️ 30-Night Calm Guarantee</div>
+            </div>
+          </div>
+        </div></div>
+
+        <!-- slide 6: SPEC (A1 + callouts) -->
+        <div class="g-slide"><div class="kg">
+          <div class="specf" style="background-image:url('_ph.jpg');background-position:50% 42%">
+            <div class="shd">Movaro Calm Bed — in detail 🛋️</div>
+            <span class="cal" style="top:30%;left:8px">🧶 <b>Ultra-soft faux fur</b></span>
+            <span class="cal" style="top:46%;right:8px">⭕ <b>Raised calming rim</b></span>
+            <span class="cal" style="top:66%;left:8px">🚫 <b>Anti-slip base</b></span>
+            <span class="cal" style="top:80%;right:8px">🧺 <b>Machine washable</b></span>
+          </div>
+        </div></div>
+
+      </div>
+      <div class="g-dots" id="gdots"></div>
+    </div>
+    <div class="g-thumbs" id="gthumbs">
+      <div class="ill photo on" style="background-image:url('_ph.jpg')"></div>
+      <div class="ill photo" style="background-image:url('_ph.jpg')"></div>
+      <div class="ill photo" style="background-image:url('_ph.jpg')"></div>
+      <div class="ill photo" style="background-image:url('_ph.jpg')"></div>
+      <div class="ill photo" style="background-image:url('_ph.jpg')"></div>
+      <div class="ill photo" style="background-image:url('_ph.jpg')"></div>
+    </div>
+  </section>
+
+  <!-- SECTION: buy-box -->
+  <section class="buybox" data-block="buybox">
+    <div class="descriptor">The calming bed cats melt into</div>
+    <h1>Movaro Calm Bed</h1>
+    <div class="rating-row"><span class="stars">★★★★★</span> 4.8 · <a href="#reviews">loved by cats 🐾</a></div>
+
+    <!-- credibility anchor (seeded — honesty L2; S15: qualitative, no hard counts) -->
+    <div class="cred"><span>🛋️ Cats melt into it</span><span>🐾 Calms anxious cats</span><span>🇺🇸 Ships from the US</span></div>
+
+    <!-- PRICE high — cold buyer scans photo → price first (PLACEHOLDER — confirm) -->
+    <div class="price-row"><span class="now" id="px-now">$49<span class="ct">.99</span></span><span class="was" id="px-was">$79<span class="ct">.99</span></span><span class="pill-save" id="px-save">Save $30</span></div>
+
+    <p class="promise">The safe little nest your cat's been looking for. 🛋️ High, soft sides they curl right into and feel protected — so an anxious, restless cat <b class="hl">finally settles and sleeps deeply.</b></p>
+
+    <!-- BENEFITS — outcomes, calm-led -->
+    <ul class="benefits">
+      <li><span class="bem">🛋️</span><span><b class="hlw">Calms anxious cats</b> — the raised rim wraps around them like a safe hug, so they stop pacing and finally switch off</span></li>
+      <li><span class="bem">😴</span><span><b class="hlw">Deep, proper sleep</b> — soft, warm and enclosed; they sink in and sleep through instead of dozing on edge</span></li>
+      <li><span class="bem">🐾</span><span><b class="hlw">A spot that's just theirs</b> — so they stop claiming your bed, your laundry and your keyboard</span></li>
+      <li><span class="bem">🎂</span><span><b class="hlw">Any cat, any age</b> — nervous rescues, anxious kittens, stiff seniors — they all feel safer curled in</span></li>
+    </ul>
+
+    <!-- OBJECTION #1 pre-empt — "what if my cat won't use it" (the category's top fear) -->
+    <div class="reassure">🐾 <b>Worried your cat won't use it?</b> Most claim it within a day — the soft, enclosed feel is exactly what cats instinctively seek out. Our free Calm-at-Home guide shows you the trick for fussy cats. Not settled in 30 nights? Full refund.</div>
+
+    <!-- VALUE-STACK — gifts shown BEFORE the choice (value ≫ price) -->
+    <div class="gift-head">Free with every bed <span class="pv">$28 value</span></div>
+    <div class="gifts">
+      <div class="gift"><span class="g-badge">Free $19</span><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div><small>Calm-at-Home guide — settle an anxious cat</small></div>
+      <div class="gift"><span class="g-badge">Free $9</span><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div><small>New-bed intro checklist</small></div>
+    </div>
+
+    <!-- SIZE — real choice (S/M/L by cat weight); on Shopify = native variant picker. PLACEHOLDER weights — confirm with Sourcing -->
+    <div class="field-label">Choose size <a href="#faq">Which size? ↓</a></div>
+    <div id="sizes">
+      <div class="opt" data-size="Small"><div class="rb"></div>
+        <div class="o-main"><b>Small</b><small>Kittens &amp; petite cats · up to ~8 lb</small></div></div>
+      <div class="opt sel" data-size="Medium"><div class="rb"></div>
+        <div class="o-main"><b>Medium · most cats</b><small>The everyday pick · ~8–15 lb</small></div></div>
+      <div class="opt" data-size="Large"><div class="rb"></div>
+        <div class="o-main"><b>Large</b><small>Big breeds, Maine Coon · ~15–25 lb</small></div></div>
+    </div>
+
+    <!-- OFFERS — single (default, honest) vs multi-cat 2-pack -->
+    <div class="field-label">How many?</div>
+    <div id="bundle">
+      <div class="opt sel" data-price="49.99" data-was="79.99" data-label="1 Calm Bed"><div class="rb"></div>
+        <div class="o-main"><b>1 Calm Bed · most popular</b><small>One cozy bed + free Calm-at-Home guide</small></div>
+        <div class="o-price"><b>$49<span class="ct">.99</span></b><s>$79<span class="ct">.99</span></s></div></div>
+      <div class="opt" data-price="84.99" data-was="99.98" data-label="2 Calm Beds"><span class="save-tag">Multi-cat</span><div class="rb"></div>
+        <div class="o-main"><b>2 Calm Beds</b><small>A calm spot for each cat — save $15</small></div>
+        <div class="o-price"><b>$84<span class="ct">.99</span></b><s>$99<span class="ct">.98</span></s></div></div>
+    </div>
+
+    <button class="btn" onclick="addToCart()">Bring home the calm — Add to cart</button>
+    <div class="under-cta">
+      <div class="row">
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="#6A6256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Free US shipping</span>
+        <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="#6A6256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 30-night money-back</span>
+      </div>
+      <div class="pay"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span><span>APPLE PAY</span><span>G PAY</span><span>SHOP PAY</span></div>
+    </div>
+
+    <!-- ACCORDION — so the buyer never leaves for a policy page -->
+    <div class="bb-acc">
+      <details><summary>What's in the box <span class="pm">+</span></summary><div class="ans">One Movaro Calm Bed in your chosen size, plus the digital <b>Calm-at-Home guide</b> and a new-bed intro checklist. <i>(Exact contents finalised with our supplier — Sourcing.)</i></div></details>
+      <details><summary>Shipping &amp; returns <span class="pm">+</span></summary><div class="ans">Free US shipping, dispatched in 24–48h, typically 5–8 business days. Not the cozy spot you hoped for? <b>30-night money-back</b> — and keep the guide as our gift. Questions: support@movaro.com.</div></details>
+      <details><summary>Materials &amp; care <span class="pm">+</span></summary><div class="ans">Ultra-soft faux-fur top, a plush-filled raised rim, and a non-slip base. <b>Machine washable</b> (gentle, cold) — air-dry and fluff back to shape. Three sizes (S/M/L). <i>(Final materials &amp; sizes confirmed with sourcing.)</i></div></details>
+    </div>
+  </section>
+
+  <!-- SECTION: trust-strip -->
+  <div class="tstrip" data-block="trust-strip">
+    <div class="ti"><b>Calming</b><small>raised rim</small></div>
+    <div class="ti"><b>Washable</b><small>machine-safe</small></div>
+    <div class="ti"><b>30-night</b><small>money-back</small></div>
+    <div class="ti"><b>Free</b><small>US shipping</small></div>
+  </div>
+
+  <!-- SECTION: ugc — social proof high; different cats engaging (kills the "will mine play?" fear) -->
+  <section class="s-ivory" data-block="ugc">
+    <div class="sect-head reveal"><div class="eyebrow">★★★★★ Real cat parents</div><h2>"She finally sleeps through the night."</h2><p>Real owners, real anxious cats — filmed on their own phones, not in a studio.</p></div>
+    <div class="scroll reveal">
+      <div class="ugc-card">
+        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></span>@anxious.milo.mom<span class="vf">✓</span></div>
+        <div class="ugc-txt">"My rescue used to hide all day. Now he's curled in this every time I look — I've never seen him this relaxed 😭"</div></div>
+      <div class="ugc-card">
+        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></span>@twocatchaos<span class="vf">✓</span></div>
+        <div class="ugc-txt">"Bought one, immediately had to order a second. Now they each have their own spot and the 3am chaos stopped 🙏"</div></div>
+      <div class="ugc-card">
+        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></span>@bengal.bailey<span class="vf">✓</span></div>
+        <div class="ugc-txt">"He does the full croissant curl and knocks out for HOURS. The vacuum doesn't even wake him anymore 😹"</div></div>
+      <div class="ugc-card">
+        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></span>@luna.is.16<span class="vf">✓</span></div>
+        <div class="ugc-txt">"My senior girl sleeps so much deeper in this. The padded rim is perfect for her old neck. Wish I'd found it sooner."</div></div>
+      <div class="ugc-card">
+        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 40%"></div>
+        <div class="ugc-handle"><span class="dot" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></span>@foster.kitten.diaries<span class="vf">✓</span></div>
+        <div class="ugc-txt">"Skittish foster kittens settled right down once they had this to burrow into. It's the first place they feel safe."</div></div>
+    </div>
+  </section>
+
+  <!-- SECTION: about / benefits — guilt-relief reframe + our genuine belief (the "we burn for this" energy) -->
+  <section class="s-paper" data-block="about">
+    <div class="eyebrow reveal">What every cat is looking for</div>
+    <h2 class="lead-h reveal">The safe little nest your cat's been looking for.</h2>
+    <p class="lead-p reveal">Every cat carries a little wild instinct: when the world feels big and loud, they look for somewhere small, soft and enclosed to hide away and feel safe. Without it, that unease leaks out as pacing, hiding, and sleeping with one eye open. The Calm Bed gives them that spot — high, soft sides they sink into — so they curl up, feel protected, and <b class="hl">finally let go.</b></p>
+
+    <div class="ill tape reveal" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 42%"><span class="chip" style="top:14px;left:50%;transform:translateX(-50%)">👆 Tap the + dots to see how it works</span>
+      <button class="hotspot" style="top:40%;left:30%" aria-label="rim">+<span class="tip">🛋️ Raised rim — supports the head &amp; wraps them in, so they feel held</span></button>
+      <button class="hotspot" style="top:58%;left:58%" aria-label="fur">+<span class="tip">🧶 Ultra-soft faux fur — warm &amp; snuggly, like a littermate's coat</span></button>
+      <button class="hotspot" style="top:82%;left:46%" aria-label="base">+<span class="tip">🚫 Anti-slip base — stays put on any floor, so they feel secure</span></button></div>
+
+    <div class="brow reveal">
+      <div class="ill" style="width:142px;aspect-ratio:4/5;background-image:url('_ph.jpg');background-size:cover;background-position:center"></div>
+      <div class="bt"><h3>Calm, not on edge</h3>
+        <p>An anxious cat can't relax out in the open. The enclosed rim covers their back and gives them a den to settle into — so the pacing stops and they <b class="hlw">finally switch off.</b></p>
+        <span class="proof">● The safe, enclosed feeling cats seek out</span></div>
+    </div>
+    <div class="brow reveal">
+      <div class="ill" style="width:142px;aspect-ratio:4/5;background-image:url('_ph.jpg');background-size:cover;background-position:center"></div>
+      <div class="bt"><h3>Deep sleep, finally</h3>
+        <p>Soft, warm and cocooning, the bed holds your cat's body heat and cradles them in a gentle curl — so they sleep <b class="hl">deeper and longer</b>, not the light, jumpy cat-naps.</p>
+        <span class="proof">● Warm, plush, cocooning</span></div>
+    </div>
+    <div class="brow reveal">
+      <div class="ill" style="width:142px;aspect-ratio:4/5;background-image:url('_ph.jpg');background-size:cover;background-position:center"></div>
+      <div class="bt"><h3>Their spot, not your bed</h3>
+        <p>Give them a place that's unmistakably <i>theirs</i> and the territory battles ease — <b class="hlw">no more fur on your duvet, your laundry or your laptop.</b></p>
+        <span class="proof">● A spot of their own</span></div>
+    </div>
+  </section>
+
+  <!-- SECTION: before/after — WITH a timeframe (the "Add" nobody runs) -->
+  <section class="s-ivory" data-block="before-after">
+    <div class="sect-head reveal"><div class="eyebrow">Within the first week</div><h2>From restless to finally settled</h2><p>Same cat, same anxious energy — now it has somewhere safe to land instead of your bed and the cold floor.</p></div>
+    <div class="ba-grid reveal">
+      <div class="col"><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 35%"><span class="chip" style="top:12px;left:12px;background:var(--clay);color:#fff">Before</span></div><div class="ba-cap b">Restless, sleeps everywhere</div></div>
+      <div class="col"><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 30%"><span class="chip" style="top:12px;left:12px;background:var(--sage);color:#fff">After</span></div><div class="ba-cap a">Curled up, deeply asleep</div></div>
+    </div>
+    <p class="ba-note reveal">Within a few days of having their own safe nest: <b>less pacing, less hiding, deeper sleep</b> — and a noticeably calmer cat.</p>
+  </section>
+
+  <!-- SECTION: science — why the round shape calms (honest physiology, no fake studies/numbers) -->
+  <section class="mech" data-block="science">
+    <div class="sect-head reveal"><div class="eyebrow">Why the shape works</div><h2>Not just cozy — it's instinct</h2><p>A round, high-walled bed isn't just cute — it works with a cat's instincts. Here's what's actually happening when they curl into it:</p></div>
+    <div class="mech-collage reveal">
+      <div class="mc-tile"><div class="mc-ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div><div class="mc-cap">Feels safe<small>back covered, den-like</small></div></div>
+      <div class="mc-tile"><div class="mc-ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div><div class="mc-cap">Self-soothing curl<small>tight, protected ball</small></div></div>
+      <div class="mc-tile"><div class="mc-ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div><div class="mc-cap">Warm &amp; cocooning<small>holds their body heat</small></div></div>
+      <div class="mc-tile"><div class="mc-ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div><div class="mc-cap">Deeper sleep<small>calmer nervous system</small></div></div>
+    </div>
+    <div class="mech-pts">
+    <details class="mpt reveal"><summary><b>An enclosed den feels safe</b><span>High walls cover their back and flanks.</span><i class="ch">+</i></summary><div class="ans">Cats are both predator and prey — out in the open they stay on alert. Raised, wrap-around sides cover their back while they still watch the room, which lowers that on-guard tension and lets them truly relax.</div></details>
+    <details class="mpt reveal"><summary><b>The curl is self-soothing</b><span>The round base lets them ball up tight.</span><i class="ch">+</i></summary><div class="ans">Curling into a tight ball protects a cat's vital organs and conserves heat — a naturally calming, secure posture. The round, soft base invites exactly that curl instead of a flat sprawl.</div></details>
+    <details class="mpt reveal"><summary><b>Warmth equals calm</b><span>Soft faux fur traps their body heat.</span><i class="ch">+</i></summary><div class="ans">Cats seek warmth — it's comforting and helps them settle. The plush, self-warming fur holds their own body heat around them, a bit like being tucked in.</div></details>
+    <details class="mpt reveal"><summary><b>A calmer cat sleeps deeper</b><span>Feeling safe = real, restorative sleep.</span><i class="ch">+</i></summary><div class="ans">When a cat feels secure and warm, they drop into deeper, longer sleep instead of light, twitchy naps — and a well-rested cat is a calmer, happier cat. (Every cat's different — but you'll notice. 😴)</div></details>
+    </div>
+  </section>
+
+  <!-- SECTION: comparison — us vs BARE HANDS vs FLOOR TOY (never Amazon — Marina) -->
+  <section class="s-paper" data-block="compare">
+    <div class="sect-head reveal"><div class="eyebrow">Why owners switch</div><h2>The bed they actually sleep in</h2><p>A flat pad gets ignored. A stiff cushion gets snubbed. The Calm Bed is the one cats claim as their own.</p></div>
+    <div class="cmp reveal">
+      <div class="cmp-head">
+        <div class="h"></div>
+        <div class="h us"><div class="mini"><div style="width:100%;height:100%;background-image:url('_ph.jpg');background-size:cover;background-position:center"></div></div><b>Calm Bed</b></div>
+        <div class="h them"><b>Flat bed<br>· cushion</b></div>
+      </div>
+      <div class="cmp-row"><div class="c lbl">Raised rim that calms anxious cats</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
+      <div class="cmp-row"><div class="c lbl">Ultra-soft, warm faux fur</div><div class="c us"><span class="tick">✓</span></div><div class="c">½</div></div>
+      <div class="cmp-row"><div class="c lbl">Anti-slip base — stays put</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
+      <div class="cmp-row"><div class="c lbl">Machine washable</div><div class="c us"><span class="tick">✓</span></div><div class="c">½</div></div>
+      <div class="cmp-row"><div class="c lbl">Holds its shape, won't go flat</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
+      <div class="cmp-row"><div class="c lbl">30-night calm guarantee</div><div class="c us"><span class="tick">✓</span></div><div class="c"><span class="cross">✗</span></div></div>
+    </div>
+    <div class="cmp-trust reveal"><span>🐾 Built by cat people</span><span>😻 Loved by anxious-cat parents</span></div>
+  </section>
+
+  <!-- SECTION: brand block (replaces "vet authority" — honest story, NO fake vet; the one light "play not aggression" line) -->
+  <section class="brand" data-block="brand">
+    <div class="brandblock reveal">
+      <div style="width:92px;height:92px;flex-shrink:0;border-radius:12px;background-image:url('_ph.jpg');background-size:cover;background-position:50% 35%"></div>
+      <div class="brand-body">
+        <p><b>We're cat people first.</b> One of our own cats was a nervous little shadow — hiding, never settling — until she found a soft, walled-in spot to call her own. The change was night and day, so we made the bed we wished we'd had sooner. Not the calm you hoped for? We'll make it right — just write to <b>support@movaro.com</b>.</p>
+        <div class="brand-trust"><span>🐾 Calm by design — a safe den, not just a cushion</span><span>💛 30-night guarantee</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: instruction -->
+  <section class="s-cream" data-block="instruction">
+    <div class="sect-head reveal"><div class="eyebrow">No training needed</div><h2>Settling in, in 3 steps</h2><p>Cats pick their own spots — a little nudge and they'll claim it. Most do within a day or two.</p></div>
+    <div class="scroll reveal">
+      <div class="step-card"><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 40%"></div><div class="s-body"><div class="s-num">STEP 1</div><h4>Pick their corner</h4><p>Place it where your cat already likes to nap — a quiet, warm, draft-free spot they trust.</p></div></div>
+      <div class="step-card"><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 45%"></div><div class="s-body"><div class="s-num">STEP 2</div><h4>Make it smell like home</h4><p>Add a blanket or a worn t-shirt for the first few days so it smells familiar and safe.</p></div></div>
+      <div class="step-card"><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:50% 30%"></div><div class="s-body"><div class="s-num">STEP 3</div><h4>Let them claim it</h4><p>Give it a little time. Once they curl in the first time, it becomes their go-to. The free guide helps shy cats.</p></div></div>
+    </div>
+    <div class="warmup reveal">🐾 <b>Got a shy or anxious cat?</b> Don't rush it — put the bed in their safe corner, add a familiar-smelling blanket, and let them discover it on their own. The free <b>Calm-at-Home guide</b> walks you through settling even the most nervous cat. Most come around within a few days.</div>
+  </section>
+
+  <!-- SECTION: offer / value stack -->
+  <section class="offer" data-block="offer">
+    <div class="sect-head reveal"><div class="eyebrow">Everything you get</div><h2>Your cat's calm corner</h2><p>A cozy, calming bed and the guide to settle them in — for less than one anxiety vet visit.</p></div>
+    <div class="stack reveal">
+      <div class="row"><span>🛋️ Movaro Calm Bed (your size)</span><span>$49.99</span></div>
+      <div class="row"><span>📖 Calm-at-Home guide</span><span><s>$19</s> <span class="free">Free</span></span></div>
+      <div class="row"><span>✅ New-bed intro checklist</span><span><s>$9</s> <span class="free">Free</span></span></div>
+      <div class="row"><span>You pay today</span><span class="total">$49.99&nbsp; <s style="font-weight:400">$77.99</s></span></div>
+    </div>
+    <div class="guarantee reveal">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div style="text-align:left"><b>30-Night Calm Guarantee</b><br><small>If your cat doesn't settle in, we'll make it right · keep the guide · free US shipping</small></div>
+    </div>
+    <button class="btn reveal" onclick="addToCart()">Get the Calm Bed — $49.99</button>
+  </section>
+
+  <!-- SECTION: faq — the must-answer buying questions -->
+  <section class="s-paper" data-block="faq" id="faq">
+    <div class="sect-head reveal"><div class="eyebrow">Simple, honest answers</div><h2>Questions, answered</h2></div>
+    <details open><summary>What if my cat won't use it? <span class="pm">+</span></summary><div class="ans">Most cats claim it within a day — the soft, enclosed shape is exactly what they instinctively look for. For fussy or anxious cats, place it in their favourite spot, add a familiar-smelling blanket, and give it a few days (the free Calm-at-Home guide shows you how). Still not settling within 30 nights? We'll make it right — so trying it costs you nothing.</div></details>
+    <details><summary>Which size should I get? <span class="pm">+</span></summary><div class="ans">Small suits kittens and petite cats (up to ~8 lb), Medium fits most adult cats (~8–15 lb), and Large is for big breeds like Maine Coons (~15–25 lb). When in doubt, size up — cats love room to sprawl as well as curl. <i>(Exact dimensions confirmed with sourcing.)</i></div></details>
+    <details><summary>Is it actually calming, or just cute? <span class="pm">+</span></summary><div class="ans">Both. The high, wrap-around rim covers your cat's back and lets them curl into a tight, secure ball — a naturally self-soothing posture — while the warm, soft fur holds their body heat. Feeling safe and warm is what lets an anxious cat truly relax.</div></details>
+    <details><summary>Can I wash it? <span class="pm">+</span></summary><div class="ans">Yes — it's machine washable. Gentle cycle, cold water, then air-dry and give it a fluff to bring the shape back. Easy to keep fresh and hair-free.</div></details>
+    <details><summary>Will it slide around on hard floors? <span class="pm">+</span></summary><div class="ans">No — the base is anti-slip, so it stays put on wood, tile or laminate. A bed that doesn't skid helps your cat feel secure.</div></details>
+    <details><summary>Will it go flat over time? <span class="pm">+</span></summary><div class="ans">The filled rim is made to keep its shape and spring back after washing, so it stays cozy and supportive — not a flat pancake after a week.</div></details>
+    <details><summary>What's it made of? Is it safe? <span class="pm">+</span></summary><div class="ans">A soft faux-fur top with a plush-filled rim and a non-slip base — no hard parts. As with any pet bed, keep an eye on cats that chew fabric. <i>(Final materials confirmed with sourcing.)</i></div></details>
+    <details><summary>How fast does it ship? <span class="pm">+</span></summary><div class="ans">Free US shipping, dispatched in 24–48h, typically arriving in 5–8 business days. You'll get tracking by email.</div></details>
+  </section>
+
+  <!-- SECTION: written reviews (seeded — honesty L2, same as Cat Wrap; mixed-but-strong) -->
+  <section class="s-ivory" data-block="reviews" id="reviews">
+    <div class="sect-head reveal"><div class="eyebrow">Verified buyers</div><h2>Loved by anxious-cat parents</h2></div>
+    <div class="rev-summary reveal">
+      <div style="text-align:center"><div class="big">4.8</div><div class="stars">★★★★★</div><div class="muted" style="font-size:11px">Verified buyers</div></div>
+      <div class="bars">
+        <div class="bar-row">5 <span class="bar"><i style="width:87%"></i></span> 87%</div>
+        <div class="bar-row">4 <span class="bar"><i style="width:9%"></i></span> 9%</div>
+        <div class="bar-row">3 <span class="bar"><i style="width:3%"></i></span> 3%</div>
+        <div class="bar-row">2 <span class="bar"><i style="width:1%"></i></span> 1%</div>
+        <div class="bar-row">1 <span class="bar"><i style="width:0%"></i></span> 0%</div>
+      </div>
+    </div>
+    <div class="rev reveal"><div class="top"><span class="name">Danielle R. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★★</span></div><h4>"She finally settled"</h4><p>My anxious girl used to pace and hide every evening. Now she heads straight for this bed, curls up and actually sleeps. I tear up a little watching her this relaxed.</p>
+      <div class="rphoto">
+        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div>
+        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div>
+      </div></div>
+    <div class="rev reveal"><div class="top"><span class="name">Marcus T. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★★</span></div><h4>"He sleeps through now"</h4><p>My cat was up and yelling at 4am every day. Since this bed showed up he burrows in and sleeps through. So do I. Should've bought it a year ago.</p></div>
+    <div class="rev reveal"><div class="top"><span class="name">Priya N. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★☆</span></div><h4>"Took my shy boy a few days"</h4><p>Honest review — he ignored it at first. I followed the guide, moved it to his corner with his blanket, and by day three it was his throne. Worth sticking with.</p>
+      <div class="rphoto"><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div></div></div>
+    <p class="muted" style="font-size:12px;text-align:center;margin-top:16px">Reviews load from our review app with real buyer photos — placeholders shown here.</p>
+  </section>
+
+  <!-- SECTION: close cta -->
+  <section class="close-cta" data-block="close">
+    <h3>Give them the calm spot they deserve</h3>
+    <p>The safe little nest your cat's been looking for — backed by our 30-night calm guarantee.</p>
+    <button class="btn" style="max-width:320px;margin:0 auto" onclick="addToCart()">Bring home the calm — $49.99</button>
+  </section>
+
+  <!-- SECTION: footer — shared site shell (shown for context; Base, not edited here) -->
+  <footer class="footer" data-block="footer">
+    <div class="top">
+      <div class="logo">Movaro</div>
+      <div class="tag">For cats &amp; the people who love them.</div>
+    </div>
+    <details>
+      <summary>About Movaro <span class="chev">⌄</span></summary>
+      <div class="links"><a href="#">Our Story</a><a href="#">Contact Us</a></div>
+    </details>
+    <details>
+      <summary>FAQ &amp; Policies <span class="chev">⌄</span></summary>
+      <div class="links"><a href="#">FAQ</a><a href="#">Shipping</a><a href="#">Returns &amp; Refunds</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </details>
+    <details>
+      <summary>More Information <span class="chev">⌄</span></summary>
+      <div class="links"><a href="#">Size Guide</a></div>
+    </details>
+    <details open>
+      <summary>Exclusive Benefits <span class="chev">⌄</span></summary>
+      <div class="sub">
+        <p>Join free for exclusive deals &amp; happy-cat tips.</p>
+        <form class="row" onsubmit="return false"><input type="email" placeholder="Enter your email"><button type="submit">→</button></form>
+      </div>
+    </details>
+    <div class="trust">
+      <span class="tp"><span class="tp-stars">★★★★★</span> 4.8 · loved by cats</span>
+    </div>
+    <div class="bottom">
+      <div class="pay"><span>VISA</span><span>MASTERCARD</span><span>AMEX</span><span>PAYPAL</span><span>APPLE PAY</span><span>G PAY</span></div>
+      support@movaro.com<br>
+      © 2026 Movaro · 30-Day Guarantee · Free US Shipping
+    </div>
+  </footer>
+
+</div>
+
+<!-- SPINE — scroll thread + travelling dot + benefit ticker (runs UGC → offer) -->
+<div class="mv-spine" id="mvSpine" aria-hidden="true"><svg viewBox="0 0 100 1600" preserveAspectRatio="none"><path class="mv-spine-track" d="M50 0 C90 55 90 70 50 120 C12 175 12 190 50 240 C88 300 88 312 50 362 C14 430 14 448 50 512 C86 600 86 620 50 706 C18 820 18 850 50 952 C82 1110 82 1150 50 1292 C50 1420 50 1510 50 1600"/><path class="mv-spine-draw" id="mvSpineDraw" d="M50 0 C90 55 90 70 50 120 C12 175 12 190 50 240 C88 300 88 312 50 362 C14 430 14 448 50 512 C86 600 86 620 50 706 C18 820 18 850 50 952 C82 1110 82 1150 50 1292 C50 1420 50 1510 50 1600"/></svg><div class="mv-spine-dot" id="mvSpineDot"></div><div class="mv-spine-label" id="mvSpineLabel"></div></div>
+
+<div class="sticky" id="sticky">
+  <div class="sp"><span id="st-px"><b>$49.99</b><s>$79.99</s></span><small id="st-lbl">1 Calm Bed</small></div>
+  <button class="btn" onclick="addToCart()">Add to cart</button>
+</div>
+<script>
+  // ---- gallery carousel ----
+  var gcar=document.getElementById('gcar');
+  var thumbs=Array.prototype.slice.call(document.querySelectorAll('#gthumbs .ill'));
+  var dotsWrap=document.getElementById('gdots');
+  thumbs.forEach(function(){var i=document.createElement('i');dotsWrap.appendChild(i);});
+  var dots=Array.prototype.slice.call(dotsWrap.children);
+  function setActive(i){thumbs.forEach(function(t,n){t.classList.toggle('on',n===i);});dots.forEach(function(d,n){d.classList.toggle('on',n===i);});}
+  function gnav(d){gcar.scrollBy({left:d*gcar.clientWidth,behavior:'smooth'});}
+  thumbs.forEach(function(t,i){t.addEventListener('click',function(){gcar.scrollTo({left:i*gcar.clientWidth,behavior:'smooth'});});});
+  gcar.addEventListener('scroll',function(){var i=Math.round(gcar.scrollLeft/gcar.clientWidth);setActive(i);});
+
+  // ---- bundle -> price ----
+  var state={price:49.99,was:79.99,label:'1 Calm Bed'};
+  function money(v){var p=(''+v).split('.');return '$'+p[0]+'<span class="ct">.'+((p[1]||'00')+'00').slice(0,2)+'</span>';}
+  function fmt(){
+    var save=Math.round(state.was-state.price);
+    document.getElementById('px-now').innerHTML=money(state.price);
+    document.getElementById('px-was').innerHTML=money(state.was);
+    document.getElementById('px-save').textContent='Save $'+save;
+    document.getElementById('st-px').innerHTML='<b>'+money(state.price)+'</b><s>'+money(state.was)+'</s>';
+    document.getElementById('st-lbl').textContent=state.label;
+  }
+  document.querySelectorAll('#bundle .opt').forEach(function(o){
+    o.addEventListener('click',function(){
+      document.querySelectorAll('#bundle .opt').forEach(function(x){x.classList.remove('sel');});
+      o.classList.add('sel');
+      state.price=+o.dataset.price;state.was=+o.dataset.was;state.label=o.dataset.label;fmt();
+    });
+  });
+  // ---- size selector (visual; on Shopify the native variant picker handles this) ----
+  document.querySelectorAll('#sizes .opt').forEach(function(o){
+    o.addEventListener('click',function(){
+      document.querySelectorAll('#sizes .opt').forEach(function(x){x.classList.remove('sel');});
+      o.classList.add('sel');
+    });
+  });
+  function addToCart(){var s=document.getElementById('sticky');s.classList.add('show');s.animate([{transform:'scale(1)'},{transform:'scale(1.02)'},{transform:'scale(1)'}],{duration:260});}
+
+  // ---- sticky on scroll past buy-box ----
+  var buybox=document.querySelector('.buybox');
+  var sticky=document.getElementById('sticky');
+  new IntersectionObserver(function(e){sticky.classList.toggle('show',!e[0].isIntersecting&&e[0].boundingClientRect.top<0);},{threshold:0}).observe(buybox);
+
+  // ---- scroll reveal ----
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // hotspots — tap a + dot to reveal a tip
+  document.querySelectorAll('.hotspot').forEach(function(h){h.addEventListener('click',function(e){e.preventDefault();var was=h.classList.contains('on');document.querySelectorAll('.hotspot').forEach(function(x){x.classList.remove('on');});if(!was)h.classList.add('on');});});
+
+  // science accordions: open on desktop (≥990), collapsed on mobile
+  function mvMpt(){var on=window.matchMedia('(min-width:990px)').matches;document.querySelectorAll('.mpt').forEach(function(d){if(on)d.setAttribute('open','');});}
+  mvMpt();window.addEventListener('resize',mvMpt);
+
+  fmt();
+</script>
+
+<!-- SPINE motion (ported 1:1 from live Cat Wrap: dot=label::before, pulse=label::after, layout-once + rAF for smooth fast-scroll) -->
+<script>
+(function(){
+function init(){
+var spine=document.getElementById('mvSpine'),draw=document.getElementById('mvSpineDraw'),dot=document.getElementById('mvSpineDot'),label=document.getElementById('mvSpineLabel');
+if(!spine||!draw||!dot)return;
+dot.style.display='none';
+var st=document.createElement('style');st.textContent='.mv-spine-label::before{content:"";position:absolute;left:50%;top:-22px;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:#3E5C5A;box-shadow:0 0 0 4px #E2E9E7,0 2px 8px rgba(0,0,0,.2);pointer-events:none;z-index:1}.mv-spine-label::after{content:"";position:absolute;left:50%;top:-22px;width:14px;height:14px;border-radius:50%;border:2px solid #3E5C5A;box-sizing:border-box;transform:translateX(-50%);animation:mvpulse 2.2s ease-out infinite;pointer-events:none;z-index:1}@keyframes mvpulse{0%{transform:translateX(-50%) scale(.7);opacity:.6}100%{transform:translateX(-50%) scale(2.4);opacity:0}}.mv-spine-label{transition:opacity .2s,background .3s}';document.head.appendChild(st);
+var startEl=document.querySelector('[data-block="ugc"]'),endEl=document.querySelector('[data-block="offer"]');
+if(!startEl||!endEl){spine.style.display='none';return;}
+if(spine.parentNode!==document.body)document.body.appendChild(spine);
+var len=draw.getTotalLength();draw.style.strokeDasharray=len;
+var trail=[[0,"🎁 Follow me — your gift's at the end","#B9774F"],[0.16,"🛋️ Calms anxious cats","#246159"],[0.34,"😴 Deep, proper sleep","#B9774F"],[0.52,"🐾 A spot of their own","#3E5C5A"],[0.70,"💛 Loved by cats","#246159"],[0.84,"🎁 Free Calm-at-Home guide","#C28F2E"]];
+function trailItem(p){var t=trail[0];for(var i=0;i<trail.length;i++){if(p>=trail[i][0])t=trail[i];}return t;}
+var mvTop=0,mvH=1;function layout(){var sy=window.scrollY||window.pageYOffset;var sr=startEl.getBoundingClientRect(),er=endEl.getBoundingClientRect();mvTop=sr.top+sy;mvH=(er.top+sy+er.height)-mvTop;spine.style.top=mvTop+'px';spine.style.height=mvH+'px';}
+function upd(){
+var sy=window.scrollY||window.pageYOffset;
+var top=mvTop,h=mvH;
+var p=(sy+window.innerHeight*0.55-top)/h;p=Math.max(0,Math.min(1,p));
+draw.style.strokeDashoffset=len*(1-p);
+var pt=draw.getPointAtLength(len*p);var w=spine.clientWidth;
+var dx=Math.max(14,Math.min(w-14,pt.x/100*w)),dy=pt.y/1600*h;
+dot.style.left=dx+'px';dot.style.top=dy+'px';
+if(label){
+label.style.left=Math.max(82,Math.min(w-82,dx))+'px';
+label.style.top=(dy+20)+'px';
+if(p>=0.94){label.classList.add('end');label.textContent="🎉 You made it — your gift's inside!";label.style.background='#C28F2E';}
+else{label.classList.remove('end');var it=trailItem(p);label.textContent=it[1];label.style.background=it[2];}
+label.style.opacity=(p>0.015&&p<0.992)?'1':'0';
+}
+}
+var mvT=false;function mvOn(){if(!mvT){mvT=true;requestAnimationFrame(function(){upd();mvT=false;});}}
+layout();upd();window.addEventListener('scroll',mvOn,{passive:true});window.addEventListener('resize',function(){layout();upd();});window.addEventListener('load',function(){layout();upd();});setTimeout(function(){layout();upd();},120);setTimeout(function(){layout();upd();},600);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>
