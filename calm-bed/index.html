@@ -602,13 +602,13 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   <section class="buybox" data-block="buybox">
     <div class="descriptor">The calming bed cats melt into</div>
     <h1>Movaro Calm Bed</h1>
-    <div class="rating-row"><span class="stars">★★★★★</span> 4.8 · <a href="#reviews">loved by cats 🐾</a></div>
+    <div class="rating-row"><span class="stars">★★★★★</span> 4.8 · <span>loved by cats 🐾</span></div>
 
     <!-- credibility anchor (seeded — honesty L2; S15: qualitative, no hard counts) -->
     <div class="cred"><span>🛋️ Cats melt into it</span><span>🐾 Calms anxious cats</span><span>🇺🇸 Ships from the US</span></div>
 
     <!-- PRICE high — cold buyer scans photo → price first (PLACEHOLDER — confirm) -->
-    <div class="price-row"><span class="now" id="px-now">$49<span class="ct">.99</span></span><span class="was" id="px-was">$79<span class="ct">.99</span></span><span class="pill-save" id="px-save">Save $30</span></div>
+    <div class="price-row"><span class="now" id="px-now">$55<span class="ct">.99</span></span><span class="was" id="px-was">$85<span class="ct">.99</span></span><span class="pill-save" id="px-save">Save $30</span></div>
 
     <p class="promise">The safe little nest your cat's been looking for. 🛋️ High, soft sides they curl right into and feel protected — so an anxious, restless cat <b class="hl">finally settles and sleeps deeply.</b></p>
 
@@ -630,26 +630,21 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
       <div class="gift"><span class="g-badge">Free $9</span><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div><small>New-bed intro checklist</small></div>
     </div>
 
-    <!-- SIZE — real choice (S/M/L by cat weight); on Shopify = native variant picker. PLACEHOLDER weights — confirm with Sourcing -->
-    <div class="field-label">Choose size <a href="#faq">Which size? ↓</a></div>
+    <!-- SIZE — 4 sizes (S/M/L/XL), price varies by size; on Shopify = native variant picker. Dims/weights from CJ + Marina's size image. "was"/Save anchors are placeholders — confirm -->
+    <div class="field-label">Choose size</div>
     <div id="sizes">
-      <div class="opt" data-size="Small"><div class="rb"></div>
-        <div class="o-main"><b>Small</b><small>Kittens &amp; petite cats · up to ~8 lb</small></div></div>
-      <div class="opt sel" data-size="Medium"><div class="rb"></div>
-        <div class="o-main"><b>Medium · most cats</b><small>The everyday pick · ~8–15 lb</small></div></div>
-      <div class="opt" data-size="Large"><div class="rb"></div>
-        <div class="o-main"><b>Large</b><small>Big breeds, Maine Coon · ~15–25 lb</small></div></div>
-    </div>
-
-    <!-- OFFERS — single (default, honest) vs multi-cat 2-pack -->
-    <div class="field-label">How many?</div>
-    <div id="bundle">
-      <div class="opt sel" data-price="49.99" data-was="79.99" data-label="1 Calm Bed"><div class="rb"></div>
-        <div class="o-main"><b>1 Calm Bed · most popular</b><small>One cozy bed + free Calm-at-Home guide</small></div>
+      <div class="opt" data-price="49.99" data-was="79.99" data-label="Size S"><div class="rb"></div>
+        <div class="o-main"><b>S</b><small>20″×20″×8″ · best for pets up to 15 lb</small></div>
         <div class="o-price"><b>$49<span class="ct">.99</span></b><s>$79<span class="ct">.99</span></s></div></div>
-      <div class="opt" data-price="84.99" data-was="99.98" data-label="2 Calm Beds"><span class="save-tag">Multi-cat</span><div class="rb"></div>
-        <div class="o-main"><b>2 Calm Beds</b><small>A calm spot for each cat — save $15</small></div>
-        <div class="o-price"><b>$84<span class="ct">.99</span></b><s>$99<span class="ct">.98</span></s></div></div>
+      <div class="opt sel" data-price="55.99" data-was="85.99" data-label="Size M"><span class="save-tag">Most popular</span><div class="rb"></div>
+        <div class="o-main"><b>M</b><small>24″×24″×8″ · best for pets up to 25 lb</small></div>
+        <div class="o-price"><b>$55<span class="ct">.99</span></b><s>$85<span class="ct">.99</span></s></div></div>
+      <div class="opt" data-price="59.99" data-was="89.99" data-label="Size L"><div class="rb"></div>
+        <div class="o-main"><b>L</b><small>30″×30″×8″ · best for pets up to 45 lb</small></div>
+        <div class="o-price"><b>$59<span class="ct">.99</span></b><s>$89<span class="ct">.99</span></s></div></div>
+      <div class="opt" data-price="69.99" data-was="99.99" data-label="Size XL"><div class="rb"></div>
+        <div class="o-main"><b>XL</b><small>36″×36″×8″ · best for pets up to 90 lb</small></div>
+        <div class="o-price"><b>$69<span class="ct">.99</span></b><s>$99<span class="ct">.99</span></s></div></div>
     </div>
 
     <button class="btn" onclick="addToCart()">Bring home the calm — Add to cart</button>
@@ -665,7 +660,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <div class="bb-acc">
       <details><summary>What's in the box <span class="pm">+</span></summary><div class="ans">One Movaro Calm Bed in your chosen size, plus the digital <b>Calm-at-Home guide</b> and a new-bed intro checklist. <i>(Exact contents finalised with our supplier — Sourcing.)</i></div></details>
       <details><summary>Shipping &amp; returns <span class="pm">+</span></summary><div class="ans">Free US shipping, dispatched in 24–48h, typically 5–8 business days. Not the cozy spot you hoped for? <b>30-night money-back</b> — and keep the guide as our gift. Questions: support@movaro.com.</div></details>
-      <details><summary>Materials &amp; care <span class="pm">+</span></summary><div class="ans">Ultra-soft faux-fur top, a plush-filled raised rim, and a non-slip base. <b>Machine washable</b> (gentle, cold) — air-dry and fluff back to shape. Three sizes (S/M/L). <i>(Final materials &amp; sizes confirmed with sourcing.)</i></div></details>
+      <details><summary>Materials &amp; care <span class="pm">+</span></summary><div class="ans">Ultra-soft faux-fur top, a plush-filled raised rim, and a non-slip base. <b>Machine washable</b> (gentle, cold) — air-dry and fluff back to shape. Four sizes (S/M/L/XL). <i>(Final materials confirmed with sourcing.)</i></div></details>
     </div>
   </section>
 
@@ -807,23 +802,23 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   <section class="offer" data-block="offer">
     <div class="sect-head reveal"><div class="eyebrow">Everything you get</div><h2>Your cat's calm corner</h2><p>A cozy, calming bed and the guide to settle them in — for less than one anxiety vet visit.</p></div>
     <div class="stack reveal">
-      <div class="row"><span>🛋️ Movaro Calm Bed (your size)</span><span>$49.99</span></div>
+      <div class="row"><span>🛋️ Movaro Calm Bed (your size)</span><span>from $49.99</span></div>
       <div class="row"><span>📖 Calm-at-Home guide</span><span><s>$19</s> <span class="free">Free</span></span></div>
       <div class="row"><span>✅ New-bed intro checklist</span><span><s>$9</s> <span class="free">Free</span></span></div>
-      <div class="row"><span>You pay today</span><span class="total">$49.99&nbsp; <s style="font-weight:400">$77.99</s></span></div>
+      <div class="row"><span>You pay today</span><span class="total">from $49.99</span></div>
     </div>
     <div class="guarantee reveal">
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div style="text-align:left"><b>30-Night Calm Guarantee</b><br><small>If your cat doesn't settle in, we'll make it right · keep the guide · free US shipping</small></div>
     </div>
-    <button class="btn reveal" onclick="addToCart()">Get the Calm Bed — $49.99</button>
+    <button class="btn reveal" onclick="addToCart()">Get the Calm Bed — from $49.99</button>
   </section>
 
   <!-- SECTION: faq — the must-answer buying questions -->
   <section class="s-paper" data-block="faq" id="faq">
     <div class="sect-head reveal"><div class="eyebrow">Simple, honest answers</div><h2>Questions, answered</h2></div>
     <details open><summary>What if my cat won't use it? <span class="pm">+</span></summary><div class="ans">Most cats claim it within a day — the soft, enclosed shape is exactly what they instinctively look for. For fussy or anxious cats, place it in their favourite spot, add a familiar-smelling blanket, and give it a few days (the free Calm-at-Home guide shows you how). Still not settling within 30 nights? We'll make it right — so trying it costs you nothing.</div></details>
-    <details><summary>Which size should I get? <span class="pm">+</span></summary><div class="ans">Small suits kittens and petite cats (up to ~8 lb), Medium fits most adult cats (~8–15 lb), and Large is for big breeds like Maine Coons (~15–25 lb). When in doubt, size up — cats love room to sprawl as well as curl. <i>(Exact dimensions confirmed with sourcing.)</i></div></details>
+    <details><summary>Which size should I get? <span class="pm">+</span></summary><div class="ans">Four sizes, by your pet's weight: <b>S</b> 20″×20″ (up to 15 lb) · <b>M</b> 24″×24″ (up to 25 lb) · <b>L</b> 30″×30″ (up to 45 lb) · <b>XL</b> 36″×36″ (up to 90 lb). All are 8″ tall. When in doubt, size up — cats love room to sprawl as well as curl.</div></details>
     <details><summary>Is it actually calming, or just cute? <span class="pm">+</span></summary><div class="ans">Both. The high, wrap-around rim covers your cat's back and lets them curl into a tight, secure ball — a naturally self-soothing posture — while the warm, soft fur holds their body heat. Feeling safe and warm is what lets an anxious cat truly relax.</div></details>
     <details><summary>Can I wash it? <span class="pm">+</span></summary><div class="ans">Yes — it's machine washable. Gentle cycle, cold water, then air-dry and give it a fluff to bring the shape back. Easy to keep fresh and hair-free.</div></details>
     <details><summary>Will it slide around on hard floors? <span class="pm">+</span></summary><div class="ans">No — the base is anti-slip, so it stays put on wood, tile or laminate. A bed that doesn't skid helps your cat feel secure.</div></details>
@@ -832,35 +827,13 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     <details><summary>How fast does it ship? <span class="pm">+</span></summary><div class="ans">Free US shipping, dispatched in 24–48h, typically arriving in 5–8 business days. You'll get tracking by email.</div></details>
   </section>
 
-  <!-- SECTION: written reviews (seeded — honesty L2, same as Cat Wrap; mixed-but-strong) -->
-  <section class="s-ivory" data-block="reviews" id="reviews">
-    <div class="sect-head reveal"><div class="eyebrow">Verified buyers</div><h2>Loved by anxious-cat parents</h2></div>
-    <div class="rev-summary reveal">
-      <div style="text-align:center"><div class="big">4.8</div><div class="stars">★★★★★</div><div class="muted" style="font-size:11px">Verified buyers</div></div>
-      <div class="bars">
-        <div class="bar-row">5 <span class="bar"><i style="width:87%"></i></span> 87%</div>
-        <div class="bar-row">4 <span class="bar"><i style="width:9%"></i></span> 9%</div>
-        <div class="bar-row">3 <span class="bar"><i style="width:3%"></i></span> 3%</div>
-        <div class="bar-row">2 <span class="bar"><i style="width:1%"></i></span> 1%</div>
-        <div class="bar-row">1 <span class="bar"><i style="width:0%"></i></span> 0%</div>
-      </div>
-    </div>
-    <div class="rev reveal"><div class="top"><span class="name">Danielle R. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★★</span></div><h4>"She finally settled"</h4><p>My anxious girl used to pace and hide every evening. Now she heads straight for this bed, curls up and actually sleeps. I tear up a little watching her this relaxed.</p>
-      <div class="rphoto">
-        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div>
-        <div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div>
-      </div></div>
-    <div class="rev reveal"><div class="top"><span class="name">Marcus T. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★★</span></div><h4>"He sleeps through now"</h4><p>My cat was up and yelling at 4am every day. Since this bed showed up he burrows in and sleeps through. So do I. Should've bought it a year ago.</p></div>
-    <div class="rev reveal"><div class="top"><span class="name">Priya N. <span class="vbadge">✓ Verified</span></span><span class="stars">★★★★☆</span></div><h4>"Took my shy boy a few days"</h4><p>Honest review — he ignored it at first. I followed the guide, moved it to his corner with his blanket, and by day three it was his throne. Worth sticking with.</p>
-      <div class="rphoto"><div class="ill" style="background-image:url('_ph.jpg');background-size:cover;background-position:center"></div></div></div>
-    <p class="muted" style="font-size:12px;text-align:center;margin-top:16px">Reviews load from our review app with real buyer photos — placeholders shown here.</p>
-  </section>
+  <!-- SECTION: reviews — REMOVED per Marina (no written-reviews block on this product) -->
 
   <!-- SECTION: close cta -->
   <section class="close-cta" data-block="close">
     <h3>Give them the calm spot they deserve</h3>
     <p>The safe little nest your cat's been looking for — backed by our 30-night calm guarantee.</p>
-    <button class="btn" style="max-width:320px;margin:0 auto" onclick="addToCart()">Bring home the calm — $49.99</button>
+    <button class="btn" style="max-width:320px;margin:0 auto" onclick="addToCart()">Bring home the calm — from $49.99</button>
   </section>
 
   <!-- SECTION: footer — shared site shell (shown for context; Base, not edited here) -->
@@ -904,7 +877,7 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
 <div class="mv-spine" id="mvSpine" aria-hidden="true"><svg viewBox="0 0 100 1600" preserveAspectRatio="none"><path class="mv-spine-track" d="M50 0 C90 55 90 70 50 120 C12 175 12 190 50 240 C88 300 88 312 50 362 C14 430 14 448 50 512 C86 600 86 620 50 706 C18 820 18 850 50 952 C82 1110 82 1150 50 1292 C50 1420 50 1510 50 1600"/><path class="mv-spine-draw" id="mvSpineDraw" d="M50 0 C90 55 90 70 50 120 C12 175 12 190 50 240 C88 300 88 312 50 362 C14 430 14 448 50 512 C86 600 86 620 50 706 C18 820 18 850 50 952 C82 1110 82 1150 50 1292 C50 1420 50 1510 50 1600"/></svg><div class="mv-spine-dot" id="mvSpineDot"></div><div class="mv-spine-label" id="mvSpineLabel"></div></div>
 
 <div class="sticky" id="sticky">
-  <div class="sp"><span id="st-px"><b>$49.99</b><s>$79.99</s></span><small id="st-lbl">1 Calm Bed</small></div>
+  <div class="sp"><span id="st-px"><b>$55.99</b><s>$85.99</s></span><small id="st-lbl">Size M</small></div>
   <button class="btn" onclick="addToCart()">Add to cart</button>
 </div>
 <script>
@@ -919,8 +892,8 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
   thumbs.forEach(function(t,i){t.addEventListener('click',function(){gcar.scrollTo({left:i*gcar.clientWidth,behavior:'smooth'});});});
   gcar.addEventListener('scroll',function(){var i=Math.round(gcar.scrollLeft/gcar.clientWidth);setActive(i);});
 
-  // ---- bundle -> price ----
-  var state={price:49.99,was:79.99,label:'1 Calm Bed'};
+  // ---- size -> price (4 sizes; on Shopify the native variant picker handles this) ----
+  var state={price:55.99,was:85.99,label:'Size M'};
   function money(v){var p=(''+v).split('.');return '$'+p[0]+'<span class="ct">.'+((p[1]||'00')+'00').slice(0,2)+'</span>';}
   function fmt(){
     var save=Math.round(state.was-state.price);
@@ -930,18 +903,11 @@ details .ans{padding:0 18px 18px;font-size:14px;color:var(--ink-soft)}
     document.getElementById('st-px').innerHTML='<b>'+money(state.price)+'</b><s>'+money(state.was)+'</s>';
     document.getElementById('st-lbl').textContent=state.label;
   }
-  document.querySelectorAll('#bundle .opt').forEach(function(o){
-    o.addEventListener('click',function(){
-      document.querySelectorAll('#bundle .opt').forEach(function(x){x.classList.remove('sel');});
-      o.classList.add('sel');
-      state.price=+o.dataset.price;state.was=+o.dataset.was;state.label=o.dataset.label;fmt();
-    });
-  });
-  // ---- size selector (visual; on Shopify the native variant picker handles this) ----
   document.querySelectorAll('#sizes .opt').forEach(function(o){
     o.addEventListener('click',function(){
       document.querySelectorAll('#sizes .opt').forEach(function(x){x.classList.remove('sel');});
       o.classList.add('sel');
+      state.price=+o.dataset.price;state.was=+o.dataset.was;state.label=o.dataset.label;fmt();
     });
   });
   function addToCart(){var s=document.getElementById('sticky');s.classList.add('show');s.animate([{transform:'scale(1)'},{transform:'scale(1.02)'},{transform:'scale(1)'}],{duration:260});}
