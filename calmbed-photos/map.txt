@@ -14,3 +14,5 @@ D2	ChatGPT Image 24 июн. 2026 г., 18_33_47.png
 S1	ChatGPT Image 24 июн. 2026 г., 18_18_33.png
 G1	ChatGPT Image 24 июн. 2026 г., 18_53_52.png
 G2	ChatGPT Image 24 июн. 2026 г., 18_56_27.png
+AS1	ChatGPT Image 24 июн. 2026 г., 19_55_23.png
+S2	ChatGPT Image 24 июн. 2026 г., 19_56_27.png
